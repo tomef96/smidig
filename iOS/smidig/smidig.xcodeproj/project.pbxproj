@@ -1,0 +1,591 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		64D787BF21B7D1CE00F541E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D787BE21B7D1CE00F541E8 /* AppDelegate.swift */; };
+		64D787C121B7D1CE00F541E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D787C021B7D1CE00F541E8 /* ViewController.swift */; };
+		64D787C421B7D1CE00F541E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64D787C221B7D1CE00F541E8 /* Main.storyboard */; };
+		64D787C621B7D1D000F541E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64D787C521B7D1D000F541E8 /* Assets.xcassets */; };
+		64D787C921B7D1D000F541E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64D787C721B7D1D000F541E8 /* LaunchScreen.storyboard */; };
+		64D787D421B7D1D000F541E8 /* smidigTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D787D321B7D1D000F541E8 /* smidigTests.swift */; };
+		64D787DF21B7D1D000F541E8 /* smidigUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D787DE21B7D1D000F541E8 /* smidigUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		64D787D021B7D1D000F541E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 64D787B321B7D1CE00F541E8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 64D787BA21B7D1CE00F541E8;
+			remoteInfo = smidig;
+		};
+		64D787DB21B7D1D000F541E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 64D787B321B7D1CE00F541E8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 64D787BA21B7D1CE00F541E8;
+			remoteInfo = smidig;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		64D787BB21B7D1CE00F541E8 /* smidig.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = smidig.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		64D787BE21B7D1CE00F541E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		64D787C021B7D1CE00F541E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		64D787C321B7D1CE00F541E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		64D787C521B7D1D000F541E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		64D787C821B7D1D000F541E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		64D787CA21B7D1D000F541E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64D787CF21B7D1D000F541E8 /* smidigTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = smidigTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		64D787D321B7D1D000F541E8 /* smidigTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = smidigTests.swift; sourceTree = "<group>"; };
+		64D787D521B7D1D000F541E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64D787DA21B7D1D000F541E8 /* smidigUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = smidigUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		64D787DE21B7D1D000F541E8 /* smidigUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = smidigUITests.swift; sourceTree = "<group>"; };
+		64D787E021B7D1D000F541E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		64D787B821B7D1CE00F541E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64D787CC21B7D1D000F541E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64D787D721B7D1D000F541E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		64D787B221B7D1CE00F541E8 = {
+			isa = PBXGroup;
+			children = (
+				64D787BD21B7D1CE00F541E8 /* smidig */,
+				64D787D221B7D1D000F541E8 /* smidigTests */,
+				64D787DD21B7D1D000F541E8 /* smidigUITests */,
+				64D787BC21B7D1CE00F541E8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		64D787BC21B7D1CE00F541E8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				64D787BB21B7D1CE00F541E8 /* smidig.app */,
+				64D787CF21B7D1D000F541E8 /* smidigTests.xctest */,
+				64D787DA21B7D1D000F541E8 /* smidigUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		64D787BD21B7D1CE00F541E8 /* smidig */ = {
+			isa = PBXGroup;
+			children = (
+				64D787BE21B7D1CE00F541E8 /* AppDelegate.swift */,
+				64D787C021B7D1CE00F541E8 /* ViewController.swift */,
+				64D787C221B7D1CE00F541E8 /* Main.storyboard */,
+				64D787C521B7D1D000F541E8 /* Assets.xcassets */,
+				64D787C721B7D1D000F541E8 /* LaunchScreen.storyboard */,
+				64D787CA21B7D1D000F541E8 /* Info.plist */,
+			);
+			path = smidig;
+			sourceTree = "<group>";
+		};
+		64D787D221B7D1D000F541E8 /* smidigTests */ = {
+			isa = PBXGroup;
+			children = (
+				64D787D321B7D1D000F541E8 /* smidigTests.swift */,
+				64D787D521B7D1D000F541E8 /* Info.plist */,
+			);
+			path = smidigTests;
+			sourceTree = "<group>";
+		};
+		64D787DD21B7D1D000F541E8 /* smidigUITests */ = {
+			isa = PBXGroup;
+			children = (
+				64D787DE21B7D1D000F541E8 /* smidigUITests.swift */,
+				64D787E021B7D1D000F541E8 /* Info.plist */,
+			);
+			path = smidigUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		64D787BA21B7D1CE00F541E8 /* smidig */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64D787E321B7D1D000F541E8 /* Build configuration list for PBXNativeTarget "smidig" */;
+			buildPhases = (
+				64D787B721B7D1CE00F541E8 /* Sources */,
+				64D787B821B7D1CE00F541E8 /* Frameworks */,
+				64D787B921B7D1CE00F541E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = smidig;
+			productName = smidig;
+			productReference = 64D787BB21B7D1CE00F541E8 /* smidig.app */;
+			productType = "com.apple.product-type.application";
+		};
+		64D787CE21B7D1D000F541E8 /* smidigTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64D787E621B7D1D000F541E8 /* Build configuration list for PBXNativeTarget "smidigTests" */;
+			buildPhases = (
+				64D787CB21B7D1D000F541E8 /* Sources */,
+				64D787CC21B7D1D000F541E8 /* Frameworks */,
+				64D787CD21B7D1D000F541E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				64D787D121B7D1D000F541E8 /* PBXTargetDependency */,
+			);
+			name = smidigTests;
+			productName = smidigTests;
+			productReference = 64D787CF21B7D1D000F541E8 /* smidigTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		64D787D921B7D1D000F541E8 /* smidigUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64D787E921B7D1D000F541E8 /* Build configuration list for PBXNativeTarget "smidigUITests" */;
+			buildPhases = (
+				64D787D621B7D1D000F541E8 /* Sources */,
+				64D787D721B7D1D000F541E8 /* Frameworks */,
+				64D787D821B7D1D000F541E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				64D787DC21B7D1D000F541E8 /* PBXTargetDependency */,
+			);
+			name = smidigUITests;
+			productName = smidigUITests;
+			productReference = 64D787DA21B7D1D000F541E8 /* smidigUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		64D787B321B7D1CE00F541E8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Tom Fevang";
+				TargetAttributes = {
+					64D787BA21B7D1CE00F541E8 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					64D787CE21B7D1D000F541E8 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 64D787BA21B7D1CE00F541E8;
+					};
+					64D787D921B7D1D000F541E8 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 64D787BA21B7D1CE00F541E8;
+					};
+				};
+			};
+			buildConfigurationList = 64D787B621B7D1CE00F541E8 /* Build configuration list for PBXProject "smidig" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 64D787B221B7D1CE00F541E8;
+			productRefGroup = 64D787BC21B7D1CE00F541E8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				64D787BA21B7D1CE00F541E8 /* smidig */,
+				64D787CE21B7D1D000F541E8 /* smidigTests */,
+				64D787D921B7D1D000F541E8 /* smidigUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		64D787B921B7D1CE00F541E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64D787C921B7D1D000F541E8 /* LaunchScreen.storyboard in Resources */,
+				64D787C621B7D1D000F541E8 /* Assets.xcassets in Resources */,
+				64D787C421B7D1CE00F541E8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64D787CD21B7D1D000F541E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64D787D821B7D1D000F541E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		64D787B721B7D1CE00F541E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64D787C121B7D1CE00F541E8 /* ViewController.swift in Sources */,
+				64D787BF21B7D1CE00F541E8 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64D787CB21B7D1D000F541E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64D787D421B7D1D000F541E8 /* smidigTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64D787D621B7D1D000F541E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64D787DF21B7D1D000F541E8 /* smidigUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		64D787D121B7D1D000F541E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 64D787BA21B7D1CE00F541E8 /* smidig */;
+			targetProxy = 64D787D021B7D1D000F541E8 /* PBXContainerItemProxy */;
+		};
+		64D787DC21B7D1D000F541E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 64D787BA21B7D1CE00F541E8 /* smidig */;
+			targetProxy = 64D787DB21B7D1D000F541E8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		64D787C221B7D1CE00F541E8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				64D787C321B7D1CE00F541E8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		64D787C721B7D1D000F541E8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				64D787C821B7D1D000F541E8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		64D787E121B7D1D000F541E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		64D787E221B7D1D000F541E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		64D787E421B7D1D000F541E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GNR9TUGZ4M;
+				INFOPLIST_FILE = smidig/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tomef.smidig19;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		64D787E521B7D1D000F541E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GNR9TUGZ4M;
+				INFOPLIST_FILE = smidig/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tomef.smidig19;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		64D787E721B7D1D000F541E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GNR9TUGZ4M;
+				INFOPLIST_FILE = smidigTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tomef.smidigTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/smidig.app/smidig";
+			};
+			name = Debug;
+		};
+		64D787E821B7D1D000F541E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GNR9TUGZ4M;
+				INFOPLIST_FILE = smidigTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tomef.smidigTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/smidig.app/smidig";
+			};
+			name = Release;
+		};
+		64D787EA21B7D1D000F541E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GNR9TUGZ4M;
+				INFOPLIST_FILE = smidigUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tomef.smidigUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = smidig;
+			};
+			name = Debug;
+		};
+		64D787EB21B7D1D000F541E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GNR9TUGZ4M;
+				INFOPLIST_FILE = smidigUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tomef.smidigUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = smidig;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		64D787B621B7D1CE00F541E8 /* Build configuration list for PBXProject "smidig" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64D787E121B7D1D000F541E8 /* Debug */,
+				64D787E221B7D1D000F541E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		64D787E321B7D1D000F541E8 /* Build configuration list for PBXNativeTarget "smidig" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64D787E421B7D1D000F541E8 /* Debug */,
+				64D787E521B7D1D000F541E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		64D787E621B7D1D000F541E8 /* Build configuration list for PBXNativeTarget "smidigTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64D787E721B7D1D000F541E8 /* Debug */,
+				64D787E821B7D1D000F541E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		64D787E921B7D1D000F541E8 /* Build configuration list for PBXNativeTarget "smidigUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64D787EA21B7D1D000F541E8 /* Debug */,
+				64D787EB21B7D1D000F541E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 64D787B321B7D1CE00F541E8 /* Project object */;
+}
