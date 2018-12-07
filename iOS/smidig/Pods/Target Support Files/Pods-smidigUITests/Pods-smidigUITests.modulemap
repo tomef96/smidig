@@ -1,0 +1,6 @@
+framework module Pods_smidigUITests {
+  umbrella header "Pods-smidigUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

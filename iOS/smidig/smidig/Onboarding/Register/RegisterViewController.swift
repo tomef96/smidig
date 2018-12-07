@@ -7,17 +7,51 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class RegisterViewController: UIViewController {
+    
+    var handle: AuthStateDidChangeListenerHandle?
+    var user: User?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        handle = Auth.auth().addStateDidChangeListener {
+            (auth, user) in
+            if user == nil {
+                print("User is logged in")
+            } else {
+                print("User is not logged in")
+            }
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        Auth.auth().removeStateDidChangeListener(handle!)
+    }
+    
+    
 
     @IBOutlet weak var emailTextView: UITextField!
     @IBOutlet weak var passwordTextView: UITextField!
+    
+    @IBAction func onClick(_ sender: UIButton) {
+        if (self.emailTextView.text != nil && self.passwordTextView.text != nil) {
+            registerUser(email: (self.emailTextView?.text)!, password: (self.passwordTextView?.text)!)
+        }
+    }
+    
+    func registerUser(email: String, password: String) {
+        Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
+            
+            guard (authResult?.user) != nil else { return }
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
