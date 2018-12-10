@@ -49,6 +49,15 @@ class RegisterViewController: UIViewController {
         Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
             
             guard (authResult?.user) != nil else { return }
+            self.performSegue(withIdentifier: "registrationComplete", sender: self)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "userIsLoggedIn") {
+            if let profileViewController = segue.destination as? ProfileViewController {
+                profileViewController.user = self.user
+            }
         }
     }
     

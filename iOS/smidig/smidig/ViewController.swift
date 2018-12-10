@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ViewController: UIViewController {
 
@@ -14,9 +15,18 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-    @IBAction func onClick(_ sender: Any) {
-        
+    
+    override func viewWillAppear(_ animated: Bool) {
+        Auth.auth().addStateDidChangeListener {
+            (auth, user) in
+            if user != nil {
+                print("Firebase: ", "User is logged in")
+                self.performSegue(withIdentifier: "loggedIn", sender: self)
+            } else {
+                print("Firebase: ", "User is not logged in")
+                self.performSegue(withIdentifier: "notLoggedIn", sender: self)
+            }
+        }
     }
     
 }

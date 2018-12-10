@@ -16,18 +16,18 @@ class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         handle = Auth.auth().addStateDidChangeListener {
             (auth, user) in
-            if user != nil {
+            if Auth.auth().currentUser != nil {
                 print("Firebase: ", "User is logged in")
-                self.performSegue(withIdentifier: "userIsNotLoggedIn", sender: self)
+                print("Firebase: ", Auth.auth().currentUser!)
             } else {
                 print("Firebase: ", "User is not logged in")
+                self.performSegue(withIdentifier: "userIsNotLoggedIn", sender: self)
             }
         }
     }
@@ -35,13 +35,19 @@ class ProfileViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "userIsNotLoggedIn") {
             if let loginViewController = segue.destination as? LoginViewController {
-                loginViewController.user = self.user
+                loginViewController.user = Auth.auth().currentUser
             }
         }
     }
     
-    @IBAction func logoutUser(_ sender: UIButton) {
-        if self.user != nil {
+    @IBAction func signoutButtonClick(_ sender: Any) {
+        logoutUser()
+    }
+    
+    func logoutUser() {
+        print("Firebase logout: ", Auth.auth().currentUser!)
+        print("Firebase logout: ", "Signing out user now")
+        if Auth.auth().currentUser != nil {
             let firebaseAuth = Auth.auth()
             do {
                 try firebaseAuth.signOut()
@@ -50,7 +56,6 @@ class ProfileViewController: UIViewController {
             }
         }
     }
-    
 
     /*
     // MARK: - Navigation
