@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PQC-bv-uIE">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,6 +10,25 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="0RJ-tt-HOR">
+            <objects>
+                <viewController id="PQC-bv-uIE" customClass="ViewController" customModule="smidig" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h8q-5E-D3i">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Axo-j1-Z5p"/>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="notLoggedIn" id="u8a-zK-EQI"/>
+                        <segue destination="jbG-jm-vX8" kind="show" identifier="loggedIn" id="owK-uW-RgK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tn7-c5-xq5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-948" y="52"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -89,7 +108,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-125" y="1"/>
+            <point key="canvasLocation" x="-126.08695652173914" y="0.6696428571428571"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="9kH-nF-p8n">
@@ -165,11 +184,12 @@
                     <connections>
                         <outlet property="emailTextView" destination="i9y-qL-CQP" id="Qz7-sq-dyi"/>
                         <outlet property="passwordTextView" destination="wPQ-1o-80E" id="MU5-aN-7Ey"/>
+                        <segue destination="jbG-jm-vX8" kind="show" identifier="registrationComplete" id="tLI-DI-f0M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0PI-1s-igH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-168.11594202898553" y="691.74107142857144"/>
+            <point key="canvasLocation" x="-126" y="749"/>
         </scene>
         <!--Search-->
         <scene sceneID="zfO-YA-La2">
@@ -253,15 +273,16 @@
                                         <integer key="value" value="8"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="signoutButtonClick:" destination="fqu-7K-q8P" eventType="touchUpInside" id="CLo-yo-fXJ"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="userIsNotLoggedIn" id="Bms-lP-5KS"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="9Xv-ZJ-DYm"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="L2b-l1-KM3"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="userIsNotLoggedIn" id="XFb-Vb-7GB"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="872-3e-RN2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -293,6 +314,7 @@
         <image name="LogoPlaceholder" width="500" height="500"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="XFb-Vb-7GB"/>
+        <segue reference="tLI-DI-f0M"/>
+        <segue reference="ugx-Ah-ZNi"/>
     </inferredMetricsTieBreakers>
 </document>
