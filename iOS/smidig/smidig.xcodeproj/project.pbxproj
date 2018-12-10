@@ -12,6 +12,9 @@
 		502D378221B92A1A00267EBD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502D378121B92A1A00267EBD /* LoginViewController.swift */; };
 		5055FEDF21BA7F9500DA0CA7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5055FEDE21BA7F9500DA0CA7 /* GoogleService-Info.plist */; };
 		5055FEE321BAA13000DA0CA7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5055FEE221BAA13000DA0CA7 /* ProfileViewController.swift */; };
+		643E104821BE6A54006D099C /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643E104721BE6A54006D099C /* EventViewController.swift */; };
+		643E104A21BE6B12006D099C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643E104921BE6B12006D099C /* Event.swift */; };
+		643E105021BE7458006D099C /* eventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643E104F21BE7458006D099C /* eventTests.swift */; };
 		64D787BF21B7D1CE00F541E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D787BE21B7D1CE00F541E8 /* AppDelegate.swift */; };
 		64D787C121B7D1CE00F541E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D787C021B7D1CE00F541E8 /* ViewController.swift */; };
 		64D787C421B7D1CE00F541E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64D787C221B7D1CE00F541E8 /* Main.storyboard */; };
@@ -47,6 +50,9 @@
 		5055FEDE21BA7F9500DA0CA7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5055FEE221BAA13000DA0CA7 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5D61D0F30AB8A9A48AA6C770 /* Pods-smidig.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smidig.debug.xcconfig"; path = "Pods/Target Support Files/Pods-smidig/Pods-smidig.debug.xcconfig"; sourceTree = "<group>"; };
+		643E104721BE6A54006D099C /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = SOURCE_ROOT; };
+		643E104921BE6B12006D099C /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = SOURCE_ROOT; };
+		643E104F21BE7458006D099C /* eventTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eventTests.swift; sourceTree = "<group>"; };
 		64D787BB21B7D1CE00F541E8 /* smidig.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = smidig.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64D787BE21B7D1CE00F541E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64D787C021B7D1CE00F541E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +157,8 @@
 		502D377121B9268200267EBD /* Event */ = {
 			isa = PBXGroup;
 			children = (
+				643E104721BE6A54006D099C /* EventViewController.swift */,
+				643E104921BE6B12006D099C /* Event.swift */,
 			);
 			path = Event;
 			sourceTree = "<group>";
@@ -221,6 +229,7 @@
 			children = (
 				64D787D321B7D1D000F541E8 /* smidigTests.swift */,
 				64D787D521B7D1D000F541E8 /* Info.plist */,
+				643E104F21BE7458006D099C /* eventTests.swift */,
 			);
 			path = smidigTests;
 			sourceTree = "<group>";
@@ -493,6 +502,8 @@
 				5055FEE321BAA13000DA0CA7 /* ProfileViewController.swift in Sources */,
 				64D787BF21B7D1CE00F541E8 /* AppDelegate.swift in Sources */,
 				502D377F21B9299A00267EBD /* RegisterViewController.swift in Sources */,
+				643E104A21BE6B12006D099C /* Event.swift in Sources */,
+				643E104821BE6A54006D099C /* EventViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,6 +511,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				643E105021BE7458006D099C /* eventTests.swift in Sources */,
 				64D787D421B7D1D000F541E8 /* smidigTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
