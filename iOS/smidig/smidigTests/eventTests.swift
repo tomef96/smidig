@@ -12,8 +12,6 @@ class eventTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        var event: Event
-        event.author = "Jens"
     }
 
     override func tearDown() {
@@ -23,7 +21,12 @@ class eventTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-        
+        var event: Event
+        event.author = "Jan-Kristian"
+        event.title = "Æ e ensom"
+        event.description = "Hjælp"
+        event.places = 1
+        XCTAssert(event.author == "Jan-Kristian")
     }
 
     func testPerformanceExample() {
