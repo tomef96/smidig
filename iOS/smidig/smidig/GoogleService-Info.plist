@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>330580426352-j9t8gpkti5d1cerg1duas2dk3sipi9gi.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.330580426352-j9t8gpkti5d1cerg1duas2dk3sipi9gi</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDEcWM2KLqfyTKtnjk9BE_yE8w6l78VsPg</string>
+	<key>GCM_SENDER_ID</key>
+	<string>330580426352</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>tomef.smidig19</string>
+	<key>PROJECT_ID</key>
+	<string>smidig-67a32</string>
+	<key>STORAGE_BUCKET</key>
+	<string>smidig-67a32.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:330580426352:ios:305cc1364e0ebefb</string>
+	<key>DATABASE_URL</key>
+	<string>https://smidig-67a32.firebaseio.com</string>
+</dict>
+</plist>
