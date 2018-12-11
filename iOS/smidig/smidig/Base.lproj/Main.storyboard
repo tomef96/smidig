@@ -278,6 +278,14 @@
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="userIsNotLoggedIn" id="Bms-lP-5KS"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x5e-54-gTP">
+                                <rect key="frame" x="165" y="280" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="changeName:" destination="fqu-7K-q8P" eventType="touchUpInside" id="VFb-DP-oeq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="9Xv-ZJ-DYm"/>
@@ -286,7 +294,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="872-3e-RN2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3510" y="448"/>
+            <point key="canvasLocation" x="3508.6956521739135" y="447.99107142857139"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="S3J-Kb-vkf">
@@ -315,6 +323,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="tLI-DI-f0M"/>
-        <segue reference="ugx-Ah-ZNi"/>
+        <segue reference="Bms-lP-5KS"/>
     </inferredMetricsTieBreakers>
 </document>

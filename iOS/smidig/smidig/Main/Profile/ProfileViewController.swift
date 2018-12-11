@@ -66,5 +66,10 @@ class ProfileViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func changeName(_ sender: UIButton) {
+        let appUser = AppUser()
+        appUser.changeUsername(to: "Jan")
+        appUser.changeDescription(to: "Æ e kul")
+    }
+    
 }

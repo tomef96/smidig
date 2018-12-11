@@ -1,28 +1,30 @@
 //
-//  eventTests.swift
+//  profileTests.swift
 //  smidigTests
 //
 //  Created by Tom Fevang on 10/12/2018.
 //  Copyright © 2018 Tom Fevang. All rights reserved.
 //
+
 import XCTest
+import Firebase
 @testable import smidig
 
-class eventTests: XCTestCase {
+class profileTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        FirebaseApp.configure()
     }
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        let event = Event(author: "Jan-Kristian", places: 1, title: "Æ e ensom", description: "Hjælp", image: "", isJoined: false)
-        XCTAssert(event.author == "Jan-Kristian")
+    
+    func testChangeUsername() {
+        let user = AppUser()
+        user.changeUsername(to: "Tom")
+        XCTAssertEqual(user.username, "Tom")
     }
 
     func testPerformanceExample() {

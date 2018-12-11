@@ -14,6 +14,9 @@
 		643E104821BE6A54006D099C /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643E104721BE6A54006D099C /* EventViewController.swift */; };
 		643E104A21BE6B12006D099C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643E104921BE6B12006D099C /* Event.swift */; };
 		643E105021BE7458006D099C /* eventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643E104F21BE7458006D099C /* eventTests.swift */; };
+		643E105221BE7F15006D099C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 643E105121BE7F15006D099C /* GoogleService-Info.plist */; };
+		643E105421BE9540006D099C /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643E105321BE9540006D099C /* AppUser.swift */; };
+		643E105621BE966C006D099C /* profileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643E105521BE966C006D099C /* profileTests.swift */; };
 		64D787BF21B7D1CE00F541E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D787BE21B7D1CE00F541E8 /* AppDelegate.swift */; };
 		64D787C121B7D1CE00F541E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D787C021B7D1CE00F541E8 /* ViewController.swift */; };
 		64D787C421B7D1CE00F541E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64D787C221B7D1CE00F541E8 /* Main.storyboard */; };
@@ -51,6 +54,9 @@
 		643E104721BE6A54006D099C /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = SOURCE_ROOT; };
 		643E104921BE6B12006D099C /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = SOURCE_ROOT; };
 		643E104F21BE7458006D099C /* eventTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eventTests.swift; sourceTree = "<group>"; };
+		643E105121BE7F15006D099C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		643E105321BE9540006D099C /* AppUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUser.swift; sourceTree = "<group>"; };
+		643E105521BE966C006D099C /* profileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileTests.swift; sourceTree = "<group>"; };
 		64D787BB21B7D1CE00F541E8 /* smidig.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = smidig.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64D787BE21B7D1CE00F541E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64D787C021B7D1CE00F541E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -173,6 +179,7 @@
 			children = (
 				502D377421B926A400267EBD /* Settings */,
 				5055FEE221BAA13000DA0CA7 /* ProfileViewController.swift */,
+				643E105321BE9540006D099C /* AppUser.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -217,6 +224,7 @@
 				64D787C521B7D1D000F541E8 /* Assets.xcassets */,
 				64D787C721B7D1D000F541E8 /* LaunchScreen.storyboard */,
 				64D787CA21B7D1D000F541E8 /* Info.plist */,
+				643E105121BE7F15006D099C /* GoogleService-Info.plist */,
 			);
 			path = smidig;
 			sourceTree = "<group>";
@@ -227,6 +235,7 @@
 				64D787D321B7D1D000F541E8 /* smidigTests.swift */,
 				64D787D521B7D1D000F541E8 /* Info.plist */,
 				643E104F21BE7458006D099C /* eventTests.swift */,
+				643E105521BE966C006D099C /* profileTests.swift */,
 			);
 			path = smidigTests;
 			sourceTree = "<group>";
@@ -373,6 +382,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				64D787C921B7D1D000F541E8 /* LaunchScreen.storyboard in Resources */,
+				643E105221BE7F15006D099C /* GoogleService-Info.plist in Resources */,
 				64D787C621B7D1D000F541E8 /* Assets.xcassets in Resources */,
 				64D787C421B7D1CE00F541E8 /* Main.storyboard in Resources */,
 			);
@@ -526,6 +536,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				643E105421BE9540006D099C /* AppUser.swift in Sources */,
 				502D378221B92A1A00267EBD /* LoginViewController.swift in Sources */,
 				64D787C121B7D1CE00F541E8 /* ViewController.swift in Sources */,
 				5055FEE321BAA13000DA0CA7 /* ProfileViewController.swift in Sources */,
@@ -540,6 +551,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				643E105621BE966C006D099C /* profileTests.swift in Sources */,
 				643E105021BE7458006D099C /* eventTests.swift in Sources */,
 				64D787D421B7D1D000F541E8 /* smidigTests.swift in Sources */,
 			);

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class EventViewController: UIViewController {
 
@@ -16,13 +17,22 @@ class EventViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    func signUp(user: String, for event: Event) {
-        // TODO: Gjør det mulig å melde seg på en event
+    func join(event: Event) {
+        // TODO: Gjør det mulig å melde seg på et event
+        //User.getCurrentUser.addToSchedule(event)
+    }
+    
+    func leave(event: Event) {
+        // TODO: Gjøre det mulig å melde seg av et event
+        //User.getCurrentUser.removeFromSchedule(event)
     }
     
     func chat(with author: Event) {
         // TODO: Gjør det mulig å sende melding til vert
+        //Chat.init(with: event.author, and: User.getCurrentUser)
     }
+    
+    
     
     // MARK: - Navigation
 
