@@ -12,6 +12,7 @@ import FirebaseFirestore
 
 class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
+    @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var createBtn: UIButton!
     @IBOutlet weak var numberPicker: UIPickerView!
     @IBOutlet weak var dateTextField: UITextField!
@@ -19,7 +20,6 @@ class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     @IBOutlet weak var createButton: UIButton!
     @IBOutlet weak var descriptionTextField: UITextField!
     @IBOutlet weak var numberTextField: UITextField!
-    @IBOutlet weak var titleTextField: UITextField!
     var pickerData: [Int] = [Int]()
     private var datePicker: UIDatePicker?
     let db = Firestore.firestore()
@@ -57,8 +57,18 @@ class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         documentData["title"] = titleTextField.text
         documentData["description"] = descriptionTextField.text
         documentData["place"] = placeTextField.text
+        documentData["date"] = dateTextField.text
+        documentData["spots"] = numberTextField.text
+        documentData["owner"] = Auth.auth().currentUser?.uid
         
-        db.collection("events").addDocument(data: documentData)
+        var ref: DocumentReference? = nil
+        ref = db.collection("events").addDocument(data: documentData) { err in
+            if let err = err {
+                print("Error adding document: \(err)")
+            } else {
+                print("Document added with ID: \(ref!.documentID)")
+            }
+        }
     }
     
     @objc func viewTapped(gestureRecognizer: UITapGestureRecognizer) {
