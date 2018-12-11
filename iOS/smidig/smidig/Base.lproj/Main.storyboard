@@ -377,11 +377,21 @@
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="userIsNotLoggedIn" id="Bms-lP-5KS"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tza-Aj-D2R">
+                                <rect key="frame" x="98" y="135" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="9Xv-ZJ-DYm"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="L2b-l1-KM3"/>
+                    <connections>
+                        <outlet property="usernameLabel" destination="Tza-Aj-D2R" id="ARS-JF-f64"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="872-3e-RN2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

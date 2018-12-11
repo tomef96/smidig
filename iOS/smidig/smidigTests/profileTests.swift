@@ -14,7 +14,6 @@ class profileTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        FirebaseApp.configure()
     }
 
     override func tearDown() {
@@ -25,6 +24,12 @@ class profileTests: XCTestCase {
         let user = AppUser()
         user.changeUsername(to: "Tom")
         XCTAssertEqual(user.username, "Tom")
+    }
+    
+    func testGetUsername() {
+        let user = AppUser()
+        user.getUsername()
+        XCTAssertEqual(user.username, "Jan")
     }
 
     func testPerformanceExample() {

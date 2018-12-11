@@ -13,7 +13,9 @@ class ProfileViewController: UIViewController {
     
     var user: User?
     var handle: AuthStateDidChangeListenerHandle?
-
+    @IBOutlet weak var usernameLabel: UILabel!
+    var appUser = AppUser()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -30,6 +32,7 @@ class ProfileViewController: UIViewController {
                 self.performSegue(withIdentifier: "userIsNotLoggedIn", sender: self)
             }
         }
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

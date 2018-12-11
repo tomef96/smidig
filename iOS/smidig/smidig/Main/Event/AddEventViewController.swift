@@ -23,6 +23,8 @@ class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     var pickerData: [Int] = [Int]()
     private var datePicker: UIDatePicker?
     let db = Firestore.firestore()
+    
+    var appUser: AppUser = AppUser()
 
     override func viewDidLoad() {
         super.viewDidLoad()

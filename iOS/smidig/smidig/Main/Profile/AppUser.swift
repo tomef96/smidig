@@ -8,6 +8,7 @@
 
 import Foundation
 import Firebase
+import FirebaseFirestore
 
 class AppUser {
     
@@ -16,10 +17,10 @@ class AppUser {
     
     init() {
         db = Firestore.firestore()
-        doc = db.collection("users").document((Auth.auth().currentUser?.uid)!)
+        doc = db.collection("users").document(Auth.auth().currentUser?.uid ?? "FcfMsztg71QXT2hHq4ST1cJvowD2")
     }
         
-    var username = ""
+    var username: String = ""
     var description = ""
     
     func changeUsername(to username: String) {
@@ -32,14 +33,16 @@ class AppUser {
         doc.setData(["description": description], mergeFields: ["description"])
     }
     
-    func getUsername() {
-        doc.getDocument { (document, error) in
-            if let document = document, document.exists {
-                let name = document.data()!["username"] ?? "nil"
-            } else {
-                print("Document does not exist")
+    func getUsername(){
+            doc.getDocument { (document, error) in
+                if let document = document, document.exists {
+                    let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+                    print("Document data: \(dataDescription)")
+                    self.username = document["username"] as! String
+                } else {
+                    print("Document does not exist")
+                }
             }
         }
-    }
-    
+
 }
