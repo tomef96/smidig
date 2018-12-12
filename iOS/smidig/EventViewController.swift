@@ -14,7 +14,6 @@ class EventViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        //event = Event(owner: "owner", place: "place", description: "description", date: "date", spots: "spots", title: "title")
         eventView.populate(event: event!)
     }
     
@@ -25,7 +24,6 @@ class EventViewController: UIViewController {
     var event: Event?
     
     @IBOutlet weak var eventView: EventView!
-    
     
     // MARK: - Navigation
 

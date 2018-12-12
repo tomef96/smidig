@@ -15,10 +15,27 @@ class Event {
     let title: String
     let description: String
     let spots: String
-    //let image: String
     let date: String
+    //let time: String?
+    //let category: Category
+    //let subcategory: String
     //let isJoined: Bool
+    //let image: String
     
+    enum Category: String {
+        case Sport
+        case Gaming
+        case Fritid
+        case Friluft
+    }
+    
+    enum Place: String {
+        case Oslo
+        case Trondheim
+        case Stavanger
+        case Bergen
+    }
+
     init(owner: String, place: String, description: String, date: String, spots: String, title: String) {
         self.author = owner
         self.title = title
