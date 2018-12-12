@@ -13,25 +13,18 @@ class EventViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        //event = Event(owner: "owner", place: "place", description: "description", date: "date", spots: "spots", title: "title")
+        eventView.populate(event: event!)
     }
     
-    func join(event: Event) {
-        // TODO: Gjør det mulig å melde seg på et event
-        //User.getCurrentUser.addToSchedule(event)
+    override func viewWillAppear(_ animated: Bool) {
+        
     }
     
-    func leave(event: Event) {
-        // TODO: Gjøre det mulig å melde seg av et event
-        //User.getCurrentUser.removeFromSchedule(event)
-    }
+    var event: Event?
     
-    func chat(with author: Event) {
-        // TODO: Gjør det mulig å sende melding til vert
-        //Chat.init(with: event.author, and: User.getCurrentUser)
-    }
-    
+    @IBOutlet weak var eventView: EventView!
     
     
     // MARK: - Navigation
@@ -41,6 +34,38 @@ class EventViewController: UIViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    
+}
 
+class EventView: UIView {
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
+    @IBOutlet weak var spotsLabel: UILabel!
+    
+    @IBOutlet weak var placeLabel: UILabel!
+    
+    func populate(event: Event) {
+        titleLabel.text = event.title
+        descriptionLabel.text = event.description
+        spotsLabel.text = event.spots
+        placeLabel.text = event.place
+    }
+    
+    @IBAction func touchJoinBtn(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func touchLeaveBtn(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func touchChatBtn(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func touchReportBtn(_ sender: UIButton) {
+        
+    }
 }

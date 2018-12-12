@@ -191,6 +191,99 @@
             </objects>
             <point key="canvasLocation" x="-126" y="749"/>
         </scene>
+        <!--Detailed Event-->
+        <scene sceneID="IZ4-3c-Z63">
+            <objects>
+                <viewController title="Detailed Event" id="lV7-11-P0m" customClass="EventViewController" customModule="smidig" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qTW-Lx-97t">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0pF-Jq-uSy" customClass="EventView" customModule="smidig" customModuleProvider="target">
+                                <rect key="frame" x="20" y="44" width="374" height="818"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OxC-tL-eEe">
+                                        <rect key="frame" x="8" y="8" width="366" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FXb-Vx-fMI">
+                                        <rect key="frame" x="8" y="60" width="366" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2a-gS-WV4" userLabel="Spots Label">
+                                        <rect key="frame" x="9" y="116" width="365" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ote-G1-R5l" userLabel="Place Label">
+                                        <rect key="frame" x="8" y="167" width="358" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rlM-va-CHK" userLabel="Join Button">
+                                        <rect key="frame" x="16" y="524" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Join"/>
+                                        <connections>
+                                            <action selector="touchJoinBtn:" destination="0pF-Jq-uSy" eventType="touchUpInside" id="dya-zb-KA1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UfQ-e3-NCx" userLabel="Leave Button">
+                                        <rect key="frame" x="100" y="524" width="40" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Leave"/>
+                                        <connections>
+                                            <action selector="touchLeaveBtn:" destination="0pF-Jq-uSy" eventType="touchUpInside" id="gjn-NP-HYi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K3c-RB-8Ks" userLabel="Chat Button">
+                                        <rect key="frame" x="190" y="524" width="33" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Chat"/>
+                                        <connections>
+                                            <action selector="touchChatBtn:" destination="0pF-Jq-uSy" eventType="touchUpInside" id="qvC-zN-lvi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KxK-58-r1l" userLabel="Report Button">
+                                        <rect key="frame" x="263" y="524" width="47" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Report"/>
+                                        <connections>
+                                            <action selector="touchReportBtn:" destination="0pF-Jq-uSy" eventType="touchUpInside" id="af4-CG-8q2"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="descriptionLabel" destination="FXb-Vx-fMI" id="xqe-Fs-ckx"/>
+                                    <outlet property="placeLabel" destination="ote-G1-R5l" id="M8H-nM-yxj"/>
+                                    <outlet property="spotsLabel" destination="d2a-gS-WV4" id="6Yu-u8-mio"/>
+                                    <outlet property="titleLabel" destination="OxC-tL-eEe" id="AwI-0x-XXV"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="myI-BQ-5ZI"/>
+                    </view>
+                    <connections>
+                        <outlet property="eventView" destination="0pF-Jq-uSy" id="WEl-PP-lyw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fyd-Wp-k1m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="818.84057971014499" y="-514.28571428571422"/>
+        </scene>
         <!--Search-->
         <scene sceneID="zfO-YA-La2">
             <objects>
@@ -308,6 +401,7 @@
                                     <outlet property="eventTitleLabel" destination="OBN-yt-5Dx" id="eJL-KL-FOW"/>
                                     <outlet property="placeLabel" destination="S09-ZA-kdN" id="r8q-C3-est"/>
                                     <outlet property="spotsLabel" destination="FAg-tG-Fad" id="RqU-g9-5ku"/>
+                                    <segue destination="lV7-11-P0m" kind="showDetail" id="k7P-O5-jvZ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -515,7 +609,7 @@
         <image name="LogoPlaceholder" width="500" height="500"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tLI-DI-f0M"/>
+        <segue reference="owK-uW-RgK"/>
         <segue reference="Bms-lP-5KS"/>
     </inferredMetricsTieBreakers>
 </document>

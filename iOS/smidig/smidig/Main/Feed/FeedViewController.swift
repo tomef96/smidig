@@ -73,14 +73,23 @@ class FeedViewController: UITableViewController {
     /*override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 300
     }*/
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        let cell = sender as! EventTableViewCell
+        let title = cell.eventTitleLabel.text
+        let spots = cell.spotsLabel.text
+        let description = cell.descriptionLabel.text
+        let place = cell.placeLabel.text
+        let event = Event(owner: "owner", place: place!, description: description!, date: "date", spots: spots!, title: title!)
+        
+        let destination = segue.destination as? EventViewController
+        destination?.event = event
     }
-    */
+    
 
 }
