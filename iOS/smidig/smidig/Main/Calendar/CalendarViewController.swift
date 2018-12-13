@@ -7,18 +7,18 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 class CalendarViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        let event = Event(owner: "Jan", place: "Oslo", description: "Desc", date: "Date", spots: "Spots", title: "Title")
-        events = [event]
+        let event = Event(owner: "Yo", place: "Bro", description: "Ha", date: "La", spots: "2", title: "Bli med meg til noragutu", eventId: "id")
+        events.append(event)
     }
     
-    var events: [Event]?
-    var cells: [CalendarTableViewCell]?
+    var events = [Event]()
     
     // MARK: - Navigation
 
@@ -28,30 +28,4 @@ class CalendarViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     
-    
-
-}
-
-class CalendarTableViewCell: UITableViewCell {
-    
-    @IBOutlet weak var titleLabel: UILabel!
-    
-    @IBOutlet weak var placeLabel: UILabel!
-    
-    @IBOutlet weak var timeLabel: UILabel!
-    
-    @IBOutlet weak var totalSpotsLabel: UILabel!
-    
-    @IBOutlet weak var descriptionLabel: UILabel!
-    
-    @IBOutlet weak var spotsLabel: UILabel!
-    
-    func populate(event: Event) {
-        titleLabel.text = event.title
-        placeLabel.text = event.place
-        
-        descriptionLabel.text = event.description
-        spotsLabel.text = event.spots
-        
-    }
 }
