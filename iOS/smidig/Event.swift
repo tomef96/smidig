@@ -16,6 +16,7 @@ class Event {
     let description: String
     let spots: String
     let date: String
+    let eventId: String
     //let time: String?
     //let category: Category
     //let subcategory: String
@@ -36,22 +37,13 @@ class Event {
         case Bergen
     }
 
-    init(owner: String, place: String, description: String, date: String, spots: String, title: String) {
+    init(owner: String, place: String, description: String, date: String, spots: String, title: String, eventId: String) {
         self.author = owner
         self.title = title
         self.date = date
         self.spots = spots
         self.description = description
         self.place = place
+        self.eventId = eventId
     }
-}
-
-class Data {
-    
-    let events = [
-        Event(owner: "Jan-Kristian", place: "Grünerløkka", description: "Bli med på fotball!", date: "13/12/2018", spots: "5", title: "Fotball på løkka 1"),
-        Event(owner: "Jan-Kristian", place: "Grünerløkka", description: "Bli med på fotball!", date: "13/12/2018", spots: "5", title: "Fotball på løkka 2"),
-        Event(owner: "Jan-Kristian", place: "Grünerløkka", description: "Bli med på fotball!", date: "13/12/2018", spots: "5", title: "Fotball på løkka 3")
-    ]
-    
 }
