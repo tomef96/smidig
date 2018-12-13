@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseFirestore
 
 class EventViewController: UIViewController {
 
@@ -36,6 +37,9 @@ class EventViewController: UIViewController {
 
 class EventView: UIView {
     
+    let db = Firestore.firestore()
+    var eventId: String = ""
+    
     @IBOutlet weak var titleLabel: UILabel!
     
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -49,9 +53,15 @@ class EventView: UIView {
         descriptionLabel.text = event.description
         spotsLabel.text = event.spots
         placeLabel.text = event.place
+        eventId = event.eventId
     }
     
     @IBAction func touchJoinBtn(_ sender: UIButton) {
+        let ref = db.collection("users").document((Auth.auth().currentUser?.uid)!)
+        let eventReference = db.document("events/\(eventId)").path as String
+        
+        ref.collection("scheduele").addDocument(data: ["event" : eventReference])
+        
         
     }
     

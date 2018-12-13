@@ -20,10 +20,18 @@ class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     @IBOutlet weak var createButton: UIButton!
     @IBOutlet weak var descriptionTextField: UITextField!
     @IBOutlet weak var numberTextField: UITextField!
+    @IBOutlet weak var timeTextField: UITextField!
     var pickerData: [Int] = [Int]()
     private var datePicker: UIDatePicker?
+    private var timePicker: UIDatePicker?
+    var categoryData: [String] = [String]()
+    var subcategoryData: [String] = [String]()
     let db = Firestore.firestore()
+    @IBOutlet weak var categoryPicker: UIPickerView!
+    @IBOutlet weak var subcategoryPicker: UIPickerView!
     
+    @IBOutlet weak var subcategoryTextField: UITextField!
+    @IBOutlet weak var categoryTextField: UITextField!
     var appUser: AppUser = AppUser()
 
     override func viewDidLoad() {
@@ -33,14 +41,33 @@ class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         datePicker?.datePickerMode = .date
         datePicker?.addTarget(self, action: #selector(dateChanged(datePicker:)), for: .valueChanged)
         
+        timePicker = UIDatePicker()
+        timePicker?.datePickerMode = .time
+        timePicker?.addTarget(self, action: #selector(timeChanged(timePicker:)), for: .valueChanged)
+        
         var i = 0
         repeat {
             pickerData.append(i)
             i = i + 1
         } while i < 101
         
+        categoryData.append(contentsOf: ["Gaming", "Friluft"])
+        subcategoryData.append(contentsOf: ["CS", "Fortnite", "Klatring", "Løping"])
+        
         self.numberPicker.delegate = self
         self.numberPicker.dataSource = self
+        
+        self.categoryPicker.delegate = self
+        self.categoryPicker.dataSource = self
+        
+        self.subcategoryPicker.delegate = self
+        self.subcategoryPicker.dataSource = self
+        
+        categoryPicker.removeFromSuperview()
+        categoryTextField.inputView = categoryPicker
+        
+        subcategoryPicker.removeFromSuperview()
+        subcategoryTextField.inputView = subcategoryPicker
         
         numberPicker.removeFromSuperview()
         numberTextField.inputView = numberPicker
@@ -50,6 +77,7 @@ class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         view.addGestureRecognizer(tapGesture)
         
         dateTextField.inputView = datePicker
+        timeTextField.inputView = timePicker
     
     }
     
@@ -62,6 +90,10 @@ class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         documentData["date"] = dateTextField.text
         documentData["spots"] = numberTextField.text
         documentData["owner"] = Auth.auth().currentUser?.uid
+        documentData["time"] = timeTextField.text
+        documentData["category"] = categoryTextField.text
+        documentData["subcategory"] = subcategoryTextField.text
+        
         
         var ref: DocumentReference? = nil
         ref = db.collection("events").addDocument(data: documentData) { err in
@@ -69,6 +101,7 @@ class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
                 print("Error adding document: \(err)")
             } else {
                 print("Document added with ID: \(ref!.documentID)")
+                ref?.setData(["id" : ref?.documentID], merge: true)
             }
         }
     }
@@ -85,6 +118,15 @@ class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         dateTextField.text = dateFormatter.string(from: datePicker.date)
     }
     
+    @objc func timeChanged(timePicker: UIDatePicker) {
+        
+        let timeFormatter = DateFormatter()
+        timeFormatter.dateFormat = "HH:mm"
+        
+        timeTextField.text = timeFormatter.string(from: timePicker.date)
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -94,15 +136,35 @@ class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return pickerData.count
+        if (pickerView == numberPicker) {
+            return pickerData.count
+        } else if (pickerView == categoryPicker) {
+            return categoryData.count
+        } else if (pickerView == subcategoryPicker) {
+            return subcategoryData.count
+        }
+        return 0
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if (pickerView == numberPicker) {
             return String(pickerData[row])
+        } else if (pickerView == categoryPicker) {
+             return String(categoryData[row])
+        } else if (pickerView == subcategoryPicker) {
+            return String(subcategoryData[row])
+        }
+        return "Test"
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        numberTextField.text = String(pickerData[row])
+        if (pickerView == numberPicker) {
+           numberTextField.text = String(pickerData[row])
+        } else if (pickerView == categoryPicker) {
+            categoryTextField.text = String(categoryData[row])
+        } else if (pickerView == subcategoryPicker) {
+            subcategoryTextField.text = String(subcategoryData[row])
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){

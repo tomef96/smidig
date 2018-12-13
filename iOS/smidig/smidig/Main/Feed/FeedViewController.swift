@@ -36,8 +36,9 @@ class FeedViewController: UITableViewController {
                 let date: String = document["date"]! as! String
                 let spots: String = document["spots"]! as! String
                 let title: String = document["title"]! as! String
+                let id: String = document["id"]! as! String
                 
-                self.events.append(Event(owner: owner, place: place, description: description, date: date, spots: spots, title: title))
+                self.events.append(Event(owner: owner, place: place, description: description, date: date, spots: spots, title: title, eventId: id))
                 
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
@@ -66,6 +67,7 @@ class FeedViewController: UITableViewController {
         cell.spotsLabel.text = entry.spots
         cell.descriptionLabel.text = entry.description
         cell.placeLabel.text = entry.place
+        cell.eventId = entry.eventId
         print(entry.title)
         return cell
     }
@@ -85,7 +87,8 @@ class FeedViewController: UITableViewController {
         let spots = cell.spotsLabel.text
         let description = cell.descriptionLabel.text
         let place = cell.placeLabel.text
-        let event = Event(owner: "owner", place: place!, description: description!, date: "date", spots: spots!, title: title!)
+        let id = cell.eventId
+        let event = Event(owner: "owner", place: place!, description: description!, date: "date", spots: spots!, title: title!, eventId: id!)
         
         let destination = segue.destination as? EventViewController
         destination?.event = event
