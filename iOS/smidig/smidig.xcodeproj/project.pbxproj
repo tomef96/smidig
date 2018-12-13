@@ -22,6 +22,9 @@
 		643E105021BE7458006D099C /* eventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643E104F21BE7458006D099C /* eventTests.swift */; };
 		643E105421BE9540006D099C /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643E105321BE9540006D099C /* AppUser.swift */; };
 		643E105621BE966C006D099C /* profileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643E105521BE966C006D099C /* profileTests.swift */; };
+		64A7EE5D21C2556800B8F946 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A7EE5C21C2556800B8F946 /* CalendarViewController.swift */; };
+		64A7EE6121C269B800B8F946 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64A7EE6021C269B800B8F946 /* Calendar.storyboard */; };
+		64A7EE6321C269C500B8F946 /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A7EE6221C269C500B8F946 /* Calendar.swift */; };
 		64D787BF21B7D1CE00F541E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D787BE21B7D1CE00F541E8 /* AppDelegate.swift */; };
 		64D787C121B7D1CE00F541E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D787C021B7D1CE00F541E8 /* ViewController.swift */; };
 		64D787C421B7D1CE00F541E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64D787C221B7D1CE00F541E8 /* Main.storyboard */; };
@@ -67,6 +70,9 @@
 		643E104F21BE7458006D099C /* eventTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eventTests.swift; sourceTree = "<group>"; };
 		643E105321BE9540006D099C /* AppUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUser.swift; sourceTree = "<group>"; };
 		643E105521BE966C006D099C /* profileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileTests.swift; sourceTree = "<group>"; };
+		64A7EE5C21C2556800B8F946 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		64A7EE6021C269B800B8F946 /* Calendar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
+		64A7EE6221C269C500B8F946 /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
 		64D787BB21B7D1CE00F541E8 /* smidig.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = smidig.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64D787BE21B7D1CE00F541E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64D787C021B7D1CE00F541E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +151,7 @@
 		502D376E21B9264000267EBD /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				64A7EE5B21C2553B00B8F946 /* Calendar */,
 				502D377321B9269C00267EBD /* Profile */,
 				502D377221B9268D00267EBD /* Messages */,
 				502D377121B9268200267EBD /* Event */,
@@ -204,6 +211,16 @@
 			children = (
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		64A7EE5B21C2553B00B8F946 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				64A7EE5C21C2556800B8F946 /* CalendarViewController.swift */,
+				64A7EE6021C269B800B8F946 /* Calendar.storyboard */,
+				64A7EE6221C269C500B8F946 /* Calendar.swift */,
+			);
+			path = Calendar;
 			sourceTree = "<group>";
 		};
 		64D787B221B7D1CE00F541E8 = {
@@ -399,6 +416,7 @@
 				64D787C921B7D1D000F541E8 /* LaunchScreen.storyboard in Resources */,
 				5055FEE521BE7ECC00DA0CA7 /* GoogleService-Info.plist in Resources */,
 				64D787C621B7D1D000F541E8 /* Assets.xcassets in Resources */,
+				64A7EE6121C269B800B8F946 /* Calendar.storyboard in Resources */,
 				64D787C421B7D1CE00F541E8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -555,6 +573,7 @@
 				502D378221B92A1A00267EBD /* LoginViewController.swift in Sources */,
 				5055FEE721BE8C4300DA0CA7 /* AddEventViewController.swift in Sources */,
 				64D787C121B7D1CE00F541E8 /* ViewController.swift in Sources */,
+				64A7EE6321C269C500B8F946 /* Calendar.swift in Sources */,
 				5015E1C021C120160015004C /* EventTableViewCell.swift in Sources */,
 				5055FEE321BAA13000DA0CA7 /* ProfileViewController.swift in Sources */,
 				5015E1BA21C102200015004C /* FeedPageViewController.swift in Sources */,
@@ -563,6 +582,7 @@
 				5015E1BE21C102850015004C /* ForYouViewController.swift in Sources */,
 				502D377F21B9299A00267EBD /* RegisterViewController.swift in Sources */,
 				643E104A21BE6B12006D099C /* Event.swift in Sources */,
+				64A7EE5D21C2556800B8F946 /* CalendarViewController.swift in Sources */,
 				643E104821BE6A54006D099C /* EventViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

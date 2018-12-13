@@ -87,8 +87,8 @@ class FeedViewController: UITableViewController {
         let place = cell.placeLabel.text
         let event = Event(owner: "owner", place: place!, description: description!, date: "date", spots: spots!, title: title!)
         
-        let destination = segue.destination as? EventViewController
-        destination?.event = event
+        let destination = segue.destination as! EventViewController
+        destination.event = event
     }
     
 

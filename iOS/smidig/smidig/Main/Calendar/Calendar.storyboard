@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MhH-Z0-Mhg">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Calendar-->
+        <scene sceneID="8nq-QX-XDA">
+            <objects>
+                <viewController storyboardIdentifier="Calendar Scene" id="MhH-Z0-Mhg" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fzY-Ix-kew">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bbi-Rb-zQa">
+                                <rect key="frame" x="16" y="89" width="343" height="522"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="157" id="QWo-oV-IOl" customClass="CalendarTableViewCell" customModule="smidig" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="157"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QWo-oV-IOl" id="ec0-9x-Bc2">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="157"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1y8-NF-QIE">
+                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="157"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fotballkamp på gressbanen" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xk6-L0-HJE" userLabel="Title Label">
+                                                            <rect key="frame" x="0.0" y="0.0" width="343" height="31.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="b5m-Wa-gbt">
+                                                            <rect key="frame" x="0.0" y="39.5" width="343" height="20.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="gressbanen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zz6-1T-3Z4" userLabel="Place Label">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="89" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTk-C6-ZXR" userLabel="Time Label">
+                                                                    <rect key="frame" x="163" y="0.0" width="43" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11/12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W3W-K1-crB" userLabel="Total Spots Label">
+                                                                    <rect key="frame" x="306" y="0.0" width="37" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="lastBaseline" translatesAutoresizingMaskIntoConstraints="NO" id="jfD-Ur-MB7">
+                                                            <rect key="frame" x="0.0" y="68" width="343" height="89"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jadda Jadda Jadda Jadda Jadda Jadda Jadda Jadda Jadda Jadda Jadda Jadda" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="50" translatesAutoresizingMaskIntoConstraints="NO" id="kPU-hJ-ZC0" userLabel="Description Label">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="285.5" height="89"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="1 Ledig" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mbs-Pb-ctc" userLabel="Spots Label">
+                                                                    <rect key="frame" x="285.5" y="69" width="57.5" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="1y8-NF-QIE" firstAttribute="top" secondItem="ec0-9x-Bc2" secondAttribute="top" id="1Yj-nu-IBI"/>
+                                                <constraint firstAttribute="bottom" secondItem="1y8-NF-QIE" secondAttribute="bottom" id="BJi-K9-Cgx"/>
+                                                <constraint firstItem="1y8-NF-QIE" firstAttribute="leading" secondItem="ec0-9x-Bc2" secondAttribute="leading" id="DT9-oN-x3y"/>
+                                                <constraint firstAttribute="trailing" secondItem="1y8-NF-QIE" secondAttribute="trailing" id="ZDW-tX-1hl"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="kPU-hJ-ZC0" id="4yQ-Hf-FA7"/>
+                                            <outlet property="placeLabel" destination="Zz6-1T-3Z4" id="YMm-aP-Xhw"/>
+                                            <outlet property="spotsLabel" destination="Mbs-Pb-ctc" id="jCA-XP-McQ"/>
+                                            <outlet property="timeLabel" destination="gTk-C6-ZXR" id="a9w-z5-jjF"/>
+                                            <outlet property="titleLabel" destination="xk6-L0-HJE" id="IvA-jx-RV1"/>
+                                            <outlet property="totalSpotsLabel" destination="W3W-K1-crB" id="KZC-NU-sg9"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mitt Program" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q6p-zB-ZmZ">
+                                <rect key="frame" x="99" y="42" width="177" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MNe-L9-17x" firstAttribute="trailing" secondItem="bbi-Rb-zQa" secondAttribute="trailing" constant="16" id="1gn-KG-q5S"/>
+                            <constraint firstItem="bbi-Rb-zQa" firstAttribute="top" secondItem="MNe-L9-17x" secondAttribute="top" constant="69" id="d0x-ag-ryo"/>
+                            <constraint firstItem="MNe-L9-17x" firstAttribute="bottom" secondItem="bbi-Rb-zQa" secondAttribute="bottom" constant="7" id="kOo-4E-q6o"/>
+                            <constraint firstItem="bbi-Rb-zQa" firstAttribute="leading" secondItem="MNe-L9-17x" secondAttribute="leading" constant="16" id="yVj-Of-ArN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MNe-L9-17x"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Calendar" id="7rm-2j-Tik" userLabel="Calendar"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="llL-rK-pkS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="94.902548725637189"/>
+        </scene>
+    </scenes>
+</document>
