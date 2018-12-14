@@ -27,13 +27,13 @@ class EventTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        backgroundCellView.clipsToBounds = true
-        backgroundCellView.layer.cornerRadius = 5
-        backgroundCellView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
+        backgroundCellView?.clipsToBounds = true
+        backgroundCellView?.layer.cornerRadius = 5
+        backgroundCellView?.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
         
-        categoryRectangle.clipsToBounds = true
-        categoryRectangle.layer.cornerRadius = 5
-        categoryRectangle.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
+        categoryRectangle?.clipsToBounds = true
+        categoryRectangle?.layer.cornerRadius = 5
+        categoryRectangle?.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
         
     }
 

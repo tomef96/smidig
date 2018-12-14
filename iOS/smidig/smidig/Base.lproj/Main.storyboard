@@ -481,7 +481,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="124.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tkM-T9-ekC">
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tkM-T9-ekC" customClass="CardView" customModule="smidig" customModuleProvider="target">
                                             <rect key="frame" x="20" y="24" width="374" height="100"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
@@ -547,9 +547,9 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="backgroundCellView" destination="tkM-T9-ekC" id="3Xh-1y-HWe"/>
+                                    <outlet property="cardView" destination="tkM-T9-ekC" id="n5M-Wp-dns"/>
                                     <outlet property="categoryLabel" destination="j0m-ok-2lO" id="Nbz-3t-89w"/>
                                     <outlet property="categoryRectangle" destination="BHe-2S-h0Q" id="D0Y-aY-ULE"/>
-                                    <outlet property="cell" destination="tkM-T9-ekC" id="Hn1-C8-whk"/>
                                     <outlet property="descriptionLabel" destination="S09-ZA-kdN" id="eNd-F7-vdS"/>
                                     <outlet property="eventTitleLabel" destination="OBN-yt-5Dx" id="eJL-KL-FOW"/>
                                     <outlet property="placeLabel" destination="KfB-Rs-wmQ" id="8WQ-yq-zZi"/>
