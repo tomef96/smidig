@@ -37,6 +37,15 @@ class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        titleTextField.underlined()
+        numberTextField.underlined()
+        dateTextField.underlined()
+        placeTextField.underlined()
+        descriptionTextField.underlined()
+        categoryTextField.underlined()
+        subcategoryTextField.underlined()
+        timeTextField.underlined()
+        
         datePicker = UIDatePicker()
         datePicker?.datePickerMode = .date
         datePicker?.addTarget(self, action: #selector(dateChanged(datePicker:)), for: .valueChanged)
@@ -172,4 +181,18 @@ class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         super.touchesBegan(touches, with: event)
     }
 
+}
+
+extension UITextField {
+    
+    func underlined(){
+        let border = CALayer()
+        let width = CGFloat(2.0)
+        border.borderColor = UIColor.lightGray.cgColor
+        border.frame = CGRect(x: 0, y: self.frame.size.height - width, width:  self.frame.size.width, height: self.frame.size.height)
+        border.borderWidth = width
+        self.layer.addSublayer(border)
+        self.layer.masksToBounds = true
+    }
+    
 }
