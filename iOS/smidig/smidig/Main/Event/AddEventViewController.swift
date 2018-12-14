@@ -46,6 +46,10 @@ class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         subcategoryTextField.underlined()
         timeTextField.underlined()
         
+        createBtn.layer.cornerRadius = 0.5 * createBtn.bounds.size.width
+        createBtn.clipsToBounds = true
+        
+        
         datePicker = UIDatePicker()
         datePicker?.datePickerMode = .date
         datePicker?.addTarget(self, action: #selector(dateChanged(datePicker:)), for: .valueChanged)
