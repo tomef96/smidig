@@ -14,8 +14,6 @@ class CalendarViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        let event = Event(owner: "Yo", place: "Bro", description: "Ha", date: "La", spots: "2", title: "Bli med meg til noragutu", eventId: "id", category: "Gaming", subcategory: "CS", time: "10:30")
-        events.append(event)
     }
     
     // MARK: - Navigation

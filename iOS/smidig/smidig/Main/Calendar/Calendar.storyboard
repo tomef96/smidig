@@ -176,6 +176,7 @@
                                     <outlet property="eventTitleLabel" destination="CXe-Ul-mbU" id="ceA-cW-0WF"/>
                                     <outlet property="placeLabel" destination="nHq-7g-zuU" id="Yt8-mU-fVE"/>
                                     <outlet property="spotsLabel" destination="7ag-X2-csU" id="ONb-Lc-a1u"/>
+                                    <outlet property="timeLabel" destination="8J9-Q6-0vN" id="fSw-Pv-iv5"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

@@ -72,8 +72,8 @@ class FeedViewController: UITableViewController {
         cell.descriptionLabel.text = entry.description
         cell.placeLabel.text = entry.place
         cell.eventId = entry.eventId
-        cell.subcategoryLabel.text = entry.subcategory
-        cell.categoryLabel.text = entry.category
+        cell.subcategoryLabel?.text = entry.subcategory
+        cell.categoryLabel?.text = entry.category
         cell.timeLabel.text = entry.time
         print(entry.title)
         return cell
