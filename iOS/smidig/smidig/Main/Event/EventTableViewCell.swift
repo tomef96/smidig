@@ -18,6 +18,7 @@ class EventTableViewCell: UITableViewCell {
     @IBOutlet weak var eventTitleLabel: UILabel!
     var eventId: String!
     
+    @IBOutlet weak var cardView: CardView!
     @IBOutlet weak var subcategoryLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!

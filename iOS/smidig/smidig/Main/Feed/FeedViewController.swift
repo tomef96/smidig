@@ -75,6 +75,7 @@ class FeedViewController: UITableViewController {
         cell.subcategoryLabel?.text = entry.subcategory
         cell.categoryLabel?.text = entry.category
         cell.timeLabel.text = entry.time
+        cell.cardView?.layer.cornerRadius = 5
         print(entry.title)
         return cell
     }
@@ -95,10 +96,10 @@ class FeedViewController: UITableViewController {
         let description = cell.descriptionLabel.text
         let place = cell.placeLabel.text
         let id = cell.eventId
-        let category = cell.categoryLabel.text
-        let subcategory = cell.subcategoryLabel.text
+        let category = cell.categoryLabel?.text
+        let subcategory = cell.subcategoryLabel?.text
         let time = cell.timeLabel.text
-        let event = Event(owner: "owner", place: place!, description: description!, date: "date", spots: spots!, title: title!, eventId: id!, category: category!, subcategory: subcategory!, time: time!)
+        let event = Event(owner: "owner", place: place!, description: description!, date: "date", spots: spots!, title: title!, eventId: id!, category: category ?? "Unknown", subcategory: subcategory ?? "Unknown", time: time!)
         
         let destination = segue.destination as! EventViewController
         destination.event = event
