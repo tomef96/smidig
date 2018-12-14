@@ -66,7 +66,11 @@ class EventView: UIView {
     }
     
     @IBAction func touchLeaveBtn(_ sender: UIButton) {
+        let ref = db.collection("users").document((Auth.auth().currentUser?.uid)!)
+        let eventReference = db.document("events/\(eventId)")
         
+        let scheduleEvent = ref.collection("schedule").document(eventReference.documentID)
+        scheduleEvent.delete()
     }
     
     @IBAction func touchChatBtn(_ sender: UIButton) {
