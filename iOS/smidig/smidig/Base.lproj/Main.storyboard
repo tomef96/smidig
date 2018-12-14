@@ -229,7 +229,7 @@
         <!--Detailed Event-->
         <scene sceneID="IZ4-3c-Z63">
             <objects>
-                <viewController title="Detailed Event" id="lV7-11-P0m" customClass="EventViewController" customModule="smidig" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailedEvent" title="Detailed Event" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lV7-11-P0m" customClass="EventViewController" customModule="smidig" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qTW-Lx-97t">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
