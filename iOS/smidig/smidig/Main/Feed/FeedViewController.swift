@@ -67,7 +67,7 @@ class FeedViewController: UITableViewController {
         cell.spotsLabel.text = entry.spots
         cell.descriptionLabel.text = entry.description
         cell.placeLabel.text = entry.place
-        cell.eventId = entry.eventId
+        //cell.eventId = entry.eventId
         print(entry.title)
         return cell
     }
@@ -90,8 +90,8 @@ class FeedViewController: UITableViewController {
         let id = cell.eventId
         let event = Event(owner: "owner", place: place!, description: description!, date: "date", spots: spots!, title: title!, eventId: id!)
         
-        let destination = segue.destination as? EventViewController
-        destination?.event = event
+        let destination = segue.destination as! EventViewController
+        destination.event = event
     }
     
 
