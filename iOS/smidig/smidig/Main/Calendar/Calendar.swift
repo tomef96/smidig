@@ -8,3 +8,7 @@
 
 import Foundation
 
+class Calendar {
+    
+    var events: [Event]?
+}

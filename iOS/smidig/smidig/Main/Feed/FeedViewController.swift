@@ -67,7 +67,7 @@ class FeedViewController: UITableViewController {
         cell.spotsLabel.text = entry.spots
         cell.descriptionLabel.text = entry.description
         cell.placeLabel.text = entry.place
-        //cell.eventId = entry.eventId
+        cell.eventId = entry.eventId
         print(entry.title)
         return cell
     }

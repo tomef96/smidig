@@ -58,9 +58,9 @@ class EventView: UIView {
     
     @IBAction func touchJoinBtn(_ sender: UIButton) {
         let ref = db.collection("users").document((Auth.auth().currentUser?.uid)!)
-        let eventReference = db.document("events/\(eventId)").path as String
+        let eventReference = db.document("events/\(eventId)")
         
-        ref.collection("scheduele").addDocument(data: ["event" : eventReference])
+        ref.collection("schedule").addDocument(data: ["event" : eventReference])
         
         
     }
