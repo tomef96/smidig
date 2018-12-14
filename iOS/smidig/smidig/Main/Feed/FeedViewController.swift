@@ -21,6 +21,7 @@ class FeedViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
     }
 
