@@ -469,16 +469,16 @@
         <scene sceneID="8g0-lD-Ee4">
             <objects>
                 <tableViewController storyboardIdentifier="FeedViewController" id="7th-eJ-QU9" customClass="FeedViewController" customModule="smidig" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" id="y5y-fU-npt">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="126" sectionHeaderHeight="28" sectionFooterHeight="28" id="y5y-fU-npt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="150" id="u3I-5w-vBC" customClass="EventTableViewCell" customModule="smidig" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="150"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="125" id="u3I-5w-vBC" customClass="EventTableViewCell" customModule="smidig" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="125"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="u3I-5w-vBC" id="MCg-Zg-OZ2">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="149.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="124.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tkM-T9-ekC">
@@ -541,13 +541,15 @@
                                                     <color key="highlightedColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" white="0.92749357876712324" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" red="0.98431372549019602" green="0.98431372549019602" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </view>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="backgroundCellView" destination="tkM-T9-ekC" id="3Xh-1y-HWe"/>
                                     <outlet property="categoryLabel" destination="j0m-ok-2lO" id="Nbz-3t-89w"/>
+                                    <outlet property="categoryRectangle" destination="BHe-2S-h0Q" id="D0Y-aY-ULE"/>
+                                    <outlet property="cell" destination="tkM-T9-ekC" id="Hn1-C8-whk"/>
                                     <outlet property="descriptionLabel" destination="S09-ZA-kdN" id="eNd-F7-vdS"/>
                                     <outlet property="eventTitleLabel" destination="OBN-yt-5Dx" id="eJL-KL-FOW"/>
                                     <outlet property="placeLabel" destination="KfB-Rs-wmQ" id="8WQ-yq-zZi"/>
