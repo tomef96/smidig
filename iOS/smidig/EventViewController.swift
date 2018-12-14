@@ -14,6 +14,9 @@ class EventViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self as? UIGestureRecognizerDelegate;
+
         // Do any additional setup after loading the view.
         eventView.populate(event: event!)
     }
