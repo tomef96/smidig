@@ -37,9 +37,12 @@ class FeedViewController: UITableViewController {
                 let date: String = document["date"]! as! String
                 let spots: String = document["spots"]! as! String
                 let title: String = document["title"]! as! String
+                let category: String = document["category"]! as! String
+                let subcategory: String = document["subcategory"] as! String
+                let time: String = document["time"] as! String
                 let id: String = document["id"]! as! String
                 
-                self.events.append(Event(owner: owner, place: place, description: description, date: date, spots: spots, title: title, eventId: id))
+                self.events.append(Event(owner: owner, place: place, description: description, date: date, spots: spots, title: title, eventId: id, category: category, subcategory: subcategory, time: time))
                 
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
@@ -69,6 +72,9 @@ class FeedViewController: UITableViewController {
         cell.descriptionLabel.text = entry.description
         cell.placeLabel.text = entry.place
         cell.eventId = entry.eventId
+        cell.subcategoryLabel.text = entry.subcategory
+        cell.categoryLabel.text = entry.category
+        cell.timeLabel.text = entry.time
         print(entry.title)
         return cell
     }
@@ -89,7 +95,10 @@ class FeedViewController: UITableViewController {
         let description = cell.descriptionLabel.text
         let place = cell.placeLabel.text
         let id = cell.eventId
-        let event = Event(owner: "owner", place: place!, description: description!, date: "date", spots: spots!, title: title!, eventId: id!)
+        let category = cell.categoryLabel.text
+        let subcategory = cell.subcategoryLabel.text
+        let time = cell.timeLabel.text
+        let event = Event(owner: "owner", place: place!, description: description!, date: "date", spots: spots!, title: title!, eventId: id!, category: category!, subcategory: subcategory!, time: time!)
         
         let destination = segue.destination as! EventViewController
         destination.event = event

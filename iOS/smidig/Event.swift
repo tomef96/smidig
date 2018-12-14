@@ -17,9 +17,9 @@ class Event {
     let spots: String
     let date: String
     let eventId: String
-    //let time: String?
-    //let category: Category
-    //let subcategory: String
+    let time: String
+    let category: String
+    let subcategory: String
     //let isJoined: Bool
     //let image: String
     
@@ -37,7 +37,7 @@ class Event {
         case Bergen
     }
 
-    init(owner: String, place: String, description: String, date: String, spots: String, title: String, eventId: String) {
+    init(owner: String, place: String, description: String, date: String, spots: String, title: String, eventId: String, category: String, subcategory: String, time: String) {
         self.author = owner
         self.title = title
         self.date = date
@@ -45,5 +45,8 @@ class Event {
         self.description = description
         self.place = place
         self.eventId = eventId
+        self.category = category
+        self.subcategory = subcategory
+        self.time = time
     }
 }
