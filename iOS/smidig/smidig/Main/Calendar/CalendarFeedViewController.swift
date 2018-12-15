@@ -17,7 +17,7 @@ class CalendarFeedViewController: FeedViewController {
             .collection("schedule")
         docRef.getDocuments { (documents, err) in
             for document in (documents?.documents)! {
-                let event: DocumentReference = document.data()["event"] as! DocumentReference
+                let event = document.data()["event"] as! DocumentReference
                 event.getDocument(completion: { (document, err) in
                     if let document = document, document.exists {
                         let owner: String = document["owner"]! as! String

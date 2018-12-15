@@ -64,16 +64,21 @@ class EventView: UIView {
         let eventReference = db.document("events/\(eventId)")
         
         ref.collection("schedule").addDocument(data: ["event" : eventReference])
-        
-        
     }
     
     @IBAction func touchLeaveBtn(_ sender: UIButton) {
-        let ref = db.collection("users").document((Auth.auth().currentUser?.uid)!)
+        let docRef = db.collection("users").document((Auth.auth().currentUser?.uid)!).collection("schedule")
         let eventReference = db.document("events/\(eventId)")
+        docRef.getDocuments { (documents, err) in
+            for document in (documents?.documents)! {
+                let result = document.data().first
+                if result?.value as! DocumentReference == eventReference {
+                    let document = document.documentID
+                    docRef.document(document).delete()
+                }
+            }
+        }
         
-        let scheduleEvent = ref.collection("schedule").document(eventReference.documentID)
-        scheduleEvent.delete()
     }
     
     @IBAction func touchChatBtn(_ sender: UIButton) {
