@@ -100,7 +100,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <outlet property="cardView" destination="xAc-Ou-vVi" id="S2S-Q8-WYC"/>
+                                    <outlet property="cardView" destination="xAc-Ou-vVi" id="i7o-V6-hYl"/>
                                     <outlet property="descriptionLabel" destination="iWi-bl-r5e" id="PKV-JB-8zI"/>
                                     <outlet property="eventTitleLabel" destination="CXe-Ul-mbU" id="ceA-cW-0WF"/>
                                     <outlet property="placeLabel" destination="nHq-7g-zuU" id="Yt8-mU-fVE"/>

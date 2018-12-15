@@ -17,6 +17,7 @@ class EventTableViewCell: UITableViewCell {
     @IBOutlet weak var eventImageView: UIImageView!
     @IBOutlet weak var eventTitleLabel: UILabel!
     var eventId: String!
+    @IBOutlet weak var categoryRectangle: UIView!
     
     @IBOutlet weak var cardView: CardView!
     @IBOutlet weak var subcategoryLabel: UILabel!
@@ -25,6 +26,15 @@ class EventTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        backgroundCellView?.clipsToBounds = true
+        backgroundCellView?.layer.cornerRadius = 5
+        backgroundCellView?.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
+        
+        categoryRectangle?.clipsToBounds = true
+        categoryRectangle?.layer.cornerRadius = 5
+        categoryRectangle?.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
