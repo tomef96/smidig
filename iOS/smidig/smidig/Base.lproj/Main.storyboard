@@ -299,14 +299,14 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="47" height="30"/>
                                                         <state key="normal" title="Join"/>
                                                         <connections>
-                                                            <action selector="touchJoinBtn:" destination="0pF-Jq-uSy" eventType="touchUpInside" id="dya-zb-KA1"/>
+                                                            <action selector="joinEvent:" destination="lV7-11-P0m" eventType="touchUpInside" id="ufb-hB-vKY"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UfQ-e3-NCx" userLabel="Leave Button">
                                                         <rect key="frame" x="64" y="0.0" width="47" height="30"/>
                                                         <state key="normal" title="Leave"/>
                                                         <connections>
-                                                            <action selector="touchLeaveBtn:" destination="0pF-Jq-uSy" eventType="touchUpInside" id="gjn-NP-HYi"/>
+                                                            <action selector="leaveEvent:" destination="lV7-11-P0m" eventType="touchUpInside" id="Nkf-Q5-7b3"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K3c-RB-8Ks" userLabel="Chat Button">
@@ -384,10 +384,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="0pF-Jq-uSy" firstAttribute="leading" secondItem="myI-BQ-5ZI" secondAttribute="leading" id="MBK-xc-BqA"/>
-                            <constraint firstItem="myI-BQ-5ZI" firstAttribute="bottom" secondItem="0pF-Jq-uSy" secondAttribute="bottom" id="Oo2-k0-RqD"/>
-                            <constraint firstItem="myI-BQ-5ZI" firstAttribute="trailing" secondItem="0pF-Jq-uSy" secondAttribute="trailing" id="b3g-v5-Kq0"/>
-                            <constraint firstItem="0pF-Jq-uSy" firstAttribute="top" secondItem="myI-BQ-5ZI" secondAttribute="top" id="oTe-p9-v0w"/>
+                            <constraint firstItem="0pF-Jq-uSy" firstAttribute="width" secondItem="myI-BQ-5ZI" secondAttribute="width" id="8dg-p0-du0"/>
+                            <constraint firstItem="0pF-Jq-uSy" firstAttribute="leading" secondItem="qTW-Lx-97t" secondAttribute="leading" id="CK7-d0-Rzc"/>
+                            <constraint firstItem="0pF-Jq-uSy" firstAttribute="top" secondItem="myI-BQ-5ZI" secondAttribute="top" id="WLW-Si-ozB"/>
+                            <constraint firstItem="0pF-Jq-uSy" firstAttribute="height" secondItem="myI-BQ-5ZI" secondAttribute="height" id="XxY-MJ-wYt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="myI-BQ-5ZI"/>
                     </view>
@@ -481,13 +481,11 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="124.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tkM-T9-ekC" customClass="CardView" customModule="smidig" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tkM-T9-ekC" customClass="CardView" customModule="smidig" customModuleProvider="target">
                                             <rect key="frame" x="20" y="24" width="374" height="100"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BHe-2S-h0Q" userLabel="categoryRectangle">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BHe-2S-h0Q" userLabel="categoryRectangle">
                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="17"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gaming" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j0m-ok-2lO" userLabel="Category">
                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="17"/>
@@ -542,8 +540,20 @@
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" red="0.98431372549019602" green="0.98431372549019602" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="BHe-2S-h0Q" secondAttribute="bottom" constant="83" id="8M8-cZ-hk9"/>
+                                                <constraint firstItem="BHe-2S-h0Q" firstAttribute="leading" secondItem="tkM-T9-ekC" secondAttribute="leading" id="fY0-Tx-mH0"/>
+                                                <constraint firstItem="BHe-2S-h0Q" firstAttribute="top" secondItem="tkM-T9-ekC" secondAttribute="top" id="h4y-io-GCR"/>
+                                                <constraint firstAttribute="trailing" secondItem="BHe-2S-h0Q" secondAttribute="trailing" id="rbJ-wI-GGx"/>
+                                            </constraints>
                                         </view>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="tkM-T9-ekC" firstAttribute="leading" secondItem="MCg-Zg-OZ2" secondAttribute="leading" constant="20" id="ANR-nC-5bU"/>
+                                        <constraint firstAttribute="bottom" secondItem="tkM-T9-ekC" secondAttribute="bottom" constant="0.5" id="X05-wt-5d5"/>
+                                        <constraint firstAttribute="trailing" secondItem="tkM-T9-ekC" secondAttribute="trailing" constant="20" id="cF1-Gh-q68"/>
+                                        <constraint firstItem="tkM-T9-ekC" firstAttribute="top" secondItem="MCg-Zg-OZ2" secondAttribute="top" constant="24" id="ezz-QQ-aED"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="backgroundCellView" destination="tkM-T9-ekC" id="3Xh-1y-HWe"/>

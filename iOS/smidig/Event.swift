@@ -7,8 +7,11 @@
 //
 
 import Foundation
+import Firebase
 
 class Event {
+    
+    let db = Firestore.firestore()
         
     let author: String
     let place: String
@@ -20,6 +23,7 @@ class Event {
     let time: String
     let category: String
     let subcategory: String
+    // TODO: let spotsLeft: Int
     //let isJoined: Bool
     //let image: String
     
@@ -48,5 +52,26 @@ class Event {
         self.category = category
         self.subcategory = subcategory
         self.time = time
+    }
+    
+    func leave() {
+        let docRef = db.collection("users").document((Auth.auth().currentUser?.uid)!).collection("schedule")
+        let eventReference = db.document("events/\(eventId)")
+        docRef.getDocuments { (documents, err) in
+            for document in (documents?.documents)! {
+                let result = document.data().first
+                if result?.value as! DocumentReference == eventReference {
+                    let document = document.documentID
+                    docRef.document(document).delete()
+                }
+            }
+        }
+    }
+    
+    func join() {
+        let ref = db.collection("users").document((Auth.auth().currentUser?.uid)!)
+        let eventReference = db.document("events/\(eventId)")
+        
+        ref.collection("schedule").addDocument(data: ["event" : eventReference])
     }
 }

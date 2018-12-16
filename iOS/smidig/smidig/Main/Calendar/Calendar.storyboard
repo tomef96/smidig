@@ -29,8 +29,8 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xAc-Ou-vVi" customClass="CardView" customModule="smidig" customModuleProvider="target">
                                             <rect key="frame" x="16" y="11" width="343" height="183"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="rDj-dI-Yo4">
-                                                    <rect key="frame" x="8" y="8" width="327" height="151.5"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="rDj-dI-Yo4">
+                                                    <rect key="frame" x="8" y="15.5" width="327" height="151.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title of the event" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CXe-Ul-mbU" userLabel="Title Label">
                                                             <rect key="frame" x="0.0" y="0.0" width="327" height="31.5"/>
@@ -86,7 +86,7 @@
                                                 <constraint firstItem="rDj-dI-Yo4" firstAttribute="leading" secondItem="xAc-Ou-vVi" secondAttribute="leading" constant="8" id="32X-Py-Iwa"/>
                                                 <constraint firstAttribute="trailing" secondItem="rDj-dI-Yo4" secondAttribute="trailing" constant="8" id="BIL-SV-RbO"/>
                                                 <constraint firstItem="rDj-dI-Yo4" firstAttribute="top" relation="greaterThanOrEqual" secondItem="xAc-Ou-vVi" secondAttribute="top" constant="8" id="WQf-11-XuI"/>
-                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="rDj-dI-Yo4" secondAttribute="bottom" constant="16" id="x2O-cC-Gel"/>
+                                                <constraint firstAttribute="bottom" secondItem="rDj-dI-Yo4" secondAttribute="bottom" constant="16" id="x2O-cC-Gel"/>
                                             </constraints>
                                         </view>
                                     </subviews>
