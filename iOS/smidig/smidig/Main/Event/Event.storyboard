@@ -344,7 +344,7 @@
                         <viewLayoutGuide key="safeArea" id="XwY-6S-vRd"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="baseline_add_circle_black_36pt" selectedImage="baseline_add_circle_black_36pt" id="pOH-OK-eQl">
-                        <inset key="imageInsets" minX="0.0" minY="3" maxX="0.0" maxY="0.0"/>
+                        <inset key="imageInsets" minX="0.0" minY="4" maxX="0.0" maxY="0.0"/>
                     </tabBarItem>
                     <connections>
                         <outlet property="categoryPicker" destination="BZf-Cd-F4H" id="QtQ-SW-eqO"/>

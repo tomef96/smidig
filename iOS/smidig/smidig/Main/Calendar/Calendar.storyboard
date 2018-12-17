@@ -180,7 +180,7 @@
                         <viewLayoutGuide key="safeArea" id="c88-4h-yT6"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="baseline_calendar_today_black_36pt" id="ELC-RP-NsW" userLabel="Program">
-                        <inset key="imageInsets" minX="0.0" minY="3" maxX="0.0" maxY="0.0"/>
+                        <inset key="imageInsets" minX="0.0" minY="4" maxX="0.0" maxY="0.0"/>
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
