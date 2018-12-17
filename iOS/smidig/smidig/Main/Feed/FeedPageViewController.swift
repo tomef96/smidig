@@ -12,8 +12,8 @@ class FeedPageViewController: UIPageViewController, UIPageViewControllerDelegate
     
     lazy var subViewControllers : [UIViewController] = {
         return [
-        UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FeedViewController") as! FeedViewController,
-        UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ForYouViewController") as! ForYouViewController
+        UIStoryboard(name: "Feed", bundle: nil).instantiateViewController(withIdentifier: "FeedViewController") as! FeedViewController,
+        UIStoryboard(name: "Feed", bundle: nil).instantiateViewController(withIdentifier: "ForYouViewController") as! ForYouViewController
         ]
     }()
 

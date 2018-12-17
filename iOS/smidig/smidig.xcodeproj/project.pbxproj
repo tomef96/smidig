@@ -12,6 +12,10 @@
 		5015E1BC21C1024E0015004C /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5015E1BB21C1024E0015004C /* FeedViewController.swift */; };
 		5015E1BE21C102850015004C /* ForYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5015E1BD21C102850015004C /* ForYouViewController.swift */; };
 		5015E1C021C120160015004C /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5015E1BF21C120160015004C /* EventTableViewCell.swift */; };
+		5015E1C821C7AC610015004C /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5015E1C721C7AC610015004C /* Feed.storyboard */; };
+		5015E1CA21C7ADC90015004C /* Event.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5015E1C921C7ADC90015004C /* Event.storyboard */; };
+		5015E1CC21C7AF1F0015004C /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5015E1CB21C7AF1F0015004C /* Profile.storyboard */; };
+		5015E1CE21C7AF5F0015004C /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5015E1CD21C7AF5F0015004C /* Search.storyboard */; };
 		502D377F21B9299A00267EBD /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502D377E21B9299A00267EBD /* RegisterViewController.swift */; };
 		502D378221B92A1A00267EBD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502D378121B92A1A00267EBD /* LoginViewController.swift */; };
 		5055FEE321BAA13000DA0CA7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5055FEE221BAA13000DA0CA7 /* ProfileViewController.swift */; };
@@ -60,6 +64,10 @@
 		5015E1BB21C1024E0015004C /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		5015E1BD21C102850015004C /* ForYouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouViewController.swift; sourceTree = "<group>"; };
 		5015E1BF21C120160015004C /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
+		5015E1C721C7AC610015004C /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
+		5015E1C921C7ADC90015004C /* Event.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Event.storyboard; sourceTree = "<group>"; };
+		5015E1CB21C7AF1F0015004C /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		5015E1CD21C7AF5F0015004C /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		502D377E21B9299A00267EBD /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		502D378121B92A1A00267EBD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5055FEE221BAA13000DA0CA7 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -169,6 +177,7 @@
 				5015E1B921C102200015004C /* FeedPageViewController.swift */,
 				5015E1BB21C1024E0015004C /* FeedViewController.swift */,
 				5015E1BD21C102850015004C /* ForYouViewController.swift */,
+				5015E1C721C7AC610015004C /* Feed.storyboard */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -176,6 +185,7 @@
 		502D377021B9267800267EBD /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				5015E1CD21C7AF5F0015004C /* Search.storyboard */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -187,6 +197,7 @@
 				643E104921BE6B12006D099C /* Event.swift */,
 				5055FEE621BE8C4300DA0CA7 /* AddEventViewController.swift */,
 				5015E1BF21C120160015004C /* EventTableViewCell.swift */,
+				5015E1C921C7ADC90015004C /* Event.storyboard */,
 			);
 			path = Event;
 			sourceTree = "<group>";
@@ -204,6 +215,7 @@
 				502D377421B926A400267EBD /* Settings */,
 				5055FEE221BAA13000DA0CA7 /* ProfileViewController.swift */,
 				643E105321BE9540006D099C /* AppUser.swift */,
+				5015E1CB21C7AF1F0015004C /* Profile.storyboard */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -418,8 +430,12 @@
 			files = (
 				64D787C921B7D1D000F541E8 /* LaunchScreen.storyboard in Resources */,
 				5055FEE521BE7ECC00DA0CA7 /* GoogleService-Info.plist in Resources */,
+				5015E1CC21C7AF1F0015004C /* Profile.storyboard in Resources */,
+				5015E1C821C7AC610015004C /* Feed.storyboard in Resources */,
+				5015E1CE21C7AF5F0015004C /* Search.storyboard in Resources */,
 				64D787C621B7D1D000F541E8 /* Assets.xcassets in Resources */,
 				64A7EE6121C269B800B8F946 /* Calendar.storyboard in Resources */,
+				5015E1CA21C7ADC90015004C /* Event.storyboard in Resources */,
 				64D787C421B7D1CE00F541E8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

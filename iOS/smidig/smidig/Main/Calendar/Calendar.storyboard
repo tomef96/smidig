@@ -124,12 +124,12 @@
         <!--DetailedEvent-->
         <scene sceneID="6w2-6H-Z8x">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="DetailedEvent" id="2Vy-IP-Cge" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Event" referencedIdentifier="DetailedEvent" id="2Vy-IP-Cge" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K8W-q4-wQz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1554" y="-1102"/>
         </scene>
-        <!--Calendar-->
+        <!--Program-->
         <scene sceneID="6lQ-iA-DGH">
             <objects>
                 <viewController id="kwe-bi-hce" customClass="CalendarViewController" customModule="smidig" customModuleProvider="target" sceneMemberID="viewController">
@@ -179,7 +179,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="c88-4h-yT6"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Calendar" id="ELC-RP-NsW" userLabel="Calendar"/>
+                    <tabBarItem key="tabBarItem" title="Program" image="baseline_calendar_today_black_36pt" id="ELC-RP-NsW" userLabel="Program"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RKd-XM-TH0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -187,4 +187,7 @@
             <point key="canvasLocation" x="136.80000000000001" y="-838.83058470764627"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="baseline_calendar_today_black_36pt" width="72" height="72"/>
+    </resources>
 </document>
