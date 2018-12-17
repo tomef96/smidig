@@ -66,34 +66,4 @@ class EventView: UIView {
         placeLabel.text = event.place
         eventId = event.eventId
     }
-    
-    @IBAction func touchJoinBtn(_ sender: UIButton) {
-//        let ref = db.collection("users").document((Auth.auth().currentUser?.uid)!)
-//        let eventReference = db.document("events/\(eventId)")
-//
-//        ref.collection("schedule").addDocument(data: ["event" : eventReference])
-    }
-    
-    @IBAction func touchLeaveBtn(_ sender: UIButton) {
-//        let docRef = db.collection("users").document((Auth.auth().currentUser?.uid)!).collection("schedule")
-//        let eventReference = db.document("events/\(eventId)")
-//        docRef.getDocuments { (documents, err) in
-//            for document in (documents?.documents)! {
-//                let result = document.data().first
-//                if result?.value as! DocumentReference == eventReference {
-//                    let document = document.documentID
-//                    docRef.document(document).delete()
-//                }
-//            }
-//        }
-        
-    }
-    
-    @IBAction func touchChatBtn(_ sender: UIButton) {
-        
-    }
-    
-    @IBAction func touchReportBtn(_ sender: UIButton) {
-        
-    }
 }
