@@ -343,7 +343,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="XwY-6S-vRd"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Ny Aktivitet" image="baseline_add_circle_black_36pt" selectedImage="baseline_add_circle_black_36pt" id="pOH-OK-eQl"/>
+                    <tabBarItem key="tabBarItem" title="" image="baseline_add_circle_black_36pt" selectedImage="baseline_add_circle_black_36pt" id="pOH-OK-eQl">
+                        <inset key="imageInsets" minX="0.0" minY="3" maxX="0.0" maxY="0.0"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="categoryPicker" destination="BZf-Cd-F4H" id="QtQ-SW-eqO"/>
                         <outlet property="categoryTextField" destination="od6-w2-DYw" id="bCL-Zu-kzU"/>
