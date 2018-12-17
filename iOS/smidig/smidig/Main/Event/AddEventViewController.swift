@@ -188,7 +188,6 @@ class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
 }
 
 extension UITextField {
-    
     func underlined(){
         let border = CALayer()
         let width = CGFloat(2.0)
@@ -198,5 +197,4 @@ extension UITextField {
         self.layer.addSublayer(border)
         self.layer.masksToBounds = true
     }
-    
 }
