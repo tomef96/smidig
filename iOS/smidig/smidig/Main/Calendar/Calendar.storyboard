@@ -129,7 +129,7 @@
             </objects>
             <point key="canvasLocation" x="1554" y="-1102"/>
         </scene>
-        <!--Program-->
+        <!--Calendar View Controller-->
         <scene sceneID="6lQ-iA-DGH">
             <objects>
                 <viewController id="kwe-bi-hce" customClass="CalendarViewController" customModule="smidig" customModuleProvider="target" sceneMemberID="viewController">
@@ -179,7 +179,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="c88-4h-yT6"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Program" image="baseline_calendar_today_black_36pt" id="ELC-RP-NsW" userLabel="Program"/>
+                    <tabBarItem key="tabBarItem" title="" image="baseline_calendar_today_black_36pt" id="ELC-RP-NsW" userLabel="Program">
+                        <inset key="imageInsets" minX="0.0" minY="3" maxX="0.0" maxY="0.0"/>
+                    </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RKd-XM-TH0" userLabel="First Responder" sceneMemberID="firstResponder"/>

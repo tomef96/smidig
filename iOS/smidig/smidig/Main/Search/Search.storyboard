@@ -20,7 +20,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="HWn-iQ-oeX"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="search" id="rR4-0d-f0f"/>
+                    <tabBarItem key="tabBarItem" image="baseline_search_black_36pt" id="rR4-0d-f0f">
+                        <inset key="imageInsets" minX="0.0" minY="3" maxX="0.0" maxY="0.0"/>
+                    </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CY6-TV-Q0d" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -28,4 +30,7 @@
             <point key="canvasLocation" x="418" y="-210"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="baseline_search_black_36pt" width="72" height="72"/>
+    </resources>
 </document>

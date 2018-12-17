@@ -14,7 +14,9 @@
         <scene sceneID="Hj8-in-6LV">
             <objects>
                 <pageViewController storyboardIdentifier="FeedController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="jqC-tu-IuR" userLabel="Feed" customClass="FeedPageViewController" customModule="smidig" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Hjem" image="baseline_home_black_36pt" id="r3S-eL-oTX"/>
+                    <tabBarItem key="tabBarItem" title="" image="baseline_home_black_36pt" id="r3S-eL-oTX">
+                        <inset key="imageInsets" minX="0.0" minY="3" maxX="0.0" maxY="0.0"/>
+                    </tabBarItem>
                     <connections>
                         <segue destination="zLl-my-MUg" kind="show" id="ruc-Gj-KN3"/>
                     </connections>
