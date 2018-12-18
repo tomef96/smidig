@@ -17,6 +17,9 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        emailTextView.underlined()
+        passwordTextView.underlined()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
