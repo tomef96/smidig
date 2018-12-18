@@ -49,10 +49,19 @@
                     </tabBarItem>
                     <connections>
                         <outlet property="usernameLabel" destination="zUF-E2-hmP" id="w1T-44-X1b"/>
+                        <segue destination="V1A-YE-M2W" kind="show" identifier="userIsNotLoggedIn" id="bx5-y8-pvR"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="3510" y="448"/>
+            <point key="canvasLocation" x="3474" y="437"/>
+        </scene>
+        <!--Onboarding-->
+        <scene sceneID="YSD-Xw-9Vo">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Onboarding" id="V1A-YE-M2W" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="idK-PL-tvt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4076" y="395"/>
         </scene>
     </scenes>
     <resources>
