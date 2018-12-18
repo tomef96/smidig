@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="d1T-sQ-xco">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -29,6 +29,9 @@
                                         <state key="normal" title="Click here to register">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="kJg-xF-dy9" kind="show" id="l2R-eJ-Vgs"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FOO-cr-NhP" userLabel="EmailTextField">
                                         <rect key="frame" x="20" y="336" width="335" height="30"/>
@@ -82,6 +85,7 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="loginUser:" destination="d1T-sQ-xco" eventType="touchUpInside" id="pXX-CE-lX3"/>
+                                            <segue destination="C5L-pj-4Am" kind="show" identifier="userIsLoggedIn" id="zNm-1Z-Hdl"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -122,6 +126,14 @@
             </objects>
             <point key="canvasLocation" x="125" y="-155"/>
         </scene>
+        <!--NavController-->
+        <scene sceneID="s9Q-S4-TWb">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="NavController" id="C5L-pj-4Am" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wCd-2S-69N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1009" y="-23"/>
+        </scene>
         <!--Register View Controller-->
         <scene sceneID="QzR-qc-304">
             <objects>
@@ -149,6 +161,9 @@
                                 <state key="normal" title="Already have an account?">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="d1T-sQ-xco" kind="show" id="y2z-vq-fwm"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aeB-09-xWQ" userLabel="PasswordTextField">
                                 <rect key="frame" x="160" y="433" width="97" height="30"/>
