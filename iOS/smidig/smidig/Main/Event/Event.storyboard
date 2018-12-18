@@ -34,7 +34,7 @@
                                         <rect key="frame" x="0.0" y="46" width="375" height="601"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ccz-sc-UTR">
-                                                <rect key="frame" x="16" y="16" width="343" height="308"/>
+                                                <rect key="frame" x="16" y="16" width="343" height="350"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fotballkamp på gressbanen" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRm-k6-3ql">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="86"/>
@@ -42,14 +42,14 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vi kjører en liten fotballkamp! Vi trenger flere spillere, lagene organiserer vi når vi er der. Bli med oss!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rBq-jR-ZS5">
-                                                        <rect key="frame" x="0.0" y="94" width="343" height="61"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vi kjører en liten fotballkamp! Vi trenger flere spillere, lagene organiserer vi når vi er der. Bli med oss!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rBq-jR-ZS5">
+                                                        <rect key="frame" x="0.0" y="108" width="343" height="61"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="aOJ-ty-Sxf" userLabel="FirstDetailStack View">
-                                                        <rect key="frame" x="0.0" y="185.5" width="343" height="41"/>
+                                                        <rect key="frame" x="0.0" y="213.5" width="343" height="41"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9ZN-9i-JXy">
                                                                 <rect key="frame" x="0.0" y="0.0" width="171.5" height="41"/>
@@ -88,7 +88,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="iL6-da-usS" userLabel="SecondDetailStack View">
-                                                        <rect key="frame" x="0.0" y="267" width="343" height="41"/>
+                                                        <rect key="frame" x="0.0" y="309" width="343" height="41"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Zm1-la-Wxi" userLabel="TimeStack View">
                                                                 <rect key="frame" x="0.0" y="0.0" width="171.5" height="41"/>
@@ -128,11 +128,11 @@
                                                     </stackView>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="350" id="MwD-FS-rMY"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="350" id="MwD-FS-rMY"/>
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="H3U-Oz-D5i">
-                                                <rect key="frame" x="16" y="344" width="343" height="153"/>
+                                                <rect key="frame" x="16" y="386" width="343" height="153"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="m1J-RZ-t5H">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="76.5"/>
