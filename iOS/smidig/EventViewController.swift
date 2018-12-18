@@ -67,3 +67,20 @@ class EventView: UIView {
         eventId = event.eventId
     }
 }
+
+class RoundButton : UIButton {
+    
+    var selectedState: Bool = false
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        //layer.borderWidth = 2 / UIScreen.main.nativeScale
+        //layer.borderColor = UIColor.white.cgColor
+    }
+    
+    
+    override func layoutSubviews(){
+        super.layoutSubviews()
+        layer.cornerRadius = 4
+    }
+}
