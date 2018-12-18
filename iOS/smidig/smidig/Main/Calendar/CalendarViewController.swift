@@ -27,6 +27,9 @@ class CalendarViewController: UIViewController {
 
 class CardView: UIView {
     
-    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        layer.cornerRadius = 6
+    }
     
 }

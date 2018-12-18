@@ -30,7 +30,6 @@ class EventTableViewCell: UITableViewCell {
         /*backgroundCellView?.clipsToBounds = true
         backgroundCellView?.layer.cornerRadius = 64
         backgroundCellView?.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner, .layerMaxXMinYCorner, .layerMinXMinYCorner]*/
-        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
