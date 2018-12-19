@@ -103,6 +103,9 @@
                                         <state key="normal" title="Slett meg">
                                             <color key="titleColor" red="0.94902604820000003" green="0.090207430579999998" blue="0.068740736060000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="signoutButtonClick:" destination="OkT-Gc-rII" eventType="touchUpInside" id="I7K-dM-6gN"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.94902604818344116" green="0.9490082859992981" blue="0.94902032613754272" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

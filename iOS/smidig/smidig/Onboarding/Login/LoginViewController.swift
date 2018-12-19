@@ -40,11 +40,11 @@ class LoginViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            if (segue.identifier == "userIsLoggedIn") {
+            //if (segue.identifier == "userIsLoggedIn") {
                 if let profileViewController = segue.destination as? ProfileViewController {
                     profileViewController.user = self.user
                 }
-            }
+            //}
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -63,6 +63,7 @@ class LoginViewController: UIViewController {
             print("Firebase: ", user?.user as Any)
             print("Firebase: ", user?.user.email as Any)
             print("Firebase: ", self.user as Any)
+            self.performSegue(withIdentifier: "userIsLoggedIn", sender: self)
         }
     }
     

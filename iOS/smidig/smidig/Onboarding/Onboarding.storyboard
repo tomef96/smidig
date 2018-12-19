@@ -65,7 +65,6 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="loginUser:" destination="d1T-sQ-xco" eventType="touchUpInside" id="pXX-CE-lX3"/>
-                                            <segue destination="C5L-pj-4Am" kind="show" identifier="userIsLoggedIn" id="zNm-1Z-Hdl"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTf-80-k2P">
@@ -91,7 +90,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IsS-4n-gNi" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="123.18840579710145" y="-155.35714285714286"/>
+            <point key="canvasLocation" x="391" y="-356"/>
         </scene>
         <!--NavController-->
         <scene sceneID="s9Q-S4-TWb">

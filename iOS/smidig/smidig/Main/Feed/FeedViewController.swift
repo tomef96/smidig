@@ -75,8 +75,8 @@ class FeedViewController: UITableViewController {
         cell.subcategoryLabel?.text = entry.subcategory
         cell.categoryLabel?.text = entry.category
         cell.timeLabel.text = entry.time
-        cell.cardView?.layer.cornerRadius = 16
-        cell.cardView?.layer.masksToBounds = true
+        //cell.cardView?.layer.cornerRadius = 16
+        //cell.cardView?.layer.masksToBounds = true
         print(entry.title)
         return cell
     }
