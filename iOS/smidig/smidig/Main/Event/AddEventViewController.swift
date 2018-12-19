@@ -27,6 +27,7 @@ class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     var categoryData: [String] = [String]()
     var subcategoryData: [String] = [String]()
     let db = Firestore.firestore()
+    var event: Event?
     @IBOutlet weak var categoryPicker: UIPickerView!
     @IBOutlet weak var subcategoryPicker: UIPickerView!
     
@@ -97,25 +98,34 @@ class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     @IBAction func addEvent(_ sender: Any) {
         var documentData = [String : Any]()
         
-        documentData["title"] = titleTextField.text
-        documentData["description"] = descriptionTextField.text
-        documentData["place"] = placeTextField.text
-        documentData["date"] = dateTextField.text
-        documentData["spots"] = numberTextField.text
-        documentData["owner"] = Auth.auth().currentUser?.uid
-        documentData["time"] = timeTextField.text
-        documentData["category"] = categoryTextField.text
-        documentData["subcategory"] = subcategoryTextField.text
-        
-        
-        var ref: DocumentReference? = nil
-        ref = db.collection("events").addDocument(data: documentData) { err in
-            if let err = err {
-                print("Error adding document: \(err)")
-            } else {
-                print("Document added with ID: \(ref!.documentID)")
-                ref?.setData(["id" : ref?.documentID], merge: true)
+        if (titleTextField.text != "" && descriptionTextField.text != "" && placeTextField.text != "" && dateTextField.text != "" && numberTextField.text != "" && Auth.auth().currentUser?.uid != nil && timeTextField.text != "" && categoryTextField.text != "" && subcategoryTextField.text != "") {
+            
+            documentData["title"] = titleTextField.text
+            documentData["description"] = descriptionTextField.text
+            documentData["place"] = placeTextField.text
+            documentData["date"] = dateTextField.text
+            documentData["spots"] = numberTextField.text
+            documentData["owner"] = Auth.auth().currentUser?.uid
+            documentData["time"] = timeTextField.text
+            documentData["category"] = categoryTextField.text
+            documentData["subcategory"] = subcategoryTextField.text
+            
+            
+            
+            var ref: DocumentReference? = nil
+            ref = db.collection("events").addDocument(data: documentData) { err in
+                if let err = err {
+                    print("Error adding document: \(err)")
+                } else {
+                    print("Document added with ID: \(ref!.documentID)")
+                    ref?.setData(["id" : ref?.documentID], merge: true)
+                    self.event = Event(owner: documentData["owner"] as! String, place: documentData["place"] as! String, description: documentData["description"] as! String, date: documentData["date"] as! String, spots: documentData["spots"] as! String, title: documentData["title"] as! String, eventId: (ref?.documentID)!, category: documentData["category"] as! String, subcategory: documentData["subcategory"] as! String, time: documentData["time"] as! String)
+                    self.performSegue(withIdentifier: "eventAdded", sender: self)
+                }
             }
+            
+        } else {
+            print("Alle feltene er ikke fylt ut")
         }
     }
     
@@ -183,6 +193,14 @@ class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
         view.endEditing(true)
         super.touchesBegan(touches, with: event)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        
+        let destination = segue.destination as! EventViewController
+        destination.event = event
     }
 
 }
