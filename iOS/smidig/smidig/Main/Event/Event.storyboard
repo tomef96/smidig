@@ -292,9 +292,11 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dpF-9r-wLr">
+                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dpF-9r-wLr">
                                         <rect key="frame" x="35" y="173" width="98" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="bfE-GH-Ekx"/>
+                                        </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -307,7 +309,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l9Y-0Z-gsr">
-                                        <rect key="frame" x="265" y="90" width="38.5" height="67"/>
+                                        <rect key="frame" x="265" y="90" width="39" height="67"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="56"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -360,9 +362,8 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sted" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rhb-Lf-6zN">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Sted" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rhb-Lf-6zN">
                                         <rect key="frame" x="35" y="144" width="36" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -379,6 +380,7 @@
                                 <constraints>
                                     <constraint firstItem="zvd-wF-0vb" firstAttribute="leading" secondItem="Np7-6H-3AH" secondAttribute="leading" id="1PK-B7-bdE"/>
                                     <constraint firstItem="zds-AU-WBF" firstAttribute="centerX" secondItem="dQQ-IM-RVy" secondAttribute="centerX" id="5gv-1a-pYp"/>
+                                    <constraint firstItem="l9Y-0Z-gsr" firstAttribute="bottom" secondItem="dpF-9r-wLr" secondAttribute="bottom" id="67f-Vs-XK7"/>
                                     <constraint firstItem="l9Y-0Z-gsr" firstAttribute="leading" secondItem="cZP-CF-sbC" secondAttribute="leading" constant="10" id="7K6-qM-aco"/>
                                     <constraint firstItem="l9Y-0Z-gsr" firstAttribute="top" secondItem="cZP-CF-sbC" secondAttribute="bottom" constant="8" id="8Zr-Ws-5P8"/>
                                     <constraint firstItem="Np7-6H-3AH" firstAttribute="leading" secondItem="dQQ-IM-RVy" secondAttribute="leading" constant="35" id="Dbd-bW-tqv"/>
@@ -387,6 +389,8 @@
                                     <constraint firstItem="cZP-CF-sbC" firstAttribute="top" secondItem="zds-AU-WBF" secondAttribute="bottom" constant="19" id="fnZ-Cl-h8E"/>
                                     <constraint firstItem="zvd-wF-0vb" firstAttribute="top" secondItem="Np7-6H-3AH" secondAttribute="bottom" constant="28" id="fwY-cG-FzW"/>
                                     <constraint firstItem="l9Y-0Z-gsr" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zvd-wF-0vb" secondAttribute="trailing" constant="60" id="jRC-7v-Mgy"/>
+                                    <constraint firstItem="dpF-9r-wLr" firstAttribute="leading" secondItem="rhb-Lf-6zN" secondAttribute="leading" id="lfX-qc-rT1"/>
+                                    <constraint firstItem="rhb-Lf-6zN" firstAttribute="leading" secondItem="Np7-6H-3AH" secondAttribute="leading" id="mAH-Gi-WHm"/>
                                     <constraint firstItem="Np7-6H-3AH" firstAttribute="top" secondItem="zds-AU-WBF" secondAttribute="bottom" constant="19" id="qaR-Vi-KQ9"/>
                                 </constraints>
                             </view>
@@ -425,6 +429,7 @@
                         <outlet property="subcategoryTextField" destination="q87-lw-LVH" id="XN6-64-j6H"/>
                         <outlet property="timeTextField" destination="Z5c-BW-VgE" id="3dq-Td-ulc"/>
                         <outlet property="titleTextField" destination="zvd-wF-0vb" id="Xxi-VK-xOE"/>
+                        <segue destination="l6s-1B-Kpf" kind="show" identifier="eventAdded" id="gDW-lB-dOd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5kV-nY-cJb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -490,7 +495,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LDB-rP-wap">
-                                                        <rect key="frame" x="0.0" y="21" width="304" height="601"/>
+                                                        <rect key="frame" x="0.0" y="20.5" width="304" height="601"/>
                                                     </pickerView>
                                                 </subviews>
                                             </stackView>
