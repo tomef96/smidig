@@ -65,7 +65,6 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="loginUser:" destination="d1T-sQ-xco" eventType="touchUpInside" id="pXX-CE-lX3"/>
-                                            <segue destination="C5L-pj-4Am" kind="show" identifier="userIsLoggedIn" id="zNm-1Z-Hdl"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTf-80-k2P">
@@ -87,6 +86,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="FOO-cr-NhP" id="k1a-52-yLA"/>
                         <outlet property="passwordTextField" destination="ILP-Sc-4tU" id="aAg-h3-tAB"/>
+                        <segue destination="C5L-pj-4Am" kind="show" identifier="userIsLoggedIn" id="HAQ-Fe-iEk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IsS-4n-gNi" sceneMemberID="firstResponder"/>
