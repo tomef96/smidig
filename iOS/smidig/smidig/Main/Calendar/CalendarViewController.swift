@@ -29,7 +29,7 @@ class CardView: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        layer.cornerRadius = 6
+        layer.cornerRadius = 16
     }
     
 }
