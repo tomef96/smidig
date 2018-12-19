@@ -69,7 +69,7 @@ class FeedViewController: UITableViewController {
         //cell.eventImageView.image = image
         cell.eventTitleLabel.text = entry.title
         cell.spotsLabel.text = entry.spots
-        cell.descriptionLabel.text = entry.description
+        cell.descriptionLabel?.text = entry.description
         cell.placeLabel.text = entry.place
         cell.eventId = entry.eventId
         cell.subcategoryLabel?.text = entry.subcategory
