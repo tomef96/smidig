@@ -31,10 +31,22 @@ class EventViewController: UIViewController {
     
     @IBAction func joinEvent(_ sender: UIButton) {
         event.join()
+        postAlert(title: "Lagt til i kalender", message: "😃")
     }
     
     @IBAction func leaveEvent(_ sender: UIButton) {
         event.leave()
+        postAlert(title: "Det var synd", message: "😔")
+    }
+    
+    func postAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        self.present(alert, animated: true, completion: nil)
+        
+        // delays execution of code to dismiss
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
+            alert.dismiss(animated: true, completion: nil)
+        })
     }
     
     // MARK: - Navigation
