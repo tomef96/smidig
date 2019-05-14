@@ -9,21 +9,33 @@
 import UIKit
 import FirebaseAuth
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
     var handle: AuthStateDidChangeListenerHandle?
     var user: User?
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         emailTextField.underlined()
+        emailTextField.keyboardType = UIKeyboardType.emailAddress
+        emailTextField.returnKeyType = UIReturnKeyType.next
+        
         passwordTextField.underlined()
+        passwordTextField.returnKeyType = UIReturnKeyType.go
+        passwordTextField.delegate = self
         
         // Do any additional setup after loading the view.
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        passwordTextField.resignFirstResponder()
+        loginUser(loginButton)
+        return true
     }
     
     
@@ -63,20 +75,10 @@ class LoginViewController: UIViewController {
             print("Firebase: ", user?.user as Any)
             print("Firebase: ", user?.user.email as Any)
             print("Firebase: ", self.user as Any)
-            self.performSegue(withIdentifier: "userIsLoggedIn", sender: self)
+            print(error ?? "")
+            if user?.user != nil {
+                self.performSegue(withIdentifier: "userIsLoggedIn", sender: self)
+            }
         }
     }
-    
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
