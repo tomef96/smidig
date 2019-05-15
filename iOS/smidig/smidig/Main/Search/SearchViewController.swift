@@ -8,13 +8,27 @@
 
 import UIKit
 
-class SearchViewController: UIViewController {
+class SearchViewController: UIViewController, UISearchBarDelegate {
     
     let searcher = Searcher()
+    var searchResult = [Event]?(nil)
+    
+    @IBOutlet weak var searchPhrase: UISearchBar!
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        doSearch(keyword: searchText)
+        print(searchResult?.first?.title ?? "No result")
 
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+    
+    
+    func doSearch(keyword: String) {
+        self.searchResult = searcher.search(keyword: keyword, events: searcher.events)
     }
     
 

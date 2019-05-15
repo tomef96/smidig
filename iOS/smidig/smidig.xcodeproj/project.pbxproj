@@ -15,7 +15,6 @@
 		5015E1C821C7AC610015004C /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5015E1C721C7AC610015004C /* Feed.storyboard */; };
 		5015E1CA21C7ADC90015004C /* Event.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5015E1C921C7ADC90015004C /* Event.storyboard */; };
 		5015E1CC21C7AF1F0015004C /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5015E1CB21C7AF1F0015004C /* Profile.storyboard */; };
-		5015E1CE21C7AF5F0015004C /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5015E1CD21C7AF5F0015004C /* Search.storyboard */; };
 		5015E1D221C8F3F30015004C /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5015E1D121C8F3F30015004C /* Onboarding.storyboard */; };
 		502D377F21B9299A00267EBD /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502D377E21B9299A00267EBD /* RegisterViewController.swift */; };
 		502D378221B92A1A00267EBD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502D378121B92A1A00267EBD /* LoginViewController.swift */; };
@@ -30,6 +29,7 @@
 		643E105021BE7458006D099C /* eventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643E104F21BE7458006D099C /* eventTests.swift */; };
 		643E105421BE9540006D099C /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643E105321BE9540006D099C /* AppUser.swift */; };
 		643E105621BE966C006D099C /* profileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643E105521BE966C006D099C /* profileTests.swift */; };
+		649797DB228C1F410021D35C /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 649797DA228C1F410021D35C /* Search.storyboard */; };
 		64A7EE5D21C2556800B8F946 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A7EE5C21C2556800B8F946 /* CalendarViewController.swift */; };
 		64A7EE6121C269B800B8F946 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64A7EE6021C269B800B8F946 /* Calendar.storyboard */; };
 		64A7EE6321C269C500B8F946 /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A7EE6221C269C500B8F946 /* Calendar.swift */; };
@@ -71,7 +71,6 @@
 		5015E1C721C7AC610015004C /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		5015E1C921C7ADC90015004C /* Event.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Event.storyboard; sourceTree = "<group>"; };
 		5015E1CB21C7AF1F0015004C /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
-		5015E1CD21C7AF5F0015004C /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		5015E1D121C8F3F30015004C /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		502D377E21B9299A00267EBD /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		502D378121B92A1A00267EBD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +86,7 @@
 		643E104F21BE7458006D099C /* eventTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eventTests.swift; sourceTree = "<group>"; };
 		643E105321BE9540006D099C /* AppUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUser.swift; sourceTree = "<group>"; };
 		643E105521BE966C006D099C /* profileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileTests.swift; sourceTree = "<group>"; };
+		649797DA228C1F410021D35C /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		64A7EE5C21C2556800B8F946 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		64A7EE6021C269B800B8F946 /* Calendar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
 		64A7EE6221C269C500B8F946 /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
@@ -194,9 +194,9 @@
 		502D377021B9267800267EBD /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				5015E1CD21C7AF5F0015004C /* Search.storyboard */,
 				64365549228AC7370056AD91 /* Searcher.swift */,
 				6436554B228AC7680056AD91 /* SearchViewController.swift */,
+				649797DA228C1F410021D35C /* Search.storyboard */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -444,8 +444,8 @@
 				5015E1D221C8F3F30015004C /* Onboarding.storyboard in Resources */,
 				5055FEE521BE7ECC00DA0CA7 /* GoogleService-Info.plist in Resources */,
 				5015E1CC21C7AF1F0015004C /* Profile.storyboard in Resources */,
+				649797DB228C1F410021D35C /* Search.storyboard in Resources */,
 				5015E1C821C7AC610015004C /* Feed.storyboard in Resources */,
-				5015E1CE21C7AF5F0015004C /* Search.storyboard in Resources */,
 				64D787C621B7D1D000F541E8 /* Assets.xcassets in Resources */,
 				64A7EE6121C269B800B8F946 /* Calendar.storyboard in Resources */,
 				5015E1CA21C7ADC90015004C /* Event.storyboard in Resources */,

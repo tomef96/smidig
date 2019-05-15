@@ -48,31 +48,24 @@ class searchTests: XCTestCase {
         
     }
 
-    func testShouldReadSearchResultCorrectly() {
+    func testShouldFindEvent() {
         let result = searcher.search(keyword: "fotball", events: testDB)
-        XCTAssert(result.count == 1)
+        XCTAssert(result?.count == 1)
     }
     
-    func testShouldReturnEmptyArray() {
+    func testShouldNotFindAnyEvents() {
         let result = searcher.search(keyword: "dsboinsdf", events: testDB)
-        XCTAssert(result.count == 0)
+        XCTAssert(result?.count == 0)
+    }
+    
+    func testShouldNotSearchForSpace() {
+        let result = searcher.search(keyword: " ", events: testDB)
+        XCTAssert(result == nil)
+    }
+    
+    func testShouldSearchForPartial() {
+        let result = searcher.search(keyword: "spill", events: testDB)
+        XCTAssert(result?.count == 2)
     }
 
-    /*func checkForSearchParam(events: [Event], searchParam: String) -> Bool {
-        var result = false
-        let lc = searchParam.lowercased()
-        for event in events {
-            if event.title.lowercased().contains(lc) {
-                result = true
-            } else if event.description.lowercased().contains(lc) {
-                result = true
-            } else if event.subcategory.lowercased().contains(lc) {
-                result = true
-            }
-            else {
-                return result
-            }
-        }
-        return result
-    }*/
 }

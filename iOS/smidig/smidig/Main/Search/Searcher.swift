@@ -10,8 +10,15 @@ import Foundation
 import FirebaseFirestore
 
 class Searcher {
+    
+    var events = [Event]()
+    
+    init() {
+        fetchEvents()
+    }
 
-    func search(keyword: String, events: [Event]) -> [Event] {
+    func search(keyword: String, events: [Event]) -> [Event]? {
+        if keyword.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {return nil}
         var result = [Event]()
         for event in events {
             let t = event.title.lowercased()
@@ -25,9 +32,28 @@ class Searcher {
         return result
     }
     
-    /*private func fetchResult(searchParam: String) -> [Event] {
+    private func fetchEvents() {
         let db = Firestore.firestore()
-        let ref = db.collection("events")
-    }*/
+        //var events = [Event]()
+        db.collection("events").getDocuments { (documents, err) in
+            for document in (documents?.documents)! {
+            
+                let owner: String = document["owner"]! as! String
+                let place: String = document["place"]! as! String
+                let description: String = document["description"]! as! String
+                let date: String = document["date"]! as! String
+                let spots: String = document["spots"]! as! String
+                let title: String = document["title"]! as! String
+                let category: String = document["category"]! as! String
+                let subcategory: String = document["subcategory"] as! String
+                let time: String = document["time"] as! String
+                let id: String = document["id"]! as! String
+                
+                self.events.append(Event(owner: owner, place: place, description: description, date: date, spots: spots, title: title, eventId: id, category: category, subcategory: subcategory, time: time))
+            
+            }
+        }
+        //return events
+    }
     
 }
