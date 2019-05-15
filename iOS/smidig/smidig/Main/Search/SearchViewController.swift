@@ -28,7 +28,11 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
     
     
     func doSearch(keyword: String) {
-        self.searchResult = searcher.search(keyword: keyword, events: searcher.events)
+        self.searchResult = searcher.search(for: keyword, in: searcher.events)
+        let child = children[0] as! SearchTableViewController
+        DispatchQueue.main.async {
+            child.self.tableView.reloadData()
+        }
     }
     
 

@@ -17,7 +17,7 @@ class Searcher {
         fetchEvents()
     }
 
-    func search(keyword: String, events: [Event]) -> [Event]? {
+    func search(for keyword: String, in events: [Event]) -> [Event]? {
         if keyword.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {return nil}
         var result = [Event]()
         for event in events {
