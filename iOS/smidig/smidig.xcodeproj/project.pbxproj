@@ -22,6 +22,9 @@
 		5055FEE321BAA13000DA0CA7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5055FEE221BAA13000DA0CA7 /* ProfileViewController.swift */; };
 		5055FEE521BE7ECC00DA0CA7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5055FEE421BE7ECC00DA0CA7 /* GoogleService-Info.plist */; };
 		5055FEE721BE8C4300DA0CA7 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5055FEE621BE8C4300DA0CA7 /* AddEventViewController.swift */; };
+		6436554A228AC7370056AD91 /* Searcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64365549228AC7370056AD91 /* Searcher.swift */; };
+		6436554C228AC7680056AD91 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6436554B228AC7680056AD91 /* SearchViewController.swift */; };
+		6436554E228AD45C0056AD91 /* searchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6436554D228AD45C0056AD91 /* searchTests.swift */; };
 		643E104821BE6A54006D099C /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643E104721BE6A54006D099C /* EventViewController.swift */; };
 		643E104A21BE6B12006D099C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643E104921BE6B12006D099C /* Event.swift */; };
 		643E105021BE7458006D099C /* eventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643E104F21BE7458006D099C /* eventTests.swift */; };
@@ -76,6 +79,9 @@
 		5055FEE421BE7ECC00DA0CA7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5055FEE621BE8C4300DA0CA7 /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
 		5D61D0F30AB8A9A48AA6C770 /* Pods-smidig.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smidig.debug.xcconfig"; path = "Pods/Target Support Files/Pods-smidig/Pods-smidig.debug.xcconfig"; sourceTree = "<group>"; };
+		64365549228AC7370056AD91 /* Searcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Searcher.swift; sourceTree = "<group>"; };
+		6436554B228AC7680056AD91 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		6436554D228AD45C0056AD91 /* searchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchTests.swift; sourceTree = "<group>"; };
 		643E104721BE6A54006D099C /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = SOURCE_ROOT; };
 		643E104921BE6B12006D099C /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = SOURCE_ROOT; };
 		643E104F21BE7458006D099C /* eventTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eventTests.swift; sourceTree = "<group>"; };
@@ -189,6 +195,8 @@
 			isa = PBXGroup;
 			children = (
 				5015E1CD21C7AF5F0015004C /* Search.storyboard */,
+				64365549228AC7370056AD91 /* Searcher.swift */,
+				6436554B228AC7680056AD91 /* SearchViewController.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -286,6 +294,7 @@
 				64D787D521B7D1D000F541E8 /* Info.plist */,
 				643E104F21BE7458006D099C /* eventTests.swift */,
 				643E105521BE966C006D099C /* profileTests.swift */,
+				6436554D228AD45C0056AD91 /* searchTests.swift */,
 			);
 			path = smidigTests;
 			sourceTree = "<group>";
@@ -603,6 +612,8 @@
 				5015E1BA21C102200015004C /* FeedPageViewController.swift in Sources */,
 				64D787BF21B7D1CE00F541E8 /* AppDelegate.swift in Sources */,
 				5015E1BC21C1024E0015004C /* FeedViewController.swift in Sources */,
+				6436554A228AC7370056AD91 /* Searcher.swift in Sources */,
+				6436554C228AC7680056AD91 /* SearchViewController.swift in Sources */,
 				5015E1BE21C102850015004C /* ForYouViewController.swift in Sources */,
 				502D377F21B9299A00267EBD /* RegisterViewController.swift in Sources */,
 				643E104A21BE6B12006D099C /* Event.swift in Sources */,
@@ -616,6 +627,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				643E105621BE966C006D099C /* profileTests.swift in Sources */,
+				6436554E228AD45C0056AD91 /* searchTests.swift in Sources */,
 				643E105021BE7458006D099C /* eventTests.swift in Sources */,
 				64D787D421B7D1D000F541E8 /* smidigTests.swift in Sources */,
 			);

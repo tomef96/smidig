@@ -13,7 +13,7 @@ class Event {
     
     let db = Firestore.firestore()
         
-    let author: String
+    let owner: String
     let place: String
     let title: String
     let description: String
@@ -42,7 +42,7 @@ class Event {
     }
 
     init(owner: String, place: String, description: String, date: String, spots: String, title: String, eventId: String, category: String, subcategory: String, time: String) {
-        self.author = owner
+        self.owner = owner
         self.title = title
         self.date = date
         self.spots = spots

@@ -21,8 +21,19 @@ class eventTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-        let event = Event(author: "Jan-Kristian", places: 1, title: "Æ e ensom", description: "Hjælp", image: "", isJoined: false)
-        XCTAssert(event.author == "Jan-Kristian")
+        let event = Event(
+            owner: "Jan-Kristian",
+            place: "",
+            description: "",
+            date: "",
+            spots: "",
+            title: "",
+            eventId: "",
+            category: "",
+            subcategory: "",
+            time: ""
+        )
+        XCTAssert(event.owner == "Jan-Kristian")
     }
 
     func testPerformanceExample() {
