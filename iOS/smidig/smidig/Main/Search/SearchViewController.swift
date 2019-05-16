@@ -17,8 +17,6 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         doSearch(keyword: searchText)
-        print(searchResult?.first?.title ?? "No result")
-
     }
     
     override func viewDidLoad() {
@@ -26,12 +24,12 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
         
     }
     
-    
     func doSearch(keyword: String) {
         self.searchResult = searcher.search(for: keyword, in: searcher.events)
-        let child = children[0] as! SearchTableViewController
+        let child = children[0] as? SearchTableViewController
+        child?.events = searchResult ?? [Event]()
         DispatchQueue.main.async {
-            child.self.tableView.reloadData()
+            child?.tableView.reloadData()
         }
     }
     

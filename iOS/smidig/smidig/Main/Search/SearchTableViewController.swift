@@ -10,7 +10,7 @@ import UIKit
 
 class SearchTableViewController: UITableViewController {
     
-    var svc: SearchViewController!
+    var events = [Event]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,33 +20,25 @@ class SearchTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        svc = parent as? SearchViewController
     }
 
     // MARK: - Table view data source
-    
-    override func viewWillAppear(_ animated: Bool) {
-        
-    }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return svc?.searchResult?.count ?? 0
+        return events.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "SearchTableViewCell", for: indexPath) as? SearchTableViewCell else {
             fatalError("The dequeued cell is not an instance of SearchTableViewCell.")
         }
-        
-        let entry = svc.searchResult?[indexPath.row]
-        
-        cell.labelTitle.text = entry?.title
-        cell.labelPlace.text = entry?.place
-        print("table setup")
+        let entry = events[indexPath.row]
+        cell.labelTitle.text = entry.title
+        cell.labelPlace.text = entry.place
         return cell
     }
 

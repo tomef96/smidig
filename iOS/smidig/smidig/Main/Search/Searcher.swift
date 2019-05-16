@@ -34,7 +34,6 @@ class Searcher {
     
     private func fetchEvents() {
         let db = Firestore.firestore()
-        //var events = [Event]()
         db.collection("events").getDocuments { (documents, err) in
             for document in (documents?.documents)! {
             
@@ -53,7 +52,6 @@ class Searcher {
             
             }
         }
-        //return events
     }
     
 }

@@ -12,7 +12,6 @@ class SearchTableViewCell: UITableViewCell {
     
     
     @IBOutlet weak var labelTitle: UILabel!
-    
     @IBOutlet weak var labelPlace: UILabel!
     
     override func awakeFromNib() {
