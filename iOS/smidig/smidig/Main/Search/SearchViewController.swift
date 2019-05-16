@@ -11,7 +11,7 @@ import UIKit
 class SearchViewController: UIViewController, UISearchBarDelegate {
     
     let searcher = Searcher()
-    var searchResult = [Event]?(nil)
+    var searchResult: [Event]? = nil
     
     @IBOutlet weak var searchPhrase: UISearchBar!
     

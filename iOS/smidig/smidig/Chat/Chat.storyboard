@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Twa-Fn-5kp">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Chat-->
+        <scene sceneID="9xs-zD-V3A">
+            <objects>
+                <viewController storyboardIdentifier="Chat" title="Chat" id="Twa-Fn-5kp" customClass="ChatViewController" customModule="smidig" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LbX-RB-NLO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Skriv en melding ..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bLR-e8-GCW">
+                                <rect key="frame" x="16" y="617" width="290" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="MessageInputField:" destination="n8P-JM-85p" eventType="editingDidEnd" id="0JE-kh-nbO"/>
+                                    <action selector="messageTextField:" destination="n8P-JM-85p" eventType="editingDidEnd" id="mOH-2c-P7y"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="50n-Sh-Giw">
+                                <rect key="frame" x="323" y="617" width="36" height="30"/>
+                                <state key="normal" title="Send"/>
+                                <connections>
+                                    <action selector="sendMessageButton:" destination="Twa-Fn-5kp" eventType="touchUpInside" id="IGf-4H-cM0"/>
+                                    <action selector="sendMessageButton:" destination="n8P-JM-85p" eventType="touchUpInside" id="PTS-sx-3Xy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bLR-e8-GCW" firstAttribute="top" secondItem="hGX-OB-yUu" secondAttribute="top" constant="597" id="4Qm-Qq-mrX"/>
+                            <constraint firstItem="50n-Sh-Giw" firstAttribute="leading" secondItem="hGX-OB-yUu" secondAttribute="leading" constant="323" id="4Wi-jO-6jW"/>
+                            <constraint firstItem="50n-Sh-Giw" firstAttribute="top" secondItem="hGX-OB-yUu" secondAttribute="top" constant="597" id="LTU-4d-tA3"/>
+                            <constraint firstItem="hGX-OB-yUu" firstAttribute="bottom" secondItem="bLR-e8-GCW" secondAttribute="bottom" constant="20" id="UFV-ca-auq"/>
+                            <constraint firstItem="hGX-OB-yUu" firstAttribute="bottom" secondItem="50n-Sh-Giw" secondAttribute="bottom" constant="20" id="guB-Cx-wFo"/>
+                            <constraint firstItem="hGX-OB-yUu" firstAttribute="trailing" secondItem="bLR-e8-GCW" secondAttribute="trailing" constant="69" id="iBd-UR-blq"/>
+                            <constraint firstItem="bLR-e8-GCW" firstAttribute="leading" secondItem="hGX-OB-yUu" secondAttribute="leading" constant="16" id="kD8-y3-kVa"/>
+                            <constraint firstItem="hGX-OB-yUu" firstAttribute="trailing" secondItem="50n-Sh-Giw" secondAttribute="trailing" constant="16" id="ztT-c2-yey"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hGX-OB-yUu"/>
+                    </view>
+                    <connections>
+                        <outlet property="messageTextField" destination="bLR-e8-GCW" id="1AT-YU-kJg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ubt-zi-Qmm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="n8P-JM-85p" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-743.20000000000005" y="-99.400299850074973"/>
+        </scene>
+    </scenes>
+</document>

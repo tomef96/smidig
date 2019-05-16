@@ -39,6 +39,10 @@ class EventViewController: UIViewController {
         postAlert(title: "Det var synd", message: "😔")
     }
     
+    @IBAction func goToChat(_ sender: Any) {
+        
+    }
+    
     func postAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         self.present(alert, animated: true, completion: nil)
@@ -55,6 +59,10 @@ class EventViewController: UIViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }*/
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            let destination = segue.destination as! ChatViewController
+            destination.chatId = event.eventId
+    }
 }
 
 class EventView: UIView {

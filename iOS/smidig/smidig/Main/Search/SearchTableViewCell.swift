@@ -10,7 +10,7 @@ import UIKit
 
 class SearchTableViewCell: UITableViewCell {
     
-    var event = Event?(nil)
+    var event: Event? = nil
     
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var labelPlace: UILabel!
