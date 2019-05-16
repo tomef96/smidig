@@ -67,6 +67,7 @@ class FeedViewController: UITableViewController {
         let entry = self.events[indexPath.row]
         //let image = UIImage(named: "LogoPlaceholder.png")
         //cell.eventImageView.image = image
+        cell.event = entry
         cell.eventTitleLabel.text = entry.title
         cell.spotsLabel.text = entry.spots
         cell.descriptionLabel?.text = entry.description
@@ -89,21 +90,9 @@ class FeedViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
         let cell = sender as! EventTableViewCell
-        let title = cell.eventTitleLabel.text
-        let spots = cell.spotsLabel.text
-        let description = cell.descriptionLabel?.text
-        let place = cell.placeLabel.text
-        let id = cell.eventId
-        let category = cell.categoryLabel?.text
-        let subcategory = cell.subcategoryLabel?.text
-        let time = cell.timeLabel.text
-        let event = Event(owner: "owner", place: place!, description: description ?? "Unknown", date: "date", spots: spots!, title: title!, eventId: id!, category: category ?? "Unknown", subcategory: subcategory ?? "Unknown", time: time!)
-        
         let destination = segue.destination as! EventViewController
-        destination.event = event
+        destination.event = cell.event
     }
     
 

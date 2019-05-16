@@ -43,7 +43,6 @@ class EventViewController: UIViewController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         self.present(alert, animated: true, completion: nil)
         
-        // delays execution of code to dismiss
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
             alert.dismiss(animated: true, completion: nil)
         })

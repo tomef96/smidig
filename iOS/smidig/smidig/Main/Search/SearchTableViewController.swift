@@ -37,6 +37,7 @@ class SearchTableViewController: UITableViewController {
             fatalError("The dequeued cell is not an instance of SearchTableViewCell.")
         }
         let entry = events[indexPath.row]
+        cell.event = entry
         cell.labelTitle.text = entry.title
         cell.labelPlace.text = entry.place
         return cell
@@ -77,14 +78,15 @@ class SearchTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let cell = sender as! SearchTableViewCell        
+        let destination = segue.destination as! EventViewController
+        destination.event = cell.event
     }
-    */
+    
 
 }

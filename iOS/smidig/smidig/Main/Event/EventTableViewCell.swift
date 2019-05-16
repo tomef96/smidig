@@ -10,6 +10,8 @@ import UIKit
 
 class EventTableViewCell: UITableViewCell {
     
+    var event = Event?(nil)
+    
     @IBOutlet weak var placeLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var spotsLabel: UILabel!
