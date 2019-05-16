@@ -182,6 +182,7 @@
 		502D376E21B9264000267EBD /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				50746F53228D85F9007A125D /* Chat */,
 				64A7EE5B21C2553B00B8F946 /* Calendar */,
 				502D377321B9269C00267EBD /* Profile */,
 				502D377221B9268D00267EBD /* Messages */,
@@ -299,7 +300,6 @@
 		64D787BD21B7D1CE00F541E8 /* smidig */ = {
 			isa = PBXGroup;
 			children = (
-				50746F53228D85F9007A125D /* Chat */,
 				502D376E21B9264000267EBD /* Main */,
 				502D376B21B9260F00267EBD /* Onboarding */,
 				64D787BE21B7D1CE00F541E8 /* AppDelegate.swift */,
