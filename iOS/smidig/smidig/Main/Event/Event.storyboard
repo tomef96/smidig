@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vzU-Ok-cje">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vzU-Ok-cje">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -31,7 +31,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="23s-kV-ou7">
-                                        <rect key="frame" x="0.0" y="46" width="375" height="601"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ccz-sc-UTR">
                                                 <rect key="frame" x="16" y="16" width="343" height="350"/>
@@ -192,23 +192,14 @@
                                             <constraint firstAttribute="trailing" secondItem="H3U-Oz-D5i" secondAttribute="trailing" constant="16" id="zCU-f4-rmi"/>
                                         </constraints>
                                     </scrollView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c8K-hC-gBU">
-                                        <rect key="frame" x="14" y="8" width="34" height="30"/>
-                                        <state key="normal" title="Back"/>
-                                        <connections>
-                                            <segue destination="spd-AX-zNm" kind="show" id="qBw-XT-vrj"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstItem="23s-kV-ou7" firstAttribute="top" secondItem="c8K-hC-gBU" secondAttribute="bottom" constant="8" symbolic="YES" id="7Wh-3I-tve"/>
-                                    <constraint firstItem="c8K-hC-gBU" firstAttribute="leading" secondItem="y3U-hQ-VBP" secondAttribute="leading" constant="14" id="CNU-Rx-9fS"/>
                                     <constraint firstItem="23s-kV-ou7" firstAttribute="leading" secondItem="y3U-hQ-VBP" secondAttribute="leading" id="CSW-f5-Rto"/>
                                     <constraint firstAttribute="bottom" secondItem="23s-kV-ou7" secondAttribute="bottom" id="WnE-HM-XrJ"/>
                                     <constraint firstAttribute="trailing" secondItem="23s-kV-ou7" secondAttribute="trailing" id="ecp-aB-jTP"/>
-                                    <constraint firstItem="23s-kV-ou7" firstAttribute="top" secondItem="y3U-hQ-VBP" secondAttribute="top" constant="46" id="v6V-90-t2t"/>
+                                    <constraint firstItem="23s-kV-ou7" firstAttribute="top" secondItem="y3U-hQ-VBP" secondAttribute="top" id="v6V-90-t2t"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="descriptionLabel" destination="rBq-jR-ZS5" id="Kp5-gH-fT0"/>
@@ -524,6 +515,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="baseline_add_circle_black_36pt" width="72" height="72"/>
+        <image name="baseline_add_circle_black_36pt" width="36" height="36"/>
     </resources>
 </document>
