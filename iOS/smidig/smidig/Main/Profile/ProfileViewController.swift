@@ -16,9 +16,14 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var usernameLabel: UILabel!
     var appUser = AppUser()
     
+    @IBOutlet weak var labelName: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        user = Auth.auth().currentUser
+        labelName.text = user?.displayName
     }
     
     override func viewWillAppear(_ animated: Bool) {

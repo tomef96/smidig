@@ -50,7 +50,6 @@ class RegisterViewController: UIViewController {
     
     func registerUser(email: String, password: String) {
         Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
-            
             guard (authResult?.user) != nil else { return }
             self.performSegue(withIdentifier: "registrationComplete", sender: self)
         }

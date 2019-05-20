@@ -134,6 +134,7 @@
                         <inset key="imageInsets" minX="0.0" minY="4" maxX="0.0" maxY="0.0"/>
                     </tabBarItem>
                     <connections>
+                        <outlet property="labelName" destination="zUF-E2-hmP" id="TCr-kN-6UB"/>
                         <outlet property="usernameLabel" destination="zUF-E2-hmP" id="w1T-44-X1b"/>
                         <segue destination="V1A-YE-M2W" kind="show" identifier="userIsNotLoggedIn" id="bx5-y8-pvR"/>
                     </connections>
