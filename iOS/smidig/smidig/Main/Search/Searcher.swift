@@ -23,9 +23,10 @@ class Searcher {
         for event in events {
             let t = event.title.lowercased()
             let d = event.description.lowercased()
+            let c = event.category.lowercased()
             let s = event.subcategory.lowercased()
             let k = keyword.lowercased()
-            if t.contains(k) || d.contains(k) || s.contains(k) {
+            if t.contains(k) || d.contains(k) || c.contains(k) || s.contains(k) {
                 result.append(event)
             }
         }

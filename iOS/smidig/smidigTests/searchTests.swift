@@ -32,13 +32,13 @@ class searchTests: XCTestCase {
         let event2 = Event(
             owner: "",
             place: "",
-            description: "spille hockey",
+            description: "møtes bak ishallen, spiller et par timer",
             date: "",
             spots: "",
-            title: "Hockey",
+            title: "spis grus",
             eventId: "",
-            category: "",
-            subcategory: "",
+            category: "Sport",
+            subcategory: "Hockey",
             time: ""
         )
         testDB.append(event2)
@@ -49,23 +49,33 @@ class searchTests: XCTestCase {
     }
 
     func testShouldFindEvent() {
-        let result = searcher.search(keyword: "fotball", events: testDB)
+        let result = searcher.search(for: "fotball", in: testDB)
         XCTAssert(result?.count == 1)
     }
     
     func testShouldNotFindAnyEvents() {
-        let result = searcher.search(keyword: "dsboinsdf", events: testDB)
+        let result = searcher.search(for: "dsboinsdf", in: testDB)
         XCTAssert(result?.count == 0)
     }
     
-    func testShouldNotSearchForSpace() {
-        let result = searcher.search(keyword: " ", events: testDB)
+    func testShouldNotReturnOnSpace() {
+        let result = searcher.search(for: " ", in: testDB)
         XCTAssert(result == nil)
     }
     
-    func testShouldSearchForPartial() {
-        let result = searcher.search(keyword: "spill", events: testDB)
+    func testShouldReturnOnPartial() {
+        let result = searcher.search(for: "spill", in: testDB)
         XCTAssert(result?.count == 2)
+    }
+    
+    func testShouldReturnOnCategory() {
+        let result = searcher.search(for: "sport", in: testDB)
+        XCTAssert(result?.count == 1)
+    }
+    
+    func testShouldReturnOnSubcategory() {
+        let result = searcher.search(for: "hockey", in: testDB)
+        XCTAssert(result?.count == 1)
     }
 
 }
