@@ -69,16 +69,14 @@ class FeedViewController: UITableViewController {
         //cell.eventImageView.image = image
         cell.event = entry
         cell.eventTitleLabel.text = entry.title
-        cell.spotsLabel.text = entry.spots
+        cell.spotsLabel?.text = entry.spots
         cell.descriptionLabel?.text = entry.description
         cell.placeLabel.text = entry.place
         cell.eventId = entry.eventId
         cell.subcategoryLabel?.text = entry.subcategory
         cell.categoryLabel?.text = entry.category
         cell.timeLabel.text = entry.time
-        //cell.cardView?.layer.cornerRadius = 16
-        //cell.cardView?.layer.masksToBounds = true
-        print(entry.title)
+        cell.dateLabel?.text = entry.date
         return cell
     }
     
