@@ -17,13 +17,19 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        emailTextView.underlined()
-        passwordTextView.underlined()
+        emailTextField.underlined()
+        emailTextField.keyboardType = UIKeyboardType.emailAddress
+        emailTextField.returnKeyType = UIReturnKeyType.next
+        
+        passwordTextField.underlined()
+        passwordTextField.returnKeyType = UIReturnKeyType.go
+        passwordTextField.delegate = self
     }
     
     @IBOutlet weak var registerButton: UIButton!
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        passwordTextField.resignFirstResponder()
         onClick(registerButton)
         return true
     }
@@ -45,12 +51,12 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     
     
 
-    @IBOutlet weak var emailTextView: UITextField!
-    @IBOutlet weak var passwordTextView: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     
     @IBAction func onClick(_ sender: UIButton) {
-        if (self.emailTextView.text != nil && self.passwordTextView.text != nil) {
-            registerUser(email: (self.emailTextView?.text)!, password: (self.passwordTextView?.text)!)
+        if (self.emailTextField.text != nil && self.passwordTextField.text != nil) {
+            registerUser(email: (self.emailTextField?.text)!, password: (self.passwordTextField?.text)!)
         }
     }
     

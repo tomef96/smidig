@@ -195,8 +195,8 @@
                         <viewLayoutGuide key="safeArea" id="lmD-XS-kZU"/>
                     </view>
                     <connections>
-                        <outlet property="emailTextView" destination="UwR-bV-kZ7" id="8Jn-PO-bHO"/>
-                        <outlet property="passwordTextView" destination="aeB-09-xWQ" id="nBH-0K-0yv"/>
+                        <outlet property="emailTextField" destination="UwR-bV-kZ7" id="8Jn-PO-bHO"/>
+                        <outlet property="passwordTextField" destination="aeB-09-xWQ" id="5QA-JZ-tIZ"/>
                         <outlet property="registerButton" destination="iBc-FD-uBZ" id="ByH-8j-GGJ"/>
                     </connections>
                 </viewController>
