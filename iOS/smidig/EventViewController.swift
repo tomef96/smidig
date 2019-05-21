@@ -19,6 +19,10 @@ class EventViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         eventView.populate(event: event)
+        if event.participants.contains(Auth.auth().currentUser!.uid) {
+            joinButton.setTitle("Påmeldt", for: UIControl.State.normal)
+            joinButton.isEnabled = false
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -29,14 +33,26 @@ class EventViewController: UIViewController {
     
     @IBOutlet weak var eventView: EventView!
     
+    @IBOutlet weak var joinButton: UIButton!
+    
     @IBAction func joinEvent(_ sender: UIButton) {
         event.join()
         postAlert(title: "Lagt til i kalender", message: "😃")
+        eventView.populate(event: event)
+        leaveButton.isHidden = false
+        joinButton.setTitle("Påmeldt", for: UIControl.State.normal)
+        joinButton.isEnabled = false
     }
+    
+    @IBOutlet weak var leaveButton: UIButton!
     
     @IBAction func leaveEvent(_ sender: UIButton) {
         event.leave()
         postAlert(title: "Det var synd", message: "😔")
+        eventView.populate(event: event)
+        leaveButton.isHidden = true
+        joinButton.setTitle("Bli med", for: UIControl.State.normal)
+        joinButton.isEnabled = true
     }
     
     @IBAction func goToChat(_ sender: Any) {
@@ -78,11 +94,17 @@ class EventView: UIView {
     
     @IBOutlet weak var placeLabel: UILabel!
     
+    @IBOutlet weak var dateLabel: UILabel!
+    
+    @IBOutlet weak var timeLabel: UILabel!
+    
     func populate(event: Event) {
         titleLabel.text = event.title
         descriptionLabel.text = event.description
-        spotsLabel.text = event.spots
+        spotsLabel.text = String(event.participants.count) + "/" + event.spots
         placeLabel.text = event.place
+        dateLabel.text = event.date
+        timeLabel.text = event.time
         eventId = event.eventId
     }
 }

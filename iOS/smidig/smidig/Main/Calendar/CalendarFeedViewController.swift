@@ -23,10 +23,9 @@ class CalendarFeedViewController: FeedViewController {
                 event.getDocument(completion: { (document, err) in
                     if let document = document, document.exists {
                         self.events.append(self.createEvent(from: document))
-                        
-                        DispatchQueue.main.async {
+                    }
+                    DispatchQueue.main.async {
                         self.tableView.reloadData()
-                        }
                     }
                 })
             }
@@ -44,7 +43,9 @@ class CalendarFeedViewController: FeedViewController {
         let subcategory: String = document["subcategory"] as! String
         let time: String = document["time"] as! String
         let id: String = document["id"]! as! String
-        return Event(owner: owner, place: place, description: description, date: date, spots: spots, title: title, eventId: id, category: category, subcategory: subcategory, time: time)
+        let participants = document["participants"]! as! [String]
+        
+        return Event(owner: owner, place: place, description: description, date: date, spots: spots, title: title, eventId: id, category: category, subcategory: subcategory, time: time, participants: participants)
     }
     
 }

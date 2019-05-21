@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vzU-Ok-cje">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vzU-Ok-cje">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -118,7 +118,7 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DKB-4z-kWQ" userLabel="SpotStack View">
                                                                 <rect key="frame" x="171.5" y="0.0" width="171.5" height="41"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plasser" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mf6-h2-Fy6">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deltagere" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mf6-h2-Fy6">
                                                                         <rect key="frame" x="0.0" y="0.0" width="171.5" height="20.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -140,14 +140,17 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="H3U-Oz-D5i">
-                                                <rect key="frame" x="16" y="386" width="343" height="153"/>
+                                                <rect key="frame" x="16" y="386" width="343" height="160"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="m1J-RZ-t5H">
-                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="76.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="80"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZK-Yt-alX" userLabel="Join Button" customClass="RoundButton" customModule="smidig" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="99.5" height="76.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="99.5" height="80"/>
                                                                 <color key="backgroundColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="0.82255993150684936" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="80" id="THr-p2-7OB"/>
+                                                                </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <state key="normal" title="Bli med"/>
@@ -156,8 +159,11 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jD1-Nm-enV" userLabel="Chat Button" customClass="RoundButton" customModule="smidig" customModuleProvider="target">
-                                                                <rect key="frame" x="121.5" y="0.0" width="100" height="76.5"/>
+                                                                <rect key="frame" x="121.5" y="0.0" width="100" height="80"/>
                                                                 <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="80" id="1u6-se-wns"/>
+                                                                </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Chat"/>
@@ -167,8 +173,11 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L55-ld-6DE" userLabel="Report Button" customClass="RoundButton" customModule="smidig" customModuleProvider="target">
-                                                                <rect key="frame" x="243.5" y="0.0" width="99.5" height="76.5"/>
+                                                                <rect key="frame" x="243.5" y="0.0" width="99.5" height="80"/>
                                                                 <color key="backgroundColor" red="0.79097928240000004" green="0.12695073509999999" blue="0.12857062259999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="80" id="IQF-VL-5o3"/>
+                                                                </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Rapporter"/>
@@ -179,7 +188,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Oj-6a-2o7" userLabel="Leave Button">
-                                                        <rect key="frame" x="0.0" y="76.5" width="343" height="76.5"/>
+                                                        <rect key="frame" x="0.0" y="80" width="343" height="80"/>
                                                         <state key="normal" title="Forlat"/>
                                                         <connections>
                                                             <action selector="leaveEvent:" destination="l6s-1B-Kpf" eventType="touchUpInside" id="6Y3-xg-m9f"/>
@@ -191,10 +200,9 @@
                                         <constraints>
                                             <constraint firstItem="H3U-Oz-D5i" firstAttribute="top" secondItem="ccz-sc-UTR" secondAttribute="bottom" constant="20" id="2JH-HS-JjF"/>
                                             <constraint firstItem="ccz-sc-UTR" firstAttribute="centerX" secondItem="23s-kV-ou7" secondAttribute="centerX" id="A0M-lD-LIz"/>
-                                            <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="H3U-Oz-D5i" secondAttribute="bottom" constant="40" id="Cmt-vP-Jh4"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="H3U-Oz-D5i" secondAttribute="bottom" priority="750" constant="100" id="Cmt-vP-Jh4"/>
                                             <constraint firstItem="ccz-sc-UTR" firstAttribute="leading" secondItem="23s-kV-ou7" secondAttribute="leading" constant="16" id="Ka5-24-m5o"/>
                                             <constraint firstItem="ccz-sc-UTR" firstAttribute="top" secondItem="23s-kV-ou7" secondAttribute="top" constant="16" id="P90-zl-oMK"/>
-                                            <constraint firstItem="H3U-Oz-D5i" firstAttribute="top" relation="lessThanOrEqual" secondItem="23s-kV-ou7" secondAttribute="top" constant="420" id="Vjv-Sa-jXN"/>
                                             <constraint firstAttribute="trailing" secondItem="ccz-sc-UTR" secondAttribute="trailing" constant="16" id="g6Q-CE-azN"/>
                                             <constraint firstItem="H3U-Oz-D5i" firstAttribute="leading" secondItem="23s-kV-ou7" secondAttribute="leading" constant="16" id="mzO-Ic-0pM"/>
                                             <constraint firstAttribute="bottom" secondItem="ccz-sc-UTR" secondAttribute="bottom" constant="213" id="uSb-tw-FYm"/>
@@ -211,9 +219,11 @@
                                     <constraint firstItem="23s-kV-ou7" firstAttribute="top" secondItem="y3U-hQ-VBP" secondAttribute="top" id="v6V-90-t2t"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="dateLabel" destination="QOQ-ow-csn" id="rTR-pj-D9p"/>
                                     <outlet property="descriptionLabel" destination="rBq-jR-ZS5" id="Kp5-gH-fT0"/>
                                     <outlet property="placeLabel" destination="qxP-dy-5wh" id="acY-iT-eFM"/>
                                     <outlet property="spotsLabel" destination="IIE-bw-nGl" id="xd6-kS-htI"/>
+                                    <outlet property="timeLabel" destination="EiT-o5-G2c" id="eaJ-fO-BOD"/>
                                     <outlet property="titleLabel" destination="bRm-k6-3ql" id="kCH-FT-3So"/>
                                 </connections>
                             </view>
@@ -229,6 +239,8 @@
                     </view>
                     <connections>
                         <outlet property="eventView" destination="y3U-hQ-VBP" id="m4e-xq-zbH"/>
+                        <outlet property="joinButton" destination="EZK-Yt-alX" id="l9s-1q-2uh"/>
+                        <outlet property="leaveButton" destination="3Oj-6a-2o7" id="eSb-ld-VvZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X42-tV-IHP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -524,6 +536,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="baseline_add_circle_black_36pt" width="72" height="72"/>
+        <image name="baseline_add_circle_black_36pt" width="36" height="36"/>
     </resources>
 </document>

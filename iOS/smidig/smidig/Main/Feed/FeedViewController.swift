@@ -41,8 +41,9 @@ class FeedViewController: UITableViewController {
                 let subcategory: String = document["subcategory"] as! String
                 let time: String = document["time"] as! String
                 let id: String = document["id"]! as! String
+                let participants = document["participants"] as! [String]
                 
-                self.events.append(Event(owner: owner, place: place, description: description, date: date, spots: spots, title: title, eventId: id, category: category, subcategory: subcategory, time: time))
+                self.events.append(Event(owner: owner, place: place, description: description, date: date, spots: spots, title: title, eventId: id, category: category, subcategory: subcategory, time: time, participants: participants))
                 
                 DispatchQueue.main.async {
                     self.tableView.reloadData()

@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseAuth
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: UIViewController, UITextFieldDelegate {
     
     var handle: AuthStateDidChangeListenerHandle?
     var user: User?
@@ -19,7 +19,13 @@ class RegisterViewController: UIViewController {
         
         emailTextView.underlined()
         passwordTextView.underlined()
-        
+    }
+    
+    @IBOutlet weak var registerButton: UIButton!
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        onClick(registerButton)
+        return true
     }
     
     override func viewWillAppear(_ animated: Bool) {
