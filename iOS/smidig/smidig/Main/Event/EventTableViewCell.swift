@@ -25,6 +25,8 @@ class EventTableViewCell: UITableViewCell {
     @IBOutlet weak var subcategoryLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
