@@ -14,12 +14,7 @@ class ChatViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         chat = Chat(chatId: chatId)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-
     }
     
     var chat: Chat!
@@ -41,6 +36,13 @@ class ChatViewController: UIViewController {
             
             print(chat.messages.count)
 
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "chatVCtoTW") {
+            let displayTW = segue.destination as! MessageTableViewController
+            displayTW.chatId = self.chatId
         }
     }
 }
