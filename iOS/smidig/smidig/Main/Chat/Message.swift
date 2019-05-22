@@ -8,8 +8,9 @@
 
 import Foundation
 import Firebase
+import MessageKit
 
-class Message {
+struct Message {
     
     let message: String
     let author: String

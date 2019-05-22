@@ -52,8 +52,6 @@ class Chat {
                     
                     let message = Message.init(message: text as! String, author: username, date: Timestamp.init(date: timestamp))
                     
-                    print("Ny melding hentet fra db, sendt av: \(message.author)")
-                    
                     self.messages.append(message)
                 }
             })
