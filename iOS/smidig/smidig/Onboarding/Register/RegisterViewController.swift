@@ -21,6 +21,14 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         
         passwordTextField.underlined()
         passwordTextField.delegate = self
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc
+    func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     @IBOutlet weak var registerButton: UIButton!
