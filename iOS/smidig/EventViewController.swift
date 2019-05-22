@@ -18,7 +18,15 @@ class EventViewController: UIViewController {
         self.navigationController?.interactivePopGestureRecognizer?.delegate = self as? UIGestureRecognizerDelegate;
 
         // Do any additional setup after loading the view.
-        eventView.populate(event: event)
+        //eventView.populate(event: event)
+        populate(event: event)
+        
+        if event.participants.contains(Auth.auth().currentUser!.uid) {
+            joinButton.setTitle("Påmeldt", for: UIControl.State.normal)
+            joinButton.isEnabled = false
+        } else {
+            leaveButton.isHidden = true
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -27,16 +35,28 @@ class EventViewController: UIViewController {
     
     var event: Event!
     
-    @IBOutlet weak var eventView: EventView!
+    @IBOutlet weak var eventView: EventScrollView!
+    
+    @IBOutlet weak var joinButton: UIButton!
     
     @IBAction func joinEvent(_ sender: UIButton) {
         event.join()
         postAlert(title: "Lagt til i kalender", message: "😃")
+        populate(event: event)
+        leaveButton.isHidden = false
+        joinButton.setTitle("Påmeldt", for: UIControl.State.normal)
+        joinButton.isEnabled = false
     }
+    
+    @IBOutlet weak var leaveButton: UIButton!
     
     @IBAction func leaveEvent(_ sender: UIButton) {
         event.leave()
         postAlert(title: "Det var synd", message: "😔")
+        populate(event: event)
+        leaveButton.isHidden = true
+        joinButton.setTitle("Bli med", for: UIControl.State.normal)
+        joinButton.isEnabled = true
     }
     
     @IBAction func goToChat(_ sender: Any) {
@@ -51,21 +71,35 @@ class EventViewController: UIViewController {
             alert.dismiss(animated: true, completion: nil)
         })
     }
-    
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }*/
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             let destination = segue.destination as! ChatViewController
             destination.chatId = event.eventId
     }
+    
+    @IBOutlet weak var labelTitle: UILabel!
+    @IBOutlet weak var labelDescription: UILabel!
+    @IBOutlet weak var labelPlace: UILabel!
+    @IBOutlet weak var labelDate: UILabel!
+    @IBOutlet weak var labelTime: UILabel!
+    @IBOutlet weak var labelSpots: UILabel!
+    
+    var eventId: String = ""
+    
+    func populate(event: Event) {
+        labelTitle.text = event.title
+        labelDescription.text = event.description
+        labelSpots.text = String(event.participants.count) + "/" + event.spots
+        labelPlace.text = event.place
+        labelDate.text = event.date
+        labelTime.text = event.time
+        eventId = event.eventId
+    }
 }
 
-class EventView: UIView {
+
+
+class EventScrollView: UIScrollView {
     
     let db = Firestore.firestore()
     var eventId: String = ""
@@ -78,11 +112,17 @@ class EventView: UIView {
     
     @IBOutlet weak var placeLabel: UILabel!
     
+    @IBOutlet weak var dateLabel: UILabel!
+    
+    @IBOutlet weak var timeLabel: UILabel!
+    
     func populate(event: Event) {
         titleLabel.text = event.title
         descriptionLabel.text = event.description
-        spotsLabel.text = event.spots
+        spotsLabel.text = String(event.participants.count) + "/" + event.spots
         placeLabel.text = event.place
+        dateLabel.text = event.date
+        timeLabel.text = event.time
         eventId = event.eventId
     }
 }

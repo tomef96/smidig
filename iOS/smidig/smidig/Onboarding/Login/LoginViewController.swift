@@ -22,11 +22,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         emailTextField.underlined()
-        emailTextField.keyboardType = UIKeyboardType.emailAddress
-        emailTextField.returnKeyType = UIReturnKeyType.next
         
         passwordTextField.underlined()
-        passwordTextField.returnKeyType = UIReturnKeyType.go
         passwordTextField.delegate = self
         
         // Do any additional setup after loading the view.

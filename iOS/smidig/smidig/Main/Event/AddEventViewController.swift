@@ -109,6 +109,7 @@ class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             documentData["time"] = timeTextField.text
             documentData["category"] = categoryTextField.text
             documentData["subcategory"] = subcategoryTextField.text
+            documentData["participants"] = [Auth.auth().currentUser!.uid]
             
             
             
@@ -119,7 +120,7 @@ class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
                 } else {
                     print("Document added with ID: \(ref!.documentID)")
                     ref?.setData(["id" : ref?.documentID], merge: true)
-                    self.event = Event(owner: documentData["owner"] as! String, place: documentData["place"] as! String, description: documentData["description"] as! String, date: documentData["date"] as! String, spots: documentData["spots"] as! String, title: documentData["title"] as! String, eventId: (ref?.documentID)!, category: documentData["category"] as! String, subcategory: documentData["subcategory"] as! String, time: documentData["time"] as! String)
+                    self.event = Event(owner: documentData["owner"] as! String, place: documentData["place"] as! String, description: documentData["description"] as! String, date: documentData["date"] as! String, spots: documentData["spots"] as! String, title: documentData["title"] as! String, eventId: (ref?.documentID)!, category: documentData["category"] as! String, subcategory: documentData["subcategory"] as! String, time: documentData["time"] as! String, participants: documentData["participants"] as! [String])
                     self.performSegue(withIdentifier: "eventAdded", sender: self)
                 }
             }

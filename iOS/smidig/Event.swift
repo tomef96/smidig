@@ -23,7 +23,7 @@ class Event {
     let time: String
     let category: String
     let subcategory: String
-    // TODO: let spotsLeft: Int
+    var participants: [String]
     //let isJoined: Bool
     //let image: String
     
@@ -41,7 +41,7 @@ class Event {
         case Bergen
     }
 
-    init(owner: String, place: String, description: String, date: String, spots: String, title: String, eventId: String, category: String, subcategory: String, time: String) {
+    init(owner: String, place: String, description: String, date: String, spots: String, title: String, eventId: String, category: String, subcategory: String, time: String, participants: [String]) {
         self.owner = owner
         self.title = title
         self.date = date
@@ -52,6 +52,7 @@ class Event {
         self.category = category
         self.subcategory = subcategory
         self.time = time
+        self.participants = participants
     }
     
     func leave() {
@@ -63,8 +64,15 @@ class Event {
                 if result?.value as! DocumentReference == eventReference {
                     let document = document.documentID
                     docRef.document(document).delete()
+                eventReference.collection("members").document(Auth.auth().currentUser!.uid).delete()
                 }
             }
+        }
+    
+        let index = participants.index(of: Auth.auth().currentUser!.uid)
+        if index != nil {
+            participants.remove(at: index!)
+            eventReference.setData(["participants": participants], mergeFields: ["participants"])
         }
     }
     
@@ -73,5 +81,13 @@ class Event {
         let eventReference = db.document("events/\(eventId)")
         
         ref.collection("schedule").addDocument(data: ["event" : eventReference])
+    /*eventReference.collection("members").document(Auth.auth().currentUser!.uid).setData(["test": "test"])*/
+        
+        let userId = Auth.auth().currentUser!.uid
+        if !participants.contains(userId) {
+            participants.append(userId)
+            eventReference.setData(["participants": participants], mergeFields: ["participants"])
+        }
+        
     }
 }

@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseAuth
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: UIViewController, UITextFieldDelegate {
     
     var handle: AuthStateDidChangeListenerHandle?
     var user: User?
@@ -17,15 +17,24 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        emailTextView.underlined()
-        passwordTextView.underlined()
+        emailTextField.underlined()
         
+        passwordTextField.underlined()
+        passwordTextField.delegate = self
+    }
+    
+    @IBOutlet weak var registerButton: UIButton!
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        passwordTextField.resignFirstResponder()
+        onClick(registerButton)
+        return true
     }
     
     override func viewWillAppear(_ animated: Bool) {
         handle = Auth.auth().addStateDidChangeListener {
             (auth, user) in
-            if user == nil {
+            if user != nil {
                 print("User is logged in")
             } else {
                 print("User is not logged in")
@@ -39,12 +48,12 @@ class RegisterViewController: UIViewController {
     
     
 
-    @IBOutlet weak var emailTextView: UITextField!
-    @IBOutlet weak var passwordTextView: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     
     @IBAction func onClick(_ sender: UIButton) {
-        if (self.emailTextView.text != nil && self.passwordTextView.text != nil) {
-            registerUser(email: (self.emailTextView?.text)!, password: (self.passwordTextView?.text)!)
+        if (self.emailTextField.text != nil && self.passwordTextField.text != nil) {
+            registerUser(email: (self.emailTextField?.text)!, password: (self.passwordTextField?.text)!)
         }
     }
     
@@ -62,15 +71,5 @@ class RegisterViewController: UIViewController {
             }
         }
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
