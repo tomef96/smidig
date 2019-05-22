@@ -16,10 +16,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        emailTextField.underlined()
-        
-        passwordTextField.underlined()
+    
         passwordTextField.delegate = self
     }
     
@@ -50,16 +47,23 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var displayNameTextField: UITextField!
     
     @IBAction func onClick(_ sender: UIButton) {
-        if (self.emailTextField.text != nil && self.passwordTextField.text != nil) {
-            registerUser(email: (self.emailTextField?.text)!, password: (self.passwordTextField?.text)!)
+        if (self.emailTextField.text != nil && self.passwordTextField.text != nil &&
+            self.displayNameTextField.text != nil) {
+            registerUser(email: (self.emailTextField?.text)!, password: (self.passwordTextField?.text)!, displayName: (self.displayNameTextField?.text)!)
         }
     }
     
-    func registerUser(email: String, password: String) {
+    func registerUser(email: String, password: String, displayName: String) {
         Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
             guard (authResult?.user) != nil else { return }
+            let changeRequest = authResult?.user.createProfileChangeRequest()
+            changeRequest?.displayName = displayName
+            changeRequest?.commitChanges(completion: { (err) in
+                
+            })
             self.performSegue(withIdentifier: "registrationComplete", sender: self)
         }
     }
