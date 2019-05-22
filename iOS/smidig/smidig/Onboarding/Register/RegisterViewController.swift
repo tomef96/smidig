@@ -18,11 +18,8 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         emailTextField.underlined()
-        emailTextField.keyboardType = UIKeyboardType.emailAddress
-        emailTextField.returnKeyType = UIReturnKeyType.next
         
         passwordTextField.underlined()
-        passwordTextField.returnKeyType = UIReturnKeyType.go
         passwordTextField.delegate = self
     }
     
@@ -37,7 +34,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     override func viewWillAppear(_ animated: Bool) {
         handle = Auth.auth().addStateDidChangeListener {
             (auth, user) in
-            if user == nil {
+            if user != nil {
                 print("User is logged in")
             } else {
                 print("User is not logged in")
@@ -74,15 +71,5 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             }
         }
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
