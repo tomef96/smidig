@@ -111,6 +111,7 @@ class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             documentData["subcategory"] = subcategoryTextField.text
             documentData["participants"] = [Auth.auth().currentUser!.uid]
             
+            /*let schedule = db.collection("users").document(Auth.auth().currentUser!.uid).collection("schedule")*/
             
             
             var ref: DocumentReference? = nil
@@ -121,9 +122,13 @@ class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
                     print("Document added with ID: \(ref!.documentID)")
                     ref?.setData(["id" : ref?.documentID], merge: true)
                     self.event = Event(owner: documentData["owner"] as! String, place: documentData["place"] as! String, description: documentData["description"] as! String, date: documentData["date"] as! String, spots: documentData["spots"] as! String, title: documentData["title"] as! String, eventId: (ref?.documentID)!, category: documentData["category"] as! String, subcategory: documentData["subcategory"] as! String, time: documentData["time"] as! String, participants: documentData["participants"] as! [String])
+                    
+                   let eventReference = self.db.document("events/\(ref!.documentID)")
+                    self.db.collection("users").document(Auth.auth().currentUser!.uid).collection("schedule").addDocument(data: ["event": eventReference])
                     self.performSegue(withIdentifier: "eventAdded", sender: self)
                 }
             }
+            
             
         } else {
             print("Alle feltene er ikke fylt ut")

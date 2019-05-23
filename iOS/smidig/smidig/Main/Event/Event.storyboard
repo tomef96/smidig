@@ -27,10 +27,10 @@
             </objects>
             <point key="canvasLocation" x="289" y="-122"/>
         </scene>
-        <!--Detailed Event-->
+        <!--Detaljer-->
         <scene sceneID="Jiu-yT-nOm">
             <objects>
-                <viewController storyboardIdentifier="DetailedEvent" title="Detailed Event" useStoryboardIdentifierAsRestorationIdentifier="YES" id="l6s-1B-Kpf" customClass="EventViewController" customModule="smidig" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailedEvent" title="Detaljer" useStoryboardIdentifierAsRestorationIdentifier="YES" id="l6s-1B-Kpf" customClass="EventViewController" customModule="smidig" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RJo-JX-lWM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -230,7 +230,6 @@
         <!--Navigation Controller-->
         <scene sceneID="qpm-9f-EZ9">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pM7-as-ec1" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="Vek-Uu-Eg7" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xlu-sK-2cB">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -240,6 +239,7 @@
                         <segue destination="vzU-Ok-cje" kind="relationship" relationship="rootViewController" id="vDy-i2-5W2"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pM7-as-ec1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1961" y="-1314"/>
         </scene>
@@ -345,12 +345,6 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ny aktivitet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zds-AU-WBF">
-                                                <rect key="frame" x="136" y="16" width="103" height="26"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Subkategori" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5aa-sX-EPL">
                                                 <rect key="frame" x="255" y="442" width="93" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -392,13 +386,11 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="zds-AU-WBF" firstAttribute="centerX" secondItem="dQQ-IM-RVy" secondAttribute="centerX" id="5gv-1a-pYp"/>
+                                            <constraint firstItem="Np7-6H-3AH" firstAttribute="top" secondItem="dQQ-IM-RVy" secondAttribute="top" constant="61" id="6a7-k9-YgD"/>
+                                            <constraint firstItem="cZP-CF-sbC" firstAttribute="top" secondItem="dQQ-IM-RVy" secondAttribute="top" constant="61" id="CAM-TJ-sBw"/>
                                             <constraint firstItem="Np7-6H-3AH" firstAttribute="leading" secondItem="dQQ-IM-RVy" secondAttribute="leading" constant="35" id="Dbd-bW-tqv"/>
                                             <constraint firstAttribute="trailing" secondItem="cZP-CF-sbC" secondAttribute="trailing" constant="64" id="VLe-kS-FZ7"/>
                                             <constraint firstItem="cZP-CF-sbC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Np7-6H-3AH" secondAttribute="trailing" constant="181" id="dWq-Sg-ogp"/>
-                                            <constraint firstItem="zds-AU-WBF" firstAttribute="top" secondItem="dQQ-IM-RVy" secondAttribute="top" constant="16" id="ff0-cp-Fji"/>
-                                            <constraint firstItem="cZP-CF-sbC" firstAttribute="top" secondItem="zds-AU-WBF" secondAttribute="bottom" constant="19" id="fnZ-Cl-h8E"/>
-                                            <constraint firstItem="Np7-6H-3AH" firstAttribute="top" secondItem="zds-AU-WBF" secondAttribute="bottom" constant="19" id="qaR-Vi-KQ9"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -424,7 +416,7 @@
                     <tabBarItem key="tabBarItem" title="" image="baseline_add_circle_black_36pt" selectedImage="baseline_add_circle_black_36pt" id="pOH-OK-eQl">
                         <inset key="imageInsets" minX="0.0" minY="4" maxX="0.0" maxY="0.0"/>
                     </tabBarItem>
-                    <navigationItem key="navigationItem" id="hzM-de-HYK"/>
+                    <navigationItem key="navigationItem" title="Ny aktivitet" id="hzM-de-HYK"/>
                     <connections>
                         <outlet property="categoryPicker" destination="BZf-Cd-F4H" id="QtQ-SW-eqO"/>
                         <outlet property="categoryTextField" destination="od6-w2-DYw" id="bCL-Zu-kzU"/>

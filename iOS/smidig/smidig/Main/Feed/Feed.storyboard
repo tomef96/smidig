@@ -18,7 +18,7 @@
                     <tabBarItem key="tabBarItem" title="" image="baseline_home_black_36pt" id="r3S-eL-oTX">
                         <inset key="imageInsets" minX="0.0" minY="3" maxX="0.0" maxY="0.0"/>
                     </tabBarItem>
-                    <navigationItem key="navigationItem" id="kLs-32-OTT"/>
+                    <navigationItem key="navigationItem" title="Feed" id="kLs-32-OTT"/>
                     <connections>
                         <segue destination="Mf6-rP-Etk" kind="show" id="7o6-iw-MkX"/>
                     </connections>
@@ -43,10 +43,10 @@
             </objects>
             <point key="canvasLocation" x="539" y="267"/>
         </scene>
-        <!--Hjem-->
+        <!--Feed-->
         <scene sceneID="Oon-9Z-MvJ">
             <objects>
-                <viewController storyboardIdentifier="FeedViewController" id="Mf6-rP-Etk" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FeedViewController" title="Feed" id="Mf6-rP-Etk" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vmr-Ka-1cy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -131,16 +131,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Hei No Isolation!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3TR-bC-nCX">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="246" id="nZg-OW-tkQ" userLabel="Cell" customClass="EventTableViewCell" customModule="smidig" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="414" height="246"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="246"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nZg-OW-tkQ" id="7iY-7H-9HO">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="245.5"/>
@@ -235,6 +228,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="cardView" destination="dxM-OD-qzG" id="Iyr-6J-EWK"/>
                                     <outlet property="categoryLabel" destination="9qR-q1-OcE" id="AAs-2b-9jm"/>
                                     <outlet property="descriptionLabel" destination="Sq9-Wt-dh1" id="Wtj-Lg-A5N"/>
                                     <outlet property="eventTitleLabel" destination="cLI-nm-91X" id="u7c-6s-MDm"/>
