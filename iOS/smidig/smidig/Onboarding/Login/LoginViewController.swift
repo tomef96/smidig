@@ -20,10 +20,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        emailTextField.underlined()
-        
-        passwordTextField.underlined()
+
         passwordTextField.delegate = self
         
         // Do any additional setup after loading the view.

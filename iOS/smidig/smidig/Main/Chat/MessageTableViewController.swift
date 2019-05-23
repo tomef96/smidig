@@ -86,6 +86,7 @@ class MessageTableViewController: UITableViewController {
         cell.messageLabel.layer.masksToBounds = true
         
         if (Auth.auth().currentUser?.displayName == cell.message?.author) {
+            cell.messageLabel.backgroundColor = UIColor.red
             
         }
         

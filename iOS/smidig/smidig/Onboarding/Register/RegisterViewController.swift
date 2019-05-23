@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import Firebase
 
 class RegisterViewController: UIViewController, UITextFieldDelegate {
     
@@ -59,6 +60,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     func registerUser(email: String, password: String, displayName: String) {
         Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
             guard (authResult?.user) != nil else { return }
+            Firestore.firestore().collection("users").document((authResult?.user.uid)!).setData(["username" : displayName])
             let changeRequest = authResult?.user.createProfileChangeRequest()
             changeRequest?.displayName = displayName
             changeRequest?.commitChanges(completion: { (err) in
