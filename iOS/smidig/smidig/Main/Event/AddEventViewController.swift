@@ -65,8 +65,8 @@ class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             i = i + 1
         } while i < 101
         
-        categoryData.append(contentsOf: ["Gaming", "Friluft"])
-        subcategoryData.append(contentsOf: ["CS", "Fortnite", "Klatring", "Løping"])
+        categoryData.append(contentsOf: Event.categories.keys)
+        //subcategoryData.append(contentsOf: Event.categories["Sport"]!)
         
         self.numberPicker.delegate = self
         self.numberPicker.dataSource = self
@@ -186,6 +186,8 @@ class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
            numberTextField.text = String(pickerData[row])
         } else if (pickerView == categoryPicker) {
             categoryTextField.text = String(categoryData[row])
+            subcategoryTextField.text = ""
+            subcategoryData = Event.categories[categoryTextField.text!]!
         } else if (pickerView == subcategoryPicker) {
             subcategoryTextField.text = String(subcategoryData[row])
         }
