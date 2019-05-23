@@ -85,6 +85,11 @@ class MessageTableViewController: UITableViewController {
         cell.messageLabel.layer.cornerRadius = 10
         cell.messageLabel.layer.masksToBounds = true
         
+        if (Auth.auth().currentUser?.displayName == cell.message?.author) {
+            cell.messageLabel.backgroundColor = UIColor.red
+            
+        }
+        
         if (previous != nil) {
             if (previous?.author == entry.author) {
                 cell.authorLabel.text = " "

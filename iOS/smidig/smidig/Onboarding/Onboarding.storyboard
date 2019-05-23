@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="d1T-sQ-xco">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="d1T-sQ-xco">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,8 +21,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="zsC-ju-ZTz">
                                 <rect key="frame" x="0.0" y="44" width="414" height="398"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FOO-cr-NhP" userLabel="EmailTextField">
-                                <rect key="frame" x="100" y="366" width="214" height="20"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FOO-cr-NhP" userLabel="EmailTextField">
+                                <rect key="frame" x="100" y="366" width="214" height="30"/>
                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration" hint="you@example.com" label="Email"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -59,8 +59,8 @@
                                     <segue destination="kJg-xF-dy9" kind="show" id="l2R-eJ-Vgs"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ILP-Sc-4tU" userLabel="PasswordTextField">
-                                <rect key="frame" x="100" y="436" width="214" height="20"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Passord" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ILP-Sc-4tU" userLabel="PasswordTextField">
+                                <rect key="frame" x="100" y="436" width="214" height="30"/>
                                 <accessibility key="accessibilityConfiguration" hint="you@example.com" label="Email"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -123,8 +123,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="2yV-Oh-Owa">
                                 <rect key="frame" x="0.0" y="44" width="414" height="398"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UwR-bV-kZ7" userLabel="EmailTextField">
-                                <rect key="frame" x="100" y="366" width="214" height="20"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UwR-bV-kZ7" userLabel="EmailTextField">
+                                <rect key="frame" x="100" y="436" width="214" height="30"/>
                                 <accessibility key="accessibilityConfiguration" hint="you@example.com" label="Email"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -135,20 +135,20 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aeB-09-xWQ" userLabel="PasswordTextField">
-                                <rect key="frame" x="100" y="426" width="214" height="20"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Brukernavn" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tdo-Wy-9CA" userLabel="EmailTextField">
+                                <rect key="frame" x="100" y="366" width="214" height="30"/>
                                 <accessibility key="accessibilityConfiguration" hint="you@example.com" label="Email"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
-                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iBc-FD-uBZ">
-                                <rect key="frame" x="120" y="510" width="174" height="30"/>
+                                <rect key="frame" x="120" y="576" width="174" height="30"/>
                                 <color key="backgroundColor" red="0.11372549019607843" green="0.72549019607843135" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="zS4-j3-cdY"/>
@@ -161,6 +161,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="onClick:" destination="kJg-xF-dy9" eventType="touchUpInside" id="2Ia-zB-2WR"/>
+                                    <segue destination="C5L-pj-4Am" kind="show" identifier="registrationComplete" id="e6I-5X-Hes"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fnY-qW-03S">
@@ -172,29 +173,45 @@
                                     <segue destination="d1T-sQ-xco" kind="show" id="y2z-vq-fwm"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Passord" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aeB-09-xWQ" userLabel="PasswordTextField">
+                                <rect key="frame" x="100" y="506" width="214" height="30"/>
+                                <accessibility key="accessibilityConfiguration" hint="you@example.com" label="Email"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES" textContentType="password"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="aeB-09-xWQ" firstAttribute="leading" secondItem="lmD-XS-kZU" secondAttribute="leading" constant="100" id="5df-Cn-vdF"/>
+                            <constraint firstItem="aeB-09-xWQ" firstAttribute="top" secondItem="UwR-bV-kZ7" secondAttribute="top" constant="70" id="4yx-GD-4Ba"/>
+                            <constraint firstItem="lmD-XS-kZU" firstAttribute="trailing" secondItem="UwR-bV-kZ7" secondAttribute="trailing" constant="100" id="5i2-sw-sUI"/>
                             <constraint firstItem="lmD-XS-kZU" firstAttribute="bottom" secondItem="2yV-Oh-Owa" secondAttribute="bottom" constant="420" id="7FM-rn-kKd"/>
-                            <constraint firstItem="UwR-bV-kZ7" firstAttribute="top" secondItem="lmD-XS-kZU" secondAttribute="top" constant="322" id="AyA-rz-GXs"/>
-                            <constraint firstItem="lmD-XS-kZU" firstAttribute="trailing" secondItem="UwR-bV-kZ7" secondAttribute="trailing" constant="100" id="Die-tZ-jLh"/>
-                            <constraint firstItem="iBc-FD-uBZ" firstAttribute="top" secondItem="aeB-09-xWQ" secondAttribute="bottom" constant="64" id="GFC-0o-rd9"/>
-                            <constraint firstItem="UwR-bV-kZ7" firstAttribute="leading" secondItem="lmD-XS-kZU" secondAttribute="leading" constant="100" id="GUR-Pw-hXE"/>
-                            <constraint firstItem="lmD-XS-kZU" firstAttribute="trailing" secondItem="aeB-09-xWQ" secondAttribute="trailing" constant="100" id="GUx-ft-cPF"/>
+                            <constraint firstItem="tdo-Wy-9CA" firstAttribute="top" secondItem="lmD-XS-kZU" secondAttribute="top" constant="322" id="B2S-zT-lPn"/>
+                            <constraint firstItem="UwR-bV-kZ7" firstAttribute="top" secondItem="tdo-Wy-9CA" secondAttribute="top" constant="70" id="LlG-Uq-3uF"/>
                             <constraint firstItem="lmD-XS-kZU" firstAttribute="bottom" secondItem="fnY-qW-03S" secondAttribute="bottom" constant="20" id="Mmm-1s-XEh"/>
                             <constraint firstItem="lmD-XS-kZU" firstAttribute="trailing" secondItem="2yV-Oh-Owa" secondAttribute="trailing" id="Nwe-Yz-4hQ"/>
                             <constraint firstItem="lmD-XS-kZU" firstAttribute="top" secondItem="2yV-Oh-Owa" secondAttribute="top" id="THc-2J-III"/>
+                            <constraint firstItem="lmD-XS-kZU" firstAttribute="trailing" secondItem="tdo-Wy-9CA" secondAttribute="trailing" constant="100" id="VCV-Gl-dkH"/>
+                            <constraint firstItem="lmD-XS-kZU" firstAttribute="trailing" secondItem="aeB-09-xWQ" secondAttribute="trailing" constant="100" id="Xt5-05-axa"/>
+                            <constraint firstItem="tdo-Wy-9CA" firstAttribute="leading" secondItem="lmD-XS-kZU" secondAttribute="leading" constant="100" id="YeN-Uw-0ah"/>
+                            <constraint firstItem="UwR-bV-kZ7" firstAttribute="leading" secondItem="lmD-XS-kZU" secondAttribute="leading" constant="100" id="bf0-Rr-GjA"/>
+                            <constraint firstItem="iBc-FD-uBZ" firstAttribute="top" secondItem="aeB-09-xWQ" secondAttribute="top" constant="70" id="cPe-ow-Gc8"/>
                             <constraint firstItem="lmD-XS-kZU" firstAttribute="trailing" secondItem="fnY-qW-03S" secondAttribute="trailing" constant="50" id="cmt-0u-473"/>
                             <constraint firstItem="lmD-XS-kZU" firstAttribute="leading" secondItem="2yV-Oh-Owa" secondAttribute="leading" id="d6H-IH-Ks5"/>
-                            <constraint firstItem="aeB-09-xWQ" firstAttribute="top" secondItem="UwR-bV-kZ7" secondAttribute="bottom" constant="40" id="hwo-uI-1bK"/>
                             <constraint firstItem="fnY-qW-03S" firstAttribute="leading" secondItem="lmD-XS-kZU" secondAttribute="leading" constant="50" id="ioP-dX-AbX"/>
                             <constraint firstItem="lmD-XS-kZU" firstAttribute="trailing" secondItem="iBc-FD-uBZ" secondAttribute="trailing" constant="120" id="oib-i8-1Pf"/>
+                            <constraint firstItem="aeB-09-xWQ" firstAttribute="leading" secondItem="lmD-XS-kZU" secondAttribute="leading" constant="100" id="qXc-Bm-E15"/>
                             <constraint firstItem="iBc-FD-uBZ" firstAttribute="leading" secondItem="lmD-XS-kZU" secondAttribute="leading" constant="120" id="tjb-dw-WiK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lmD-XS-kZU"/>
                     </view>
                     <connections>
+                        <outlet property="displayNameTextField" destination="tdo-Wy-9CA" id="BA3-r3-JwQ"/>
                         <outlet property="emailTextField" destination="UwR-bV-kZ7" id="8Jn-PO-bHO"/>
                         <outlet property="passwordTextField" destination="aeB-09-xWQ" id="5QA-JZ-tIZ"/>
                         <outlet property="registerButton" destination="iBc-FD-uBZ" id="ByH-8j-GGJ"/>
@@ -208,4 +225,7 @@
     <resources>
         <image name="logo" width="1182" height="1080"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="HAQ-Fe-iEk"/>
+    </inferredMetricsTieBreakers>
 </document>
