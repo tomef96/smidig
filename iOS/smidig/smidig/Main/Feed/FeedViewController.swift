@@ -65,9 +65,8 @@ class FeedViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath as IndexPath) as! EventTableViewCell
+        
         let entry = self.events[indexPath.row]
-        //let image = UIImage(named: "LogoPlaceholder.png")
-        //cell.eventImageView.image = image
         cell.event = entry
         cell.eventTitleLabel.text = entry.title
         cell.spotsLabel?.text = entry.spots
@@ -78,7 +77,27 @@ class FeedViewController: UITableViewController {
         cell.categoryLabel?.text = entry.category
         cell.timeLabel.text = entry.time
         cell.dateLabel?.text = entry.date
+        setCellBackgroundColor(for: cell.cardView, by: entry.category)
         return cell
+    }
+    
+    private func setCellBackgroundColor(for view: UIView, by category: String) {
+        switch category {
+        case "Sport":
+            view.backgroundColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1) // #95D26B
+        case "Gaming":
+            view.backgroundColor = #colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1) // #F07F5A
+        case "Meet Up":
+            view.backgroundColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1) // #42C1F7
+        case "Underholdning":
+            view.backgroundColor = #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1) // #F7C758
+        case "Studering":
+            view.backgroundColor = #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1) // #DA407A
+        case "Uteliv":
+            view.backgroundColor = #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1) // #5D11F7
+        default:
+            view.backgroundColor = #colorLiteral(red: 0.9490196078, green: 0.337254902, blue: 0.3215686275, alpha: 1) // #F25652
+        }
     }
     
     /*override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
