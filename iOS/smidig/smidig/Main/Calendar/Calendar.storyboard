@@ -65,14 +65,14 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="2eF-o2-V8H">
                                                             <rect key="frame" x="0.0" y="104.5" width="311" height="20.5"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="bottomRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 Ledig" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Su7-lA-2Qn">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="57.5" height="20.5"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="bottomRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plasser" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Su7-lA-2Qn">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="60.5" height="20.5"/>
                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11/12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ag-X2-csU" userLabel="Date">
-                                                                    <rect key="frame" x="139.5" y="0.0" width="42" height="20.5"/>
+                                                                    <rect key="frame" x="141" y="0.0" width="42" height="20.5"/>
                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -112,6 +112,7 @@
                                     <outlet property="dateLabel" destination="7ag-X2-csU" id="AhT-V6-6mM"/>
                                     <outlet property="eventTitleLabel" destination="CXe-Ul-mbU" id="ceA-cW-0WF"/>
                                     <outlet property="placeLabel" destination="nHq-7g-zuU" id="Yt8-mU-fVE"/>
+                                    <outlet property="spotsLabel" destination="Su7-lA-2Qn" id="R9f-Ne-hws"/>
                                     <outlet property="subcategoryLabel" destination="3GI-VC-Vub" id="WA7-dq-L0X"/>
                                     <outlet property="timeLabel" destination="8J9-Q6-0vN" id="fSw-Pv-iv5"/>
                                     <segue destination="2Vy-IP-Cge" kind="show" id="ZpM-eN-Cd7"/>

@@ -69,7 +69,7 @@ class FeedViewController: UITableViewController {
         let entry = self.events[indexPath.row]
         cell.event = entry
         cell.eventTitleLabel.text = entry.title
-        cell.spotsLabel?.text = entry.spots
+        cell.spotsLabel?.text = String((Int(entry.spots)! - entry.participants.count)) + " plasser"
         cell.descriptionLabel?.text = entry.description
         cell.placeLabel.text = entry.place
         cell.eventId = entry.eventId
