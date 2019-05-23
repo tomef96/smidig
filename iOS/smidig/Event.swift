@@ -24,22 +24,16 @@ class Event {
     let category: String
     let subcategory: String
     var participants: [String]
-    //let isJoined: Bool
-    //let image: String
     
-    enum Category: String {
-        case Sport
-        case Gaming
-        case Fritid
-        case Friluft
-    }
-    
-    enum Place: String {
-        case Oslo
-        case Trondheim
-        case Stavanger
-        case Bergen
-    }
+    static let categories: Dictionary<String, Array<String>> = [
+        "Gaming": ["CS", "Fortnite", "WoW", "Annet"],
+        "Sport": ["Fotball", "Hockey", "Basket", "Annet"],
+        "Studering": ["Lesing", "Øving", "Annet"],
+        "Uteliv": ["Vors", "Fest", "Annet"],
+        "Underholdning": ["Kino", "Bowling", "Biljard", "Annet"],
+        "Meet Up": ["Annet"],
+        "Annet": ["Annet"]
+    ]
 
     init(owner: String, place: String, description: String, date: String, spots: String, title: String, eventId: String, category: String, subcategory: String, time: String, participants: [String]) {
         self.owner = owner

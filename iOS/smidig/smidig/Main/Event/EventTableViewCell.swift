@@ -11,6 +11,7 @@ import UIKit
 class EventTableViewCell: UITableViewCell {
     
     var event: Event? = nil
+    var eventId: String!
     
     @IBOutlet weak var placeLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -18,9 +19,7 @@ class EventTableViewCell: UITableViewCell {
     @IBOutlet weak var backgroundCellView: UIView!
     @IBOutlet weak var eventImageView: UIImageView!
     @IBOutlet weak var eventTitleLabel: UILabel!
-    var eventId: String!
     @IBOutlet weak var categoryRectangle: UIView!
-    
     @IBOutlet weak var cardView: CardView!
     @IBOutlet weak var subcategoryLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
