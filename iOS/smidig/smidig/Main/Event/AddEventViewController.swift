@@ -92,7 +92,16 @@ class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         
         dateTextField.inputView = datePicker
         timeTextField.inputView = timePicker
+        
+        let date = Date()
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        dateTextField.text = dateFormatter.string(from: date)
     
+        let timeFormatter = DateFormatter()
+        timeFormatter.dateFormat = "HH:mm"
+        timeTextField.text = timeFormatter.string(from: date)
     }
     
     @IBAction func addEvent(_ sender: Any) {
