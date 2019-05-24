@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aPc-Rs-o0n">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aPc-Rs-o0n">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Search View Controller-->
+        <!--Søk-->
         <scene sceneID="HLt-zT-pd7">
             <objects>
                 <viewController id="2bg-5F-uyT" customClass="SearchViewController" customModule="smidig" customModuleProvider="target" sceneMemberID="viewController">
@@ -47,7 +47,7 @@
                     <tabBarItem key="tabBarItem" title="" image="baseline_search_black_36pt" id="ANe-rS-3ta">
                         <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
-                    <navigationItem key="navigationItem" id="7wd-kM-R17"/>
+                    <navigationItem key="navigationItem" title="Søk" id="7wd-kM-R17"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="searchPhrase" destination="I2A-Xu-4Ef" id="how-sJ-06X"/>
@@ -147,6 +147,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="baseline_search_black_36pt" width="72" height="72"/>
+        <image name="baseline_search_black_36pt" width="36" height="36"/>
     </resources>
 </document>

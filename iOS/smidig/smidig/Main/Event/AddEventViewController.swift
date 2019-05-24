@@ -65,8 +65,8 @@ class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             i = i + 1
         } while i < 101
         
-        categoryData.append(contentsOf: ["Gaming", "Friluft"])
-        subcategoryData.append(contentsOf: ["CS", "Fortnite", "Klatring", "Løping"])
+        categoryData.append(contentsOf: Event.categories.keys)
+        //subcategoryData.append(contentsOf: Event.categories["Sport"]!)
         
         self.numberPicker.delegate = self
         self.numberPicker.dataSource = self
@@ -92,7 +92,16 @@ class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         
         dateTextField.inputView = datePicker
         timeTextField.inputView = timePicker
+        
+        let date = Date()
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        dateTextField.text = dateFormatter.string(from: date)
     
+        let timeFormatter = DateFormatter()
+        timeFormatter.dateFormat = "HH:mm"
+        timeTextField.text = timeFormatter.string(from: date)
     }
     
     @IBAction func addEvent(_ sender: Any) {
@@ -111,6 +120,7 @@ class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             documentData["subcategory"] = subcategoryTextField.text
             documentData["participants"] = [Auth.auth().currentUser!.uid]
             
+            /*let schedule = db.collection("users").document(Auth.auth().currentUser!.uid).collection("schedule")*/
             
             
             var ref: DocumentReference? = nil
@@ -121,9 +131,13 @@ class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
                     print("Document added with ID: \(ref!.documentID)")
                     ref?.setData(["id" : ref?.documentID], merge: true)
                     self.event = Event(owner: documentData["owner"] as! String, place: documentData["place"] as! String, description: documentData["description"] as! String, date: documentData["date"] as! String, spots: documentData["spots"] as! String, title: documentData["title"] as! String, eventId: (ref?.documentID)!, category: documentData["category"] as! String, subcategory: documentData["subcategory"] as! String, time: documentData["time"] as! String, participants: documentData["participants"] as! [String])
+                    
+                   let eventReference = self.db.document("events/\(ref!.documentID)")
+                    self.db.collection("users").document(Auth.auth().currentUser!.uid).collection("schedule").addDocument(data: ["event": eventReference])
                     self.performSegue(withIdentifier: "eventAdded", sender: self)
                 }
             }
+            
             
         } else {
             print("Alle feltene er ikke fylt ut")
@@ -186,6 +200,8 @@ class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
            numberTextField.text = String(pickerData[row])
         } else if (pickerView == categoryPicker) {
             categoryTextField.text = String(categoryData[row])
+            subcategoryTextField.text = ""
+            subcategoryData = Event.categories[categoryTextField.text!]!
         } else if (pickerView == subcategoryPicker) {
             subcategoryTextField.text = String(subcategoryData[row])
         }

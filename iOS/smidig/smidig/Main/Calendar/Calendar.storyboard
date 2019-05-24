@@ -19,16 +19,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Mitt Program" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RF7-xe-RIx">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="61"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="171" id="rAp-oS-VAM" customClass="EventTableViewCell" customModule="smidig" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="89" width="375" height="171"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="171"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rAp-oS-VAM" id="Cwd-fg-CE6">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="170.5"/>
@@ -72,14 +65,14 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="2eF-o2-V8H">
                                                             <rect key="frame" x="0.0" y="104.5" width="311" height="20.5"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="bottomRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 Ledig" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Su7-lA-2Qn">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="57.5" height="20.5"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="bottomRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plasser" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Su7-lA-2Qn">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="60.5" height="20.5"/>
                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11/12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ag-X2-csU" userLabel="Date">
-                                                                    <rect key="frame" x="139.5" y="0.0" width="42" height="20.5"/>
+                                                                    <rect key="frame" x="141" y="0.0" width="42" height="20.5"/>
                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -119,6 +112,7 @@
                                     <outlet property="dateLabel" destination="7ag-X2-csU" id="AhT-V6-6mM"/>
                                     <outlet property="eventTitleLabel" destination="CXe-Ul-mbU" id="ceA-cW-0WF"/>
                                     <outlet property="placeLabel" destination="nHq-7g-zuU" id="Yt8-mU-fVE"/>
+                                    <outlet property="spotsLabel" destination="Su7-lA-2Qn" id="R9f-Ne-hws"/>
                                     <outlet property="subcategoryLabel" destination="3GI-VC-Vub" id="WA7-dq-L0X"/>
                                     <outlet property="timeLabel" destination="8J9-Q6-0vN" id="fSw-Pv-iv5"/>
                                     <segue destination="2Vy-IP-Cge" kind="show" id="ZpM-eN-Cd7"/>
@@ -160,10 +154,10 @@
             </objects>
             <point key="canvasLocation" x="-796" y="-912"/>
         </scene>
-        <!--Calendar View Controller-->
+        <!--Mitt program-->
         <scene sceneID="6lQ-iA-DGH">
             <objects>
-                <viewController id="kwe-bi-hce" customClass="CalendarViewController" customModule="smidig" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Mitt program" id="kwe-bi-hce" customClass="CalendarViewController" customModule="smidig" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1lh-Ki-ijD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -202,7 +196,7 @@
                     <tabBarItem key="tabBarItem" title="" image="baseline_calendar_today_black_36pt" id="ELC-RP-NsW" userLabel="Program">
                         <inset key="imageInsets" minX="0.0" minY="4" maxX="0.0" maxY="0.0"/>
                     </tabBarItem>
-                    <navigationItem key="navigationItem" id="rXx-FC-cYO"/>
+                    <navigationItem key="navigationItem" title="Mitt program" id="rXx-FC-cYO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RKd-XM-TH0" userLabel="First Responder" sceneMemberID="firstResponder"/>

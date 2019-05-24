@@ -13,20 +13,11 @@
         <!--Profile-->
         <scene sceneID="nyT-PV-JeS">
             <objects>
-                <viewController id="OkT-Gc-rII" userLabel="Profile" customClass="ProfileViewController" customModule="smidig" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Min profil" id="OkT-Gc-rII" userLabel="Profile" customClass="ProfileViewController" customModule="smidig" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0PB-fU-FKU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Min profil" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WWS-8P-hx5">
-                                <rect key="frame" x="133" y="40" width="109.5" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="CFQ-Fb-7yR"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gNl-Tp-3zB">
                                 <rect key="frame" x="0.0" y="92" width="375" height="128"/>
                                 <subviews>
@@ -119,13 +110,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="hub-wr-AaI" firstAttribute="leading" secondItem="I9V-tF-PzN" secondAttribute="leading" id="29V-0Y-z75"/>
+                            <constraint firstItem="gNl-Tp-3zB" firstAttribute="top" secondItem="I9V-tF-PzN" secondAttribute="top" constant="72" id="4JF-Ja-osJ"/>
                             <constraint firstItem="I9V-tF-PzN" firstAttribute="trailing" secondItem="gNl-Tp-3zB" secondAttribute="trailing" id="6w8-yo-6b0"/>
-                            <constraint firstItem="WWS-8P-hx5" firstAttribute="centerX" secondItem="I9V-tF-PzN" secondAttribute="centerX" id="ELv-6d-dWM"/>
                             <constraint firstItem="hub-wr-AaI" firstAttribute="top" secondItem="gNl-Tp-3zB" secondAttribute="bottom" constant="24" id="IWG-T7-qCU"/>
                             <constraint firstItem="I9V-tF-PzN" firstAttribute="bottom" secondItem="hub-wr-AaI" secondAttribute="bottom" id="NPl-o7-1s6"/>
-                            <constraint firstItem="gNl-Tp-3zB" firstAttribute="top" secondItem="WWS-8P-hx5" secondAttribute="bottom" constant="31" id="ogF-sb-uvB"/>
                             <constraint firstItem="I9V-tF-PzN" firstAttribute="trailing" secondItem="hub-wr-AaI" secondAttribute="trailing" id="oxm-Jj-xPt"/>
-                            <constraint firstItem="WWS-8P-hx5" firstAttribute="top" secondItem="I9V-tF-PzN" secondAttribute="top" constant="20" id="sKm-Yb-bvy"/>
                             <constraint firstItem="gNl-Tp-3zB" firstAttribute="leading" secondItem="I9V-tF-PzN" secondAttribute="leading" id="yiJ-ds-E9y"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="I9V-tF-PzN"/>
