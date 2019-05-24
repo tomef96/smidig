@@ -14,12 +14,13 @@ struct Message {
     
     let message: String
     let author: String
-    let date: Timestamp
+    let date: Date
+    var isOwner: Bool = false
     
-    init(message: String, author: String, date: Timestamp) {
+    init(message: String, author: String, date: Date) {
         self.message = message
         self.author = author
-        self.date = Timestamp()
+        self.date = date
     }
     
 }

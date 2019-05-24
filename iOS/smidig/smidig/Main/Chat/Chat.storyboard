@@ -14,7 +14,7 @@
         <scene sceneID="pDY-7S-bSR">
             <objects>
                 <tableViewController id="O1Y-lw-7ok" customClass="MessageTableViewController" customModule="smidig" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="1" id="es6-Bj-zG7">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="1" id="es6-Bj-zG7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="589"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -27,12 +27,12 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="McJ-Zy-3Ke">
-                                            <rect key="frame" x="25" y="11" width="42" height="21"/>
+                                            <rect key="frame" x="25" y="10" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nZt-il-dM2" customClass="PaddingLabel" customModule="smidig" customModuleProvider="target">
-                                            <rect key="frame" x="25" y="47" width="233" height="190.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nZt-il-dM2" customClass="PaddingLabel" customModule="smidig" customModuleProvider="target">
+                                            <rect key="frame" x="25" y="46" width="233" height="202.5"/>
                                             <color key="backgroundColor" white="0.85370291095890416" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="233" id="jjE-yI-Jd8"/>
@@ -43,11 +43,11 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="nZt-il-dM2" secondAttribute="bottom" constant="12" id="1Km-eD-37W"/>
+                                        <constraint firstAttribute="bottom" secondItem="nZt-il-dM2" secondAttribute="bottom" constant="1" id="0NE-fS-nUp"/>
                                         <constraint firstItem="nZt-il-dM2" firstAttribute="leading" secondItem="CZ3-cY-amK" secondAttribute="leading" constant="25" id="AUT-Hh-Hd5"/>
-                                        <constraint firstItem="McJ-Zy-3Ke" firstAttribute="top" secondItem="CZ3-cY-amK" secondAttribute="top" constant="11" id="Fkg-dU-QqT"/>
-                                        <constraint firstItem="nZt-il-dM2" firstAttribute="top" secondItem="CZ3-cY-amK" secondAttribute="top" constant="47" id="SqQ-aa-evj"/>
+                                        <constraint firstItem="McJ-Zy-3Ke" firstAttribute="top" secondItem="CZ3-cY-amK" secondAttribute="top" constant="10" id="R1I-cq-9YF"/>
                                         <constraint firstItem="nZt-il-dM2" firstAttribute="top" secondItem="McJ-Zy-3Ke" secondAttribute="bottom" constant="15" id="dnZ-q8-TlS"/>
+                                        <constraint firstItem="nZt-il-dM2" firstAttribute="top" secondItem="CZ3-cY-amK" secondAttribute="top" constant="46" id="due-uZ-MIa"/>
                                         <constraint firstItem="nZt-il-dM2" firstAttribute="leading" secondItem="McJ-Zy-3Ke" secondAttribute="leading" id="mjJ-lS-Bhj"/>
                                         <constraint firstAttribute="trailing" secondItem="nZt-il-dM2" secondAttribute="trailing" constant="117" id="rqe-HG-hLo"/>
                                     </constraints>
@@ -55,6 +55,9 @@
                                 <connections>
                                     <outlet property="authorLabel" destination="McJ-Zy-3Ke" id="8mv-yu-YGc"/>
                                     <outlet property="messageLabel" destination="nZt-il-dM2" id="Nxe-PB-TMZ"/>
+                                    <outlet property="messageLeadingConstraint" destination="AUT-Hh-Hd5" id="TF1-qD-bGn"/>
+                                    <outlet property="messageTopConstraint" destination="due-uZ-MIa" id="7JV-i8-OoD"/>
+                                    <outlet property="messageTrailingConstraint" destination="rqe-HG-hLo" id="1IG-VW-TE3"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

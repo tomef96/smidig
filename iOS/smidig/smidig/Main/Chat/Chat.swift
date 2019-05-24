@@ -50,7 +50,7 @@ class Chat {
                         username = document?.data()?["username"] as? String ?? "Ukjent bruker"
                     }
                     
-                    let message = Message.init(message: text as! String, author: username, date: Timestamp.init(date: timestamp))
+                    let message = Message.init(message: text as! String, author: username, date: timestamp)
                     
                     self.messages.append(message)
                 }
