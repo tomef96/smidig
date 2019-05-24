@@ -14,6 +14,7 @@ class MessageTableViewController: UITableViewController {
     let db = Firestore.firestore()
     var chatId: String = "Not set"
     var messages = [Message]()
+    let currentUser = Auth.auth().currentUser?.displayName
     
     @IBOutlet var messagesTableView: UITableView!
     let cellSpaceHeight: CGFloat = 0
@@ -21,8 +22,11 @@ class MessageTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.messagesTableView.sectionHeaderHeight = 0.0
-        self.messagesTableView.estimatedRowHeight = 100
+        self.messagesTableView.dataSource = self
+        self.messagesTableView.delegate = self
+        
+        self.messagesTableView.rowHeight = UITableView.automaticDimension
+        self.messagesTableView.estimatedRowHeight = UITableView.automaticDimension
         db.collection("chats").document(chatId).collection("messages").addSnapshotListener { (QuerySnapshot, Error) in
             QuerySnapshot?.documentChanges.forEach({ (DocumentChange) in
                 let text = DocumentChange.document.data()["message"]
@@ -32,16 +36,33 @@ class MessageTableViewController: UITableViewController {
                 self.db.collection("users").document(author as! String).getDocument { (document, error) in
                     var username = "ukjent"
                     
+                    let source = DocumentChange.document.metadata.hasPendingWrites ? "Local" : "Server"
+                    
                     if (document != nil) {
                         username = document?.data()?["username"] as? String ?? "Ukjent bruker"
                     }
                     
-                    let message = Message.init(message: text as! String, author: username, date: Timestamp.init(date: timestamp))
+                    var message = Message.init(message: text as! String, author: username, date: timestamp)
                     
-                    self.messages.append(message)
+                    print("Current user \(String(describing: self.currentUser))")
+                    print(message.author)
+                    if (message.author == self.currentUser) {
+                        message.isOwner = true
+                    }
+                    
+                    if (!(source == "Local" && message.isOwner == true)) {
+                        self.messages.append(message)
+                    }
+                    
+                    self.messages = self.messages.sorted(by: { (message1, message2) -> Bool in
+                        return message1.date < message2.date
+                    })
                     
                     DispatchQueue.main.async {
                         self.tableView.reloadData()
+                        if (self.messages.count > 0) {
+                            self.messagesTableView.scrollToRow(at: IndexPath(item: self.messages.count-1, section: 0), at: .bottom, animated: true)
+                        }
                     }
                 }
             })
@@ -66,7 +87,6 @@ class MessageTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return self.messages.count
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "chatCell", for: indexPath) as! MessageTableViewCell
@@ -84,14 +104,29 @@ class MessageTableViewController: UITableViewController {
         cell.authorLabel.text = entry.author
         cell.messageLabel.layer.cornerRadius = 10
         cell.messageLabel.layer.masksToBounds = true
+        cell.messageLabel.lineBreakMode = .byWordWrapping
         
-        if (Auth.auth().currentUser?.displayName == cell.message?.author) {
-            
+        if (cell.message?.isOwner == true) {
+            print(cell.message?.isOwner as Any)
+            print(cell.message?.author as Any)
+            cell.messageLabel.backgroundColor = UIColor.red
+            cell.messageLeadingConstraint.constant = 117
+            cell.messageTrailingConstraint.constant = 25
+        } else {
+            cell.messageLabel.backgroundColor = UIColor.lightGray
+            cell.messageLeadingConstraint.constant = 25
+            cell.messageTrailingConstraint.constant = 117
         }
         
         if (previous != nil) {
             if (previous?.author == entry.author) {
                 cell.authorLabel.text = " "
+                cell.messageTopConstraint.constant = 5
+                cell.updateConstraints()
+            } else {
+                cell.authorLabel.text = entry.author
+                cell.messageTopConstraint.constant = 46
+                cell.updateConstraints()
             }
         }
 
@@ -99,11 +134,13 @@ class MessageTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let cell = self.messages[indexPath.row]
+        /*let cell = self.messages[indexPath.row]
         
         let height = cell.message.heightWithConstrainedWidth(width: 233.0, font: UIFont.systemFont(ofSize: 17.0))
         
-        return height + 100.0
+        return height + 125*/
+        
+        return UITableView.automaticDimension
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
