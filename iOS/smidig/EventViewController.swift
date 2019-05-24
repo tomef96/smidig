@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseFirestore
+import SwiftMessages
 
 class EventViewController: UIViewController {
 
@@ -41,7 +42,13 @@ class EventViewController: UIViewController {
     
     @IBAction func joinEvent(_ sender: UIButton) {
         event.join()
-        postAlert(title: "Lagt til i kalender", message: "😃")
+        
+        let view = MessageView.viewFromNib(layout: .cardView)
+        view.configureTheme(.success)
+        view.button?.isHidden = true
+        view.configureContent(title: "Suksess!", body: "Du er nå påmeldt \(event.title)!")
+        SwiftMessages.show(view: view)
+        
         populate(event: event)
         leaveButton.isHidden = false
         joinButton.setTitle("Påmeldt", for: UIControl.State.normal)
@@ -52,7 +59,13 @@ class EventViewController: UIViewController {
     
     @IBAction func leaveEvent(_ sender: UIButton) {
         event.leave()
-        postAlert(title: "Det var synd", message: "😔")
+        
+        let view = MessageView.viewFromNib(layout: .cardView)
+        view.configureTheme(.success)
+        view.button?.isHidden = true
+        view.configureContent(title: "Suksess!", body: "Du forlot eventet \(event.title)!")
+        SwiftMessages.show(view: view)
+        
         populate(event: event)
         leaveButton.isHidden = true
         joinButton.setTitle("Bli med", for: UIControl.State.normal)

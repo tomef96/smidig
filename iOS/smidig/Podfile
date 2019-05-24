@@ -10,7 +10,7 @@ target 'smidig' do
 	pod 'Firebase/Core'
 	pod 'Firebase/Auth'
 	pod 'Firebase/Firestore'
-    pod 'MessageKit'
+    pod 'SwiftMessages'
 
   target 'smidigTests' do
     inherit! :search_paths
