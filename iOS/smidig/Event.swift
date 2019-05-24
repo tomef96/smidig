@@ -31,6 +31,7 @@ class Event {
         "Studering": ["Lesing", "Øving", "Annet"],
         "Uteliv": ["Vors", "Fest", "Annet"],
         "Underholdning": ["Kino", "Bowling", "Biljard", "Annet"],
+        "Friluft": ["Tur", "Camping"],
         "Meet Up": ["Annet"],
         "Annet": ["Annet"]
     ]
