@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseAuth
 import Firebase
+import SwiftMessages
 
 class RegisterViewController: UIViewController, UITextFieldDelegate {
     
@@ -59,14 +60,62 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var displayNameTextField: UITextField!
     
     @IBAction func onClick(_ sender: UIButton) {
-        if (self.emailTextField.text != nil && self.passwordTextField.text != nil &&
-            self.displayNameTextField.text != nil) {
+        if (!((self.emailTextField.text?.isEmpty)!) && !((self.passwordTextField.text?.isEmpty)!) &&
+            !((self.displayNameTextField.text?.isEmpty)!)) {
             registerUser(email: (self.emailTextField?.text)!, password: (self.passwordTextField?.text)!, displayName: (self.displayNameTextField?.text)!)
+        } else {
+            let view = MessageView.viewFromNib(layout: .cardView)
+            view.configureTheme(.error)
+            view.button?.isHidden = true
+            view.configureContent(title: "Feil!", body: "Du må fylle ut alle feltene!")
+            SwiftMessages.show(view: view)
         }
     }
     
     func registerUser(email: String, password: String, displayName: String) {
         Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
+            
+            if error != nil {
+                if let errCode = AuthErrorCode(rawValue: error!._code) {
+                    let view = MessageView.viewFromNib(layout: .cardView)
+                    
+                    switch errCode {
+                    case .wrongPassword:
+                        view.configureTheme(.error)
+                        view.button?.isHidden = true
+                        view.configureContent(title: "Feil!", body: "Brukernavn eller passord er feil!")
+                        SwiftMessages.show(view: view)
+                        break;
+                    case .userNotFound:
+                        view.configureTheme(.error)
+                        view.button?.isHidden = true
+                        view.configureContent(title: "Feil!", body: "Brukernavn eller passord er feil!")
+                        SwiftMessages.show(view: view)
+                        break;
+                    case .invalidEmail:
+                        view.configureTheme(.error)
+                        view.button?.isHidden = true
+                        view.configureContent(title: "Feil!", body: "Du må skrive en gyldig Email adresse!")
+                        SwiftMessages.show(view: view)
+                        break;
+                    case .emailAlreadyInUse:
+                        view.configureTheme(.error)
+                        view.button?.isHidden = true
+                        view.configureContent(title: "Feil!", body: "Det finnes allerede en bruker med denne emailen!")
+                        SwiftMessages.show(view: view)
+                        break;
+                    case .weakPassword:
+                        view.configureTheme(.error)
+                        view.button?.isHidden = true
+                        view.configureContent(title: "Feil!", body: "Passordet er for svakt. Det må inneholde minst 6 tegn. Vi anbefaler en lang setning som alle passord.")
+                        SwiftMessages.show(view: view)
+                        break;
+                    default:
+                        print("Ukjent feilmelding")
+                    }
+                }
+            }
+            
             guard (authResult?.user) != nil else { return }
             Firestore.firestore().collection("users").document((authResult?.user.uid)!).setData(["username" : displayName])
             let changeRequest = authResult?.user.createProfileChangeRequest()

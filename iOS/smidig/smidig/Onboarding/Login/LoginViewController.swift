@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import SwiftMessages
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
@@ -64,8 +65,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func loginUser(_ sender: UIButton) {
-        if (self.emailTextField.text != nil && self.passwordTextField.text != nil) {
+        if (!(self.emailTextField.text?.isEmpty)! && !(self.passwordTextField.text?.isEmpty)!) {
             loginUser(email: (self.emailTextField?.text)!, password: (self.passwordTextField?.text)!)
+        } else {
+            let view = MessageView.viewFromNib(layout: .cardView)
+            view.configureTheme(.error)
+            view.button?.isHidden = true
+            view.configureContent(title: "Feil!", body: "Du må fylle ut alle feltene!")
+            SwiftMessages.show(view: view)
         }
     }
     
@@ -78,6 +85,34 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             print(error ?? "")
             if user?.user != nil {
                 self.performSegue(withIdentifier: "userIsLoggedIn", sender: self)
+            }
+            if error != nil {
+                if let errCode = AuthErrorCode(rawValue: error!._code) {
+                    let view = MessageView.viewFromNib(layout: .cardView)
+                    
+                    switch errCode {
+                    case .wrongPassword:
+                        view.configureTheme(.error)
+                        view.button?.isHidden = true
+                        view.configureContent(title: "Feil!", body: "Brukernavn eller passord er feil!")
+                        SwiftMessages.show(view: view)
+                        break;
+                    case .userNotFound:
+                        view.configureTheme(.error)
+                        view.button?.isHidden = true
+                        view.configureContent(title: "Feil!", body: "Brukernavn eller passord er feil!")
+                        SwiftMessages.show(view: view)
+                        break;
+                    case .invalidEmail:
+                        view.configureTheme(.error)
+                        view.button?.isHidden = true
+                        view.configureContent(title: "Feil!", body: "Du må skrive en gyldig Email adresse!")
+                        SwiftMessages.show(view: view)
+                        break;
+                    default:
+                        print("Unknown error")
+                    }
+                }
             }
         }
     }

@@ -161,7 +161,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="onClick:" destination="kJg-xF-dy9" eventType="touchUpInside" id="2Ia-zB-2WR"/>
-                                    <segue destination="C5L-pj-4Am" kind="show" identifier="registrationComplete" id="e6I-5X-Hes"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fnY-qW-03S">
@@ -215,17 +214,18 @@
                         <outlet property="emailTextField" destination="UwR-bV-kZ7" id="8Jn-PO-bHO"/>
                         <outlet property="passwordTextField" destination="aeB-09-xWQ" id="5QA-JZ-tIZ"/>
                         <outlet property="registerButton" destination="iBc-FD-uBZ" id="ByH-8j-GGJ"/>
+                        <segue destination="C5L-pj-4Am" kind="show" identifier="registrationComplete" id="DGq-4q-rVA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DwU-Tf-bsO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-828" y="-155"/>
+            <point key="canvasLocation" x="-723" y="-155"/>
         </scene>
     </scenes>
     <resources>
         <image name="logo" width="1182" height="1080"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="HAQ-Fe-iEk"/>
+        <segue reference="DGq-4q-rVA"/>
     </inferredMetricsTieBreakers>
 </document>
