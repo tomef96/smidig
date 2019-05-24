@@ -117,11 +117,6 @@ class MessageTableViewController: UITableViewController {
             cell.messageLabel.backgroundColor = UIColor.lightGray
             cell.messageLeadingConstraint.constant = 25
             cell.messageTrailingConstraint.constant = 117
-
-        if (Auth.auth().currentUser?.displayName == cell.message?.author) {
-            cell.messageLabel.backgroundColor = UIColor.red
-            
-
         }
         
         if (previous != nil) {
