@@ -46,7 +46,7 @@ class EventViewController: UIViewController {
         let view = MessageView.viewFromNib(layout: .cardView)
         view.configureTheme(.success)
         view.button?.isHidden = true
-        view.configureContent(title: "Suksess!", body: "Du er nå påmeldt \(event.title)!")
+        view.configureContent(title: "Suksess!", body: "Du er nå påmeldt eventet \(event.title)!")
         SwiftMessages.show(view: view)
         
         populate(event: event)
