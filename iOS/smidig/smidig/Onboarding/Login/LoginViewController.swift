@@ -79,10 +79,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     func loginUser(email: String, password: String) {
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
             self.user = user?.user
-            print("Firebase: ", user?.user as Any)
-            print("Firebase: ", user?.user.email as Any)
-            print("Firebase: ", self.user as Any)
-            print(error ?? "")
             if user?.user != nil {
                 self.performSegue(withIdentifier: "userIsLoggedIn", sender: self)
             }
