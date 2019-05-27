@@ -19,9 +19,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingen eventer" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oK0-y4-GN4">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="24"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="171" id="rAp-oS-VAM" customClass="EventTableViewCell" customModule="smidig" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="171"/>
+                                <rect key="frame" x="0.0" y="72" width="375" height="171"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rAp-oS-VAM" id="Cwd-fg-CE6">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="170.5"/>
@@ -125,6 +132,9 @@
                             <outlet property="delegate" destination="HqZ-em-Ft0" id="Wf2-0D-Ztb"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="labelNoEvents" destination="oK0-y4-GN4" id="76E-Df-Jrw"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HBR-h0-r96" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

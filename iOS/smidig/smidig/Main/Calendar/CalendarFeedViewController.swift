@@ -11,6 +11,13 @@ import Firebase
 
 class CalendarFeedViewController: FeedViewController {
     
+    
+    @IBOutlet weak var labelNoEvents: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
     override func fetchEvents() {
         events.removeAll()
         let docRef = db.collection("users")
@@ -23,12 +30,28 @@ class CalendarFeedViewController: FeedViewController {
                 event.getDocument(completion: { (document, err) in
                     if let document = document, document.exists {
                         self.events.append(self.createEvent(from: document))
-                    }
-                    DispatchQueue.main.async {
-                        self.tableView.reloadData()
+        
+                        self.labelNoEvents.isHidden = true
+                        DispatchQueue.main.async {
+                            self.tableView.reloadData()
+                        }
                     }
                 })
             }
+            print(self.events.count)
+            if self.events.count == 0 {
+                self.labelNoEvents.isHidden = false
+                self.labelNoEvents.text = "Ingen eventer"
+            }
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        labelNoEvents.isHidden = false
+        labelNoEvents.text = "Laster inn..."
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
         }
     }
     
