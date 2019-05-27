@@ -30,12 +30,7 @@ class CalendarFeedViewController: FeedViewController {
                 event.getDocument(completion: { (document, err) in
                     if let document = document, document.exists {
                         self.events.append(self.createEvent(from: document))
-                        /*if self.events.count > 0 {
-                            self.labelNoEvents.isHidden = true
-                        } else {
-                            self.labelNoEvents.isHidden = false
-                            self.labelNoEvents.text = "Ingen eventer"
-                        }*/
+        
                         self.labelNoEvents.isHidden = true
                         DispatchQueue.main.async {
                             self.tableView.reloadData()

@@ -142,7 +142,7 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dxM-OD-qzG" customClass="CardView" customModule="smidig" customModuleProvider="target">
                                             <rect key="frame" x="16" y="16" width="382" height="213.5"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="GxE-jB-EaU">
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="GxE-jB-EaU">
                                                     <rect key="frame" x="16" y="16" width="350" height="181.5"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="VVu-eM-RH9">
@@ -163,7 +163,7 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="575-jk-E6f">
-                                                            <rect key="frame" x="0.0" y="51.5" width="350" height="80"/>
+                                                            <rect key="frame" x="0.0" y="52" width="350" height="80"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Langrenn i Nordmarka" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cLI-nm-91X">
                                                                     <rect key="frame" x="0.0" y="0.0" width="350" height="26.5"/>
