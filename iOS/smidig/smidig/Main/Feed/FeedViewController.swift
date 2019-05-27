@@ -24,10 +24,8 @@ class FeedViewController: UITableViewController {
         
         self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
     }
-
+    
     func fetchEvents() {
-        events.removeAll()
-        
         db.collection("events").getDocuments { (documents, err) in
             for document in (documents?.documents)! {
                 print("\(document.documentID) => \(document.data())")
@@ -50,6 +48,10 @@ class FeedViewController: UITableViewController {
                 }
             }
         }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        events.removeAll()
     }
     
     override func viewWillAppear(_ animated: Bool) {
