@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uhN-Su-cDK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uhN-Su-cDK">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -194,7 +194,7 @@
                         <viewLayoutGuide key="safeArea" id="c88-4h-yT6"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="baseline_calendar_today_black_36pt" id="ELC-RP-NsW" userLabel="Program">
-                        <inset key="imageInsets" minX="0.0" minY="4" maxX="0.0" maxY="0.0"/>
+                        <inset key="imageInsets" minX="0.0" minY="4" maxX="0.0" maxY="-4"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" title="Mitt program" id="rXx-FC-cYO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -205,6 +205,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="baseline_calendar_today_black_36pt" width="36" height="36"/>
+        <image name="baseline_calendar_today_black_36pt" width="72" height="72"/>
     </resources>
 </document>
