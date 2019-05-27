@@ -120,7 +120,7 @@
                         <viewLayoutGuide key="safeArea" id="I9V-tF-PzN"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="baseline_person_black_36pt" id="bUp-sN-eRe" userLabel="Profil">
-                        <inset key="imageInsets" minX="0.0" minY="4" maxX="0.0" maxY="-4"/>
+                        <inset key="imageInsets" minX="0.0" minY="8" maxX="0.0" maxY="-8"/>
                     </tabBarItem>
                     <connections>
                         <outlet property="labelName" destination="zUF-E2-hmP" id="TCr-kN-6UB"/>

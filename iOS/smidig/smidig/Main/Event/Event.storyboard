@@ -414,7 +414,7 @@
                         <viewLayoutGuide key="safeArea" id="XwY-6S-vRd"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="baseline_add_circle_black_36pt" selectedImage="baseline_add_circle_black_36pt" id="pOH-OK-eQl">
-                        <inset key="imageInsets" minX="0.0" minY="4" maxX="0.0" maxY="-4"/>
+                        <inset key="imageInsets" minX="0.0" minY="8" maxX="0.0" maxY="-8"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" title="Ny aktivitet" id="hzM-de-HYK"/>
                     <connections>
