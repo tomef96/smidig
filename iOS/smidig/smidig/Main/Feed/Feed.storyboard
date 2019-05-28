@@ -110,32 +110,34 @@
         <scene sceneID="qng-FH-Wxs">
             <objects>
                 <tableViewController id="sQb-LS-Nvz" customClass="FilterTableViewController" customModule="smidig" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="64" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="SWf-wc-SeS">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="75" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="SWf-wc-SeS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FilterCell" rowHeight="134" id="H8a-W5-Gvo" customClass="FilterTableViewCell" customModule="smidig" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="134"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FilterCell" rowHeight="75" id="H8a-W5-Gvo" customClass="FilterTableViewCell" customModule="smidig" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="H8a-W5-Gvo" id="ets-8j-liH">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="134"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tOi-oh-sDU">
-                                            <rect key="frame" x="8" y="8" width="398" height="133.5"/>
+                                            <rect key="frame" x="16" y="8" width="382" height="59"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRN-Hg-ECP">
-                                                    <rect key="frame" x="8" y="51" width="103.5" height="31.5"/>
+                                                    <rect key="frame" x="8" y="14" width="103.5" height="31.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iLW-DK-8dY">
-                                                    <rect key="frame" x="341" y="51.5" width="51" height="31"/>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iLW-DK-8dY" customClass="FilterSwitch" customModule="smidig" customModuleProvider="target">
+                                                    <rect key="frame" x="325" y="14" width="51" height="31"/>
+                                                    <color key="onTintColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                    <color key="thumbTintColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </switch>
                                             </subviews>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="iLW-DK-8dY" firstAttribute="centerY" secondItem="tOi-oh-sDU" secondAttribute="centerY" id="9nr-gl-rmN"/>
                                                 <constraint firstItem="MRN-Hg-ECP" firstAttribute="centerY" secondItem="tOi-oh-sDU" secondAttribute="centerY" id="CtT-6S-DpB"/>
@@ -146,13 +148,15 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="tOi-oh-sDU" firstAttribute="top" secondItem="ets-8j-liH" secondAttribute="top" constant="8" id="15C-WA-0B7"/>
-                                        <constraint firstAttribute="bottom" secondItem="tOi-oh-sDU" secondAttribute="bottom" constant="-8" id="RX1-0U-7dD"/>
-                                        <constraint firstItem="tOi-oh-sDU" firstAttribute="leading" secondItem="ets-8j-liH" secondAttribute="leading" constant="8" id="WHh-Aw-63D"/>
-                                        <constraint firstAttribute="trailing" secondItem="tOi-oh-sDU" secondAttribute="trailing" constant="8" id="fYz-h5-gFC"/>
+                                        <constraint firstAttribute="bottom" secondItem="tOi-oh-sDU" secondAttribute="bottom" constant="8" id="RX1-0U-7dD"/>
+                                        <constraint firstItem="tOi-oh-sDU" firstAttribute="leading" secondItem="ets-8j-liH" secondAttribute="leading" constant="16" id="WHh-Aw-63D"/>
+                                        <constraint firstAttribute="trailing" secondItem="tOi-oh-sDU" secondAttribute="trailing" constant="16" id="fYz-h5-gFC"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="filterSwitch" destination="iLW-DK-8dY" id="Ijc-iM-UlP"/>
                                     <outlet property="labelCategory" destination="MRN-Hg-ECP" id="rSy-2j-P0y"/>
+                                    <outlet property="viewContainer" destination="tOi-oh-sDU" id="Asr-b2-EMU"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

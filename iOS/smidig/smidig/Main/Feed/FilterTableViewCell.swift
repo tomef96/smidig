@@ -11,11 +11,15 @@ import UIKit
 class FilterTableViewCell: UITableViewCell {
 
     @IBOutlet weak var labelCategory: UILabel!
+        
+    @IBOutlet weak var filterSwitch: FilterSwitch!
     
+    @IBOutlet weak var viewContainer: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        viewContainer.layer.cornerRadius = 8
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
