@@ -1,5 +1,5 @@
 //
-//  FeedViewController.swift
+//  FilterViewController.swift
 //  smidig
 //
 //  Created by Tom Fevang on 27/05/2019.
@@ -8,21 +8,14 @@
 
 import UIKit
 
-class FeedViewController: UIViewController {
+class FilterViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let button = UIBarButtonItem(image: .init(imageLiteralResourceName: "baseline_filter_list_black_24dp"), style: .plain, target: self, action: #selector(showFilter))
-        button.tintColor = UIColor.black
-        navigationItem.rightBarButtonItem = button
-        
+
+        // Do any additional setup after loading the view.
     }
     
-    @objc
-    func showFilter() {
-        performSegue(withIdentifier: "FilterSegue", sender: UIBarButtonItem())
-    }
 
     /*
     // MARK: - Navigation

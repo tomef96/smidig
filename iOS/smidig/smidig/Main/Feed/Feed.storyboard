@@ -11,22 +11,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Feed-->
-        <scene sceneID="Hj8-in-6LV">
-            <objects>
-                <pageViewController storyboardIdentifier="FeedController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="jqC-tu-IuR" userLabel="Feed" customClass="FeedPageViewController" customModule="smidig" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="baseline_home_black_36pt" id="r3S-eL-oTX">
-                        <inset key="imageInsets" minX="0.0" minY="3" maxX="0.0" maxY="0.0"/>
-                    </tabBarItem>
-                    <navigationItem key="navigationItem" title="Feed" id="kLs-32-OTT"/>
-                    <connections>
-                        <segue destination="Mf6-rP-Etk" kind="show" id="7o6-iw-MkX"/>
-                    </connections>
-                </pageViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SOs-lW-pzA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1702" y="267"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZN2-kk-ki6">
             <objects>
@@ -36,17 +20,17 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="jqC-tu-IuR" kind="relationship" relationship="rootViewController" id="bkr-jJ-Ga2"/>
+                        <segue destination="Mf6-rP-Etk" kind="relationship" relationship="rootViewController" id="ers-eS-rjI"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6MJ-Ep-hKa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="539" y="267"/>
+            <point key="canvasLocation" x="2919" y="-1347"/>
         </scene>
         <!--Feed-->
         <scene sceneID="Oon-9Z-MvJ">
             <objects>
-                <viewController storyboardIdentifier="FeedViewController" title="Feed" id="Mf6-rP-Etk" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FeedViewController" title="Feed" id="Mf6-rP-Etk" customClass="FeedViewController" customModule="smidig" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vmr-Ka-1cy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -83,37 +67,104 @@
                         <viewLayoutGuide key="safeArea" id="jlK-u3-svV"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Hjem" image="baseline_home_black_36pt" id="iHa-4W-liy"/>
+                    <navigationItem key="navigationItem" title="Feed" id="77R-ch-BAj"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="fhD-aq-qX2" kind="show" identifier="FilterSegue" id="GIy-tF-mhz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8mq-mo-nHX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2919" y="-612"/>
+            <point key="canvasLocation" x="2919" y="-609"/>
         </scene>
-        <!--Hjem-->
-        <scene sceneID="BcK-t2-6CD">
+        <!--Filter-->
+        <scene sceneID="MDk-lP-sK4">
             <objects>
-                <viewController storyboardIdentifier="ForYouViewController" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VWI-fx-W6E" customClass="ForYouViewController" customModule="smidig" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Usj-4E-9jb">
+                <viewController title="Filter" id="fhD-aq-qX2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZuJ-hn-Kxu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="For you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hm5-wJ-oZQ">
-                                <rect key="frame" x="186" y="438" width="58" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yRR-69-Gcb">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <connections>
+                                    <segue destination="sQb-LS-Nvz" kind="embed" id="U0H-el-tTe"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="gLy-ef-H9F"/>
+                        <constraints>
+                            <constraint firstItem="Mgi-Ud-SCM" firstAttribute="trailing" secondItem="yRR-69-Gcb" secondAttribute="trailing" id="9bZ-zS-YDF"/>
+                            <constraint firstItem="yRR-69-Gcb" firstAttribute="leading" secondItem="Mgi-Ud-SCM" secondAttribute="leading" id="RqL-n0-xrT"/>
+                            <constraint firstItem="yRR-69-Gcb" firstAttribute="top" secondItem="Mgi-Ud-SCM" secondAttribute="top" id="gIF-1Q-WzI"/>
+                            <constraint firstItem="Mgi-Ud-SCM" firstAttribute="bottom" secondItem="yRR-69-Gcb" secondAttribute="bottom" id="xg9-Pz-2v1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Mgi-Ud-SCM"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Hjem" image="baseline_home_black_36pt" id="h1m-HA-Le1"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="exH-kB-CkD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DNX-Tg-EBo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1703" y="-1209"/>
+            <point key="canvasLocation" x="4143" y="-700"/>
+        </scene>
+        <!--Filter Table View Controller-->
+        <scene sceneID="qng-FH-Wxs">
+            <objects>
+                <tableViewController id="sQb-LS-Nvz" customClass="FilterTableViewController" customModule="smidig" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="64" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="SWf-wc-SeS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FilterCell" rowHeight="134" id="H8a-W5-Gvo" customClass="FilterTableViewCell" customModule="smidig" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="134"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="H8a-W5-Gvo" id="ets-8j-liH">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="134"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tOi-oh-sDU">
+                                            <rect key="frame" x="8" y="8" width="398" height="133.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRN-Hg-ECP">
+                                                    <rect key="frame" x="8" y="51" width="103.5" height="31.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iLW-DK-8dY">
+                                                    <rect key="frame" x="341" y="51.5" width="51" height="31"/>
+                                                </switch>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="iLW-DK-8dY" firstAttribute="centerY" secondItem="tOi-oh-sDU" secondAttribute="centerY" id="9nr-gl-rmN"/>
+                                                <constraint firstItem="MRN-Hg-ECP" firstAttribute="centerY" secondItem="tOi-oh-sDU" secondAttribute="centerY" id="CtT-6S-DpB"/>
+                                                <constraint firstAttribute="trailing" secondItem="iLW-DK-8dY" secondAttribute="trailing" constant="8" id="lSx-aw-dlA"/>
+                                                <constraint firstItem="MRN-Hg-ECP" firstAttribute="leading" secondItem="tOi-oh-sDU" secondAttribute="leading" constant="8" id="oPp-d7-S3b"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="tOi-oh-sDU" firstAttribute="top" secondItem="ets-8j-liH" secondAttribute="top" constant="8" id="15C-WA-0B7"/>
+                                        <constraint firstAttribute="bottom" secondItem="tOi-oh-sDU" secondAttribute="bottom" constant="-8" id="RX1-0U-7dD"/>
+                                        <constraint firstItem="tOi-oh-sDU" firstAttribute="leading" secondItem="ets-8j-liH" secondAttribute="leading" constant="8" id="WHh-Aw-63D"/>
+                                        <constraint firstAttribute="trailing" secondItem="tOi-oh-sDU" secondAttribute="trailing" constant="8" id="fYz-h5-gFC"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="labelCategory" destination="MRN-Hg-ECP" id="rSy-2j-P0y"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="sQb-LS-Nvz" id="axV-ea-iIy"/>
+                            <outlet property="delegate" destination="sQb-LS-Nvz" id="NYb-Rs-Z6R"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="frF-Lk-X59" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5123.188405797102" y="-699.44196428571422"/>
         </scene>
         <!--DetailedEvent-->
         <scene sceneID="ZTL-de-GLU">
@@ -123,10 +174,10 @@
             </objects>
             <point key="canvasLocation" x="1115" y="-169"/>
         </scene>
-        <!--Feed View Controller-->
+        <!--Feed Table View Controller-->
         <scene sceneID="Xhy-yo-njV">
             <objects>
-                <tableViewController storyboardIdentifier="EventTable" id="bv7-uN-EFn" customClass="FeedViewController" customModule="smidig" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="EventTable" id="bv7-uN-EFn" customClass="FeedTableViewController" customModule="smidig" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Y11-8c-RbA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

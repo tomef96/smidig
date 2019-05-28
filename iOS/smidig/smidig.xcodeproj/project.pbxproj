@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		464A15E29C53D877B91AC841 /* Pods_smidigUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E201F94CCC3390DE6367BDA /* Pods_smidigUITests.framework */; };
-		5015E1BA21C102200015004C /* FeedPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5015E1B921C102200015004C /* FeedPageViewController.swift */; };
-		5015E1BC21C1024E0015004C /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5015E1BB21C1024E0015004C /* FeedViewController.swift */; };
+		5015E1BC21C1024E0015004C /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5015E1BB21C1024E0015004C /* FeedTableViewController.swift */; };
 		5015E1BE21C102850015004C /* ForYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5015E1BD21C102850015004C /* ForYouViewController.swift */; };
 		5015E1C021C120160015004C /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5015E1BF21C120160015004C /* EventTableViewCell.swift */; };
 		5015E1C821C7AC610015004C /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5015E1C721C7AC610015004C /* Feed.storyboard */; };
@@ -38,6 +37,11 @@
 		649797DB228C1F410021D35C /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 649797DA228C1F410021D35C /* Search.storyboard */; };
 		649797DD228C33C20021D35C /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649797DC228C33C20021D35C /* SearchTableViewController.swift */; };
 		649797DF228C389A0021D35C /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649797DE228C389A0021D35C /* SearchTableViewCell.swift */; };
+		649797E1229BFD4A0021D35C /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649797E0229BFD4A0021D35C /* FeedViewController.swift */; };
+		649797E3229C04430021D35C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 649797E2229C04420021D35C /* Assets.xcassets */; };
+		649797E5229C0D160021D35C /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649797E4229C0D160021D35C /* FilterViewController.swift */; };
+		649797E7229C105D0021D35C /* FilterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649797E6229C105D0021D35C /* FilterTableViewController.swift */; };
+		649797E9229C11240021D35C /* FilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649797E8229C11240021D35C /* FilterTableViewCell.swift */; };
 		64A7EE5D21C2556800B8F946 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A7EE5C21C2556800B8F946 /* CalendarViewController.swift */; };
 		64A7EE6121C269B800B8F946 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64A7EE6021C269B800B8F946 /* Calendar.storyboard */; };
 		64A7EE6321C269C500B8F946 /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A7EE6221C269C500B8F946 /* Calendar.swift */; };
@@ -45,7 +49,6 @@
 		64D787BF21B7D1CE00F541E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D787BE21B7D1CE00F541E8 /* AppDelegate.swift */; };
 		64D787C121B7D1CE00F541E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D787C021B7D1CE00F541E8 /* ViewController.swift */; };
 		64D787C421B7D1CE00F541E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64D787C221B7D1CE00F541E8 /* Main.storyboard */; };
-		64D787C621B7D1D000F541E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64D787C521B7D1D000F541E8 /* Assets.xcassets */; };
 		64D787C921B7D1D000F541E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64D787C721B7D1D000F541E8 /* LaunchScreen.storyboard */; };
 		64D787D421B7D1D000F541E8 /* smidigTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D787D321B7D1D000F541E8 /* smidigTests.swift */; };
 		64D787DF21B7D1D000F541E8 /* smidigUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D787DE21B7D1D000F541E8 /* smidigUITests.swift */; };
@@ -72,8 +75,7 @@
 
 /* Begin PBXFileReference section */
 		1E201F94CCC3390DE6367BDA /* Pods_smidigUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_smidigUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5015E1B921C102200015004C /* FeedPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPageViewController.swift; sourceTree = "<group>"; };
-		5015E1BB21C1024E0015004C /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		5015E1BB21C1024E0015004C /* FeedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
 		5015E1BD21C102850015004C /* ForYouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouViewController.swift; sourceTree = "<group>"; };
 		5015E1BF21C120160015004C /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		5015E1C721C7AC610015004C /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
@@ -103,6 +105,11 @@
 		649797DA228C1F410021D35C /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		649797DC228C33C20021D35C /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		649797DE228C389A0021D35C /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		649797E0229BFD4A0021D35C /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		649797E2229C04420021D35C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		649797E4229C0D160021D35C /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		649797E6229C105D0021D35C /* FilterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewController.swift; sourceTree = "<group>"; };
+		649797E8229C11240021D35C /* FilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewCell.swift; sourceTree = "<group>"; };
 		64A7EE5C21C2556800B8F946 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		64A7EE6021C269B800B8F946 /* Calendar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
 		64A7EE6221C269C500B8F946 /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
@@ -111,7 +118,6 @@
 		64D787BE21B7D1CE00F541E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64D787C021B7D1CE00F541E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		64D787C321B7D1CE00F541E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		64D787C521B7D1D000F541E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		64D787C821B7D1D000F541E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		64D787CA21B7D1D000F541E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64D787CF21B7D1D000F541E8 /* smidigTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = smidigTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -200,10 +206,13 @@
 		502D376F21B9265B00267EBD /* Feed */ = {
 			isa = PBXGroup;
 			children = (
-				5015E1B921C102200015004C /* FeedPageViewController.swift */,
-				5015E1BB21C1024E0015004C /* FeedViewController.swift */,
+				5015E1BB21C1024E0015004C /* FeedTableViewController.swift */,
 				5015E1BD21C102850015004C /* ForYouViewController.swift */,
 				5015E1C721C7AC610015004C /* Feed.storyboard */,
+				649797E0229BFD4A0021D35C /* FeedViewController.swift */,
+				649797E4229C0D160021D35C /* FilterViewController.swift */,
+				649797E6229C105D0021D35C /* FilterTableViewController.swift */,
+				649797E8229C11240021D35C /* FilterTableViewCell.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -311,7 +320,7 @@
 				64D787BE21B7D1CE00F541E8 /* AppDelegate.swift */,
 				64D787C021B7D1CE00F541E8 /* ViewController.swift */,
 				64D787C221B7D1CE00F541E8 /* Main.storyboard */,
-				64D787C521B7D1D000F541E8 /* Assets.xcassets */,
+				649797E2229C04420021D35C /* Assets.xcassets */,
 				64D787C721B7D1D000F541E8 /* LaunchScreen.storyboard */,
 				64D787CA21B7D1D000F541E8 /* Info.plist */,
 				5055FEE421BE7ECC00DA0CA7 /* GoogleService-Info.plist */,
@@ -474,12 +483,12 @@
 			files = (
 				64D787C921B7D1D000F541E8 /* LaunchScreen.storyboard in Resources */,
 				50746F59228D8608007A125D /* Chat.storyboard in Resources */,
+				649797E3229C04430021D35C /* Assets.xcassets in Resources */,
 				5015E1D221C8F3F30015004C /* Onboarding.storyboard in Resources */,
 				5055FEE521BE7ECC00DA0CA7 /* GoogleService-Info.plist in Resources */,
 				5015E1CC21C7AF1F0015004C /* Profile.storyboard in Resources */,
 				649797DB228C1F410021D35C /* Search.storyboard in Resources */,
 				5015E1C821C7AC610015004C /* Feed.storyboard in Resources */,
-				64D787C621B7D1D000F541E8 /* Assets.xcassets in Resources */,
 				64A7EE6121C269B800B8F946 /* Calendar.storyboard in Resources */,
 				5015E1CA21C7ADC90015004C /* Event.storyboard in Resources */,
 				64D787C421B7D1CE00F541E8 /* Main.storyboard in Resources */,
@@ -637,9 +646,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				64A7EE6521C3AC1900B8F946 /* CalendarFeedViewController.swift in Sources */,
+				649797E7229C105D0021D35C /* FilterTableViewController.swift in Sources */,
 				643E105421BE9540006D099C /* AppUser.swift in Sources */,
 				502D378221B92A1A00267EBD /* LoginViewController.swift in Sources */,
 				5055FEE721BE8C4300DA0CA7 /* AddEventViewController.swift in Sources */,
+				649797E9229C11240021D35C /* FilterTableViewCell.swift in Sources */,
 				64D787C121B7D1CE00F541E8 /* ViewController.swift in Sources */,
 				649797DD228C33C20021D35C /* SearchTableViewController.swift in Sources */,
 				64A7EE6321C269C500B8F946 /* Calendar.swift in Sources */,
@@ -648,18 +659,19 @@
 				649797DF228C389A0021D35C /* SearchTableViewCell.swift in Sources */,
 				50746F58228D8608007A125D /* ChatViewController.swift in Sources */,
 				5035D1AF2292C11200EF0CB6 /* MessageTableViewController.swift in Sources */,
-				5015E1BA21C102200015004C /* FeedPageViewController.swift in Sources */,
 				64D787BF21B7D1CE00F541E8 /* AppDelegate.swift in Sources */,
 				50746F5B228D8608007A125D /* Chat.swift in Sources */,
-				5015E1BC21C1024E0015004C /* FeedViewController.swift in Sources */,
+				5015E1BC21C1024E0015004C /* FeedTableViewController.swift in Sources */,
 				6436554A228AC7370056AD91 /* Searcher.swift in Sources */,
 				6436554C228AC7680056AD91 /* SearchViewController.swift in Sources */,
 				5035D1B12292C3F200EF0CB6 /* MessageTableViewCell.swift in Sources */,
 				5015E1BE21C102850015004C /* ForYouViewController.swift in Sources */,
 				50746F5A228D8608007A125D /* Message.swift in Sources */,
+				649797E5229C0D160021D35C /* FilterViewController.swift in Sources */,
 				502D377F21B9299A00267EBD /* RegisterViewController.swift in Sources */,
 				643E104A21BE6B12006D099C /* Event.swift in Sources */,
 				64A7EE5D21C2556800B8F946 /* CalendarViewController.swift in Sources */,
+				649797E1229BFD4A0021D35C /* FeedViewController.swift in Sources */,
 				643E104821BE6A54006D099C /* EventViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
