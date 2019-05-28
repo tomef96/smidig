@@ -16,17 +16,20 @@ class FeedTableViewController: UITableViewController {
     
     let db = Firestore.firestore()
     var events = [Event]()
+    var filteredEvents = [Event]()
     
     let cellSpacingHeight: CGFloat = 50
     
+    var preferences: Dictionary<String, Bool> = UserDefaults.standard.dictionary(forKey: "filterPreferences") as? Dictionary<String, Bool> ?? Dictionary<String, Bool>()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
     }
 
     func fetchEvents() {
         events.removeAll()
+        filteredEvents.removeAll()
         
         db.collection("events").getDocuments { (documents, err) in
             for document in (documents?.documents)! {
@@ -44,29 +47,39 @@ class FeedTableViewController: UITableViewController {
                 let participants = document["participants"] as! [String]
                 
                 self.events.append(Event(owner: owner, place: place, description: description, date: date, spots: spots, title: title, eventId: id, category: category, subcategory: subcategory, time: time, participants: participants))
-                
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
+            }
+            self.filterEvents(events: self.events)
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
+    func filterEvents(events: [Event]) {
+        for event in events {
+            if preferences[event.category] != false {
+                self.filteredEvents.append(event)
             }
         }
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        preferences = UserDefaults.standard.dictionary(forKey: "filterPreferences") as? Dictionary<String, Bool> ?? Dictionary<String, Bool>()
         fetchEvents()
     }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.events.count
+        return self.filteredEvents.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath as IndexPath) as! EventTableViewCell
         
-        let entry = self.events[indexPath.row]
+        let entry = self.filteredEvents[indexPath.row]
         cell.event = entry
         cell.eventTitleLabel.text = entry.title
         cell.spotsLabel?.text = String((Int(entry.spots)! - entry.participants.count)) + " plasser"
@@ -78,6 +91,7 @@ class FeedTableViewController: UITableViewController {
         cell.timeLabel.text = entry.time
         cell.dateLabel?.text = entry.date
         setCellBackgroundColor(for: cell.cardView, by: entry.category)
+        cell.selectionStyle = .none
         return cell
     }
     
