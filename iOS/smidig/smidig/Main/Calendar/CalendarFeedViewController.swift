@@ -9,7 +9,7 @@
 import Foundation
 import Firebase
 
-class CalendarFeedViewController: FeedViewController {
+class CalendarFeedViewController: FeedTableViewController {
     
     
     @IBOutlet weak var labelNoEvents: UILabel!
