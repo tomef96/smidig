@@ -44,7 +44,7 @@ class FilterTableViewController: UITableViewController {
         cell.filterSwitch.category = category
         cell.filterSwitch.isOn = preferences[category] ?? true
         cell.filterSwitch.addTarget(self, action: #selector(switchChanged), for: UIControl.Event.valueChanged)
-        setCellBackgroundColor(for: cell.viewContainer, by: category)
+        cell.setCellBackgroundColor(for: cell.viewContainer, by: category)
         return cell
     }
     
@@ -54,8 +54,10 @@ class FilterTableViewController: UITableViewController {
         let value = filterSwitch.isOn
         preferences[key] = value
     }
-    
-    private func setCellBackgroundColor(for view: UIView, by category: String) {
+}
+
+extension UITableViewCell {
+    func setCellBackgroundColor(for view: UIView, by category: String) {
         switch category {
         case "Sport":
             view.backgroundColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1) // #95D26B
