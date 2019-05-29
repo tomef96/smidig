@@ -1,5 +1,5 @@
 //
-//  FeedViewController.swift
+//  FeedTableViewController.swift
 //  smidig
 //
 //  Created by Jan-Kristian Evjen on 12/12/18.
@@ -115,10 +115,6 @@ class FeedTableViewController: UITableViewController {
             view.backgroundColor = #colorLiteral(red: 0.9490196078, green: 0.337254902, blue: 0.3215686275, alpha: 1) // #F25652
         }
     }
-    
-    /*override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 300
-    }*/
     
     // MARK: - Navigation
 

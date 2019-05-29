@@ -18,7 +18,6 @@ class FilterTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         viewContainer.layer.cornerRadius = 8
     }
 
