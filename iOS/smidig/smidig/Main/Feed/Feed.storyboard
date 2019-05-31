@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nur-Rg-m5J">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nur-Rg-m5J">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -78,7 +78,6 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Hjem" image="baseline_home_black_36pt" id="iHa-4W-liy"/>
                     <navigationItem key="navigationItem" title="Feed" id="77R-ch-BAj"/>
-
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue destination="fhD-aq-qX2" kind="show" identifier="FilterSegue" id="GIy-tF-mhz"/>
@@ -296,6 +295,7 @@
                                 <connections>
                                     <outlet property="cardView" destination="dxM-OD-qzG" id="Iyr-6J-EWK"/>
                                     <outlet property="categoryLabel" destination="9qR-q1-OcE" id="AAs-2b-9jm"/>
+                                    <outlet property="dateLabel" destination="v6U-0U-6SE" id="cIp-55-y8y"/>
                                     <outlet property="descriptionLabel" destination="Sq9-Wt-dh1" id="Wtj-Lg-A5N"/>
                                     <outlet property="eventTitleLabel" destination="cLI-nm-91X" id="u7c-6s-MDm"/>
                                     <outlet property="placeLabel" destination="D6Y-4o-dll" id="Qz9-Gm-mHE"/>
@@ -318,6 +318,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="baseline_home_black_36pt" width="72" height="72"/>
+        <image name="baseline_home_black_36pt" width="36" height="36"/>
     </resources>
 </document>
