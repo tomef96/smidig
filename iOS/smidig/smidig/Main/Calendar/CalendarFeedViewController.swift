@@ -9,66 +9,56 @@
 import Foundation
 import Firebase
 
-class CalendarFeedViewController: FeedTableViewController {
+class CalendarFeedViewController: UITableViewController {
     
-    
-    @IBOutlet weak var labelNoEvents: UILabel!
-    
+    let calendar = Calendar()
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func fetchEvents() {
-        events.removeAll()
-        let docRef = db.collection("users")
-            .document((Auth.auth()
-            .currentUser?.uid)!)
-            .collection("schedule")
-        docRef.getDocuments { (documents, err) in
-            for document in (documents?.documents)! {
-                let event = document.data()["event"] as! DocumentReference
-                event.getDocument(completion: { (document, err) in
-                    if let document = document, document.exists {
-                        self.events.append(self.createEvent(from: document))
-        
-                        self.labelNoEvents.isHidden = true
-                        DispatchQueue.main.async {
-                            self.tableView.reloadData()
-                        }
-                    }
-                })
-            }
-            print(self.events.count)
-            if self.events.count == 0 {
-                self.labelNoEvents.isHidden = false
-                self.labelNoEvents.text = "Ingen eventer"
-            }
-        }
+        self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        labelNoEvents.isHidden = false
-        labelNoEvents.text = "Laster inn..."
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
+        calendar.fetchEvents { 
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }
     }
     
-    func createEvent(from document: DocumentSnapshot) -> Event {
-        let owner: String = document["owner"]! as! String
-        let place: String = document["place"]! as! String
-        let description: String = document["description"]! as! String
-        let date: String = document["date"]! as! String
-        let spots: String = document["spots"]! as! String
-        let title: String = document["title"]! as! String
-        let category: String = document["category"]! as! String
-        let subcategory: String = document["subcategory"] as! String
-        let time: String = document["time"] as! String
-        let id: String = document["id"]! as! String
-        let participants = document["participants"]! as! [String]
-        
-        return Event(owner: owner, place: place, description: description, date: date, spots: spots, title: title, eventId: id, category: category, subcategory: subcategory, time: time, participants: participants)
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
     
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return calendar.events.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath as IndexPath) as! EventTableViewCell
+        
+        let entry = calendar.events[indexPath.row]
+        cell.event = entry
+        cell.eventTitleLabel.text = entry.title
+        cell.spotsLabel?.text = String((Int(entry.spots)! - entry.participants.count)) + " plasser"
+        cell.descriptionLabel?.text = entry.description
+        cell.placeLabel.text = entry.place
+        cell.eventId = entry.eventId
+        cell.subcategoryLabel?.text = entry.subcategory
+        cell.categoryLabel?.text = entry.category
+        cell.timeLabel.text = entry.time
+        cell.dateLabel?.text = entry.date
+        cell.setCellBackgroundColor(for: cell.cardView, by: entry.category)
+        cell.selectionStyle = .none
+        return cell
+    }
+    
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let cell = sender as! EventTableViewCell
+        let destination = segue.destination as! EventViewController
+        destination.event = cell.event
+    }
 }
