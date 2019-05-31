@@ -7,65 +7,28 @@
 //
 
 import UIKit
-import Firebase
-import FirebaseFirestore
 
 class FeedTableViewController: UITableViewController {
 
-    let data = Data()
-    
-    let db = Firestore.firestore()
-    var events = [Event]()
-    var filteredEvents = [Event]()
-    
-    let cellSpacingHeight: CGFloat = 50
-    
-    var preferences: Dictionary<String, Bool> = UserDefaults.standard.dictionary(forKey: "filterPreferences") as? Dictionary<String, Bool> ?? Dictionary<String, Bool>()
+    let feed = Feed()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
     }
-
-    func fetchEvents() {
-        events.removeAll()
-        filteredEvents.removeAll()
-        
-        db.collection("events").getDocuments { (documents, err) in
-            for document in (documents?.documents)! {
-                print("\(document.documentID) => \(document.data())")
-                let owner: String = document["owner"]! as! String
-                let place: String = document["place"]! as! String
-                let description: String = document["description"]! as! String
-                let date: String = document["date"]! as! String
-                let spots: String = document["spots"]! as! String
-                let title: String = document["title"]! as! String
-                let category: String = document["category"]! as! String
-                let subcategory: String = document["subcategory"] as! String
-                let time: String = document["time"] as! String
-                let id: String = document["id"]! as! String
-                let participants = document["participants"] as! [String]
-                
-                self.events.append(Event(owner: owner, place: place, description: description, date: date, spots: spots, title: title, eventId: id, category: category, subcategory: subcategory, time: time, participants: participants))
-            }
-            self.filterEvents(events: self.events)
+    
+    override func viewWillAppear(_ animated: Bool) {
+        feed.preferences = UserDefaults.standard.dictionary(forKey: "filterPreferences") as? Dictionary<String, Bool> ?? Dictionary<String, Bool>()
+        feed.fetchEvents {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
         }
     }
     
-    func filterEvents(events: [Event]) {
-        for event in events {
-            if preferences[event.category] != false {
-                self.filteredEvents.append(event)
-            }
-        }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        preferences = UserDefaults.standard.dictionary(forKey: "filterPreferences") as? Dictionary<String, Bool> ?? Dictionary<String, Bool>()
-        fetchEvents()
+    override func viewWillDisappear(_ animated: Bool) {
+        feed.events.removeAll()
+        feed.filteredEvents.removeAll()
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -73,13 +36,16 @@ class FeedTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.filteredEvents.count
+        return feed.filteredEvents.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath as IndexPath) as! EventTableViewCell
         
-        let entry = self.filteredEvents[indexPath.row]
+        if feed.filteredEvents.isEmpty {
+            return cell
+        }
+        let entry = feed.filteredEvents[indexPath.row]
         cell.event = entry
         cell.eventTitleLabel.text = entry.title
         cell.spotsLabel?.text = String((Int(entry.spots)! - entry.participants.count)) + " plasser"

@@ -9,7 +9,7 @@
 import Foundation
 import Firebase
 
-class CalendarFeedViewController: UITableViewController {
+class CalendarTableViewController: UITableViewController {
     
     let calendar = Calendar()
         
@@ -26,6 +26,10 @@ class CalendarFeedViewController: UITableViewController {
         }
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        calendar.events.removeAll()
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -37,6 +41,9 @@ class CalendarFeedViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath as IndexPath) as! EventTableViewCell
         
+        if calendar.events.isEmpty {
+            return cell
+        }
         let entry = calendar.events[indexPath.row]
         cell.event = entry
         cell.eventTitleLabel.text = entry.title
