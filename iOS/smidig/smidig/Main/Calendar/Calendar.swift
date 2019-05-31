@@ -12,7 +12,6 @@ import Firebase
 class Calendar: EventTableModel {
     
     override func fetchEvents(completion: @escaping () -> Void) {
-        //events.removeAll()
         let docRef = db.collection("users")
             .document((Auth.auth()
                 .currentUser?.uid)!)

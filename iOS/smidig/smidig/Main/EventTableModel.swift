@@ -33,4 +33,18 @@ class EventTableModel {
         return Event(owner: owner, place: place, description: description, date: date, spots: spots, title: title, eventId: id, category: category, subcategory: subcategory, time: time, participants: participants)
     }
     
+    func populateCell(cell: EventTableViewCell, entry: Event) {
+        cell.event = entry
+        cell.eventTitleLabel.text = entry.title
+        cell.spotsLabel?.text = String((Int(entry.spots)! - entry.participants.count)) + " plasser"
+        cell.descriptionLabel?.text = entry.description
+        cell.placeLabel.text = entry.place
+        cell.eventId = entry.eventId
+        cell.subcategoryLabel?.text = entry.subcategory
+        cell.categoryLabel?.text = entry.category
+        cell.timeLabel.text = entry.time
+        cell.dateLabel?.text = entry.date
+        cell.setCellBackgroundColor(for: cell.cardView, by: entry.category)
+        cell.selectionStyle = .none
+    }
 }
