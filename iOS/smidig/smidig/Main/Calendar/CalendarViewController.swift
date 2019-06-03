@@ -14,6 +14,15 @@ class CalendarViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        let menuButton = UIBarButtonItem(image: .init(imageLiteralResourceName: "baseline_menu_black_24dp"), style: .plain, target: self, action: #selector(showMenu))
+        menuButton.tintColor = UIColor.black
+        navigationItem.leftBarButtonItem = menuButton
+    }
+    
+    @objc
+    func showMenu() {
+        performSegue(withIdentifier: "MenuSegue", sender: UIBarButtonItem())
     }
     
     // MARK: - Navigation
