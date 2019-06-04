@@ -13,14 +13,31 @@ class FeedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let button = UIBarButtonItem(image: .init(imageLiteralResourceName: "baseline_filter_list_black_24dp"), style: .plain, target: self, action: #selector(showFilter))
-        button.tintColor = UIColor.black
-        navigationItem.rightBarButtonItem = button
+        let filterButton = UIBarButtonItem(image: .init(imageLiteralResourceName: "baseline_filter_list_black_24dp"), style: .plain, target: self, action: #selector(showFilter))
+        filterButton.tintColor = UIColor.black
         
+        let searchButton = UIBarButtonItem(image: .init(imageLiteralResourceName: "baseline_search_black_24dp"), style: .plain, target: self, action: #selector(showSearch))
+        searchButton.tintColor = UIColor.black
+        
+        navigationItem.rightBarButtonItems = [filterButton, searchButton]
+        
+        let menuButton = UIBarButtonItem(image: .init(imageLiteralResourceName: "baseline_menu_black_24dp"), style: .plain, target: self, action: #selector(showMenu))
+        menuButton.tintColor = UIColor.black
+        navigationItem.leftBarButtonItem = menuButton
     }
     
     @objc
     func showFilter() {
         performSegue(withIdentifier: "FilterSegue", sender: UIBarButtonItem())
+    }
+    
+    @objc
+    func showMenu() {
+        performSegue(withIdentifier: "MenuSegue", sender: UIBarButtonItem())
+    }
+    
+    @objc
+    func showSearch() {
+        performSegue(withIdentifier: "SearchSegue", sender: UIBarButtonItem())
     }
 }

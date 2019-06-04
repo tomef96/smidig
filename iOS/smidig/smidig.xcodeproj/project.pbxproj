@@ -48,6 +48,8 @@
 		64A7EE6521C3AC1900B8F946 /* CalendarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A7EE6421C3AC1900B8F946 /* CalendarTableViewController.swift */; };
 		64CC2ED922A124650067661C /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CC2ED822A124650067661C /* Feed.swift */; };
 		64CC2EDB22A127E70067661C /* EventTableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CC2EDA22A127E70067661C /* EventTableModel.swift */; };
+		64CC2EE922A523C20067661C /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64CC2EE822A523C20067661C /* Menu.storyboard */; };
+		64CC2EEB22A528BF0067661C /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CC2EEA22A528BF0067661C /* MenuViewController.swift */; };
 		64D787BF21B7D1CE00F541E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D787BE21B7D1CE00F541E8 /* AppDelegate.swift */; };
 		64D787C121B7D1CE00F541E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D787C021B7D1CE00F541E8 /* ViewController.swift */; };
 		64D787C421B7D1CE00F541E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64D787C221B7D1CE00F541E8 /* Main.storyboard */; };
@@ -118,6 +120,8 @@
 		64A7EE6421C3AC1900B8F946 /* CalendarTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTableViewController.swift; sourceTree = "<group>"; };
 		64CC2ED822A124650067661C /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		64CC2EDA22A127E70067661C /* EventTableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableModel.swift; sourceTree = "<group>"; };
+		64CC2EE822A523C20067661C /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
+		64CC2EEA22A528BF0067661C /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		64D787BB21B7D1CE00F541E8 /* smidig.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = smidig.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64D787BE21B7D1CE00F541E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64D787C021B7D1CE00F541E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -196,6 +200,7 @@
 		502D376E21B9264000267EBD /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				64CC2EE722A523AF0067661C /* Menu */,
 				50746F53228D85F9007A125D /* Chat */,
 				64A7EE5B21C2553B00B8F946 /* Calendar */,
 				502D377321B9269C00267EBD /* Profile */,
@@ -294,6 +299,15 @@
 				64A7EE6421C3AC1900B8F946 /* CalendarTableViewController.swift */,
 			);
 			path = Calendar;
+			sourceTree = "<group>";
+		};
+		64CC2EE722A523AF0067661C /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				64CC2EE822A523C20067661C /* Menu.storyboard */,
+				64CC2EEA22A528BF0067661C /* MenuViewController.swift */,
+			);
+			path = Menu;
 			sourceTree = "<group>";
 		};
 		64D787B221B7D1CE00F541E8 = {
@@ -490,6 +504,7 @@
 				64D787C921B7D1D000F541E8 /* LaunchScreen.storyboard in Resources */,
 				50746F59228D8608007A125D /* Chat.storyboard in Resources */,
 				649797E3229C04430021D35C /* Assets.xcassets in Resources */,
+				64CC2EE922A523C20067661C /* Menu.storyboard in Resources */,
 				5015E1D221C8F3F30015004C /* Onboarding.storyboard in Resources */,
 				5055FEE521BE7ECC00DA0CA7 /* GoogleService-Info.plist in Resources */,
 				5015E1CC21C7AF1F0015004C /* Profile.storyboard in Resources */,
@@ -658,6 +673,7 @@
 				502D378221B92A1A00267EBD /* LoginViewController.swift in Sources */,
 				5055FEE721BE8C4300DA0CA7 /* AddEventViewController.swift in Sources */,
 				649797E9229C11240021D35C /* FilterTableViewCell.swift in Sources */,
+				64CC2EEB22A528BF0067661C /* MenuViewController.swift in Sources */,
 				64D787C121B7D1CE00F541E8 /* ViewController.swift in Sources */,
 				649797DD228C33C20021D35C /* SearchTableViewController.swift in Sources */,
 				64A7EE6321C269C500B8F946 /* Calendar.swift in Sources */,

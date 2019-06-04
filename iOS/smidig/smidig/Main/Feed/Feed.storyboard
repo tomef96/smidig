@@ -11,6 +11,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Menu-->
+        <scene sceneID="nIj-mh-nt1">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Menu" id="ILX-BM-JTm" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zbp-7x-Eyj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1666" y="-1162"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZN2-kk-ki6">
             <objects>
@@ -36,6 +44,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6MJ-Ep-hKa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2919" y="-1347"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="DQq-Wt-Lwn">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Search" id="HZC-I0-WOl" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ivg-os-r5l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3782" y="-1246"/>
         </scene>
         <!--Feed-->
         <scene sceneID="Oon-9Z-MvJ">
@@ -81,11 +97,13 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue destination="fhD-aq-qX2" kind="show" identifier="FilterSegue" id="GIy-tF-mhz"/>
+                        <segue destination="ILX-BM-JTm" kind="presentation" identifier="MenuSegue" id="XZ8-Fb-ezQ"/>
+                        <segue destination="HZC-I0-WOl" kind="show" identifier="SearchSegue" id="A8x-os-qft"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8mq-mo-nHX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2919" y="-609"/>
+            <point key="canvasLocation" x="2919" y="-591"/>
         </scene>
         <!--Filter-->
         <scene sceneID="MDk-lP-sK4">
