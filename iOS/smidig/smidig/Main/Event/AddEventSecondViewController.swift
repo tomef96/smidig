@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftMessages
 
 class AddEventSecondViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
@@ -38,10 +39,18 @@ class AddEventSecondViewController: UIViewController, UIPickerViewDelegate, UIPi
             parentVC?.setViewControllers([(parentVC?.subViewControllers[2])!], direction: UIPageViewController.NavigationDirection.forward, animated: true, completion: nil)
             
         } else {
-            print("Alle feltene er ikke fylt ut")
+            let view = MessageView.viewFromNib(layout: .cardView)
+            view.configureTheme(.warning)
+            view.button?.isHidden = true
+            view.configureContent(title: "Oops!", body: "Alle feltene er ikke fylt ut.")
+            SwiftMessages.show(view: view)
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        numberTextField.text = parentVC?.event?.spots
+        placeTextField.text = parentVC?.event?.place
+    }
     
     @IBAction func previousPage(_ sender: Any) {
         parentVC?.setViewControllers([(parentVC?.subViewControllers[0])!], direction: UIPageViewController.NavigationDirection.reverse, animated: true, completion: nil)
