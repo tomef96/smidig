@@ -58,23 +58,16 @@ class EventTableModel {
         cell.eventId = entry.eventId
         cell.categoryLabel?.text = entry.category
         cell.timeLabel.text = entry.time
-        cell.dateLabel?.text = entry.date
+        cell.dateLabel?.text = formatDate(date: entry.date)
         cell.setCellBackgroundColor(for: cell.cardView, by: entry.category)
         cell.selectionStyle = .none
     }
     
-    func formatDate(event: Event) {
-        /*for event in events {
-            print(event.date)
-            let splicedDate = event.date.split(separator: "/")
-            let day = splicedDate[0]
-            let month = splicedDate[1]
-            event.date = "\(day). \(self.month[month]!)"
-        }*/
-        let splicedDate = event.date.split(separator: "/")
+    func formatDate(date: String) -> String {
+        let splicedDate = date.split(separator: "/")
         let day = splicedDate[0]
         let month = splicedDate[1]
-        event.date = "\(day). \(self.month[month]!)"
+        return "\(day). \(self.month[month]!)"
     }
 }
 

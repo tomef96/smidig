@@ -19,7 +19,8 @@ class CalendarTableViewController: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        calendar.fetchEvents { 
+        calendar.fetchEvents {
+            self.calendar.sortEvents()
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }

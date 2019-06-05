@@ -15,6 +15,10 @@ class FeedTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
+        
+//        for event in feed.filteredEvents {
+//            feed.formatDate(event: event)
+//        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
