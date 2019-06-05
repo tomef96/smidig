@@ -55,6 +55,8 @@
 		64CC2EDB22A127E70067661C /* EventTableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CC2EDA22A127E70067661C /* EventTableModel.swift */; };
 		64CC2EE922A523C20067661C /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64CC2EE822A523C20067661C /* Menu.storyboard */; };
 		64CC2EEB22A528BF0067661C /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CC2EEA22A528BF0067661C /* MenuViewController.swift */; };
+		64CC2EED22A68E700067661C /* CalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CC2EEC22A68E700067661C /* CalendarTableViewCell.swift */; };
+		64CC2EEF22A69B5F0067661C /* ChatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CC2EEE22A69B5F0067661C /* ChatButton.swift */; };
 		64D787BF21B7D1CE00F541E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D787BE21B7D1CE00F541E8 /* AppDelegate.swift */; };
 		64D787C121B7D1CE00F541E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D787C021B7D1CE00F541E8 /* ViewController.swift */; };
 		64D787C421B7D1CE00F541E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64D787C221B7D1CE00F541E8 /* Main.storyboard */; };
@@ -132,6 +134,8 @@
 		64CC2EDA22A127E70067661C /* EventTableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableModel.swift; sourceTree = "<group>"; };
 		64CC2EE822A523C20067661C /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
 		64CC2EEA22A528BF0067661C /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		64CC2EEC22A68E700067661C /* CalendarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTableViewCell.swift; sourceTree = "<group>"; };
+		64CC2EEE22A69B5F0067661C /* ChatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatButton.swift; sourceTree = "<group>"; };
 		64D787BB21B7D1CE00F541E8 /* smidig.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = smidig.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64D787BE21B7D1CE00F541E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64D787C021B7D1CE00F541E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -312,6 +316,8 @@
 				64A7EE6021C269B800B8F946 /* Calendar.storyboard */,
 				64A7EE6221C269C500B8F946 /* Calendar.swift */,
 				64A7EE6421C3AC1900B8F946 /* CalendarTableViewController.swift */,
+				64CC2EEC22A68E700067661C /* CalendarTableViewCell.swift */,
+				64CC2EEE22A69B5F0067661C /* ChatButton.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -694,6 +700,7 @@
 				649797DD228C33C20021D35C /* SearchTableViewController.swift in Sources */,
 				64A7EE6321C269C500B8F946 /* Calendar.swift in Sources */,
 				5015E1C021C120160015004C /* EventTableViewCell.swift in Sources */,
+				64CC2EEF22A69B5F0067661C /* ChatButton.swift in Sources */,
 				501C771C22A1248B00676A79 /* CreateEventCollectionViewCell.swift in Sources */,
 				5055FEE321BAA13000DA0CA7 /* ProfileViewController.swift in Sources */,
 				50AE7CD522A68DC70034249D /* AddEventThirdViewController.swift in Sources */,
@@ -704,6 +711,7 @@
 				64D787BF21B7D1CE00F541E8 /* AppDelegate.swift in Sources */,
 				50746F5B228D8608007A125D /* Chat.swift in Sources */,
 				5015E1BC21C1024E0015004C /* FeedTableViewController.swift in Sources */,
+				64CC2EED22A68E700067661C /* CalendarTableViewCell.swift in Sources */,
 				6436554A228AC7370056AD91 /* Searcher.swift in Sources */,
 				6436554C228AC7680056AD91 /* SearchViewController.swift in Sources */,
 				5035D1B12292C3F200EF0CB6 /* MessageTableViewCell.swift in Sources */,

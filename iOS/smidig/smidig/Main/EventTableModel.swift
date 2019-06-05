@@ -15,6 +15,21 @@ class EventTableModel {
     
     var events = [Event]()
     
+    let month: Dictionary<Substring, String> = [
+        "01": "Jan",
+        "02": "Feb",
+        "03": "Mars",
+        "04": "April",
+        "05": "Mai",
+        "06": "Juni",
+        "07": "Juli",
+        "08": "Aug",
+        "09": "Sep",
+        "10": "Okt",
+        "11": "Nov",
+        "12": "Des"
+    ]
+    
     func fetchEvents(completion: @escaping () -> Void) {}
     
     func createEvent(from document: DocumentSnapshot) -> Event {
@@ -35,6 +50,8 @@ class EventTableModel {
     
     func populateCell(cell: EventTableViewCell, entry: Event) {
         cell.event = entry
+        cell.icon.image = .init(imageLiteralResourceName: entry.category)
+        cell.icon.tintColor = .white
         cell.eventTitleLabel.text = entry.title
         cell.spotsLabel?.text = String((Int(entry.spots)! - entry.participants.count)) + " plasser"
         cell.descriptionLabel?.text = entry.description
@@ -46,6 +63,15 @@ class EventTableModel {
         cell.dateLabel?.text = entry.date
         cell.setCellBackgroundColor(for: cell.cardView, by: entry.category)
         cell.selectionStyle = .none
+    }
+    
+    func formatDate() {
+        for event in events {
+            let splicedDate = event.date.split(separator: "/")
+            let day = splicedDate[0]
+            let month = splicedDate[1]
+            event.date = "\(day). \(self.month[month]!)"
+        }
     }
 }
 

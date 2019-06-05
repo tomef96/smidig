@@ -2,11 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Kultur.png",
+      "filename" : "baseline_chat_bubble_black_24dp.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "baseline_chat_bubble_black_24dp-1.png",
       "scale" : "2x"
     },
     {
@@ -17,8 +18,5 @@
   "info" : {
     "version" : 1,
     "author" : "xcode"
-  },
-  "properties" : {
-    "template-rendering-intent" : "template"
   }
 }
