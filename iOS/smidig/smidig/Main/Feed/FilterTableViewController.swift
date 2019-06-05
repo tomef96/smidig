@@ -44,7 +44,7 @@ class FilterTableViewController: UITableViewController {
         cell.filterSwitch.category = category
         cell.filterSwitch.isOn = preferences[category] ?? true
         cell.filterSwitch.addTarget(self, action: #selector(switchChanged), for: UIControl.Event.valueChanged)
-        cell.setCellBackgroundColor(for: cell.viewContainer, by: category)
+        cell.setCellBackgroundColor(for: cell.viewContainer, by: category, transparency: 1)
         return cell
     }
     

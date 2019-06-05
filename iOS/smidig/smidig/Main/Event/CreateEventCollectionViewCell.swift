@@ -17,5 +17,19 @@ class CreateEventCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+    
+    
+    override var isSelected: Bool{
+        didSet{
+            if self.isSelected
+            {
+                self.setCellBackgroundColor(for: self, by: self.ctgLabel.text!, transparency: 1)
+            }
+            else
+            {
+                self.setCellBackgroundColor(for: self, by: self.ctgLabel.text!, transparency: 0.5)
+            }
+        }
+    }
 
 }

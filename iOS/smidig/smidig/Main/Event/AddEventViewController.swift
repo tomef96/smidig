@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseFirestore
+import SwiftMessages
 
 private let reuseIdentifier = "CreateEventCollectionViewCell"
 
@@ -47,7 +48,7 @@ class AddEventViewController: UIViewController, UICollectionViewDelegate, UIColl
         cell.ctgLabel.text = category
         cell.ctgLabel.adjustsFontSizeToFitWidth = true
         let image = UIImage(named: category)?.withRenderingMode(.alwaysTemplate)
-        cell.setCellBackgroundColor(for: cell, by: category)
+        cell.setCellBackgroundColor(for: cell, by: category, transparency: 0.5)
         cell.ctgImage.image = image
         cell.ctgImage.tintColor = UIColor.white
         cell.layer.cornerRadius = 8
@@ -70,7 +71,11 @@ class AddEventViewController: UIViewController, UICollectionViewDelegate, UIColl
             parentVC?.setViewControllers([(parentVC?.subViewControllers[1])!], direction: UIPageViewController.NavigationDirection.forward, animated: true, completion: nil)
             
         } else {
-            print("Alle feltene er ikke fylt ut")
+            let view = MessageView.viewFromNib(layout: .cardView)
+            view.configureTheme(.warning)
+            view.button?.isHidden = true
+            view.configureContent(title: "Oops!", body: "Alle feltene er ikke fylt ut.")
+            SwiftMessages.show(view: view)
         }
         
     }
@@ -106,6 +111,11 @@ class AddEventViewController: UIViewController, UICollectionViewDelegate, UIColl
         titleTextField.addShadow()
         setupTextFields()
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        titleTextField.text = parentVC?.event?.title
+        descriptionTextField.text = parentVC?.event?.description
     }
     
     func setupTextFields() {
