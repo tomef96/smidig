@@ -7,8 +7,25 @@
 //
 
 import Foundation
+import Firebase
 
-class Calendar {
+class Calendar: EventTableModel {
     
-    var events: [Event]?
+    override func fetchEvents(completion: @escaping () -> Void) {
+        let docRef = db.collection("users")
+            .document((Auth.auth()
+                .currentUser?.uid)!)
+            .collection("schedule")
+        docRef.getDocuments { (documents, err) in
+            for document in (documents?.documents)! {
+                let event = document.data()["event"] as! DocumentReference
+                event.getDocument(completion: { (document, err) in
+                    if let document = document, document.exists {
+                        self.events.append(self.createEvent(from: document))
+                        completion()
+                    }
+                })
+            }
+        }
+    }
 }

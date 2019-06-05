@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PQC-bv-uIE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PQC-bv-uIE">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -59,16 +59,6 @@
             </objects>
             <point key="canvasLocation" x="2366" y="137"/>
         </scene>
-        <!--Profile-->
-        <scene sceneID="Q0e-z9-mx1">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Profile" id="6TM-5V-Orm" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Uyb-T1-fIQ"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uib-EV-T7x" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2825" y="471"/>
-        </scene>
         <!--Onboarding-->
         <scene sceneID="7wn-21-5Zv">
             <objects>
@@ -93,25 +83,13 @@
                     </tabBar>
                     <connections>
                         <segue destination="uFi-kq-uel" kind="relationship" relationship="viewControllers" id="40O-p8-TQg"/>
-                        <segue destination="egP-Hz-Muq" kind="relationship" relationship="viewControllers" id="dwJ-hV-B88"/>
                         <segue destination="C8u-oJ-x0g" kind="relationship" relationship="viewControllers" id="dfh-0J-vdM"/>
-                        <segue destination="O8J-m9-Gux" kind="relationship" relationship="viewControllers" id="vjk-Kz-pyn"/>
-                        <segue destination="6TM-5V-Orm" kind="relationship" relationship="viewControllers" id="yGK-a0-Rzj"/>
+                        <segue destination="egP-Hz-Muq" kind="relationship" relationship="viewControllers" id="05M-BX-Vat"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s5f-Ei-9df" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="788" y="472"/>
-        </scene>
-        <!--Search-->
-        <scene sceneID="jim-98-6YS">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Search" id="O8J-m9-Gux" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="pA3-3R-OiQ"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="c3f-4t-S4f" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1856" y="663"/>
         </scene>
     </scenes>
 </document>

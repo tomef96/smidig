@@ -68,7 +68,6 @@ class AddEventViewController: UIViewController, UICollectionViewDelegate, UIColl
             event?.description = self.descriptionTextField.text
             
             parentVC?.event = self.event
-            
             parentVC?.setViewControllers([(parentVC?.subViewControllers[1])!], direction: UIPageViewController.NavigationDirection.forward, animated: true, completion: nil)
             
         } else {
