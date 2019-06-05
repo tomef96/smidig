@@ -20,10 +20,10 @@ class Feed: EventTableModel {
         
         db.collection("events").getDocuments { (documents, err) in
             for document in (documents?.documents)! {
-                self.events.append(self.createEvent(from: document))
+                let e = self.createEvent(from: document)
+                self.events.append(e)
             }
             self.filterEvents(events: self.events)
-            self.formatDate()
             completion()
         }
     }
@@ -40,6 +40,9 @@ class Feed: EventTableModel {
             let leftDate = dateFormatter.date(from: left.date)
             let rightDate = dateFormatter.date(from: right.date)
             return leftDate! > rightDate!
+        }
+        for event in events {
+            formatDate(event: event)
         }
     }
 }

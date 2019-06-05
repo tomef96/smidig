@@ -22,10 +22,13 @@ class Calendar: EventTableModel {
                 let event = document.data()["event"] as! DocumentReference
                 event.getDocument(completion: { (document, err) in
                     if let document = document, document.exists {
-                        self.events.append(self.createEvent(from: document))
+                        let e = self.createEvent(from: document)
+                        self.formatDate(event: e)
+                        self.events.append(e)
+                        //self.events.append(self.createEvent(from: document))
+                        //self.formatDate()
+                        completion()
                     }
-                    self.formatDate()
-                    completion()
                 })
             }
         }

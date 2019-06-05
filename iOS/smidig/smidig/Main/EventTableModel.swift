@@ -65,13 +65,18 @@ class EventTableModel {
         cell.selectionStyle = .none
     }
     
-    func formatDate() {
-        for event in events {
+    func formatDate(event: Event) {
+        /*for event in events {
+            print(event.date)
             let splicedDate = event.date.split(separator: "/")
             let day = splicedDate[0]
             let month = splicedDate[1]
             event.date = "\(day). \(self.month[month]!)"
-        }
+        }*/
+        let splicedDate = event.date.split(separator: "/")
+        let day = splicedDate[0]
+        let month = splicedDate[1]
+        event.date = "\(day). \(self.month[month]!)"
     }
 }
 
