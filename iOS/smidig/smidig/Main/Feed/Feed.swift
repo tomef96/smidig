@@ -23,6 +23,7 @@ class Feed: EventTableModel {
                 self.events.append(self.createEvent(from: document))
             }
             self.filterEvents(events: self.events)
+            self.formatDate()
             completion()
         }
     }

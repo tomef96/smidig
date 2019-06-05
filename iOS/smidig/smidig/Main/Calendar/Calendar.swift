@@ -12,6 +12,7 @@ import Firebase
 class Calendar: EventTableModel {
     
     override func fetchEvents(completion: @escaping () -> Void) {
+        events.removeAll()
         let docRef = db.collection("users")
             .document((Auth.auth()
                 .currentUser?.uid)!)
@@ -22,8 +23,9 @@ class Calendar: EventTableModel {
                 event.getDocument(completion: { (document, err) in
                     if let document = document, document.exists {
                         self.events.append(self.createEvent(from: document))
-                        completion()
                     }
+                    self.formatDate()
+                    completion()
                 })
             }
         }

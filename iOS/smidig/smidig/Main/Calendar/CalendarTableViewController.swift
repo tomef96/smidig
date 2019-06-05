@@ -45,6 +45,7 @@ class CalendarTableViewController: UITableViewController {
             return cell
         }
         let entry = calendar.events[indexPath.row]
+        cell.chatButton.chatId = entry.eventId
         calendar.populateCell(cell: cell, entry: entry)
         return cell
     }
@@ -53,8 +54,13 @@ class CalendarTableViewController: UITableViewController {
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let cell = sender as! EventTableViewCell
-        let destination = segue.destination as! EventViewController
-        destination.event = cell.event
+        if let cell = sender as? EventTableViewCell {
+            let destination = segue.destination as! EventViewController
+            destination.event = cell.event
+        }
+        else if let cell = sender as? ChatButton {
+            let destination = segue.destination as! ChatViewController
+            destination.chatId = cell.chatId
+        }
     }
 }

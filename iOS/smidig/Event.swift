@@ -18,7 +18,7 @@ class Event {
     let title: String
     let description: String
     let spots: String
-    let date: String
+    var date: String
     let eventId: String
     let time: String
     let category: String
@@ -28,11 +28,14 @@ class Event {
     static let categories: Dictionary<String, Array<String>> = [
         "Gaming": ["CS", "Fortnite", "WoW", "Annet"],
         "Sport": ["Fotball", "Hockey", "Basket", "Annet"],
-        "Studering": ["Lesing", "Øving", "Annet"],
-        "Uteliv": ["Vors", "Fest", "Annet"],
+        "Skole": ["Lesing", "Øving", "Annet"],
+        "Musikk": ["Jam", "Gitar", "Piano"],
         "Underholdning": ["Kino", "Bowling", "Biljard", "Annet"],
         "Friluft": ["Tur", "Camping"],
         "Meet Up": ["Annet"],
+        "Kultur": ["Annet"],
+        "Hobby": ["Annet"],
+        "FilmOgTv": ["Annet"],
         "Annet": ["Annet"]
     ]
 

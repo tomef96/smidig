@@ -13,6 +13,9 @@ class EventTableViewCell: UITableViewCell {
     var event: Event? = nil
     var eventId: String!
     
+    
+    @IBOutlet weak var chatButton: ChatButton!
+    @IBOutlet weak var icon: UIImageView!
     @IBOutlet weak var placeLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var spotsLabel: UILabel!
