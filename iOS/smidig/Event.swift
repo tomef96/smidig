@@ -32,10 +32,9 @@ class Event {
         "Musikk": ["Jam", "Gitar", "Piano"],
         "Underholdning": ["Kino", "Bowling", "Biljard", "Annet"],
         "Friluft": ["Tur", "Camping"],
-        "Meet Up": ["Annet"],
         "Kultur": ["Annet"],
         "Hobby": ["Annet"],
-        "FilmOgTv": ["Annet"],
+        "Film og TV": ["Annet"],
         "Annet": ["Annet"]
     ]
 

@@ -36,7 +36,7 @@ class Feed: EventTableModel {
         }
         filteredEvents.sort { (left, right) -> Bool in
             let dateFormatter = DateFormatter.init()
-            dateFormatter.dateStyle = .short
+            dateFormatter.dateFormat = "dd/mm/YYYY"
             let leftDate = dateFormatter.date(from: left.date)
             let rightDate = dateFormatter.date(from: right.date)
             return leftDate! > rightDate!

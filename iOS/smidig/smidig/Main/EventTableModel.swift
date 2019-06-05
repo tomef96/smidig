@@ -80,23 +80,29 @@ class EventTableModel {
     }
 }
 
-extension UITableViewCell {
+extension UIView {
     func setCellBackgroundColor(for view: UIView, by category: String) {
         switch category {
-        case "Sport":
-            view.backgroundColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1) // #95D26B
-        case "Gaming":
+        case "Hobby":
+            view.backgroundColor = #colorLiteral(red: 1, green: 0.4117647059, blue: 0.7058823529, alpha: 1) // #95D26B
+        case "Skole":
             view.backgroundColor = #colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1) // #F07F5A
-        case "Meet Up":
+        case "Sport":
             view.backgroundColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1) // #42C1F7
-        case "Underholdning":
+        case "Gaming":
             view.backgroundColor = #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1) // #F7C758
-        case "Studering":
+        case "Underholdning":
             view.backgroundColor = #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1) // #DA407A
-        case "Uteliv":
+        case "Musikk":
             view.backgroundColor = #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1) // #5D11F7
         case "Friluft":
             view.backgroundColor = #colorLiteral(red: 0.3529411765, green: 0.8039215686, blue: 0.4980392157, alpha: 1) // #5ACD7F
+        case "Kultur":
+            view.backgroundColor = #colorLiteral(red: 0.3333333333, green: 0.1019607843, blue: 0.5450980392, alpha: 1)
+        case "Film og TV":
+            view.backgroundColor = #colorLiteral(red: 0.9490196078, green: 0.337254902, blue: 0.3215686275, alpha: 1)
+        case "Annet":
+            view.backgroundColor = #colorLiteral(red: 0, green: 0.6549019608, blue: 0.5058823529, alpha: 1)
         default:
             view.backgroundColor = #colorLiteral(red: 0.9490196078, green: 0.337254902, blue: 0.3215686275, alpha: 1) // #F25652
         }

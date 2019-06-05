@@ -14,7 +14,7 @@ private let reuseIdentifier = "CreateEventCollectionViewCell"
 
 class AddEventViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    let categories = ["Friluft" : UIColor(red: 149/255, green: 210/255, blue: 107/255, alpha: 1),
+    /*let categories = ["Friluft" : UIColor(red: 149/255, green: 210/255, blue: 107/255, alpha: 1),
                       "Film og TV" : UIColor(red: 247/255, green: 86/255, blue: 82/255, alpha: 1),
                       "Gaming" : UIColor(red: 247/255, green: 199/255, blue: 88/255, alpha: 1),
                       "Hobby" : UIColor(red: 255/255, green: 105/255, blue: 180/255, alpha: 1),
@@ -23,7 +23,9 @@ class AddEventViewController: UIViewController, UICollectionViewDelegate, UIColl
                       "Sport" : UIColor(red: 66/255, green: 193/255, blue: 247/255, alpha: 1),
                       "Underholdning" : UIColor(red: 218/255, green: 64/255, blue: 122/255, alpha: 1),
                       "Annet" : UIColor(red: 25/255, green: 25/255, blue: 25/255, alpha: 1),
-                      "Skole" : UIColor(red: 240/255, green: 127/255, blue: 90/255, alpha: 1)]
+                      "Skole" : UIColor(red: 240/255, green: 127/255, blue: 90/255, alpha: 1)]*/
+    
+    var categories: [String] = []
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -39,24 +41,21 @@ class AddEventViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CreateEventCollectionViewCell
-        
-        let category = Array(self.categories.keys)[indexPath.row]
 
+        let category = categories[indexPath.row]
+        
         cell.ctgLabel.text = category
         cell.ctgLabel.adjustsFontSizeToFitWidth = true
         let image = UIImage(named: category)?.withRenderingMode(.alwaysTemplate)
+        cell.setCellBackgroundColor(for: cell, by: category)
         cell.ctgImage.image = image
         cell.ctgImage.tintColor = UIColor.white
-        cell.backgroundColor = self.categories[category]
         cell.layer.cornerRadius = 8
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        let category = Array(self.categories.keys)[indexPath.row]
-        
-        self.category = category
+        self.category = categories[indexPath.row]
     }
     
     @IBAction func nextButtonOne(_ sender: Any) {
@@ -87,6 +86,12 @@ class AddEventViewController: UIViewController, UICollectionViewDelegate, UIColl
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        for key in Event.categories.keys {
+            categories.append(key)
+        }
+        
+        categories.sort()
         
         self.event = Event(owner: "", place: "", description: "", date: "", spots: "", title: "", eventId: "", category: "", subcategory: "", time: "", participants: [])
         
