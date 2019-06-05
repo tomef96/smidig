@@ -14,6 +14,8 @@
 		5015E1CA21C7ADC90015004C /* Event.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5015E1C921C7ADC90015004C /* Event.storyboard */; };
 		5015E1CC21C7AF1F0015004C /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5015E1CB21C7AF1F0015004C /* Profile.storyboard */; };
 		5015E1D221C8F3F30015004C /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5015E1D121C8F3F30015004C /* Onboarding.storyboard */; };
+		501C771C22A1248B00676A79 /* CreateEventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C771A22A1248B00676A79 /* CreateEventCollectionViewCell.swift */; };
+		501C771D22A1248B00676A79 /* CreateEventCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 501C771B22A1248B00676A79 /* CreateEventCollectionViewCell.xib */; };
 		502D377F21B9299A00267EBD /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502D377E21B9299A00267EBD /* RegisterViewController.swift */; };
 		502D378221B92A1A00267EBD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502D378121B92A1A00267EBD /* LoginViewController.swift */; };
 		5035D1AF2292C11200EF0CB6 /* MessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5035D1AE2292C11200EF0CB6 /* MessageTableViewController.swift */; };
@@ -25,6 +27,9 @@
 		50746F59228D8608007A125D /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50746F55228D8608007A125D /* Chat.storyboard */; };
 		50746F5A228D8608007A125D /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50746F56228D8608007A125D /* Message.swift */; };
 		50746F5B228D8608007A125D /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50746F57228D8608007A125D /* Chat.swift */; };
+		50768E7D229C0F39006222DF /* CreateEventPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50768E7C229C0F39006222DF /* CreateEventPageViewController.swift */; };
+		50AE7CD322A664A80034249D /* AddEventSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AE7CD222A664A80034249D /* AddEventSecondViewController.swift */; };
+		50AE7CD522A68DC70034249D /* AddEventThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AE7CD422A68DC70034249D /* AddEventThirdViewController.swift */; };
 		6436554A228AC7370056AD91 /* Searcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64365549228AC7370056AD91 /* Searcher.swift */; };
 		6436554C228AC7680056AD91 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6436554B228AC7680056AD91 /* SearchViewController.swift */; };
 		6436554E228AD45C0056AD91 /* searchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6436554D228AD45C0056AD91 /* searchTests.swift */; };
@@ -87,6 +92,8 @@
 		5015E1C921C7ADC90015004C /* Event.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Event.storyboard; sourceTree = "<group>"; };
 		5015E1CB21C7AF1F0015004C /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		5015E1D121C8F3F30015004C /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		501C771A22A1248B00676A79 /* CreateEventCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventCollectionViewCell.swift; sourceTree = "<group>"; };
+		501C771B22A1248B00676A79 /* CreateEventCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateEventCollectionViewCell.xib; sourceTree = "<group>"; };
 		502D377E21B9299A00267EBD /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		502D378121B92A1A00267EBD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5035D1AE2292C11200EF0CB6 /* MessageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +105,9 @@
 		50746F55228D8608007A125D /* Chat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		50746F56228D8608007A125D /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		50746F57228D8608007A125D /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		50768E7C229C0F39006222DF /* CreateEventPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventPageViewController.swift; sourceTree = "<group>"; };
+		50AE7CD222A664A80034249D /* AddEventSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventSecondViewController.swift; sourceTree = "<group>"; };
+		50AE7CD422A68DC70034249D /* AddEventThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventThirdViewController.swift; sourceTree = "<group>"; };
 		5D61D0F30AB8A9A48AA6C770 /* Pods-smidig.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smidig.debug.xcconfig"; path = "Pods/Target Support Files/Pods-smidig/Pods-smidig.debug.xcconfig"; sourceTree = "<group>"; };
 		64365549228AC7370056AD91 /* Searcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Searcher.swift; sourceTree = "<group>"; };
 		6436554B228AC7680056AD91 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -252,6 +262,11 @@
 				5055FEE621BE8C4300DA0CA7 /* AddEventViewController.swift */,
 				5015E1BF21C120160015004C /* EventTableViewCell.swift */,
 				5015E1C921C7ADC90015004C /* Event.storyboard */,
+				50768E7C229C0F39006222DF /* CreateEventPageViewController.swift */,
+				501C771A22A1248B00676A79 /* CreateEventCollectionViewCell.swift */,
+				501C771B22A1248B00676A79 /* CreateEventCollectionViewCell.xib */,
+				50AE7CD222A664A80034249D /* AddEventSecondViewController.swift */,
+				50AE7CD422A68DC70034249D /* AddEventThirdViewController.swift */,
 			);
 			path = Event;
 			sourceTree = "<group>";
@@ -508,6 +523,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				64D787C921B7D1D000F541E8 /* LaunchScreen.storyboard in Resources */,
+				501C771D22A1248B00676A79 /* CreateEventCollectionViewCell.xib in Resources */,
 				50746F59228D8608007A125D /* Chat.storyboard in Resources */,
 				649797E3229C04430021D35C /* Assets.xcassets in Resources */,
 				64CC2EE922A523C20067661C /* Menu.storyboard in Resources */,
@@ -685,10 +701,13 @@
 				64A7EE6321C269C500B8F946 /* Calendar.swift in Sources */,
 				5015E1C021C120160015004C /* EventTableViewCell.swift in Sources */,
 				64CC2EEF22A69B5F0067661C /* ChatButton.swift in Sources */,
+				501C771C22A1248B00676A79 /* CreateEventCollectionViewCell.swift in Sources */,
 				5055FEE321BAA13000DA0CA7 /* ProfileViewController.swift in Sources */,
+				50AE7CD522A68DC70034249D /* AddEventThirdViewController.swift in Sources */,
 				649797DF228C389A0021D35C /* SearchTableViewCell.swift in Sources */,
 				50746F58228D8608007A125D /* ChatViewController.swift in Sources */,
 				5035D1AF2292C11200EF0CB6 /* MessageTableViewController.swift in Sources */,
+				50768E7D229C0F39006222DF /* CreateEventPageViewController.swift in Sources */,
 				64D787BF21B7D1CE00F541E8 /* AppDelegate.swift in Sources */,
 				50746F5B228D8608007A125D /* Chat.swift in Sources */,
 				5015E1BC21C1024E0015004C /* FeedTableViewController.swift in Sources */,
@@ -705,6 +724,7 @@
 				64A7EE5D21C2556800B8F946 /* CalendarViewController.swift in Sources */,
 				649797E1229BFD4A0021D35C /* FeedViewController.swift in Sources */,
 				643E104821BE6A54006D099C /* EventViewController.swift in Sources */,
+				50AE7CD322A664A80034249D /* AddEventSecondViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

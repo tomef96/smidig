@@ -13,16 +13,16 @@ class Event {
     
     let db = Firestore.firestore()
         
-    let owner: String
-    let place: String
-    let title: String
-    let description: String
-    let spots: String
+    var owner: String
+    var place: String
+    var title: String
+    var description: String
+    var spots: String
     var date: String
-    let eventId: String
-    let time: String
-    let category: String
-    let subcategory: String
+    var eventId: String
+    var time: String
+    var category: String
+    var subcategory: String
     var participants: [String]
     
     static let categories: Dictionary<String, Array<String>> = [
