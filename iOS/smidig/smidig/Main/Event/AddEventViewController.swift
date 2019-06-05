@@ -10,215 +10,124 @@ import UIKit
 import Firebase
 import FirebaseFirestore
 
-class AddEventViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+private let reuseIdentifier = "CreateEventCollectionViewCell"
+
+class AddEventViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
+    let categories = ["Friluft" : UIColor(red: 149/255, green: 210/255, blue: 107/255, alpha: 1),
+                      "Film og TV" : UIColor(red: 247/255, green: 86/255, blue: 82/255, alpha: 1),
+                      "Gaming" : UIColor(red: 247/255, green: 199/255, blue: 88/255, alpha: 1),
+                      "Hobby" : UIColor(red: 255/255, green: 105/255, blue: 180/255, alpha: 1),
+                      "Kultur" : UIColor(red: 85/255, green: 26/255, blue: 139/255, alpha: 1),
+                      "Musikk" : UIColor(red: 93/255, green: 17/255, blue: 247/255, alpha: 1),
+                      "Sport" : UIColor(red: 66/255, green: 193/255, blue: 247/255, alpha: 1),
+                      "Underholdning" : UIColor(red: 218/255, green: 64/255, blue: 122/255, alpha: 1),
+                      "Annet" : UIColor(red: 25/255, green: 25/255, blue: 25/255, alpha: 1),
+                      "Skole" : UIColor(red: 240/255, green: 127/255, blue: 90/255, alpha: 1)]
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.categories.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 125, height: 75)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CreateEventCollectionViewCell
+        
+        let category = Array(self.categories.keys)[indexPath.row]
+
+        cell.ctgLabel.text = category
+        cell.ctgLabel.adjustsFontSizeToFitWidth = true
+        let image = UIImage(named: category)?.withRenderingMode(.alwaysTemplate)
+        cell.ctgImage.image = image
+        cell.ctgImage.tintColor = UIColor.white
+        cell.backgroundColor = self.categories[category]
+        cell.layer.cornerRadius = 8
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let category = Array(self.categories.keys)[indexPath.row]
+        
+        self.category = category
+    }
+    
+    @IBAction func nextButtonOne(_ sender: Any) {
+        
+        if (!(self.titleTextField.text?.isEmpty)! && !self.category.isEmpty && !self.descriptionTextField.text.isEmpty) {
+            
+            event?.title = self.titleTextField.text!
+            event?.category = self.category
+            event?.description = self.descriptionTextField.text
+            
+            parentVC?.event = self.event
+            
+            parentVC?.setViewControllers([(parentVC?.subViewControllers[1])!], direction: UIPageViewController.NavigationDirection.forward, animated: true, completion: nil)
+            
+        } else {
+            print("Alle feltene er ikke fylt ut")
+        }
+        
+    }
+    
+    weak var parentVC: CreateEventPageViewController?
+    @IBOutlet weak var eventCollectionView: UICollectionView!
     @IBOutlet weak var titleTextField: UITextField!
-    @IBOutlet weak var createBtn: UIButton!
-    @IBOutlet weak var numberPicker: UIPickerView!
-    @IBOutlet weak var dateTextField: UITextField!
-    @IBOutlet weak var placeTextField: UITextField!
-    @IBOutlet weak var createButton: UIButton!
-    @IBOutlet weak var descriptionTextField: UITextField!
-    @IBOutlet weak var numberTextField: UITextField!
-    @IBOutlet weak var timeTextField: UITextField!
-    var pickerData: [Int] = [Int]()
-    private var datePicker: UIDatePicker?
-    private var timePicker: UIDatePicker?
-    var categoryData: [String] = [String]()
-    var subcategoryData: [String] = [String]()
-    let db = Firestore.firestore()
+    @IBOutlet weak var descriptionTextField: UITextView!
+    var category = ""
     var event: Event?
-    @IBOutlet weak var categoryPicker: UIPickerView!
-    @IBOutlet weak var subcategoryPicker: UIPickerView!
-    
-    @IBOutlet weak var subcategoryTextField: UITextField!
-    @IBOutlet weak var categoryTextField: UITextField!
+ 
     var appUser: AppUser = AppUser()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        titleTextField.underlined()
-        numberTextField.underlined()
-        dateTextField.underlined()
-        placeTextField.underlined()
-        descriptionTextField.underlined()
-        categoryTextField.underlined()
-        subcategoryTextField.underlined()
-        timeTextField.underlined()
+        self.event = Event(owner: "", place: "", description: "", date: "", spots: "", title: "", eventId: "", category: "", subcategory: "", time: "", participants: [])
         
-        createBtn.layer.cornerRadius = 0.5 * createBtn.bounds.size.width
-        createBtn.clipsToBounds = true
+        parentVC = self.parent as? CreateEventPageViewController
         
+        let cellNib = UINib(nibName: "CreateEventCollectionViewCell", bundle: nil)
+        eventCollectionView!.register(cellNib, forCellWithReuseIdentifier: reuseIdentifier)
         
-        datePicker = UIDatePicker()
-        datePicker?.datePickerMode = .date
-        datePicker?.addTarget(self, action: #selector(dateChanged(datePicker:)), for: .valueChanged)
+        eventCollectionView.delegate = self
+        eventCollectionView.dataSource = self
         
-        timePicker = UIDatePicker()
-        timePicker?.datePickerMode = .time
-        timePicker?.addTarget(self, action: #selector(timeChanged(timePicker:)), for: .valueChanged)
-        
-        var i = 0
-        repeat {
-            pickerData.append(i)
-            i = i + 1
-        } while i < 101
-        
-        categoryData.append(contentsOf: Event.categories.keys)
-        //subcategoryData.append(contentsOf: Event.categories["Sport"]!)
-        
-        self.numberPicker.delegate = self
-        self.numberPicker.dataSource = self
-        
-        self.categoryPicker.delegate = self
-        self.categoryPicker.dataSource = self
-        
-        self.subcategoryPicker.delegate = self
-        self.subcategoryPicker.dataSource = self
-        
-        categoryPicker.removeFromSuperview()
-        categoryTextField.inputView = categoryPicker
-        
-        subcategoryPicker.removeFromSuperview()
-        subcategoryTextField.inputView = subcategoryPicker
-        
-        numberPicker.removeFromSuperview()
-        numberTextField.inputView = numberPicker
-        
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(viewTapped(gestureRecognizer:)))
-        
-        view.addGestureRecognizer(tapGesture)
-        
-        dateTextField.inputView = datePicker
-        timeTextField.inputView = timePicker
-        
-        let date = Date()
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd/MM/yyyy"
-        dateTextField.text = dateFormatter.string(from: date)
-    
-        let timeFormatter = DateFormatter()
-        timeFormatter.dateFormat = "HH:mm"
-        timeTextField.text = timeFormatter.string(from: date)
-    }
-    
-    @IBAction func addEvent(_ sender: Any) {
-        var documentData = [String : Any]()
-        
-        if (titleTextField.text != "" && descriptionTextField.text != "" && placeTextField.text != "" && dateTextField.text != "" && numberTextField.text != "" && Auth.auth().currentUser?.uid != nil && timeTextField.text != "" && categoryTextField.text != "" && subcategoryTextField.text != "") {
-            
-            documentData["title"] = titleTextField.text
-            documentData["description"] = descriptionTextField.text
-            documentData["place"] = placeTextField.text
-            documentData["date"] = dateTextField.text
-            documentData["spots"] = numberTextField.text
-            documentData["owner"] = Auth.auth().currentUser?.uid
-            documentData["time"] = timeTextField.text
-            documentData["category"] = categoryTextField.text
-            documentData["subcategory"] = subcategoryTextField.text
-            documentData["participants"] = [Auth.auth().currentUser!.uid]
-            
-            /*let schedule = db.collection("users").document(Auth.auth().currentUser!.uid).collection("schedule")*/
-            
-            
-            var ref: DocumentReference? = nil
-            ref = db.collection("events").addDocument(data: documentData) { err in
-                if let err = err {
-                    print("Error adding document: \(err)")
-                } else {
-                    print("Document added with ID: \(ref!.documentID)")
-                    ref?.setData(["id" : ref?.documentID], merge: true)
-                    self.event = Event(owner: documentData["owner"] as! String, place: documentData["place"] as! String, description: documentData["description"] as! String, date: documentData["date"] as! String, spots: documentData["spots"] as! String, title: documentData["title"] as! String, eventId: (ref?.documentID)!, category: documentData["category"] as! String, subcategory: documentData["subcategory"] as! String, time: documentData["time"] as! String, participants: documentData["participants"] as! [String])
-                    
-                   let eventReference = self.db.document("events/\(ref!.documentID)")
-                    self.db.collection("users").document(Auth.auth().currentUser!.uid).collection("schedule").addDocument(data: ["event": eventReference])
-                    self.performSegue(withIdentifier: "eventAdded", sender: self)
-                }
-            }
-            
-            
-        } else {
-            print("Alle feltene er ikke fylt ut")
-        }
-    }
-    
-    @objc func viewTapped(gestureRecognizer: UITapGestureRecognizer) {
-        view.endEditing(true)
-    }
-    
-    @objc func dateChanged(datePicker: UIDatePicker) {
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd/MM/yyyy"
-        
-        dateTextField.text = dateFormatter.string(from: datePicker.date)
-    }
-    
-    @objc func timeChanged(timePicker: UIDatePicker) {
-        
-        let timeFormatter = DateFormatter()
-        timeFormatter.dateFormat = "HH:mm"
-        
-        timeTextField.text = timeFormatter.string(from: timePicker.date)
+        titleTextField.addShadow()
+        setupTextFields()
         
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        if (pickerView == numberPicker) {
-            return pickerData.count
-        } else if (pickerView == categoryPicker) {
-            return categoryData.count
-        } else if (pickerView == subcategoryPicker) {
-            return subcategoryData.count
-        }
-        return 0
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if (pickerView == numberPicker) {
-            return String(pickerData[row])
-        } else if (pickerView == categoryPicker) {
-             return String(categoryData[row])
-        } else if (pickerView == subcategoryPicker) {
-            return String(subcategoryData[row])
-        }
-        return "Test"
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if (pickerView == numberPicker) {
-           numberTextField.text = String(pickerData[row])
-        } else if (pickerView == categoryPicker) {
-            categoryTextField.text = String(categoryData[row])
-            subcategoryTextField.text = ""
-            subcategoryData = Event.categories[categoryTextField.text!]!
-        } else if (pickerView == subcategoryPicker) {
-            subcategoryTextField.text = String(subcategoryData[row])
-        }
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
-        view.endEditing(true)
-        super.touchesBegan(touches, with: event)
+    func setupTextFields() {
+        
+        self.descriptionTextField.backgroundColor = UIColor.white // Use anycolor that give you a 2d look.
+
+        self.descriptionTextField.layer.cornerRadius = 8
+        
+        self.descriptionTextField.layer.borderWidth = 0.25
+        self.descriptionTextField.layer.borderColor = UIColor.gray.cgColor
+        
+        self.descriptionTextField.layer.borderColor = UIColor.black.withAlphaComponent(0.25).cgColor
+        self.descriptionTextField.layer.shadowOffset = CGSize(width: 0, height: 2)
+        self.descriptionTextField.layer.shadowColor = UIColor.black.cgColor //Any dark color
+        self.descriptionTextField.layer.shadowRadius = 2.0
+        self.descriptionTextField.layer.shadowOpacity = 0.25
+        self.descriptionTextField.clipsToBounds = false
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
         
-        let destination = segue.destination as! EventViewController
+        let destination = segue.destination as! AddEventSecondViewController
         destination.event = event
-    }
+ }
 
 }
 
@@ -231,5 +140,29 @@ extension UITextField {
         border.borderWidth = width
         self.layer.addSublayer(border)
         self.layer.masksToBounds = true
+    }
+    func addShadow() {
+        
+        self.borderStyle = .none
+        backgroundColor = .white
+        
+        layer.cornerRadius = 8
+        
+        layer.borderColor = UIColor.black.withAlphaComponent(0.25).cgColor
+        layer.borderWidth = 0.25
+        layer.shadowColor = UIColor.black.cgColor //Any dark color
+        layer.shadowRadius = 2.0
+        layer.shadowOpacity = 0.25
+        layer.shadowOffset = CGSize(width: 0, height: 2)
+        
+        clipsToBounds = false
+        
+        let paddingView : UIView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 30))
+        
+        self.leftView = paddingView
+        self.leftViewMode = UITextField.ViewMode.always
+        
+        
+        
     }
 }
