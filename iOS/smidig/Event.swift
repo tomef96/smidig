@@ -22,7 +22,6 @@ class Event {
     var eventId: String
     var time: String
     var category: String
-    var subcategory: String
     var participants: [String]
     
     static let categories: Dictionary<String, Array<String>> = [
@@ -38,7 +37,7 @@ class Event {
         "Annet": ["Annet"]
     ]
 
-    init(owner: String, place: String, description: String, date: String, spots: String, title: String, eventId: String, category: String, subcategory: String, time: String, participants: [String]) {
+    init(owner: String, place: String, description: String, date: String, spots: String, title: String, eventId: String, category: String, time: String, participants: [String]) {
         self.owner = owner
         self.title = title
         self.date = date
@@ -47,7 +46,6 @@ class Event {
         self.place = place
         self.eventId = eventId
         self.category = category
-        self.subcategory = subcategory
         self.time = time
         self.participants = participants
     }

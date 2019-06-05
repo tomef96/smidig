@@ -29,7 +29,7 @@ class AddEventThirdViewController: UIViewController {
     @IBAction func addEvent(_ sender: Any) {
         /*var documentData = [String : Any]()
         
-        if (event?.title != "" && event?.description != "" && event?.place != "" && event?.date != "" && event?.spots != "" && Auth.auth().currentUser?.uid != nil && event?.time != "" && event?.category != "" && event?.subcategory != "") {
+        if (event?.title != "" && event?.description != "" && event?.place != "" && event?.date != "" && event?.spots != "" && Auth.auth().currentUser?.uid != nil && event?.time != "" && event?.category != "") {
             
             documentData["title"] = event?.title
             documentData["description"] = event?.description
@@ -39,7 +39,6 @@ class AddEventThirdViewController: UIViewController {
             documentData["owner"] = Auth.auth().currentUser?.uid
             documentData["time"] = event?.time
             documentData["category"] = event?.category
-            documentData["subcategory"] = event?.category
             documentData["participants"] = [Auth.auth().currentUser!.uid]
             
             /*let schedule = db.collection("users").document(Auth.auth().currentUser!.uid).collection("schedule")*/
@@ -52,7 +51,7 @@ class AddEventThirdViewController: UIViewController {
                 } else {
                     print("Document added with ID: \(ref!.documentID)")
                     ref?.setData(["id" : ref?.documentID], merge: true)
-                    self.event = Event(owner: documentData["owner"] as! String, place: documentData["place"] as! String, description: documentData["description"] as! String, date: documentData["date"] as! String, spots: documentData["spots"] as! String, title: documentData["title"] as! String, eventId: (ref?.documentID)!, category: documentData["category"] as! String, subcategory: documentData["subcategory"] as! String, time: documentData["time"] as! String, participants: documentData["participants"] as! [String])
+                    self.event = Event(owner: documentData["owner"] as! String, place: documentData["place"] as! String, description: documentData["description"] as! String, date: documentData["date"] as! String, spots: documentData["spots"] as! String, title: documentData["title"] as! String, eventId: (ref?.documentID)!, category: documentData["category"] as! String, time: documentData["time"] as! String, participants: documentData["participants"] as! [String])
                     
                     let eventReference = self.db.document("events/\(ref!.documentID)")
                     self.db.collection("users").document(Auth.auth().currentUser!.uid).collection("schedule").addDocument(data: ["event": eventReference])
