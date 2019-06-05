@@ -93,7 +93,7 @@ class AddEventViewController: UIViewController, UICollectionViewDelegate, UIColl
         
         categories.sort()
         
-        self.event = Event(owner: "", place: "", description: "", date: "", spots: "", title: "", eventId: "", category: "", subcategory: "", time: "", participants: [])
+        self.event = Event(owner: "", place: "", description: "", date: "", spots: "", title: "", eventId: "", category: "", time: "", participants: [])
         
         parentVC = self.parent as? CreateEventPageViewController
         

@@ -24,9 +24,8 @@ class Searcher {
             let t = event.title.lowercased()
             let d = event.description.lowercased()
             let c = event.category.lowercased()
-            let s = event.subcategory.lowercased()
             let k = keyword.lowercased()
-            if t.contains(k) || d.contains(k) || c.contains(k) || s.contains(k) {
+            if t.contains(k) || d.contains(k) || c.contains(k) {
                 result.append(event)
             }
         }
@@ -45,12 +44,11 @@ class Searcher {
                 let spots: String = document["spots"]! as! String
                 let title: String = document["title"]! as! String
                 let category: String = document["category"]! as! String
-                let subcategory: String = document["subcategory"] as! String
                 let time: String = document["time"] as! String
                 let id: String = document["id"]! as! String
                 let participants: [String] = document["participants"]! as! [String]
                 
-                self.events.append(Event(owner: owner, place: place, description: description, date: date, spots: spots, title: title, eventId: id, category: category, subcategory: subcategory, time: time, participants: participants))
+                self.events.append(Event(owner: owner, place: place, description: description, date: date, spots: spots, title: title, eventId: id, category: category, time: time, participants: participants))
             
             }
         }

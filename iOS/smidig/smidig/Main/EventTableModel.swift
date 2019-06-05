@@ -40,12 +40,11 @@ class EventTableModel {
         let spots: String = document["spots"]! as! String
         let title: String = document["title"]! as! String
         let category: String = document["category"]! as! String
-        let subcategory: String = document["subcategory"] as! String
         let time: String = document["time"] as! String
         let id: String = document["id"]! as! String
         let participants = document["participants"]! as! [String]
         
-        return Event(owner: owner, place: place, description: description, date: date, spots: spots, title: title, eventId: id, category: category, subcategory: subcategory, time: time, participants: participants)
+        return Event(owner: owner, place: place, description: description, date: date, spots: spots, title: title, eventId: id, category: category, time: time, participants: participants)
     }
     
     func populateCell(cell: EventTableViewCell, entry: Event) {
@@ -57,7 +56,6 @@ class EventTableModel {
         cell.descriptionLabel?.text = entry.description
         cell.placeLabel.text = entry.place
         cell.eventId = entry.eventId
-        cell.subcategoryLabel?.text = entry.subcategory
         cell.categoryLabel?.text = entry.category
         cell.timeLabel.text = entry.time
         cell.dateLabel?.text = entry.date
