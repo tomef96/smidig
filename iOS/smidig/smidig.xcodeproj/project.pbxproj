@@ -58,6 +58,7 @@
 		64CC2EED22A68E700067661C /* CalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CC2EEC22A68E700067661C /* CalendarTableViewCell.swift */; };
 		64CC2EEF22A69B5F0067661C /* ChatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CC2EEE22A69B5F0067661C /* ChatButton.swift */; };
 		64CC2EF122A7EED10067661C /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 64CC2EF022A7EED10067661C /* Logo.png */; };
+		64CC2EF322A9446C0067661C /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CC2EF222A9446C0067661C /* FeedTableViewCell.swift */; };
 		64D787BF21B7D1CE00F541E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D787BE21B7D1CE00F541E8 /* AppDelegate.swift */; };
 		64D787C121B7D1CE00F541E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D787C021B7D1CE00F541E8 /* ViewController.swift */; };
 		64D787C421B7D1CE00F541E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64D787C221B7D1CE00F541E8 /* Main.storyboard */; };
@@ -138,6 +139,7 @@
 		64CC2EEC22A68E700067661C /* CalendarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTableViewCell.swift; sourceTree = "<group>"; };
 		64CC2EEE22A69B5F0067661C /* ChatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatButton.swift; sourceTree = "<group>"; };
 		64CC2EF022A7EED10067661C /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
+		64CC2EF222A9446C0067661C /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		64D787BB21B7D1CE00F541E8 /* smidig.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = smidig.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64D787BE21B7D1CE00F541E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64D787C021B7D1CE00F541E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 				649797E8229C11240021D35C /* FilterTableViewCell.swift */,
 				649797EA229D50B00021D35C /* FilterSwitch.swift */,
 				64CC2ED822A124650067661C /* Feed.swift */,
+				64CC2EF222A9446C0067661C /* FeedTableViewCell.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -716,6 +719,7 @@
 				5035D1AF2292C11200EF0CB6 /* MessageTableViewController.swift in Sources */,
 				50768E7D229C0F39006222DF /* CreateEventPageViewController.swift in Sources */,
 				64D787BF21B7D1CE00F541E8 /* AppDelegate.swift in Sources */,
+				64CC2EF322A9446C0067661C /* FeedTableViewCell.swift in Sources */,
 				50746F5B228D8608007A125D /* Chat.swift in Sources */,
 				5015E1BC21C1024E0015004C /* FeedTableViewController.swift in Sources */,
 				64CC2EED22A68E700067661C /* CalendarTableViewCell.swift in Sources */,

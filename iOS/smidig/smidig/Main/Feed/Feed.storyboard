@@ -214,7 +214,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="186" id="nZg-OW-tkQ" userLabel="Cell" customClass="EventTableViewCell" customModule="smidig" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="186" id="nZg-OW-tkQ" userLabel="Cell" customClass="FeedTableViewCell" customModule="smidig" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="414" height="186"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nZg-OW-tkQ" id="7iY-7H-9HO">
@@ -328,8 +328,10 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="calendarIcon" destination="vo6-1D-ceT" id="0bR-Fa-wNW"/>
                                     <outlet property="cardView" destination="dxM-OD-qzG" id="Iyr-6J-EWK"/>
                                     <outlet property="categoryLabel" destination="9qR-q1-OcE" id="AAs-2b-9jm"/>
+                                    <outlet property="clockIcon" destination="yK9-x1-SRq" id="00N-ms-hn8"/>
                                     <outlet property="dateLabel" destination="v6U-0U-6SE" id="cIp-55-y8y"/>
                                     <outlet property="descriptionLabel" destination="Sq9-Wt-dh1" id="Wtj-Lg-A5N"/>
                                     <outlet property="eventTitleLabel" destination="cLI-nm-91X" id="u7c-6s-MDm"/>
