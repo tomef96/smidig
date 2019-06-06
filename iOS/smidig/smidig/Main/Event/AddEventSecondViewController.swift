@@ -59,6 +59,8 @@ class AddEventSecondViewController: UIViewController, UIPickerViewDelegate, UIPi
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.setupHideKeyboardOnTap()
+        
         parentVC = self.parent as? CreateEventPageViewController
         print(parentVC?.event?.title)
         self.event = parentVC?.event
