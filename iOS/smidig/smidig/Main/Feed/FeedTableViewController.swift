@@ -15,6 +15,10 @@ class FeedTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
+        
+//        for event in feed.filteredEvents {
+//            feed.formatDate(event: event)
+//        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,12 +44,17 @@ class FeedTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath as IndexPath) as! EventTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath as IndexPath) as! FeedTableViewCell
         if feed.filteredEvents.isEmpty {
             return cell
         }
         let entry = feed.filteredEvents[indexPath.row]
         feed.populateCell(cell: cell, entry: entry)
+        cell.cardView.addShadow()
+        cell.calendarIcon.image = cell.calendarIcon.image?.withRenderingMode(.alwaysTemplate)
+        cell.clockIcon.image = cell.clockIcon.image?.withRenderingMode(.alwaysTemplate)
+        cell.calendarIcon.tintColor = .white
+        cell.clockIcon.tintColor = .white
         return cell
     }
     

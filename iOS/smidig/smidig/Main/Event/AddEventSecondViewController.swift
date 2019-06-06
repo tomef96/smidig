@@ -62,7 +62,6 @@ class AddEventSecondViewController: UIViewController, UIPickerViewDelegate, UIPi
         self.setupHideKeyboardOnTap()
         
         parentVC = self.parent as? CreateEventPageViewController
-        print(parentVC?.event?.title)
         self.event = parentVC?.event
         
         datePicker = UIDatePicker()

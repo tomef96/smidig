@@ -19,7 +19,8 @@ class CalendarTableViewController: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        calendar.fetchEvents { 
+        calendar.fetchEvents {
+            self.calendar.sortEvents()
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
@@ -39,7 +40,7 @@ class CalendarTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath as IndexPath) as! EventTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath as IndexPath) as! CalendarTableViewCell
         
         if calendar.events.isEmpty {
             return cell
@@ -47,6 +48,7 @@ class CalendarTableViewController: UITableViewController {
         let entry = calendar.events[indexPath.row]
         cell.chatButton.chatId = entry.eventId
         calendar.populateCell(cell: cell, entry: entry)
+        //cell.backgroundCard.addShadow()
         return cell
     }
     

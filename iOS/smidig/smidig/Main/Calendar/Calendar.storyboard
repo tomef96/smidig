@@ -90,6 +90,7 @@
                                                                     <subviews>
                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="baseline_access_time_black_24dp" translatesAutoresizingMaskIntoConstraints="NO" id="Oi1-ZN-yHA">
                                                                             <rect key="frame" x="0.0" y="0.0" width="24" height="30"/>
+                                                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" constant="24" id="6ug-VM-Dnc"/>
                                                                             </constraints>
@@ -153,6 +154,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
+                                    <outlet property="backgroundCard" destination="xAc-Ou-vVi" id="sO0-MY-XpJ"/>
                                     <outlet property="cardView" destination="aTi-5Q-grW" id="p7u-R2-HYn"/>
                                     <outlet property="chatButton" destination="fCx-Bm-VeZ" id="zN1-bm-zhu"/>
                                     <outlet property="dateLabel" destination="7ag-X2-csU" id="Rhz-Hx-uIZ"/>

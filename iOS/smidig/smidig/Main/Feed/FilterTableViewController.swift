@@ -19,7 +19,7 @@ class FilterTableViewController: UITableViewController {
         for key in Event.categories.keys {
             categories.append(key)
         }
-        
+        categories.sort()
     }
     
     override func viewWillDisappear(_ animated: Bool) {

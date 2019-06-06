@@ -37,5 +37,26 @@ class EventTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    let month: Dictionary<Substring, String> = [
+        "01": "Jan",
+        "02": "Feb",
+        "03": "Mars",
+        "04": "April",
+        "05": "Mai",
+        "06": "Juni",
+        "07": "Juli",
+        "08": "Aug",
+        "09": "Sep",
+        "10": "Okt",
+        "11": "Nov",
+        "12": "Des"
+    ]
 
+    func formatDate(date: String) {
+        let splicedDate = date.split(separator: "/")
+        let day = splicedDate[0]
+        let month = splicedDate[1]
+        dateLabel.text = "\(day). \(self.month[month]!)"
+    }
 }

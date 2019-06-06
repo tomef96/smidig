@@ -11,7 +11,7 @@ import Firebase
 
 class Feed: EventTableModel {
     
-    var filteredEvents = [Event]()
+    var filteredEvents: [Event] = []
     var preferences: Dictionary<String, Bool> = UserDefaults.standard.dictionary(forKey: "filterPreferences") as? Dictionary<String, Bool> ?? Dictionary<String, Bool>()
     
     override func fetchEvents(completion: @escaping () -> Void) {
@@ -36,13 +36,10 @@ class Feed: EventTableModel {
         }
         filteredEvents.sort { (left, right) -> Bool in
             let dateFormatter = DateFormatter.init()
-            dateFormatter.dateFormat = "dd/mm/YYYY"
+            dateFormatter.dateFormat = "dd/MM/yyyy"
             let leftDate = dateFormatter.date(from: left.date)
             let rightDate = dateFormatter.date(from: right.date)
             return leftDate! > rightDate!
-        }
-        for event in events {
-            formatDate(event: event)
         }
     }
 }
