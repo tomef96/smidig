@@ -82,7 +82,7 @@
                                             <constraint firstAttribute="height" constant="24" id="id9-sf-RnB"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="baseline_person_black_36pt" translatesAutoresizingMaskIntoConstraints="NO" id="iyz-43-sHg">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="baseline_search_black_24dp" translatesAutoresizingMaskIntoConstraints="NO" id="iyz-43-sHg">
                                         <rect key="frame" x="29" y="198" width="24" height="24"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -801,7 +801,7 @@
         <image name="baseline_add_circle_black_36pt" width="36" height="36"/>
         <image name="baseline_calendar_today_black_36pt" width="36" height="36"/>
         <image name="baseline_location_on_black_24dp" width="24" height="24"/>
-        <image name="baseline_person_black_36pt" width="36" height="36"/>
+        <image name="baseline_search_black_24dp" width="24" height="24"/>
         <image name="steg1" width="522" height="60"/>
         <image name="steg2" width="522" height="60"/>
         <image name="steg3" width="522" height="60"/>
