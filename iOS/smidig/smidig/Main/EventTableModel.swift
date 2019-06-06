@@ -52,7 +52,8 @@ class EventTableModel {
         cell.icon.image = .init(imageLiteralResourceName: entry.category)
         cell.icon.tintColor = .white
         cell.eventTitleLabel.text = entry.title
-        cell.spotsLabel?.text = String((Int(entry.spots)! - entry.participants.count)) + " plasser"
+        let spotsFormat = (Int(entry.spots)! - entry.participants.count) == 1 ? " plass" : " plasser"
+        cell.spotsLabel?.text = String((Int(entry.spots)! - entry.participants.count)) + spotsFormat
         cell.descriptionLabel?.text = entry.description
         cell.placeLabel.text = entry.place
         cell.eventId = entry.eventId

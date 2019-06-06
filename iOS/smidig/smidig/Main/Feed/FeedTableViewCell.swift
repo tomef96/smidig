@@ -10,7 +10,4 @@ import UIKit
 
 class FeedTableViewCell: EventTableViewCell {
 
-    @IBOutlet weak var clockIcon: UIImageView!
-    
-    @IBOutlet weak var calendarIcon: UIImageView!
 }

@@ -274,22 +274,6 @@
                                                         <constraint firstAttribute="width" constant="60" id="tSV-Kt-16p"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="baseline_calendar_today_black_36pt" translatesAutoresizingMaskIntoConstraints="NO" id="vo6-1D-ceT">
-                                                    <rect key="frame" x="141" y="115.5" width="24" height="24"/>
-                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="24" id="CoA-nN-bJi"/>
-                                                        <constraint firstAttribute="height" constant="24" id="zmC-rw-CHN"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="baseline_access_time_black_24dp" translatesAutoresizingMaskIntoConstraints="NO" id="yK9-x1-SRq">
-                                                    <rect key="frame" x="293" y="115.5" width="24" height="24"/>
-                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="24" id="w12-R5-Q8V"/>
-                                                        <constraint firstAttribute="width" constant="24" id="xie-uw-mr6"/>
-                                                    </constraints>
-                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" red="0.94901960780000005" green="0.33725490200000002" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
@@ -297,21 +281,17 @@
                                                 <constraint firstItem="Kof-VH-9gP" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Sq9-Wt-dh1" secondAttribute="bottom" constant="16" id="B3F-KN-nIV"/>
                                                 <constraint firstItem="f2r-3e-WLC" firstAttribute="trailing" secondItem="9qR-q1-OcE" secondAttribute="trailing" id="C8h-ke-P7E"/>
                                                 <constraint firstItem="D6Y-4o-dll" firstAttribute="top" secondItem="cLI-nm-91X" secondAttribute="bottom" id="IYH-VV-xuA"/>
-                                                <constraint firstItem="yK9-x1-SRq" firstAttribute="centerY" secondItem="f2r-3e-WLC" secondAttribute="centerY" id="J6A-Tj-hJa"/>
                                                 <constraint firstItem="9qR-q1-OcE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cLI-nm-91X" secondAttribute="trailing" constant="102" id="KIU-FP-HHy"/>
                                                 <constraint firstItem="Sq9-Wt-dh1" firstAttribute="leading" secondItem="D6Y-4o-dll" secondAttribute="leading" id="Kbp-Qd-SMn"/>
                                                 <constraint firstItem="9qR-q1-OcE" firstAttribute="top" secondItem="cLI-nm-91X" secondAttribute="top" id="Kz3-1d-TxJ"/>
                                                 <constraint firstItem="Sq9-Wt-dh1" firstAttribute="top" secondItem="D6Y-4o-dll" secondAttribute="bottom" constant="8" id="My6-Yz-osl"/>
-                                                <constraint firstItem="f2r-3e-WLC" firstAttribute="leading" secondItem="yK9-x1-SRq" secondAttribute="trailing" constant="4" id="Oav-W2-4NC"/>
                                                 <constraint firstItem="cLI-nm-91X" firstAttribute="leading" secondItem="dxM-OD-qzG" secondAttribute="leading" constant="16" id="TBN-bq-qha"/>
                                                 <constraint firstItem="e0j-OI-trr" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Sq9-Wt-dh1" secondAttribute="trailing" constant="8" id="TNw-xp-r9F"/>
                                                 <constraint firstItem="e0j-OI-trr" firstAttribute="trailing" secondItem="9qR-q1-OcE" secondAttribute="trailing" id="WJH-Ut-YyY"/>
-                                                <constraint firstItem="v6U-0U-6SE" firstAttribute="leading" secondItem="vo6-1D-ceT" secondAttribute="trailing" constant="4" id="Wbk-iA-0Vb"/>
                                                 <constraint firstAttribute="bottom" secondItem="Kof-VH-9gP" secondAttribute="bottom" constant="16" id="anZ-1M-sWn"/>
                                                 <constraint firstAttribute="bottom" secondItem="v6U-0U-6SE" secondAttribute="bottom" constant="16" id="b0B-iN-Mkj"/>
                                                 <constraint firstItem="D6Y-4o-dll" firstAttribute="leading" secondItem="cLI-nm-91X" secondAttribute="leading" id="bbw-PL-tnD"/>
                                                 <constraint firstItem="9qR-q1-OcE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="D6Y-4o-dll" secondAttribute="trailing" constant="8" id="d6E-sL-F9s"/>
-                                                <constraint firstItem="vo6-1D-ceT" firstAttribute="centerY" secondItem="v6U-0U-6SE" secondAttribute="centerY" id="fYj-uo-u1V"/>
                                                 <constraint firstItem="cLI-nm-91X" firstAttribute="top" secondItem="dxM-OD-qzG" secondAttribute="top" constant="16" id="jkv-la-WuY"/>
                                                 <constraint firstItem="v6U-0U-6SE" firstAttribute="centerX" secondItem="dxM-OD-qzG" secondAttribute="centerX" id="lKx-hG-N9o"/>
                                                 <constraint firstItem="e0j-OI-trr" firstAttribute="top" secondItem="9qR-q1-OcE" secondAttribute="bottom" constant="8" id="smC-Cn-4Wb"/>
@@ -328,10 +308,8 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="calendarIcon" destination="vo6-1D-ceT" id="0bR-Fa-wNW"/>
                                     <outlet property="cardView" destination="dxM-OD-qzG" id="Iyr-6J-EWK"/>
                                     <outlet property="categoryLabel" destination="9qR-q1-OcE" id="AAs-2b-9jm"/>
-                                    <outlet property="clockIcon" destination="yK9-x1-SRq" id="00N-ms-hn8"/>
                                     <outlet property="dateLabel" destination="v6U-0U-6SE" id="cIp-55-y8y"/>
                                     <outlet property="descriptionLabel" destination="Sq9-Wt-dh1" id="Wtj-Lg-A5N"/>
                                     <outlet property="eventTitleLabel" destination="cLI-nm-91X" id="u7c-6s-MDm"/>
@@ -355,8 +333,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="baseline_access_time_black_24dp" width="24" height="24"/>
-        <image name="baseline_calendar_today_black_36pt" width="36" height="36"/>
         <image name="baseline_home_black_36pt" width="36" height="36"/>
     </resources>
 </document>

@@ -237,12 +237,12 @@
 				5015E1BB21C1024E0015004C /* FeedTableViewController.swift */,
 				5015E1C721C7AC610015004C /* Feed.storyboard */,
 				649797E0229BFD4A0021D35C /* FeedViewController.swift */,
+				64CC2EF222A9446C0067661C /* FeedTableViewCell.swift */,
 				649797E4229C0D160021D35C /* FilterViewController.swift */,
 				649797E6229C105D0021D35C /* FilterTableViewController.swift */,
 				649797E8229C11240021D35C /* FilterTableViewCell.swift */,
 				649797EA229D50B00021D35C /* FilterSwitch.swift */,
 				64CC2ED822A124650067661C /* Feed.swift */,
-				64CC2EF222A9446C0067661C /* FeedTableViewCell.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";

@@ -51,10 +51,6 @@ class FeedTableViewController: UITableViewController {
         let entry = feed.filteredEvents[indexPath.row]
         feed.populateCell(cell: cell, entry: entry)
         cell.cardView.addShadow()
-        cell.calendarIcon.image = cell.calendarIcon.image?.withRenderingMode(.alwaysTemplate)
-        cell.clockIcon.image = cell.clockIcon.image?.withRenderingMode(.alwaysTemplate)
-        cell.calendarIcon.tintColor = .white
-        cell.clockIcon.tintColor = .white
         return cell
     }
     

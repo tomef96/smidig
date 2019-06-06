@@ -72,7 +72,7 @@ class AddEventSecondViewController: UIViewController, UIPickerViewDelegate, UIPi
         timePicker?.datePickerMode = .time
         timePicker?.addTarget(self, action: #selector(timeChanged(timePicker:)), for: .valueChanged)
         
-        var i = 0
+        var i = 2
         repeat {
             pickerData.append(i)
             i = i + 1
