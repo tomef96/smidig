@@ -21,6 +21,10 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     
         passwordTextField.delegate = self
         
+        passwordTextField.addShadow()
+        emailTextField.addShadow()
+        displayNameTextField.addShadow()
+        
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
     }

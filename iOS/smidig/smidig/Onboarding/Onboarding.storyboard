@@ -35,10 +35,10 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="05t-pw-vJv">
-                                <rect key="frame" x="120" y="506" width="174" height="30"/>
-                                <color key="backgroundColor" red="0.11372549019607843" green="0.72549019607843135" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="120" y="506" width="175" height="40"/>
+                                <color key="backgroundColor" red="0.38725256920000001" green="0.80461400750000001" blue="0.56559377909999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="lOu-vL-pVs"/>
+                                    <constraint firstAttribute="height" constant="40" id="lOu-vL-pVs"/>
                                 </constraints>
                                 <state key="normal" title="Log in"/>
                                 <userDefinedRuntimeAttributes>
@@ -85,7 +85,7 @@
                             <constraint firstItem="zsC-ju-ZTz" firstAttribute="top" secondItem="aBN-Gf-pU6" secondAttribute="top" id="YCF-J9-dVp"/>
                             <constraint firstItem="aBN-Gf-pU6" firstAttribute="trailing" secondItem="gTf-80-k2P" secondAttribute="trailing" constant="50" id="ZhU-mH-ENf"/>
                             <constraint firstItem="FOO-cr-NhP" firstAttribute="leading" secondItem="aBN-Gf-pU6" secondAttribute="leading" constant="100" id="cb5-k1-pnq"/>
-                            <constraint firstItem="aBN-Gf-pU6" firstAttribute="trailing" secondItem="05t-pw-vJv" secondAttribute="trailing" constant="120" id="i3t-b8-REa"/>
+                            <constraint firstItem="aBN-Gf-pU6" firstAttribute="trailing" secondItem="05t-pw-vJv" secondAttribute="trailing" constant="119" id="i3t-b8-REa"/>
                             <constraint firstItem="ILP-Sc-4tU" firstAttribute="top" secondItem="FOO-cr-NhP" secondAttribute="top" constant="70" id="mun-iG-9FT"/>
                             <constraint firstItem="FOO-cr-NhP" firstAttribute="top" secondItem="aBN-Gf-pU6" secondAttribute="top" constant="322" id="qk4-es-Q2h"/>
                             <constraint firstItem="05t-pw-vJv" firstAttribute="top" secondItem="ILP-Sc-4tU" secondAttribute="top" constant="70" id="sro-4L-0qD"/>
@@ -148,10 +148,10 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iBc-FD-uBZ">
-                                <rect key="frame" x="120" y="576" width="174" height="30"/>
-                                <color key="backgroundColor" red="0.11372549019607843" green="0.72549019607843135" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="120" y="576" width="175" height="40"/>
+                                <color key="backgroundColor" red="0.38725256920000001" green="0.80461400750000001" blue="0.56559377909999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="zS4-j3-cdY"/>
+                                    <constraint firstAttribute="height" constant="40" id="zS4-j3-cdY"/>
                                 </constraints>
                                 <state key="normal" title="Registrer"/>
                                 <userDefinedRuntimeAttributes>
@@ -203,7 +203,7 @@
                             <constraint firstItem="lmD-XS-kZU" firstAttribute="trailing" secondItem="fnY-qW-03S" secondAttribute="trailing" constant="50" id="cmt-0u-473"/>
                             <constraint firstItem="lmD-XS-kZU" firstAttribute="leading" secondItem="2yV-Oh-Owa" secondAttribute="leading" id="d6H-IH-Ks5"/>
                             <constraint firstItem="fnY-qW-03S" firstAttribute="leading" secondItem="lmD-XS-kZU" secondAttribute="leading" constant="50" id="ioP-dX-AbX"/>
-                            <constraint firstItem="lmD-XS-kZU" firstAttribute="trailing" secondItem="iBc-FD-uBZ" secondAttribute="trailing" constant="120" id="oib-i8-1Pf"/>
+                            <constraint firstItem="lmD-XS-kZU" firstAttribute="trailing" secondItem="iBc-FD-uBZ" secondAttribute="trailing" constant="119" id="oib-i8-1Pf"/>
                             <constraint firstItem="aeB-09-xWQ" firstAttribute="leading" secondItem="lmD-XS-kZU" secondAttribute="leading" constant="100" id="qXc-Bm-E15"/>
                             <constraint firstItem="iBc-FD-uBZ" firstAttribute="leading" secondItem="lmD-XS-kZU" secondAttribute="leading" constant="120" id="tjb-dw-WiK"/>
                         </constraints>
