@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5Uw-YC-fZ6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5Uw-YC-fZ6">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -47,7 +47,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SPx-Tn-deM">
-                                                        <rect key="frame" x="284" y="0.0" width="66" height="91.5"/>
+                                                        <rect key="frame" x="260" y="0.0" width="90" height="91.5"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P9d-Vg-Wa1">
                                                                 <rect key="frame" x="0.0" y="0.0" width="42" height="91.5"/>
@@ -57,7 +57,7 @@
                                                                 </state>
                                                             </button>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="baseline_keyboard_arrow_right_black_24dp" translatesAutoresizingMaskIntoConstraints="NO" id="dKl-Zy-Fvx">
-                                                                <rect key="frame" x="42" y="0.0" width="24" height="91.5"/>
+                                                                <rect key="frame" x="42" y="0.0" width="48" height="91.5"/>
                                                             </imageView>
                                                         </subviews>
                                                     </stackView>
@@ -105,14 +105,35 @@
                                     <constraint firstItem="vHh-4F-gQ3" firstAttribute="centerX" secondItem="hjo-gn-p8L" secondAttribute="centerX" id="ysr-4O-k6Z"/>
                                 </constraints>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PV3-jG-hCU">
+                                <rect key="frame" x="157" y="394" width="100" height="40"/>
+                                <color key="backgroundColor" red="0.90980392160000001" green="0.17254901959999999" blue="0.047058823530000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="aZV-f4-2Mc"/>
+                                    <constraint firstAttribute="width" constant="100" id="rFe-58-21B"/>
+                                </constraints>
+                                <state key="normal" title="Logg ut">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="signOutBtn:" destination="5Uw-YC-fZ6" eventType="touchUpInside" id="cmU-s3-GOh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="PV3-jG-hCU" firstAttribute="centerX" secondItem="Kn3-yk-lII" secondAttribute="centerX" id="DU3-58-5xO"/>
                             <constraint firstItem="Kn3-yk-lII" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="hjo-gn-p8L" secondAttribute="bottom" constant="500" id="FW8-02-fQd"/>
                             <constraint firstItem="3VZ-2C-032" firstAttribute="trailing" secondItem="Kn3-yk-lII" secondAttribute="trailing" id="NBI-u5-3mo"/>
                             <constraint firstItem="3VZ-2C-032" firstAttribute="top" secondItem="Kn3-yk-lII" secondAttribute="top" id="Xfz-RM-w5T"/>
                             <constraint firstItem="hjo-gn-p8L" firstAttribute="leading" secondItem="Kn3-yk-lII" secondAttribute="leading" id="ghA-me-JFo"/>
                             <constraint firstItem="3VZ-2C-032" firstAttribute="leading" secondItem="Kn3-yk-lII" secondAttribute="leading" id="k7Q-pe-o27"/>
+                            <constraint firstItem="PV3-jG-hCU" firstAttribute="top" secondItem="djh-Jj-Krr" secondAttribute="bottom" constant="32" id="rV4-XK-rgR"/>
                             <constraint firstItem="Kn3-yk-lII" firstAttribute="trailing" secondItem="hjo-gn-p8L" secondAttribute="trailing" id="wSi-r8-g5I"/>
                             <constraint firstItem="hjo-gn-p8L" firstAttribute="top" secondItem="3VZ-2C-032" secondAttribute="bottom" id="yD4-5q-Tm1"/>
                         </constraints>
@@ -120,14 +141,23 @@
                     </view>
                     <connections>
                         <outlet property="username" destination="P9d-Vg-Wa1" id="0OD-qC-Bnp"/>
+                        <segue destination="caf-S6-bUp" kind="show" identifier="userIsNotLoggedIn" id="OCl-jA-obv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eGf-A4-nWp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1497.1014492753625" y="93.75"/>
         </scene>
+        <!--Onboarding-->
+        <scene sceneID="KRF-RO-sgZ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Onboarding" id="caf-S6-bUp" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qPA-8B-mVe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-440" y="83"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="baseline_keyboard_arrow_right_black_24dp" width="24" height="24"/>
+        <image name="baseline_keyboard_arrow_right_black_24dp" width="48" height="48"/>
     </resources>
 </document>
