@@ -15,7 +15,7 @@ class EventTableModel {
     
     var events = [Event]()
     
-    let month: Dictionary<Substring, String> = [
+    static let month: Dictionary<Substring, String> = [
         "01": "Jan",
         "02": "Feb",
         "03": "Mars",
@@ -58,18 +58,38 @@ class EventTableModel {
         cell.eventId = entry.eventId
         cell.categoryLabel?.text = entry.category
         cell.timeLabel.text = entry.time
-        cell.dateLabel?.text = formatDate(date: entry.date)
+        cell.dateLabel?.text = EventTableModel.formatDate(date: entry.date)
         cell.setCellBackgroundColor(for: cell.cardView, by: entry.category)
         cell.selectionStyle = .none
     }
     
-    func formatDate(date: String) -> String {
+    static func formatDate(date: String) -> String {
         let splicedDate = date.split(separator: "/")
         let day = splicedDate[0]
         let month = splicedDate[1]
         return "\(day). \(self.month[month]!)"
     }
 }
+
+//extension UIView {
+//    func addShadow() {
+//        
+//        //layer.cornerRadius = 8
+//
+//        layer.borderColor = UIColor.black.withAlphaComponent(0.25).cgColor
+//        layer.borderWidth = 0.25
+//        layer.shadowColor = UIColor.black.cgColor //Any dark color
+//        layer.shadowRadius = 2.0
+//        layer.shadowOpacity = 0.125
+//        layer.shadowOffset = CGSize(width: 0, height: 2)
+//
+//        //clipsToBounds = false
+//
+//        //let paddingView : UIView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 30))
+//    }
+//}
+
+
 
 extension UIView {
     func setCellBackgroundColor(for view: UIView, by category: String) {

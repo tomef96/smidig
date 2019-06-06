@@ -154,6 +154,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
+                                    <outlet property="backgroundCard" destination="xAc-Ou-vVi" id="sO0-MY-XpJ"/>
                                     <outlet property="cardView" destination="aTi-5Q-grW" id="p7u-R2-HYn"/>
                                     <outlet property="chatButton" destination="fCx-Bm-VeZ" id="zN1-bm-zhu"/>
                                     <outlet property="dateLabel" destination="7ag-X2-csU" id="Rhz-Hx-uIZ"/>

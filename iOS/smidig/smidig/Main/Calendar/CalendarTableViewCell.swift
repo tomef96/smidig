@@ -10,6 +10,8 @@ import UIKit
 
 class CalendarTableViewCell: EventTableViewCell {
 
+    @IBOutlet weak var backgroundCard: CardView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         cardView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]

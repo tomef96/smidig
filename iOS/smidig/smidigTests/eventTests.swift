@@ -30,8 +30,8 @@ class eventTests: XCTestCase {
             title: "",
             eventId: "",
             category: "",
-            subcategory: "",
-            time: ""
+            time: "",
+            participants: []
         )
         XCTAssert(event.owner == "Jan-Kristian")
     }

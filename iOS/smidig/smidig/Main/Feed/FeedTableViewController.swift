@@ -50,6 +50,7 @@ class FeedTableViewController: UITableViewController {
         }
         let entry = feed.filteredEvents[indexPath.row]
         feed.populateCell(cell: cell, entry: entry)
+        cell.cardView.addShadow()
         return cell
     }
     

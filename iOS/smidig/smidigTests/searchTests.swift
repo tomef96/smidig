@@ -25,8 +25,8 @@ class searchTests: XCTestCase {
             title: "Fotball",
             eventId: "",
             category: "",
-            subcategory: "",
-            time: ""
+            time: "",
+            participants: []
         )
         testDB.append(event)
         let event2 = Event(
@@ -38,8 +38,8 @@ class searchTests: XCTestCase {
             title: "spis grus",
             eventId: "",
             category: "Sport",
-            subcategory: "Hockey",
-            time: ""
+            time: "",
+            participants: []
         )
         testDB.append(event2)
     }
@@ -70,11 +70,6 @@ class searchTests: XCTestCase {
     
     func testShouldReturnOnCategory() {
         let result = searcher.search(for: "sport", in: testDB)
-        XCTAssert(result?.count == 1)
-    }
-    
-    func testShouldReturnOnSubcategory() {
-        let result = searcher.search(for: "hockey", in: testDB)
         XCTAssert(result?.count == 1)
     }
 

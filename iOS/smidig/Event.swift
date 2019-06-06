@@ -64,7 +64,7 @@ class Event {
             }
         }
     
-        let index = participants.index(of: Auth.auth().currentUser!.uid)
+        let index = participants.firstIndex(of: Auth.auth().currentUser!.uid)
         if index != nil {
             participants.remove(at: index!)
             eventReference.setData(["participants": participants], mergeFields: ["participants"])

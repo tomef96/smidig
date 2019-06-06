@@ -63,8 +63,6 @@ class AddEventThirdViewController: UIViewController {
         } else {
             print("Alle feltene er ikke fylt ut")
         }*/
-        print("Event data: \(parentVC?.event?.title)")
-        print("Event data: \(parentVC?.event?.spots)")
     }
 
     /*

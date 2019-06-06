@@ -51,7 +51,6 @@ class AddEventSecondViewController: UIViewController, UIPickerViewDelegate, UIPi
         super.viewDidLoad()
         
         parentVC = self.parent as? CreateEventPageViewController
-        print(parentVC?.event?.title)
         self.event = parentVC?.event
         
         datePicker = UIDatePicker()

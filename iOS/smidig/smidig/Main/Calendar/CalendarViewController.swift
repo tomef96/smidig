@@ -48,4 +48,20 @@ class CardView: UIView {
         self.layer.mask = mask
     }
     
+    func addShadow() {
+        
+        //layer.cornerRadius = 8
+        
+        //layer.borderColor = UIColor.black.withAlphaComponent(0.25).cgColor
+        //layer.borderWidth = 0.25
+        layer.shadowColor = UIColor.black.cgColor //Any dark color
+        layer.shadowRadius = 3.0
+        layer.shadowOpacity = 0.25
+        layer.shadowOffset = CGSize(width: 2, height: 3)
+        
+        //clipsToBounds = false
+        
+        //let paddingView : UIView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 30))
+    }
+    
 }

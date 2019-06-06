@@ -104,7 +104,7 @@ class EventViewController: UIViewController {
         labelDescription.text = event.description
         labelSpots.text = String(event.participants.count) + "/" + event.spots
         labelPlace.text = event.place
-        labelDate.text = event.date
+        labelDate.text = EventTableModel.formatDate(date: event.date)
         labelTime.text = event.time
         eventId = event.eventId
     }

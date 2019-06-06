@@ -25,12 +25,6 @@ class profileTests: XCTestCase {
         user.changeUsername(to: "Tom")
         XCTAssertEqual(user.username, "Tom")
     }
-    
-    func testGetUsername() {
-        let user = AppUser()
-        user.getUsername()
-        XCTAssertEqual(user.username, "Jan")
-    }
 
     func testPerformanceExample() {
         // This is an example of a performance test case.

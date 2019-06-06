@@ -261,12 +261,12 @@
 			children = (
 				643E104721BE6A54006D099C /* EventViewController.swift */,
 				643E104921BE6B12006D099C /* Event.swift */,
-				5055FEE621BE8C4300DA0CA7 /* AddEventViewController.swift */,
 				5015E1BF21C120160015004C /* EventTableViewCell.swift */,
 				5015E1C921C7ADC90015004C /* Event.storyboard */,
 				50768E7C229C0F39006222DF /* CreateEventPageViewController.swift */,
 				501C771A22A1248B00676A79 /* CreateEventCollectionViewCell.swift */,
 				501C771B22A1248B00676A79 /* CreateEventCollectionViewCell.xib */,
+				5055FEE621BE8C4300DA0CA7 /* AddEventViewController.swift */,
 				50AE7CD222A664A80034249D /* AddEventSecondViewController.swift */,
 				50AE7CD422A68DC70034249D /* AddEventThirdViewController.swift */,
 			);
@@ -489,13 +489,16 @@
 				TargetAttributes = {
 					64D787BA21B7D1CE00F541E8 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 					64D787CE21B7D1D000F541E8 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 64D787BA21B7D1CE00F541E8;
 					};
 					64D787D921B7D1D000F541E8 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 64D787BA21B7D1CE00F541E8;
 					};
 				};
@@ -916,7 +919,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = tomef.smidig19;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -935,7 +938,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = tomef.smidig19;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -956,7 +959,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = tomef.smidigTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/smidig.app/smidig";
 			};
@@ -978,7 +981,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = tomef.smidigTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/smidig.app/smidig";
 			};
@@ -999,7 +1002,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = tomef.smidigUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = smidig;
 			};
@@ -1020,7 +1023,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = tomef.smidigUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = smidig;
 			};
