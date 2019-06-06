@@ -471,7 +471,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="exp-Zl-0Ix">
-                                <rect key="frame" x="37" y="344" width="299" height="124"/>
+                                <rect key="frame" x="4" y="344" width="367" height="124"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="124" id="dvb-ur-b8K"/>
@@ -519,7 +519,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="xOM-t8-UF1" firstAttribute="trailing" secondItem="qIs-5u-mIb" secondAttribute="trailing" constant="238" id="5Gf-uT-yWh"/>
-                            <constraint firstItem="xOM-t8-UF1" firstAttribute="trailing" secondItem="exp-Zl-0Ix" secondAttribute="trailing" constant="39" id="6Nz-tk-Lqd"/>
+                            <constraint firstItem="xOM-t8-UF1" firstAttribute="trailing" secondItem="exp-Zl-0Ix" secondAttribute="trailing" constant="4" id="6Nz-tk-Lqd"/>
                             <constraint firstItem="xOM-t8-UF1" firstAttribute="trailing" secondItem="4Wy-R7-fWy" secondAttribute="trailing" constant="39" id="9vd-Bg-h6E"/>
                             <constraint firstItem="L4I-oG-496" firstAttribute="leading" secondItem="xOM-t8-UF1" secondAttribute="leading" constant="37" id="ABb-gC-7Z8"/>
                             <constraint firstItem="pjg-DR-i7B" firstAttribute="leading" secondItem="xOM-t8-UF1" secondAttribute="leading" constant="100" id="AGX-Ia-A1X"/>
@@ -536,7 +536,7 @@
                             <constraint firstItem="Itx-I4-R1d" firstAttribute="centerX" secondItem="xOM-t8-UF1" secondAttribute="centerX" id="acg-yX-Ep5"/>
                             <constraint firstItem="qIs-5u-mIb" firstAttribute="leading" secondItem="xOM-t8-UF1" secondAttribute="leading" constant="37" id="dus-do-KXr"/>
                             <constraint firstItem="L4I-oG-496" firstAttribute="top" secondItem="qIs-5u-mIb" secondAttribute="bottom" constant="8" id="ftO-cd-iOo"/>
-                            <constraint firstItem="exp-Zl-0Ix" firstAttribute="leading" secondItem="xOM-t8-UF1" secondAttribute="leading" constant="37" id="fws-iH-s6A"/>
+                            <constraint firstItem="exp-Zl-0Ix" firstAttribute="leading" secondItem="xOM-t8-UF1" secondAttribute="leading" constant="4" id="fws-iH-s6A"/>
                             <constraint firstItem="hvZ-cI-s1y" firstAttribute="top" secondItem="L4I-oG-496" secondAttribute="bottom" constant="16" id="iCi-44-vSr"/>
                             <constraint firstItem="qIs-5u-mIb" firstAttribute="top" secondItem="4Wy-R7-fWy" secondAttribute="bottom" constant="16" id="lDf-hp-HQ0"/>
                             <constraint firstItem="6yA-XY-6CA" firstAttribute="leading" secondItem="xOM-t8-UF1" secondAttribute="leading" constant="37" id="tex-8V-ed6"/>

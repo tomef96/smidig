@@ -166,12 +166,12 @@ extension UITextField {
         layer.borderWidth = 0.25
         layer.shadowColor = UIColor.black.cgColor //Any dark color
         layer.shadowRadius = 2.0
-        layer.shadowOpacity = 0.25
+        layer.shadowOpacity = 0.125
         layer.shadowOffset = CGSize(width: 0, height: 2)
         
         clipsToBounds = false
         
-        let paddingView : UIView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 30))
+        let paddingView : UIView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 30))
         
         self.leftView = paddingView
         self.leftViewMode = UITextField.ViewMode.always
