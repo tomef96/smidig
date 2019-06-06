@@ -21,7 +21,7 @@ class FeedViewController: UIViewController {
         
         navigationItem.rightBarButtonItems = [filterButton, searchButton]
         
-        let menuButton = UIBarButtonItem(image: .init(imageLiteralResourceName: "baseline_menu_black_24dp"), style: .plain, target: self, action: #selector(showMenu))
+        let menuButton = UIBarButtonItem(image: .init(imageLiteralResourceName: "baseline_person_black_24dp"), style: .plain, target: self, action: #selector(showMenu))
         menuButton.tintColor = UIColor.black
         navigationItem.leftBarButtonItem = menuButton
     }
