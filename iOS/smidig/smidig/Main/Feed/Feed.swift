@@ -11,7 +11,7 @@ import Firebase
 
 class Feed: EventTableModel {
     
-    var filteredEvents = [Event]()
+    var filteredEvents: [Event] = []
     var preferences: Dictionary<String, Bool> = UserDefaults.standard.dictionary(forKey: "filterPreferences") as? Dictionary<String, Bool> ?? Dictionary<String, Bool>()
     
     override func fetchEvents(completion: @escaping () -> Void) {
