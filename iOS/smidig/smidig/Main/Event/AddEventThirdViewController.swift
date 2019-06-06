@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import SwiftMessages
 
 class AddEventThirdViewController: UIViewController {
 
@@ -27,21 +28,21 @@ class AddEventThirdViewController: UIViewController {
         
     }
     @IBAction func addEvent(_ sender: Any) {
-        /*var documentData = [String : Any]()
+        var documentData = [String : Any]()
         
         if (event?.title != "" && event?.description != "" && event?.place != "" && event?.date != "" && event?.spots != "" && Auth.auth().currentUser?.uid != nil && event?.time != "" && event?.category != "") {
             
-            documentData["title"] = event?.title
-            documentData["description"] = event?.description
-            documentData["place"] = event?.place
-            documentData["date"] = event?.date
-            documentData["spots"] = event?.spots
+            documentData["title"] = parentVC?.event?.title
+            documentData["description"] = parentVC?.event?.description
+            documentData["place"] = parentVC?.event?.place
+            documentData["date"] = parentVC?.event?.date
+            documentData["spots"] = parentVC?.event?.spots
             documentData["owner"] = Auth.auth().currentUser?.uid
-            documentData["time"] = event?.time
-            documentData["category"] = event?.category
+            documentData["time"] = parentVC?.event?.time
+            documentData["category"] = parentVC?.event?.category
             documentData["participants"] = [Auth.auth().currentUser!.uid]
             
-            /*let schedule = db.collection("users").document(Auth.auth().currentUser!.uid).collection("schedule")*/
+            let schedule = db.collection("users").document(Auth.auth().currentUser!.uid).collection("schedule")
             
             
             var ref: DocumentReference? = nil
@@ -55,24 +56,29 @@ class AddEventThirdViewController: UIViewController {
                     
                     let eventReference = self.db.document("events/\(ref!.documentID)")
                     self.db.collection("users").document(Auth.auth().currentUser!.uid).collection("schedule").addDocument(data: ["event": eventReference])
+                    
+                    self.parentVC?.event?.reset()
+                    
                     self.performSegue(withIdentifier: "eventAdded", sender: self)
                 }
             }
             
             
         } else {
-            print("Alle feltene er ikke fylt ut")
-        }*/
+            let view = MessageView.viewFromNib(layout: .cardView)
+            view.configureTheme(.warning)
+            view.button?.isHidden = true
+            view.configureContent(title: "Oops!", body: "Det ser ut som du har glemt å fylle ut et skjema.")
+            SwiftMessages.show(view: view)
+        }
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        
+        let destination = segue.destination as! EventViewController
+        destination.event = event
     }
-    */
 
 }

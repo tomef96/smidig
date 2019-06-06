@@ -21,6 +21,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        emailTextField.addShadow()
+        passwordTextField.addShadow()
 
         passwordTextField.delegate = self
         

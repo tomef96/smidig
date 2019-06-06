@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseFirestore
+import SwiftMessages
 
 private let reuseIdentifier = "CreateEventCollectionViewCell"
 
@@ -47,7 +48,7 @@ class AddEventViewController: UIViewController, UICollectionViewDelegate, UIColl
         cell.ctgLabel.text = category
         cell.ctgLabel.adjustsFontSizeToFitWidth = true
         let image = UIImage(named: category)?.withRenderingMode(.alwaysTemplate)
-        cell.setCellBackgroundColor(for: cell, by: category)
+        cell.setCellBackgroundColor(for: cell, by: category, transparency: 0.5)
         cell.ctgImage.image = image
         cell.ctgImage.tintColor = UIColor.white
         cell.layer.cornerRadius = 8
@@ -70,7 +71,11 @@ class AddEventViewController: UIViewController, UICollectionViewDelegate, UIColl
             parentVC?.setViewControllers([(parentVC?.subViewControllers[1])!], direction: UIPageViewController.NavigationDirection.forward, animated: true, completion: nil)
             
         } else {
-            print("Alle feltene er ikke fylt ut")
+            let view = MessageView.viewFromNib(layout: .cardView)
+            view.configureTheme(.warning)
+            view.button?.isHidden = true
+            view.configureContent(title: "Oops!", body: "Alle feltene er ikke fylt ut.")
+            SwiftMessages.show(view: view)
         }
         
     }
@@ -86,6 +91,8 @@ class AddEventViewController: UIViewController, UICollectionViewDelegate, UIColl
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.setupHideKeyboardOnTap()
         
         for key in Event.categories.keys {
             categories.append(key)
@@ -106,6 +113,11 @@ class AddEventViewController: UIViewController, UICollectionViewDelegate, UIColl
         titleTextField.addShadow()
         setupTextFields()
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        titleTextField.text = parentVC?.event?.title
+        descriptionTextField.text = parentVC?.event?.description
     }
     
     func setupTextFields() {
@@ -156,17 +168,32 @@ extension UITextField {
         layer.borderWidth = 0.25
         layer.shadowColor = UIColor.black.cgColor //Any dark color
         layer.shadowRadius = 2.0
-        layer.shadowOpacity = 0.25
+        layer.shadowOpacity = 0.125
         layer.shadowOffset = CGSize(width: 0, height: 2)
         
         clipsToBounds = false
         
-        let paddingView : UIView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 30))
+        let paddingView : UIView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 30))
         
         self.leftView = paddingView
         self.leftViewMode = UITextField.ViewMode.always
         
         
         
+    }
+}
+
+extension UIViewController {
+    /// Call this once to dismiss open keyboards by tapping anywhere in the view controller
+    func setupHideKeyboardOnTap() {
+        self.view.addGestureRecognizer(self.endEditingRecognizer())
+        self.navigationController?.navigationBar.addGestureRecognizer(self.endEditingRecognizer())
+    }
+    
+    /// Dismisses the keyboard from self.view
+    private func endEditingRecognizer() -> UIGestureRecognizer {
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(self.view.endEditing(_:)))
+        tap.cancelsTouchesInView = false
+        return tap
     }
 }

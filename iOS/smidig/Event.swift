@@ -50,6 +50,19 @@ class Event {
         self.participants = participants
     }
     
+    func reset() {
+        self.owner = ""
+        self.title = ""
+        self.date = ""
+        self.spots = ""
+        self.description = ""
+        self.place = ""
+        self.eventId = ""
+        self.category = ""
+        self.time = ""
+        self.participants = []
+    }
+    
     func leave() {
         let docRef = db.collection("users").document((Auth.auth().currentUser?.uid)!).collection("schedule")
         let eventReference = db.document("events/\(eventId)")
