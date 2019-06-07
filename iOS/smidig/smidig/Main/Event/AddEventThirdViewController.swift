@@ -16,12 +16,32 @@ class AddEventThirdViewController: UIViewController {
         super.viewDidLoad()
 
         parentVC = self.parent as? CreateEventPageViewController
+        
+        previewTitle.text = parentVC?.event?.title ?? "Title er ikke satt"
+        previewLocation.text = parentVC?.event?.place ?? "Lokasjon er ikke satt"
+        previewDescription.text = parentVC?.event?.description ?? "Beskrivelse er ikke satt"
+        previewSpots.text = (parentVC?.event?.spots)! + " plasser"
+        previewDate.text = parentVC?.event?.date ?? "Lokasjon er ikke satt"
+        previewTime.text = parentVC?.event?.time ?? "Tid er ikke satt"
+        previewIcon.image = UIImage(named: parentVC?.event?.category ?? "Annet")
+        previewCategory.text = parentVC?.event?.category ?? "Kategori er ikke satt"
+        previewCard.setCellBackgroundColor(for: previewCard, by: parentVC?.event?.category ?? "Annet")
         // Do any additional setup after loading the view.
     }
     
     weak var parentVC: CreateEventPageViewController?
     let db = Firestore.firestore()
     var event: Event?
+    
+    @IBOutlet weak var previewTitle: UILabel!
+    @IBOutlet weak var previewLocation: UILabel!
+    @IBOutlet weak var previewDescription: UILabel!
+    @IBOutlet weak var previewSpots: UILabel!
+    @IBOutlet weak var previewDate: UILabel!
+    @IBOutlet weak var previewTime: UILabel!
+    @IBOutlet weak var previewIcon: UIImageView!
+    @IBOutlet weak var previewCategory: UILabel!
+    @IBOutlet weak var previewCard: CardView!
     
     @IBAction func goToPrevious(_ sender: Any) {
         parentVC?.setViewControllers([(parentVC?.subViewControllers[1])!], direction: UIPageViewController.NavigationDirection.reverse, animated: true, completion: nil)
