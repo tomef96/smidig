@@ -281,7 +281,7 @@
                                                 <constraint firstItem="Kof-VH-9gP" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Sq9-Wt-dh1" secondAttribute="bottom" constant="16" id="B3F-KN-nIV"/>
                                                 <constraint firstItem="f2r-3e-WLC" firstAttribute="trailing" secondItem="9qR-q1-OcE" secondAttribute="trailing" id="C8h-ke-P7E"/>
                                                 <constraint firstItem="D6Y-4o-dll" firstAttribute="top" secondItem="cLI-nm-91X" secondAttribute="bottom" id="IYH-VV-xuA"/>
-                                                <constraint firstItem="9qR-q1-OcE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cLI-nm-91X" secondAttribute="trailing" constant="102" id="KIU-FP-HHy"/>
+                                                <constraint firstItem="9qR-q1-OcE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cLI-nm-91X" secondAttribute="trailing" constant="8" id="KIU-FP-HHy"/>
                                                 <constraint firstItem="Sq9-Wt-dh1" firstAttribute="leading" secondItem="D6Y-4o-dll" secondAttribute="leading" id="Kbp-Qd-SMn"/>
                                                 <constraint firstItem="9qR-q1-OcE" firstAttribute="top" secondItem="cLI-nm-91X" secondAttribute="top" id="Kz3-1d-TxJ"/>
                                                 <constraint firstItem="Sq9-Wt-dh1" firstAttribute="top" secondItem="D6Y-4o-dll" secondAttribute="bottom" constant="8" id="My6-Yz-osl"/>
@@ -291,7 +291,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="Kof-VH-9gP" secondAttribute="bottom" constant="16" id="anZ-1M-sWn"/>
                                                 <constraint firstAttribute="bottom" secondItem="v6U-0U-6SE" secondAttribute="bottom" constant="16" id="b0B-iN-Mkj"/>
                                                 <constraint firstItem="D6Y-4o-dll" firstAttribute="leading" secondItem="cLI-nm-91X" secondAttribute="leading" id="bbw-PL-tnD"/>
-                                                <constraint firstItem="9qR-q1-OcE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="D6Y-4o-dll" secondAttribute="trailing" constant="8" id="d6E-sL-F9s"/>
+                                                <constraint firstItem="9qR-q1-OcE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="D6Y-4o-dll" secondAttribute="trailing" priority="750" constant="8" id="d6E-sL-F9s"/>
                                                 <constraint firstItem="cLI-nm-91X" firstAttribute="top" secondItem="dxM-OD-qzG" secondAttribute="top" constant="16" id="jkv-la-WuY"/>
                                                 <constraint firstItem="v6U-0U-6SE" firstAttribute="centerX" secondItem="dxM-OD-qzG" secondAttribute="centerX" id="lKx-hG-N9o"/>
                                                 <constraint firstItem="e0j-OI-trr" firstAttribute="top" secondItem="9qR-q1-OcE" secondAttribute="bottom" constant="8" id="smC-Cn-4Wb"/>
