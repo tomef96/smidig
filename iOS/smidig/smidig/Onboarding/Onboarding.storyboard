@@ -21,7 +21,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="link-mail-logo" translatesAutoresizingMaskIntoConstraints="NO" id="zsC-ju-ZTz">
                                 <rect key="frame" x="109" y="44" width="196" height="327"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FOO-cr-NhP" userLabel="EmailTextField">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-post" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FOO-cr-NhP" userLabel="EmailTextField">
                                 <rect key="frame" x="107" y="366" width="200" height="30"/>
                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration" hint="you@example.com" label="Email"/>
@@ -45,7 +45,7 @@
                                     <constraint firstAttribute="height" constant="40" id="lOu-vL-pVs"/>
                                     <constraint firstAttribute="width" constant="125" id="wDs-hB-SbQ"/>
                                 </constraints>
-                                <state key="normal" title="Log in"/>
+                                <state key="normal" title="Logg inn"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="8"/>
@@ -57,7 +57,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTf-80-k2P">
                                 <rect key="frame" x="50" y="812" width="314" height="30"/>
-                                <state key="normal" title="Click here to register">
+                                <state key="normal" title="Klikk her for å registrere deg">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -173,7 +173,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fnY-qW-03S">
                                 <rect key="frame" x="50" y="812" width="314" height="30"/>
-                                <state key="normal" title="Already have an account?">
+                                <state key="normal" title="Har du allerede en konto?">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -239,6 +239,6 @@
         <image name="link-mail-logo" width="326" height="327"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="HAQ-Fe-iEk"/>
+        <segue reference="DGq-4q-rVA"/>
     </inferredMetricsTieBreakers>
 </document>
