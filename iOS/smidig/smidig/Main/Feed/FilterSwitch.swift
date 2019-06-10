@@ -10,4 +10,8 @@ import UIKit
 
 class FilterSwitch: UISwitch {
     var category: String?
+    
+    override func didMoveToSuperview() {
+        tintColor = .white
+    }
 }

@@ -44,7 +44,12 @@ class FilterTableViewController: UITableViewController {
         cell.filterSwitch.category = category
         cell.filterSwitch.isOn = preferences[category] ?? true
         cell.filterSwitch.addTarget(self, action: #selector(switchChanged), for: UIControl.Event.valueChanged)
-        cell.setCellBackgroundColor(for: cell.viewContainer, by: category, transparency: 1)
+        if cell.filterSwitch.isOn {
+            cell.setCellBackgroundColor(for: cell.viewContainer, by: category)
+        } else {
+            cell.viewContainer.backgroundColor = .lightGray
+        }
+        
         return cell
     }
     
@@ -52,6 +57,12 @@ class FilterTableViewController: UITableViewController {
     func switchChanged(filterSwitch: FilterSwitch) {
         guard let key = filterSwitch.category else {return}
         let value = filterSwitch.isOn
+        let view = filterSwitch.superview!
+        if value == false {
+            view.backgroundColor = .lightGray
+        } else {
+            view.setCellBackgroundColor(for: view, by: filterSwitch.category!)
+        }
         preferences[key] = value
     }
 }
