@@ -115,7 +115,7 @@
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <state key="normal" image="baseline_chat_bubble_black_24dp"/>
+                                                                    <state key="normal" image="baseline_chat_bubble_outline_black_24dp"/>
                                                                     <connections>
                                                                         <segue destination="MjW-hk-9zR" kind="show" id="aMv-MS-xpO"/>
                                                                     </connections>
@@ -273,6 +273,6 @@
     <resources>
         <image name="baseline_access_time_black_24dp" width="24" height="24"/>
         <image name="baseline_calendar_today_black_36pt" width="36" height="36"/>
-        <image name="baseline_chat_bubble_black_24dp" width="24" height="24"/>
+        <image name="baseline_chat_bubble_outline_black_24dp" width="24" height="24"/>
     </resources>
 </document>
