@@ -19,18 +19,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="link-mail-logo" translatesAutoresizingMaskIntoConstraints="NO" id="zsC-ju-ZTz">
-                                <rect key="frame" x="109" y="44" width="196" height="327"/>
+                                <rect key="frame" x="90" y="44" width="234" height="327"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-post" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FOO-cr-NhP" userLabel="EmailTextField">
-                                <rect key="frame" x="107" y="366" width="200" height="30"/>
+                                <rect key="frame" x="32" y="370" width="350" height="40"/>
                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration" hint="you@example.com" label="Email"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="5JJ-n3-WTE"/>
-                                    <constraint firstAttribute="width" constant="200" id="l2g-WK-xxZ"/>
+                                    <constraint firstAttribute="height" constant="40" id="caB-DL-waw"/>
                                 </constraints>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
@@ -39,12 +38,13 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="05t-pw-vJv">
-                                <rect key="frame" x="144.5" y="506" width="125" height="40"/>
+                                <rect key="frame" x="132" y="512" width="150" height="40"/>
                                 <color key="backgroundColor" red="0.38725256920000001" green="0.80461400750000001" blue="0.56559377909999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="lOu-vL-pVs"/>
-                                    <constraint firstAttribute="width" constant="125" id="wDs-hB-SbQ"/>
+                                    <constraint firstAttribute="width" constant="150" id="wDs-hB-SbQ"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Logg inn"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -65,14 +65,13 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Passord" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ILP-Sc-4tU" userLabel="PasswordTextField">
-                                <rect key="frame" x="107" y="436" width="200" height="30"/>
+                                <rect key="frame" x="32" y="440" width="350" height="40"/>
                                 <accessibility key="accessibilityConfiguration" hint="you@example.com" label="Email"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Qi3-cy-aaK"/>
-                                    <constraint firstAttribute="width" constant="200" id="Zc3-TG-xkj"/>
+                                    <constraint firstAttribute="height" constant="40" id="a3z-Rn-m7l"/>
                                 </constraints>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES" textContentType="password"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
@@ -85,16 +84,20 @@
                         <constraints>
                             <constraint firstItem="FOO-cr-NhP" firstAttribute="centerX" secondItem="aBN-Gf-pU6" secondAttribute="centerX" id="ESk-XM-NUc"/>
                             <constraint firstItem="gTf-80-k2P" firstAttribute="bottom" secondItem="aBN-Gf-pU6" secondAttribute="bottom" constant="-20" id="FNM-7r-a4E"/>
-                            <constraint firstItem="aBN-Gf-pU6" firstAttribute="trailing" secondItem="zsC-ju-ZTz" secondAttribute="trailing" constant="109" id="IyG-Z3-qoR"/>
+                            <constraint firstItem="aBN-Gf-pU6" firstAttribute="trailing" secondItem="zsC-ju-ZTz" secondAttribute="trailing" constant="90" id="IyG-Z3-qoR"/>
+                            <constraint firstItem="05t-pw-vJv" firstAttribute="top" secondItem="ILP-Sc-4tU" secondAttribute="bottom" constant="32" id="KLC-xQ-8kP"/>
                             <constraint firstItem="gTf-80-k2P" firstAttribute="leading" secondItem="aBN-Gf-pU6" secondAttribute="leading" constant="50" id="Lqx-CA-vlK"/>
                             <constraint firstItem="ILP-Sc-4tU" firstAttribute="centerX" secondItem="aBN-Gf-pU6" secondAttribute="centerX" id="RXU-xs-mJ6"/>
+                            <constraint firstItem="aBN-Gf-pU6" firstAttribute="trailing" secondItem="FOO-cr-NhP" secondAttribute="trailing" constant="32" id="ZWL-TV-hdq"/>
                             <constraint firstItem="aBN-Gf-pU6" firstAttribute="trailing" secondItem="gTf-80-k2P" secondAttribute="trailing" constant="50" id="ZhU-mH-ENf"/>
+                            <constraint firstItem="ILP-Sc-4tU" firstAttribute="leading" secondItem="aBN-Gf-pU6" secondAttribute="leading" constant="32" id="ZpG-l7-pb0"/>
                             <constraint firstItem="zsC-ju-ZTz" firstAttribute="top" secondItem="aBN-Gf-pU6" secondAttribute="top" id="ac9-hK-2Ib"/>
                             <constraint firstItem="05t-pw-vJv" firstAttribute="centerX" secondItem="aBN-Gf-pU6" secondAttribute="centerX" id="bD1-ie-gUS"/>
+                            <constraint firstItem="aBN-Gf-pU6" firstAttribute="trailing" secondItem="ILP-Sc-4tU" secondAttribute="trailing" constant="32" id="dAQ-Vg-DEm"/>
+                            <constraint firstItem="FOO-cr-NhP" firstAttribute="firstBaseline" secondItem="zsC-ju-ZTz" secondAttribute="baseline" constant="28" symbolType="layoutAnchor" id="fm4-69-mew"/>
                             <constraint firstItem="ILP-Sc-4tU" firstAttribute="top" secondItem="FOO-cr-NhP" secondAttribute="top" constant="70" id="mun-iG-9FT"/>
-                            <constraint firstItem="zsC-ju-ZTz" firstAttribute="leading" secondItem="aBN-Gf-pU6" secondAttribute="leading" constant="109" id="nWs-6R-Ukc"/>
-                            <constraint firstItem="FOO-cr-NhP" firstAttribute="top" secondItem="aBN-Gf-pU6" secondAttribute="top" constant="322" id="qk4-es-Q2h"/>
-                            <constraint firstItem="05t-pw-vJv" firstAttribute="top" secondItem="ILP-Sc-4tU" secondAttribute="top" constant="70" id="sro-4L-0qD"/>
+                            <constraint firstItem="zsC-ju-ZTz" firstAttribute="leading" secondItem="aBN-Gf-pU6" secondAttribute="leading" constant="90" id="nWs-6R-Ukc"/>
+                            <constraint firstItem="FOO-cr-NhP" firstAttribute="leading" secondItem="aBN-Gf-pU6" secondAttribute="leading" constant="32" id="qCf-Tb-Vmz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aBN-Gf-pU6"/>
                     </view>
@@ -126,13 +129,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UwR-bV-kZ7" userLabel="EmailTextField">
-                                <rect key="frame" x="100" y="414" width="214" height="30"/>
+                                <rect key="frame" x="32" y="443" width="350" height="40"/>
                                 <accessibility key="accessibilityConfiguration" hint="you@example.com" label="Email"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Vzu-kG-M78"/>
+                                    <constraint firstAttribute="height" constant="40" id="Vzu-kG-M78"/>
                                 </constraints>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
@@ -141,13 +144,13 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Brukernavn" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tdo-Wy-9CA" userLabel="EmailTextField">
-                                <rect key="frame" x="100" y="344" width="214" height="30"/>
+                                <rect key="frame" x="32" y="371" width="350" height="40"/>
                                 <accessibility key="accessibilityConfiguration" hint="you@example.com" label="Email"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="71d-mX-QRh"/>
+                                    <constraint firstAttribute="height" constant="40" id="71d-mX-QRh"/>
                                 </constraints>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
@@ -156,7 +159,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iBc-FD-uBZ">
-                                <rect key="frame" x="120" y="554" width="175" height="40"/>
+                                <rect key="frame" x="90" y="587" width="234" height="40"/>
                                 <color key="backgroundColor" red="0.38725256920000001" green="0.80461400750000001" blue="0.56559377909999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="zS4-j3-cdY"/>
@@ -181,13 +184,13 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Passord" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aeB-09-xWQ" userLabel="PasswordTextField">
-                                <rect key="frame" x="100" y="484" width="214" height="30"/>
+                                <rect key="frame" x="32" y="515" width="350" height="40"/>
                                 <accessibility key="accessibilityConfiguration" hint="you@example.com" label="Email"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="cem-cl-SF2"/>
+                                    <constraint firstAttribute="height" constant="40" id="cem-cl-SF2"/>
                                 </constraints>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES" textContentType="password"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
@@ -196,28 +199,28 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="link-mail-logo" translatesAutoresizingMaskIntoConstraints="NO" id="2yV-Oh-Owa">
-                                <rect key="frame" x="109" y="44" width="196" height="327"/>
+                                <rect key="frame" x="90" y="44" width="234" height="327"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="aeB-09-xWQ" firstAttribute="top" secondItem="UwR-bV-kZ7" secondAttribute="top" constant="70" id="4yx-GD-4Ba"/>
-                            <constraint firstItem="lmD-XS-kZU" firstAttribute="trailing" secondItem="UwR-bV-kZ7" secondAttribute="trailing" constant="100" id="5i2-sw-sUI"/>
-                            <constraint firstItem="tdo-Wy-9CA" firstAttribute="top" secondItem="lmD-XS-kZU" secondAttribute="top" constant="300" id="B2S-zT-lPn"/>
-                            <constraint firstItem="UwR-bV-kZ7" firstAttribute="top" secondItem="tdo-Wy-9CA" secondAttribute="top" constant="70" id="LlG-Uq-3uF"/>
+                            <constraint firstItem="aeB-09-xWQ" firstAttribute="top" secondItem="UwR-bV-kZ7" secondAttribute="bottom" constant="32" id="AfI-6S-2ke"/>
+                            <constraint firstItem="UwR-bV-kZ7" firstAttribute="leading" secondItem="tdo-Wy-9CA" secondAttribute="leading" id="Crs-SH-pcx"/>
+                            <constraint firstItem="UwR-bV-kZ7" firstAttribute="trailing" secondItem="tdo-Wy-9CA" secondAttribute="trailing" id="KV1-Re-8Jt"/>
                             <constraint firstItem="lmD-XS-kZU" firstAttribute="bottom" secondItem="fnY-qW-03S" secondAttribute="bottom" constant="20" id="Mmm-1s-XEh"/>
-                            <constraint firstItem="lmD-XS-kZU" firstAttribute="trailing" secondItem="tdo-Wy-9CA" secondAttribute="trailing" constant="100" id="VCV-Gl-dkH"/>
-                            <constraint firstItem="lmD-XS-kZU" firstAttribute="trailing" secondItem="aeB-09-xWQ" secondAttribute="trailing" constant="100" id="Xt5-05-axa"/>
-                            <constraint firstItem="tdo-Wy-9CA" firstAttribute="leading" secondItem="lmD-XS-kZU" secondAttribute="leading" constant="100" id="YeN-Uw-0ah"/>
-                            <constraint firstItem="UwR-bV-kZ7" firstAttribute="leading" secondItem="lmD-XS-kZU" secondAttribute="leading" constant="100" id="bf0-Rr-GjA"/>
-                            <constraint firstItem="iBc-FD-uBZ" firstAttribute="top" secondItem="aeB-09-xWQ" secondAttribute="top" constant="70" id="cPe-ow-Gc8"/>
+                            <constraint firstItem="lmD-XS-kZU" firstAttribute="trailing" secondItem="tdo-Wy-9CA" secondAttribute="trailing" constant="32" id="VCV-Gl-dkH"/>
+                            <constraint firstItem="tdo-Wy-9CA" firstAttribute="leading" secondItem="lmD-XS-kZU" secondAttribute="leading" constant="32" id="YeN-Uw-0ah"/>
+                            <constraint firstItem="aeB-09-xWQ" firstAttribute="leading" secondItem="UwR-bV-kZ7" secondAttribute="leading" id="ZZR-5T-Siz"/>
                             <constraint firstItem="lmD-XS-kZU" firstAttribute="trailing" secondItem="fnY-qW-03S" secondAttribute="trailing" constant="50" id="cmt-0u-473"/>
-                            <constraint firstItem="2yV-Oh-Owa" firstAttribute="leading" secondItem="lmD-XS-kZU" secondAttribute="leading" constant="109" id="eIs-FK-fQM"/>
+                            <constraint firstItem="2yV-Oh-Owa" firstAttribute="leading" secondItem="lmD-XS-kZU" secondAttribute="leading" constant="90" id="eIs-FK-fQM"/>
+                            <constraint firstItem="iBc-FD-uBZ" firstAttribute="top" secondItem="aeB-09-xWQ" secondAttribute="bottom" constant="32" id="eOU-aV-uLi"/>
+                            <constraint firstItem="UwR-bV-kZ7" firstAttribute="top" secondItem="tdo-Wy-9CA" secondAttribute="bottom" constant="32" id="hFY-v1-54R"/>
+                            <constraint firstItem="tdo-Wy-9CA" firstAttribute="top" secondItem="2yV-Oh-Owa" secondAttribute="bottom" id="hOS-pD-J1f"/>
                             <constraint firstItem="fnY-qW-03S" firstAttribute="leading" secondItem="lmD-XS-kZU" secondAttribute="leading" constant="50" id="ioP-dX-AbX"/>
-                            <constraint firstItem="lmD-XS-kZU" firstAttribute="trailing" secondItem="2yV-Oh-Owa" secondAttribute="trailing" constant="109" id="lFY-Ra-lCp"/>
-                            <constraint firstItem="lmD-XS-kZU" firstAttribute="trailing" secondItem="iBc-FD-uBZ" secondAttribute="trailing" constant="119" id="oib-i8-1Pf"/>
-                            <constraint firstItem="aeB-09-xWQ" firstAttribute="leading" secondItem="lmD-XS-kZU" secondAttribute="leading" constant="100" id="qXc-Bm-E15"/>
-                            <constraint firstItem="iBc-FD-uBZ" firstAttribute="leading" secondItem="lmD-XS-kZU" secondAttribute="leading" constant="120" id="tjb-dw-WiK"/>
+                            <constraint firstItem="lmD-XS-kZU" firstAttribute="trailing" secondItem="2yV-Oh-Owa" secondAttribute="trailing" constant="90" id="lFY-Ra-lCp"/>
+                            <constraint firstItem="lmD-XS-kZU" firstAttribute="trailing" secondItem="iBc-FD-uBZ" secondAttribute="trailing" constant="90" id="oib-i8-1Pf"/>
+                            <constraint firstItem="iBc-FD-uBZ" firstAttribute="leading" secondItem="lmD-XS-kZU" secondAttribute="leading" constant="90" id="tjb-dw-WiK"/>
+                            <constraint firstItem="aeB-09-xWQ" firstAttribute="trailing" secondItem="UwR-bV-kZ7" secondAttribute="trailing" id="uVA-H7-UDU"/>
                             <constraint firstItem="2yV-Oh-Owa" firstAttribute="top" secondItem="lmD-XS-kZU" secondAttribute="top" id="v8o-Ug-NPJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lmD-XS-kZU"/>
@@ -239,6 +242,6 @@
         <image name="link-mail-logo" width="326" height="327"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="DGq-4q-rVA"/>
+        <segue reference="HAQ-Fe-iEk"/>
     </inferredMetricsTieBreakers>
 </document>
