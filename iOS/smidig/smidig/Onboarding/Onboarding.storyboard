@@ -79,6 +79,14 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B3a-1x-0zR">
+                                <rect key="frame" x="153" y="568" width="108" height="30"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="Glemt passord?"/>
+                                <connections>
+                                    <action selector="forgottenPasswordButton:" destination="d1T-sQ-xco" eventType="touchUpInside" id="bTU-t7-hCN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -87,6 +95,8 @@
                             <constraint firstItem="aBN-Gf-pU6" firstAttribute="trailing" secondItem="zsC-ju-ZTz" secondAttribute="trailing" constant="90" id="IyG-Z3-qoR"/>
                             <constraint firstItem="05t-pw-vJv" firstAttribute="top" secondItem="ILP-Sc-4tU" secondAttribute="bottom" constant="32" id="KLC-xQ-8kP"/>
                             <constraint firstItem="gTf-80-k2P" firstAttribute="leading" secondItem="aBN-Gf-pU6" secondAttribute="leading" constant="50" id="Lqx-CA-vlK"/>
+                            <constraint firstItem="B3a-1x-0zR" firstAttribute="top" secondItem="05t-pw-vJv" secondAttribute="bottom" constant="16" id="OhR-e8-QuU"/>
+                            <constraint firstItem="B3a-1x-0zR" firstAttribute="centerX" secondItem="aBN-Gf-pU6" secondAttribute="centerX" id="PqS-tq-TAh"/>
                             <constraint firstItem="ILP-Sc-4tU" firstAttribute="centerX" secondItem="aBN-Gf-pU6" secondAttribute="centerX" id="RXU-xs-mJ6"/>
                             <constraint firstItem="aBN-Gf-pU6" firstAttribute="trailing" secondItem="FOO-cr-NhP" secondAttribute="trailing" constant="32" id="ZWL-TV-hdq"/>
                             <constraint firstItem="aBN-Gf-pU6" firstAttribute="trailing" secondItem="gTf-80-k2P" secondAttribute="trailing" constant="50" id="ZhU-mH-ENf"/>
