@@ -114,7 +114,7 @@ extension UIView {
         case "Film og TV":
             view.backgroundColor = #colorLiteral(red: 0.9490196078, green: 0.337254902, blue: 0.3215686275, alpha: 1).withAlphaComponent(transparent)
         case "Annet":
-            view.backgroundColor = #colorLiteral(red: 0, green: 0.6549019608, blue: 0.5058823529, alpha: 1).withAlphaComponent(transparent)
+            view.backgroundColor = #colorLiteral(red: 0.3568627451, green: 0.6274509804, blue: 0.6235294118, alpha: 1).withAlphaComponent(transparent)
         default:
             view.backgroundColor = #colorLiteral(red: 0.9490196078, green: 0.337254902, blue: 0.3215686275, alpha: 1).withAlphaComponent(transparent) // #F25652
         }
