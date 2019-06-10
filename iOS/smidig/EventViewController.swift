@@ -23,11 +23,20 @@ class EventViewController: UIViewController {
         populate(event: event)
         
         if event.participants.contains(Auth.auth().currentUser!.uid) {
-            joinButton.setTitle("Påmeldt", for: UIControl.State.normal)
-            joinButton.isEnabled = false
-        } else {
-            leaveButton.isHidden = true
+            joinButton.setTitle("Forlat", for: .normal)
+            joinButton.backgroundColor = #colorLiteral(red: 0.8666666667, green: 0.3921568627, blue: 0.3921568627, alpha: 1)
+            joinButton.setTitleColor(.white, for: .normal)
         }
+        
+        addShadow(view: joinButton)
+        addShadow(view: chatButton)
+    }
+    
+    func addShadow(view: UIView) {
+        view.layer.shadowColor = UIColor.black.cgColor
+        view.layer.shadowRadius = 3.0
+        view.layer.shadowOpacity = 0.25
+        view.layer.shadowOffset = CGSize(width: 1, height: 2)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,23 +45,29 @@ class EventViewController: UIViewController {
     
     var event: Event!
     
+    @IBOutlet weak var chatButton: RoundButton!
+    
     @IBOutlet weak var eventView: EventScrollView!
     
     @IBOutlet weak var joinButton: UIButton!
     
     @IBAction func joinEvent(_ sender: UIButton) {
-        event.join()
-        
-        let view = MessageView.viewFromNib(layout: .cardView)
-        view.configureTheme(.success)
-        view.button?.isHidden = true
-        view.configureContent(title: "Suksess!", body: "Du er nå påmeldt eventet \(event.title)!")
-        SwiftMessages.show(view: view)
-        
-        populate(event: event)
-        leaveButton.isHidden = false
-        joinButton.setTitle("Påmeldt", for: UIControl.State.normal)
-        joinButton.isEnabled = false
+        if sender.titleLabel?.text != "Forlat" {
+            event.join()
+            
+            let view = MessageView.viewFromNib(layout: .cardView)
+            view.configureTheme(.success)
+            view.button?.isHidden = true
+            view.configureContent(title: "Suksess!", body: "Du er nå påmeldt eventet \(event.title)!")
+            SwiftMessages.show(view: view)
+            
+            populate(event: event)
+            joinButton.setTitle("Forlat", for: .normal)
+            joinButton.backgroundColor = #colorLiteral(red: 0.8666666667, green: 0.3921568627, blue: 0.3921568627, alpha: 1)
+            joinButton.setTitleColor(.white, for: .normal)
+        } else {
+            leaveEvent(sender)
+        }
     }
     
     @IBOutlet weak var leaveButton: UIButton!
@@ -67,9 +82,10 @@ class EventViewController: UIViewController {
         SwiftMessages.show(view: view)
         
         populate(event: event)
-        leaveButton.isHidden = true
-        joinButton.setTitle("Bli med", for: UIControl.State.normal)
-        joinButton.isEnabled = true
+        //leaveButton.isHidden = true
+        joinButton.setTitle("Bli med", for: .normal)
+        joinButton.backgroundColor = #colorLiteral(red: 0.3529411765, green: 0.7960784314, blue: 0.5529411765, alpha: 1)
+        joinButton.setTitleColor(.darkText, for: .normal)
     }
     
     @IBAction func goToChat(_ sender: Any) {
@@ -89,7 +105,7 @@ class EventViewController: UIViewController {
             let destination = segue.destination as! ChatViewController
             destination.chatId = event.eventId
     }
-    
+    @IBOutlet weak var topColor: UIView!
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var labelDescription: UILabel!
     @IBOutlet weak var labelPlace: UILabel!
@@ -107,6 +123,7 @@ class EventViewController: UIViewController {
         labelDate.text = EventTableModel.formatDate(date: event.date)
         labelTime.text = event.time
         eventId = event.eventId
+        topColor.setCellBackgroundColor(for: topColor, by: event.category)
     }
 }
 

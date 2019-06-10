@@ -34,8 +34,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vAd-Ot-LgX">
+                                <rect key="frame" x="0.0" y="20" width="375" height="16"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="zON-l3-AQ2"/>
+                                </constraints>
+                            </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="23s-kV-ou7" customClass="EventScrollView" customModule="smidig" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="10" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="36" width="375" height="631"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fotballkamp på gressbanen" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRm-k6-3ql">
                                         <rect key="frame" x="32" y="64" width="311" height="20.5"/>
@@ -104,55 +111,53 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jD1-Nm-enV" userLabel="Chat Button" customClass="RoundButton" customModule="smidig" customModuleProvider="target">
-                                        <rect key="frame" x="203" y="378" width="140" height="40"/>
-                                        <color key="backgroundColor" red="0.36906403303146362" green="0.53535699844360352" blue="0.80928045511245728" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jD1-Nm-enV" userLabel="Chat Button" customClass="RoundButton" customModule="smidig" customModuleProvider="target">
+                                        <rect key="frame" x="203" y="378" width="140" height="50"/>
+                                        <color key="backgroundColor" red="0.95274513959884644" green="0.95701104402542114" blue="0.95271188020706177" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Se chat"/>
+                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="50" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="75" minY="4" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Chat" image="baseline_chat_bubble_outline_black_24dp">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
                                         <connections>
                                             <action selector="goToChat:" destination="l6s-1B-Kpf" eventType="touchUpInside" id="wI7-Ra-UGa"/>
                                             <segue destination="810-Mv-AFI" kind="show" identifier="goToChat" id="St8-vB-gyg"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZK-Yt-alX" userLabel="Join Button" customClass="RoundButton" customModule="smidig" customModuleProvider="target">
-                                        <rect key="frame" x="32" y="378" width="140" height="40"/>
-                                        <color key="backgroundColor" red="0.35370552539825439" green="0.79684340953826904" blue="0.55374974012374878" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <rect key="frame" x="32" y="378" width="140" height="50"/>
+                                        <color key="backgroundColor" red="0.3529411764705882" green="0.79607843137254897" blue="0.55294117647058827" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="140" id="5Y6-8p-xEe"/>
-                                            <constraint firstAttribute="height" constant="40" id="JD1-HQ-Pyv"/>
+                                            <constraint firstAttribute="height" constant="50" id="JD1-HQ-Pyv"/>
                                         </constraints>
-                                        <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Bli med"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <state key="normal" title="Bli med">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
                                         <connections>
                                             <action selector="joinEvent:" destination="l6s-1B-Kpf" eventType="touchUpInside" id="GXP-N0-mMV"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L55-ld-6DE" userLabel="Report Button" customClass="RoundButton" customModule="smidig" customModuleProvider="target">
-                                        <rect key="frame" x="97.5" y="542" width="180" height="33"/>
+                                        <rect key="frame" x="97.5" y="552" width="180" height="33"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="tintColor" red="0.94901960780000005" green="0.090196078430000007" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Rapporter arrangement"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Oj-6a-2o7" userLabel="Leave Button">
-                                        <rect key="frame" x="167.5" y="466" width="40" height="30"/>
-                                        <state key="normal" title="Forlat"/>
-                                        <connections>
-                                            <action selector="leaveEvent:" destination="l6s-1B-Kpf" eventType="touchUpInside" id="6Y3-xg-m9f"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="3Oj-6a-2o7" firstAttribute="centerX" secondItem="23s-kV-ou7" secondAttribute="centerX" id="0Bm-gc-opN"/>
                                     <constraint firstItem="L55-ld-6DE" firstAttribute="centerX" secondItem="23s-kV-ou7" secondAttribute="centerX" id="1t6-fQ-vH1"/>
                                     <constraint firstAttribute="bottom" secondItem="L55-ld-6DE" secondAttribute="bottom" constant="8" id="3WW-pf-5i6"/>
-                                    <constraint firstItem="L55-ld-6DE" firstAttribute="top" secondItem="3Oj-6a-2o7" secondAttribute="bottom" constant="46" id="526-Hi-own"/>
                                     <constraint firstItem="qxP-dy-5wh" firstAttribute="leading" secondItem="RrG-HD-ZaB" secondAttribute="trailing" constant="4" id="7o1-ij-idT"/>
                                     <constraint firstItem="jD1-Nm-enV" firstAttribute="width" secondItem="EZK-Yt-alX" secondAttribute="width" id="8kj-hZ-kEE"/>
                                     <constraint firstItem="jD1-Nm-enV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="EZK-Yt-alX" secondAttribute="trailing" constant="30" id="BMB-mb-S5B"/>
                                     <constraint firstItem="rBq-jR-ZS5" firstAttribute="top" secondItem="iyz-43-sHg" secondAttribute="bottom" constant="48" id="HiG-t7-s6t"/>
-                                    <constraint firstItem="3Oj-6a-2o7" firstAttribute="top" secondItem="EZK-Yt-alX" secondAttribute="bottom" constant="48" id="LN9-OH-i9k"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rBq-jR-ZS5" secondAttribute="trailing" constant="32" id="MFV-u1-Ide"/>
+                                    <constraint firstItem="L55-ld-6DE" firstAttribute="top" secondItem="EZK-Yt-alX" secondAttribute="bottom" constant="124" id="PAh-dv-nZS"/>
                                     <constraint firstItem="QOQ-ow-csn" firstAttribute="centerY" secondItem="DFA-Rp-zKy" secondAttribute="centerY" id="QYh-OI-KsK"/>
                                     <constraint firstItem="DFA-Rp-zKy" firstAttribute="leading" secondItem="RrG-HD-ZaB" secondAttribute="leading" id="S4e-Hi-ZYO"/>
                                     <constraint firstItem="jD1-Nm-enV" firstAttribute="centerY" secondItem="EZK-Yt-alX" secondAttribute="centerY" id="UfW-70-VRn"/>
@@ -184,14 +189,18 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="23s-kV-ou7" firstAttribute="width" secondItem="RJo-JX-lWM" secondAttribute="width" id="OgD-0R-jyx"/>
-                            <constraint firstItem="23s-kV-ou7" firstAttribute="centerY" secondItem="yO9-Fa-hXg" secondAttribute="centerY" id="V8g-44-ffs"/>
-                            <constraint firstItem="23s-kV-ou7" firstAttribute="centerX" secondItem="yO9-Fa-hXg" secondAttribute="centerX" id="Y0d-KZ-62N"/>
-                            <constraint firstItem="23s-kV-ou7" firstAttribute="height" secondItem="RJo-JX-lWM" secondAttribute="height" id="zAl-kp-SgA"/>
+                            <constraint firstItem="vAd-Ot-LgX" firstAttribute="leading" secondItem="yO9-Fa-hXg" secondAttribute="leading" id="53J-72-lgG"/>
+                            <constraint firstItem="yO9-Fa-hXg" firstAttribute="top" secondItem="vAd-Ot-LgX" secondAttribute="top" id="Hb4-sj-Ahv"/>
+                            <constraint firstItem="yO9-Fa-hXg" firstAttribute="leading" secondItem="23s-kV-ou7" secondAttribute="leading" id="M6x-rY-Yey"/>
+                            <constraint firstItem="23s-kV-ou7" firstAttribute="bottom" secondItem="yO9-Fa-hXg" secondAttribute="bottom" id="X5m-j0-fTW"/>
+                            <constraint firstItem="23s-kV-ou7" firstAttribute="trailing" secondItem="yO9-Fa-hXg" secondAttribute="trailing" id="XKM-lN-Xlo"/>
+                            <constraint firstItem="23s-kV-ou7" firstAttribute="top" secondItem="vAd-Ot-LgX" secondAttribute="bottom" id="daG-6C-NyH"/>
+                            <constraint firstItem="yO9-Fa-hXg" firstAttribute="trailing" secondItem="vAd-Ot-LgX" secondAttribute="trailing" id="dtx-Vp-Ma9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yO9-Fa-hXg"/>
                     </view>
                     <connections>
+                        <outlet property="chatButton" destination="jD1-Nm-enV" id="EbR-N5-VOh"/>
                         <outlet property="eventView" destination="23s-kV-ou7" id="vVt-kf-tIk"/>
                         <outlet property="joinButton" destination="EZK-Yt-alX" id="l9s-1q-2uh"/>
                         <outlet property="labelDate" destination="QOQ-ow-csn" id="BpB-Cw-qIP"/>
@@ -200,7 +209,7 @@
                         <outlet property="labelSpots" destination="IIE-bw-nGl" id="jMF-03-evW"/>
                         <outlet property="labelTime" destination="EiT-o5-G2c" id="eDW-El-wMH"/>
                         <outlet property="labelTitle" destination="bRm-k6-3ql" id="n1G-CW-UEG"/>
-                        <outlet property="leaveButton" destination="3Oj-6a-2o7" id="eSb-ld-VvZ"/>
+                        <outlet property="topColor" destination="vAd-Ot-LgX" id="CPf-f4-GZ8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X42-tV-IHP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -890,9 +899,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Friluft" width="90" height="90"/>
         <image name="baseline_access_time_black_24dp" width="24" height="24"/>
         <image name="baseline_add_circle_black_36pt" width="36" height="36"/>
         <image name="baseline_calendar_today_black_36pt" width="36" height="36"/>
+        <image name="baseline_chat_bubble_outline_black_24dp" width="24" height="24"/>
+
         <image name="baseline_location_on_black_24dp" width="24" height="24"/>
         <image name="baseline_person_black_24dp" width="24" height="24"/>
         <image name="steg1" width="522" height="60"/>
