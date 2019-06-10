@@ -19,8 +19,32 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     
+    let alert = UIAlertController(title: "Glemt passord", message: "Fyll ut mail for tilbakestilling", preferredStyle: .alert)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        alert.addTextField { (textField) in
+            textField.placeholder = "Email"
+        }
+        
+        alert.addAction(UIAlertAction(title: "Kanseller", style: .destructive, handler: { (action) in
+            self.alert.dismiss(animated: true, completion: nil)
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Tilbakestill", style: .default, handler: { (action) in
+            
+            let email = self.alert.textFields?[0].text
+            
+            Auth.auth().sendPasswordReset(withEmail: email!, completion: { (err) in
+                if err != nil {
+                    print(err as Any)
+                }
+                
+                print("Sent email reset")
+            })
+        }))
+
         
         emailTextField.addShadow()
         passwordTextField.addShadow()
@@ -45,6 +69,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
+    @IBAction func forgottenPasswordButton(_ sender: Any) {
+        
+        self.present(self.alert, animated: true, completion: nil)
+        
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         handle = Auth.auth().addStateDidChangeListener {
