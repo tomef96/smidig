@@ -38,10 +38,18 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             
             Auth.auth().sendPasswordReset(withEmail: email!, completion: { (err) in
                 if err != nil {
-                    print(err as Any)
+                    let view = MessageView.viewFromNib(layout: .cardView)
+                    view.configureTheme(.error)
+                    view.button?.isHidden = true
+                    view.configureContent(title: "Feil!", body: "Det gikk noe galt, prøv på nytt!")
+                    SwiftMessages.show(view: view)
+                } else {
+                    let view = MessageView.viewFromNib(layout: .cardView)
+                    view.configureTheme(.success)
+                    view.button?.isHidden = true
+                    view.configureContent(title: "Suksess!", body: "Du har fått mail med lenke for tilbakestilling!")
+                    SwiftMessages.show(view: view)
                 }
-                
-                print("Sent email reset")
             })
         }))
 
