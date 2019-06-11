@@ -31,56 +31,28 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hjo-gn-p8L">
-                                <rect key="frame" x="0.0" y="88" width="414" height="274"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="vHh-4F-gQ3">
-                                        <rect key="frame" x="32" y="0.0" width="350" height="274"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="z17-QA-8o6">
-                                                <rect key="frame" x="0.0" y="0.0" width="350" height="274"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brukernavn: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v92-MJ-Ftr">
-                                                        <rect key="frame" x="0.0" y="0.0" width="101.5" height="274"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SPx-Tn-deM">
-                                                        <rect key="frame" x="284" y="0.0" width="66" height="274"/>
-                                                        <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P9d-Vg-Wa1">
-                                                                <rect key="frame" x="0.0" y="0.0" width="42" height="274"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                                <state key="normal" title="Navn">
-                                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                </state>
-                                                            </button>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="baseline_keyboard_arrow_right_black_24dp" translatesAutoresizingMaskIntoConstraints="NO" id="dKl-Zy-Fvx">
-                                                                <rect key="frame" x="42" y="0.0" width="24" height="274"/>
-                                                            </imageView>
-                                                        </subviews>
-                                                    </stackView>
-                                                </subviews>
-                                            </stackView>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="vHh-4F-gQ3" secondAttribute="bottom" id="BpF-sX-chL"/>
-                                    <constraint firstItem="vHh-4F-gQ3" firstAttribute="centerY" secondItem="hjo-gn-p8L" secondAttribute="centerY" id="RbY-Lf-M9v"/>
-                                    <constraint firstAttribute="trailing" secondItem="vHh-4F-gQ3" secondAttribute="trailing" id="WKM-6F-umA"/>
-                                    <constraint firstItem="vHh-4F-gQ3" firstAttribute="top" secondItem="hjo-gn-p8L" secondAttribute="top" id="ctw-va-7YV"/>
-                                    <constraint firstItem="vHh-4F-gQ3" firstAttribute="leading" secondItem="hjo-gn-p8L" secondAttribute="leading" constant="32" id="wTB-Wv-Q2q"/>
-                                    <constraint firstItem="vHh-4F-gQ3" firstAttribute="centerX" secondItem="hjo-gn-p8L" secondAttribute="centerX" id="ysr-4O-k6Z"/>
-                                </constraints>
-                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brukernavn: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v92-MJ-Ftr">
+                                <rect key="frame" x="20" y="110" width="97" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P9d-Vg-Wa1">
+                                <rect key="frame" x="332" y="103.5" width="42" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Navn">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleAspectFit" image="baseline_keyboard_arrow_right_black_24dp" translatesAutoresizingMaskIntoConstraints="NO" id="dKl-Zy-Fvx">
+                                <rect key="frame" x="370" y="108.5" width="24" height="24"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PV3-jG-hCU">
-                                <rect key="frame" x="157" y="394" width="100" height="40"/>
+                                <rect key="frame" x="157" y="191" width="100" height="40"/>
                                 <color key="backgroundColor" red="0.90980392160000001" green="0.17254901959999999" blue="0.047058823530000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="aZV-f4-2Mc"/>
-                                    <constraint firstAttribute="width" constant="100" id="rFe-58-21B"/>
+                                    <constraint firstAttribute="width" constant="100" id="RkX-Gz-UJo"/>
+                                    <constraint firstAttribute="height" constant="40" id="mrE-3e-DEO"/>
                                 </constraints>
                                 <state key="normal" title="Logg ut">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -97,15 +69,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="PV3-jG-hCU" firstAttribute="top" secondItem="z17-QA-8o6" secondAttribute="bottom" constant="32" id="8QU-lY-5Qv"/>
-                            <constraint firstItem="PV3-jG-hCU" firstAttribute="centerX" secondItem="Kn3-yk-lII" secondAttribute="centerX" id="DU3-58-5xO"/>
-                            <constraint firstItem="Kn3-yk-lII" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="hjo-gn-p8L" secondAttribute="bottom" constant="500" id="FW8-02-fQd"/>
-                            <constraint firstItem="3VZ-2C-032" firstAttribute="trailing" secondItem="Kn3-yk-lII" secondAttribute="trailing" id="NBI-u5-3mo"/>
-                            <constraint firstItem="3VZ-2C-032" firstAttribute="top" secondItem="Kn3-yk-lII" secondAttribute="top" id="Xfz-RM-w5T"/>
-                            <constraint firstItem="hjo-gn-p8L" firstAttribute="leading" secondItem="Kn3-yk-lII" secondAttribute="leading" id="ghA-me-JFo"/>
-                            <constraint firstItem="3VZ-2C-032" firstAttribute="leading" secondItem="Kn3-yk-lII" secondAttribute="leading" id="k7Q-pe-o27"/>
-                            <constraint firstItem="Kn3-yk-lII" firstAttribute="trailing" secondItem="hjo-gn-p8L" secondAttribute="trailing" id="wSi-r8-g5I"/>
-                            <constraint firstItem="hjo-gn-p8L" firstAttribute="top" secondItem="3VZ-2C-032" secondAttribute="bottom" id="yD4-5q-Tm1"/>
+                            <constraint firstItem="3VZ-2C-032" firstAttribute="top" secondItem="Kn3-yk-lII" secondAttribute="top" id="3nA-1l-LPp"/>
+                            <constraint firstItem="v92-MJ-Ftr" firstAttribute="leading" secondItem="Kn3-yk-lII" secondAttribute="leading" constant="20" id="IHB-dc-gDI"/>
+                            <constraint firstItem="dKl-Zy-Fvx" firstAttribute="leading" secondItem="P9d-Vg-Wa1" secondAttribute="trailing" constant="-4" id="JYy-ZH-IB4"/>
+                            <constraint firstItem="P9d-Vg-Wa1" firstAttribute="centerY" secondItem="v92-MJ-Ftr" secondAttribute="centerY" id="Mx1-sK-62n"/>
+                            <constraint firstItem="v92-MJ-Ftr" firstAttribute="top" secondItem="3VZ-2C-032" secondAttribute="bottom" constant="22" id="Ok8-KY-VNu"/>
+                            <constraint firstItem="PV3-jG-hCU" firstAttribute="top" secondItem="v92-MJ-Ftr" secondAttribute="bottom" constant="60" id="Y9P-zy-gCW"/>
+                            <constraint firstItem="Kn3-yk-lII" firstAttribute="trailing" secondItem="dKl-Zy-Fvx" secondAttribute="trailing" constant="20" id="h2X-b1-wCo"/>
+                            <constraint firstItem="Kn3-yk-lII" firstAttribute="trailing" secondItem="3VZ-2C-032" secondAttribute="trailing" id="kna-Li-t04"/>
+                            <constraint firstItem="PV3-jG-hCU" firstAttribute="centerX" secondItem="Kn3-yk-lII" secondAttribute="centerX" id="rvn-ky-HaL"/>
+                            <constraint firstItem="dKl-Zy-Fvx" firstAttribute="centerY" secondItem="P9d-Vg-Wa1" secondAttribute="centerY" id="sYu-E4-uC6"/>
+                            <constraint firstItem="3VZ-2C-032" firstAttribute="leading" secondItem="Kn3-yk-lII" secondAttribute="leading" id="z5H-4x-sdF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Kn3-yk-lII"/>
                     </view>
