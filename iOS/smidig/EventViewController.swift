@@ -32,9 +32,18 @@ class EventViewController: UIViewController, MKMapViewDelegate {
         addShadow(view: joinButton)
         addShadow(view: chatButton)
         
+        locationMap.camera.altitude = .init(floatLiteral: 4000.00)
+        locationMap.isRotateEnabled = false
+        locationMap.delegate = self
+        locationMap.isHidden = true
+        
+        let osloCoo = CLLocationCoordinate2DMake(59.9127, 10.7461)
+        let distance = CLLocationDistance(exactly: 100.00)
+        
         let request = MKLocalSearch.Request.init()
-        request.naturalLanguageQuery = event.place
-        request.region = .init(.init(x: 54.65, y: 23.54, width: 0, height: 0))
+        request.naturalLanguageQuery = "%@\(event.place)"
+        request.region = .init(center: osloCoo, latitudinalMeters: distance!, longitudinalMeters: distance!)
+        request.region = .init(.init(origin: .init(x: 59.9127, y: 10.7461), size: .init(width: 10, height: 10)))
         let search = MKLocalSearch.init(request: request)
         search.start { (response, err) in
             guard let coordinate = response?.mapItems.first?.placemark.coordinate else {self.locationMap.isHidden = true; return}
@@ -48,11 +57,8 @@ class EventViewController: UIViewController, MKMapViewDelegate {
             let placemark = MKPlacemark(coordinate: coordinate, addressDictionary: nil)
             self.mapItemForMaps = MKMapItem(placemark: placemark)
             self.mapItemForMaps?.name = self.event.place
+            self.locationMap.isHidden = false
         }
-        locationMap.camera.altitude = .init(floatLiteral: 4000.00)
-        locationMap.isRotateEnabled = false
-        locationMap.delegate = self
-        
     }
     
     var mapItemForMaps: MKMapItem? = nil
