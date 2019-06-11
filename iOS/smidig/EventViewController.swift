@@ -10,8 +10,9 @@ import UIKit
 import Firebase
 import FirebaseFirestore
 import SwiftMessages
+import MapKit
 
-class EventViewController: UIViewController {
+class EventViewController: UIViewController, MKMapViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,54 @@ class EventViewController: UIViewController {
         
         addShadow(view: joinButton)
         addShadow(view: chatButton)
+        
+        let request = MKLocalSearch.Request.init()
+        request.naturalLanguageQuery = event.place
+        request.region = .init(.init(x: 54.65, y: 23.54, width: 0, height: 0))
+        let search = MKLocalSearch.init(request: request)
+        search.start { (response, err) in
+            guard let coordinate = response?.mapItems.first?.placemark.coordinate else {self.locationMap.isHidden = true; return}
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = coordinate
+            annotation.title = self.event.place
+            self.locationMap.addAnnotation(annotation)
+            self.locationMap.setCenter(coordinate, animated: false)
+            self.locationMap.selectAnnotation(annotation, animated: true)
+            
+            let placemark = MKPlacemark(coordinate: coordinate, addressDictionary: nil)
+            self.mapItemForMaps = MKMapItem(placemark: placemark)
+            self.mapItemForMaps?.name = self.event.place
+        }
+        locationMap.camera.altitude = .init(floatLiteral: 4000.00)
+        locationMap.isRotateEnabled = false
+        locationMap.delegate = self
+        
+    }
+    
+    var mapItemForMaps: MKMapItem? = nil
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        let button = UIButton(type: .detailDisclosure)
+        button.setTitle("Åpne i maps", for: .normal)
+        var pinView = mapView.dequeueReusableAnnotationView(withIdentifier: "pin") as? MKPinAnnotationView
+        if pinView == nil {
+            pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "pin")
+            pinView!.canShowCallout = true
+            pinView!.animatesDrop = true
+            pinView!.rightCalloutAccessoryView = button
+            pinView!.sizeToFit()
+        }
+        else {
+            pinView!.annotation = annotation
+            pinView!.rightCalloutAccessoryView = button
+        }
+        return pinView
+    }
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        if control == view.rightCalloutAccessoryView{
+            mapItemForMaps?.openInMaps(launchOptions: nil)
+        }
     }
     
     func addShadow(view: UIView) {
@@ -44,6 +93,8 @@ class EventViewController: UIViewController {
     }
     
     var event: Event!
+    
+    @IBOutlet weak var locationMap: MKMapView!
     
     @IBOutlet weak var chatButton: RoundButton!
     
@@ -83,7 +134,7 @@ class EventViewController: UIViewController {
         
         populate(event: event)
         //leaveButton.isHidden = true
-        joinButton.setTitle("Bli med", for: .normal)
+        joinButton.setTitle("Bli med!", for: .normal)
         joinButton.backgroundColor = #colorLiteral(red: 0.3529411765, green: 0.7960784314, blue: 0.5529411765, alpha: 1)
         joinButton.setTitleColor(.darkText, for: .normal)
     }

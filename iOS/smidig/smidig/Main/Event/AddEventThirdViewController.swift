@@ -15,6 +15,18 @@ class AddEventThirdViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+//        parentVC = self.parent as? CreateEventPageViewController
+//
+//        previewTitle.text = parentVC?.event?.title ?? "Title er ikke satt"
+//        previewLocation.text = parentVC?.event?.place ?? "Lokasjon er ikke satt"
+//        previewDate.text = EventTableModel.formatDate(date: (parentVC?.event!.date)!) ?? "Lokasjon er ikke satt"
+//        previewTime.text = parentVC?.event?.time ?? "Tid er ikke satt"
+//        previewIcon.image = UIImage(named: parentVC?.event?.category ?? "Annet")
+//        previewCard.setCellBackgroundColor(for: previewCard, by: parentVC?.event?.category ?? "Annet")
+        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         parentVC = self.parent as? CreateEventPageViewController
         
         previewTitle.text = parentVC?.event?.title ?? "Title er ikke satt"
@@ -23,7 +35,6 @@ class AddEventThirdViewController: UIViewController {
         previewTime.text = parentVC?.event?.time ?? "Tid er ikke satt"
         previewIcon.image = UIImage(named: parentVC?.event?.category ?? "Annet")
         previewCard.setCellBackgroundColor(for: previewCard, by: parentVC?.event?.category ?? "Annet")
-        // Do any additional setup after loading the view.
     }
     
     weak var parentVC: CreateEventPageViewController?

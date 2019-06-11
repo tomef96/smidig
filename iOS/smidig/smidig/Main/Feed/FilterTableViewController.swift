@@ -47,7 +47,7 @@ class FilterTableViewController: UITableViewController {
         if cell.filterSwitch.isOn {
             cell.setCellBackgroundColor(for: cell.viewContainer, by: category)
         } else {
-            cell.viewContainer.backgroundColor = .lightGray
+            cell.viewContainer.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         }
         
         return cell
