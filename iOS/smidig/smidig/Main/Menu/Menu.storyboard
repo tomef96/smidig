@@ -14,7 +14,7 @@
         <scene sceneID="sVn-Rf-gln">
             <objects>
                 <viewController id="5Uw-YC-fZ6" customClass="MenuViewController" customModule="smidig" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="vcl-Vq-bI5">
+                    <view key="view" contentMode="scaleToFill" id="vcl-Vq-bI5" customClass="RoundButton" customModule="smidig" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -47,7 +47,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleAspectFit" image="baseline_keyboard_arrow_right_black_24dp" translatesAutoresizingMaskIntoConstraints="NO" id="dKl-Zy-Fvx">
                                 <rect key="frame" x="370" y="108.5" width="24" height="24"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PV3-jG-hCU">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PV3-jG-hCU" customClass="RoundButton" customModule="smidig" customModuleProvider="target">
                                 <rect key="frame" x="157" y="191" width="100" height="40"/>
                                 <color key="backgroundColor" red="0.90980392160000001" green="0.17254901959999999" blue="0.047058823530000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -66,14 +66,35 @@
                                     <action selector="signOutBtn:" destination="5Uw-YC-fZ6" eventType="touchUpInside" id="cmU-s3-GOh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jqE-f7-if2">
+                                <rect key="frame" x="157" y="806" width="100" height="40"/>
+                                <color key="backgroundColor" red="0.90980392160000001" green="0.17254901959999999" blue="0.047058823530000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="8CS-lM-VGb"/>
+                                    <constraint firstAttribute="height" constant="40" id="z0f-6p-qZe"/>
+                                </constraints>
+                                <state key="normal" title="Slett bruker">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="deleteUser:" destination="5Uw-YC-fZ6" eventType="touchUpInside" id="qZW-ik-AXq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="3VZ-2C-032" firstAttribute="top" secondItem="Kn3-yk-lII" secondAttribute="top" id="3nA-1l-LPp"/>
                             <constraint firstItem="v92-MJ-Ftr" firstAttribute="leading" secondItem="Kn3-yk-lII" secondAttribute="leading" constant="20" id="IHB-dc-gDI"/>
+                            <constraint firstItem="jqE-f7-if2" firstAttribute="centerX" secondItem="Kn3-yk-lII" secondAttribute="centerX" id="IVf-YW-nL5"/>
                             <constraint firstItem="dKl-Zy-Fvx" firstAttribute="leading" secondItem="P9d-Vg-Wa1" secondAttribute="trailing" constant="-4" id="JYy-ZH-IB4"/>
                             <constraint firstItem="P9d-Vg-Wa1" firstAttribute="centerY" secondItem="v92-MJ-Ftr" secondAttribute="centerY" id="Mx1-sK-62n"/>
                             <constraint firstItem="v92-MJ-Ftr" firstAttribute="top" secondItem="3VZ-2C-032" secondAttribute="bottom" constant="22" id="Ok8-KY-VNu"/>
+                            <constraint firstItem="Kn3-yk-lII" firstAttribute="bottom" secondItem="jqE-f7-if2" secondAttribute="bottom" constant="16" id="Wae-u3-zgc"/>
                             <constraint firstItem="PV3-jG-hCU" firstAttribute="top" secondItem="v92-MJ-Ftr" secondAttribute="bottom" constant="60" id="Y9P-zy-gCW"/>
                             <constraint firstItem="Kn3-yk-lII" firstAttribute="trailing" secondItem="dKl-Zy-Fvx" secondAttribute="trailing" constant="20" id="h2X-b1-wCo"/>
                             <constraint firstItem="Kn3-yk-lII" firstAttribute="trailing" secondItem="3VZ-2C-032" secondAttribute="trailing" id="kna-Li-t04"/>

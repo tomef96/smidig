@@ -130,8 +130,8 @@
                                                         </view>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="rDj-dI-Yo4" secondAttribute="bottom" constant="8" id="OsY-z2-K3i"/>
-                                                        <constraint firstItem="rDj-dI-Yo4" firstAttribute="top" secondItem="GCa-50-Oku" secondAttribute="top" constant="8" id="nhg-x8-ABW"/>
+                                                        <constraint firstAttribute="bottom" secondItem="rDj-dI-Yo4" secondAttribute="bottom" priority="750" constant="8" id="OsY-z2-K3i"/>
+                                                        <constraint firstItem="rDj-dI-Yo4" firstAttribute="top" secondItem="GCa-50-Oku" secondAttribute="top" priority="750" constant="8" id="nhg-x8-ABW"/>
                                                     </constraints>
                                                 </stackView>
                                             </subviews>

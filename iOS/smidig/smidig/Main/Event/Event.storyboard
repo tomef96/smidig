@@ -895,11 +895,11 @@
             </objects>
             <point key="canvasLocation" x="4381.6000000000004" y="256.82158920539734"/>
         </scene>
-        <!--Create Event Page View Controller-->
+        <!--Ny aktivitet-->
         <scene sceneID="sI0-z8-2zR">
             <objects>
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="66F-D7-EjR" customClass="CreateEventPageViewController" customModule="smidig" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="7o6-hs-G67"/>
+                    <navigationItem key="navigationItem" title="Ny aktivitet" id="7o6-hs-G67"/>
                     <connections>
                         <segue destination="vzU-Ok-cje" kind="show" id="68f-OB-wK7"/>
                     </connections>

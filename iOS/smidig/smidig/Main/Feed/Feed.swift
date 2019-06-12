@@ -30,8 +30,10 @@ class Feed: EventTableModel {
     
     func filterEvents(events: [Event]) {
         for event in events {
-            if preferences[event.category] != false {
-                self.filteredEvents.append(event)
+            if !event.participants.contains(Auth.auth().currentUser!.uid) {
+                if preferences[event.category] != false {
+                    self.filteredEvents.append(event)
+                }
             }
         }
         filteredEvents.sort { (left, right) -> Bool in
